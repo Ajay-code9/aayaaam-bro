@@ -9,10 +9,18 @@ interface PageProps {
 export const PammMamPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ProductMasterPageTemplate
-      productTitle="BrokerBros PAMM / MAM System"
-      heroBadge="MULTI-ACCOUNT MANAGER ALLOCATION ENGINE"
-      heroDescription="Institutional asset management software for fund managers, money managers, and family offices to execute single trades across thousands of sub-accounts."
-      productMetric={{ label: "Allocation Precision", value: "Sub-Cent", sub: "Equity, Balance, or Percentage Proportional Allocation" }}
+      productTitle="Institutional PAMM / MAM Engine"
+      heroBadge="MULTI-ACCOUNT MANAGEMENT & FUND ALLOCATION"
+      heroDescription="Enterprise multi-account management infrastructure for asset managers, prop desks, and forex brokerages. Execute single master orders allocated seamlessly across thousands of investor sub-accounts with zero rounding error."
+      productMetric={{ label: "Allocation Precision", value: "Sub-Cent", sub: "Equity, Balance & Lot Ratio Proportional Allocation" }}
+      heroImageDark="/Hero-Images/pamm-mam-black.png"
+      heroImageLight="/Hero-Images/pamm-mam-white.png"
+      workflowSteps={[
+        { num: '01', title: 'Setup Master Fund Account', desc: 'Create master money manager profiles, define minimum investor capital thresholds, and establish fee terms.', icon: PieChart },
+        { num: '02', title: 'Set Allocation Rules', desc: 'Select Equity Proportional, Balance Ratio, Lot Multiplier, or Percentage allocation methods per fund.', icon: ShieldCheck },
+        { num: '03', title: 'Execute One-Click Master Orders', desc: 'Orders execute on the master account and allocate to thousands of sub-accounts instantly in microsecond C++ speed.', icon: Zap },
+        { num: '04', title: 'Automate Fee Payouts', desc: 'Management and High-Watermark performance fees calculate automatically and credit to manager wallets.', icon: Award }
+      ]}
       visualizerTabs={[
         { id: "allocation", label: "Master Account Manager", previewText: "Execute 1 order on Master Account and instantly allocate across 500+ investor sub-accounts." },
         { id: "fees", label: "Automated Fee Distribution", previewText: "Configure management fees, performance fees (High-Watermark), and IB commissions." }

@@ -125,14 +125,14 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
       verifiedStatus: 'Bank-Grade Cyber Security',
       heading: 'Ultra-Fast, Hack-Proof & Reliable Infrastructure',
       paragraph:
-        'Powered by ISO 27001 security standards, 256-bit encryption, and a guaranteed 99.99% uptime SLA to keep your brokerage running smoothly 24/7.',
+        'Powered by enterprise 256-bit encryption standards, SSL data protection, and a guaranteed 99.99% uptime SLA to keep your brokerage running smoothly 24/7.',
       imagePath: '/section-third.webp',
       placeholderLabel: 'Cyber Security Architecture Illustration',
       metrics: [
         {
           title: 'Security Standard',
-          value: 'ISO 27001',
-          subtitle: 'Certified information security system',
+          value: '256-BIT SSL',
+          subtitle: 'Enterprise encrypted data protection',
           icon: Shield,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         },
@@ -268,7 +268,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-md bg-slate-900 text-white font-mono text-[11px] border border-slate-800 shadow-sm">
               <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              <span className="text-emerald-400 font-bold tracking-wider">ISO 27001 CERTIFIED</span>
+              <span className="text-emerald-400 font-bold tracking-wider">256-BIT ENCRYPTED</span>
               <span className="text-slate-700">|</span>
               <span className="text-slate-300 font-bold">MULTI-JURISDICTION COMPLIANCE READY</span>
             </div>
@@ -325,7 +325,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                   {
                     id: 'insurance' as StoryKey,
                     title: 'Bank-Grade Security',
-                    badge: 'ISO 27001 & 99.99% Uptime',
+                    badge: '256-Bit SSL & 99.99% Uptime',
                     icon: ShieldCheck
                   },
                   {
@@ -409,7 +409,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
             <div className="relative z-10 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[10px] font-mono text-slate-400">
               <span className="flex items-center gap-1.5">
                 <BadgeCheck className="w-3 h-3 text-emerald-400" />
-                ISO 27001 CERTIFIED
+                SOC THREAT DEFENSE
               </span>
               <span className="text-emerald-400 font-bold tracking-wider">256-BIT ENCRYPTED</span>
             </div>
@@ -540,7 +540,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 text-center">
                 <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-slate-900/80 border border-slate-200/70 dark:border-slate-800 flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
                   <ShieldCheck className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span>ISO 27001 Certified</span>
+                  <span>256-Bit Encrypted</span>
                 </div>
                 <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-slate-900/80 border border-slate-200/70 dark:border-slate-800 flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
                   <CheckCircle2 className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />

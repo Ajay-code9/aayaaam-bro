@@ -90,7 +90,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
 
         {/* Divider Stat Line */}
         <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center justify-center gap-8 text-[11px] font-mono font-semibold text-slate-500 dark:text-slate-400">
-          <span>ISO 27001 Certified</span>
+          <span>256-Bit Encrypted</span>
           <span>•</span>
           <span>99.99% Uptime SLA</span>
           <span>•</span>

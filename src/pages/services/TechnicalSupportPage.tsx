@@ -9,10 +9,10 @@ interface PageProps {
 export const TechnicalSupportPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ServiceMasterPageTemplate
-      serviceTitle="24/7 Technical Support SLA Desk"
-      heroBadge="24/7 DIRECT HUMAN SUPPORT"
-      heroDescription="Direct 24/7 access to senior brokerage engineers and server specialists. Instant response with zero dead-end chatbot delays."
-      slaMetric={{ label: "Average Response Time", value: "< 24 Seconds", sub: "24/7 Direct Human Answer Guarantee" }}
+      serviceTitle="24/7/365 Technical Support & Managed SLA Desk"
+      heroBadge="24/7/365 ENTERPRISE MANAGED SUPPORT & SLA"
+      heroDescription="Direct 24/7 access to senior MetaTrader, FIX bridge, and CRM engineers. Guaranteed sub-15 minute critical incident response SLA with zero dead-end chatbot delays."
+      slaMetric={{ label: "Critical Incident Response SLA", value: "< 15 Mins", sub: "24/7/365 War-Room Escalation & Direct Engineer Access" }}
       deliverables={[
         { title: "24/7 Live Desk Access", desc: "Reach senior engineers via phone, VIP Slack channels, or urgent ticketing system.", icon: Headphones, sla: "<30s Answer" },
         { title: "Emergency Priority Hotline", desc: "Instant priority dispatch desk for urgent server or trade connectivity issues.", icon: Zap, sla: "Immediate" },

@@ -12,6 +12,8 @@ export const FinancialChartsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       productTitle="BrokerBros Financial Charts"
       heroBadge="PROFESSIONAL HTML5 CHARTING SUITE"
       heroDescription="High-speed HTML5 charting software for web and mobile. Give your traders 100+ technical indicators, drawing tools, and 1-click chart trading."
+      heroImageDark="/Hero-Images/financial-charts-black.png"
+      heroImageLight="/Hero-Images/financial-charts-white.png"
       productMetric={{ label: "Chart Render Speed", value: "60 FPS", sub: "Super-Smooth High Speed Charting" }}
       workflowSteps={[
         { num: '01', title: 'Embed Chart Widget', desc: 'Embed our lightweight HTML5 chart component into your website or web trading platform in minutes.', icon: Code },

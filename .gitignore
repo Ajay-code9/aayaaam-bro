@@ -6,3 +6,6 @@ coverage/
 *.log
 .env*
 !.env.example
+scratch_excel_unzip/
+temp_tracker.zip
+*.zip

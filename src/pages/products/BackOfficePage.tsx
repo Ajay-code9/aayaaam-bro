@@ -80,7 +80,7 @@ export const BackOfficePage: React.FC<BackOfficePageProps> = ({ onOpenAccount })
     { module: 'Order Processing Speed', tier: '< 1.8 milliseconds', status: 'Sub-Millisecond' },
     { module: 'Supported Platform Bridges', tier: 'MT4, MT5, cTrader, Vertex, Fix', status: 'Native' },
     { module: 'Database Redundancy', tier: 'Multi-Region Active-Active Cluster', status: '99.999% SLA' },
-    { module: 'Audit Logging Tier', tier: 'Immutable Cryptographic Logs', status: 'ISO Certified' },
+    { module: 'Audit Logging Tier', tier: 'Immutable Cryptographic Logs', status: 'Verified Standard' },
   ];
 
   const faqs = [

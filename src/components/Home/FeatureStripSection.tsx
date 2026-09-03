@@ -21,7 +21,7 @@ export const FeatureStripSection: React.FC = () => {
     {
       imageSrc: '/Homepage/icon-four.webp',
       title: 'Capital & Security',
-      description: 'ISO 27001 security standards, segregated client wallet architecture, and automated audit logs.',
+      description: '256-bit encryption standards, segregated client wallet architecture, and automated audit logs.',
     },
   ];
 

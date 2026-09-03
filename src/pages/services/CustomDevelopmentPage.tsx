@@ -9,10 +9,10 @@ interface PageProps {
 export const CustomDevelopmentPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ServiceMasterPageTemplate
-      serviceTitle="Custom System Development"
-      heroBadge="BESPOKE FINTECH ENGINEERING"
-      heroDescription="Tailor-made software engineering, proprietary trading plugins, custom API bridges, and custom CRM modules built to your exact specifications."
-      slaMetric={{ label: "Source Code & Quality SLA", value: "100%", sub: "Full Source Code Ownership & High-Performance Benchmark" }}
+      serviceTitle="Bespoke FinTech & Custom System Development"
+      heroBadge="BESPOKE FINTECH & BROKERAGE SYSTEM ENGINEERING"
+      heroDescription="Tailor-made brokerage software engineering, proprietary trading engine architecture, custom API bridges, bespoke CRM modules, and legacy server migrations built by senior C++ and Rust engineers."
+      slaMetric={{ label: "Source Code Ownership SLA", value: "100%", sub: "Full Intellectual Property Transfer & Microsecond Quality Guarantee" }}
       deliverables={[
         { title: "Custom Trading Plugins", desc: "Custom C++ and MQL5 plugins for MetaTrader 5, WebTrader, and proprietary platforms.", icon: Cpu, sla: "Custom C++" },
         { title: "Proprietary API Bridges", desc: "High-speed REST, WebSocket, and FIX API connectors connecting custom CRMs and liquidity feeds.", icon: Code2, sla: "Sub-5ms Speed" },

@@ -72,7 +72,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAccount, onLogin }) => {
               <li><button onClick={() => navigate('/products/web-trader')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">WebTrader Terminal</button></li>
               <li><button onClick={() => navigate('/products/mobile-app')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Mobile Trading Apps</button></li>
               <li><button onClick={() => navigate('/products/forex-crm')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">White-Label Forex CRM</button></li>
-              <li><button onClick={() => navigate('/products/simplex')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Simplex Trading Engine</button></li>
+              <li><button onClick={() => navigate('/products/bridge')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">BrokerBros Bridge</button></li>
               <li><button onClick={() => navigate('/products/plugins')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">MT5 Server Plugins</button></li>
             </ul>
           </div>
@@ -88,7 +88,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAccount, onLogin }) => {
               <li><button onClick={() => navigate('/products/social-trading')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Social Copy Trading</button></li>
               <li><button onClick={() => navigate('/products/ib-portal')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Multi-Tier IB Portal</button></li>
               <li><button onClick={() => navigate('/solutions/fix-api-liquidity')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">FIX API Liquidity Bridge</button></li>
-              <li><button onClick={() => navigate('/products/quote-engine')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">BrokerBros Quote Engine</button></li>
+              <li><button onClick={() => navigate('/products/risk-management')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">BrokerBros Risk Management System (RMS)</button></li>
             </ul>
           </div>
 
@@ -142,10 +142,10 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAccount, onLogin }) => {
         <div className="bg-white dark:bg-[#09131C] p-4 sm:p-5 rounded-xl border border-slate-200 dark:border-slate-800/90 space-y-1.5 shadow-xs">
           <div className="flex items-center gap-2 text-slate-800 dark:text-slate-300 font-semibold text-[10px] font-mono uppercase tracking-wider">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0" />
-            <span>B2B TECHNOLOGY & INFRASTRUCTURE DISCLOSURE</span>
+            <span>B2B TECHNOLOGY PROVIDER DISCLOSURE</span>
           </div>
           <p className="text-slate-600 dark:text-slate-400 text-[10px] leading-relaxed font-normal">
-            BrokerBros is an enterprise B2B financial technology provider supplying white-label broker CRM platforms, multi-asset trading terminals, liquidity bridge plugins, and co-located server infrastructure. BrokerBros does not provide retail brokerage services, manage retail client funds, or act as a counterparty to retail trades.
+            Broker Bros is a B2B brokerage technology infrastructure provider supplying white-label broker CRM platforms, client portals, trading terminals, liquidity bridge plugins, and managed server infrastructure to brokerage operators. Broker Bros is not a retail broker, investment adviser, or portfolio manager, and does not accept, hold, or manage end-client trading deposits.
           </p>
         </div>
 
@@ -153,7 +153,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAccount, onLogin }) => {
         <div className="pt-2 space-y-3 text-[10px] text-slate-500">
           <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800/60 pb-3">
             <div className="flex flex-wrap items-center gap-2">
-              {['ISO 27001 Certified', '256-Bit SSL', 'SOC 2 Type II Certified', 'Equinix LD4/NY4 Co-Located'].map((b) => (
+              {['AES-256 Encrypted', '256-Bit SSL', 'Enterprise Security Controls', 'Equinix LD4/NY4 Co-Located'].map((b) => (
                 <span key={b} className="px-2.5 py-0.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded font-mono text-[10px] text-slate-700 dark:text-slate-400 shadow-2xs">
                   {b}
                 </span>

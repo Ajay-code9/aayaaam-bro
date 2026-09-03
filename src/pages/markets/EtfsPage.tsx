@@ -21,14 +21,17 @@ export const EtfsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-semibold rounded-md border border-emerald-200 font-mono">
             <Layers className="w-3.5 h-3.5 text-emerald-600" />
-            GLOBAL ETF BROKERAGE
+            DIGITAL ASSETS &amp; INDEX ROUTING MODULE
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-4xl text-slate-900 font-sans">
-            Trade 13,000+ Global ETFs with Zero Commission
+            Digital Asset Indexing &amp; Global ETF Routing Infrastructure
           </h1>
           <p className="text-slate-700 text-lg sm:text-xl max-w-3xl leading-relaxed font-sans font-medium">
-            Diversify instantly across index, sector, thematic, commodity, and bond ETFs. Includes automated DRIP dividend reinvestment and fractional share investing.
+            Empower your brokerage to offer 13,000+ global ETFs, thematic baskets, and digital asset index modules through Broker Bros modular routing engines and broker-controlled execution bridges.
           </p>
+          <div className="p-4 bg-slate-100 rounded-lg border border-slate-200 text-xs text-slate-600 max-w-3xl">
+            <strong className="text-slate-800">Technology Provider Disclosure:</strong> Broker Bros provides trading software, indexation modules, and connectivity infrastructure for brokerage operators. Broker Bros is a B2B technology vendor, not a retail broker or investment adviser, and does not issue, underwrite, or market financial ETFs to end-retail clients.
+          </div>
         </div>
       </section>
 

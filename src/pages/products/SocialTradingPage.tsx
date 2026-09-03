@@ -9,10 +9,18 @@ interface PageProps {
 export const SocialTradingPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ProductMasterPageTemplate
-      productTitle="BrokerBros Social & Copy Trading"
-      heroBadge="SUB-100MS COPY TRADING ENGINE"
-      heroDescription="Institutional copy trading platform allowing traders to discover top signal providers, copy strategies in real-time, and automate performance fee payouts."
-      productMetric={{ label: "Copy Execution Speed", value: "< 80 ms", sub: "Microsecond Signal Replication across MT5/Web" }}
+      productTitle="White-Label Social & Copy Trading"
+      heroBadge="INSTITUTIONAL SIGNAL REPLICATION & COPY ENGINE"
+      heroDescription="Turnkey copy trading software for forex and multi-asset brokerages. Enable master traders to broadcast strategies, followers to mirror positions proportionally with sub-80ms execution, and automate High-Watermark performance fee collection."
+      productMetric={{ label: "Signal Mirror Latency", value: "< 80 ms", sub: "Microsecond Server-Level Strategy Execution" }}
+      heroImageDark="/Hero-Images/social-trading-black.png"
+      heroImageLight="/Hero-Images/social-trading-white.png"
+      workflowSteps={[
+        { num: '01', title: 'Onboard Master Traders', desc: 'Allow top strategy providers to register, build verified performance profiles, and publish track records.', icon: Users },
+        { num: '02', title: 'Configure Allocation Modes', desc: 'Followers select Equity Ratio, Fixed Lot, Multiplier, or Risk % modes with custom max drawdown caps.', icon: ShieldCheck },
+        { num: '03', title: 'Live Sub-80ms Mirroring', desc: 'Trades mirror instantly across MT4, MT5, and WebTrader server accounts with zero order rejection.', icon: Zap },
+        { num: '04', title: 'Automate High-Watermark Fees', desc: 'Performance fees calculate automatically based on net high-watermark profit and distribute to strategy providers.', icon: Award }
+      ]}
       visualizerTabs={[
         { id: "leaderboard", label: "Signal Provider Leaderboard", previewText: "Verified performance metrics, win rates, drawdown stats, and equity curve rankings." },
         { id: "copier", label: "Proportional Copy Engine", previewText: "Flexible volume allocation modes: Multiplier, Fixed Lot, Equity Ratio, or Risk Percentage." }

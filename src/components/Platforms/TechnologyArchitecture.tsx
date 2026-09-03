@@ -79,7 +79,7 @@ export const TechnologyArchitecture: React.FC = () => {
               <Activity className="w-4 h-4 text-emerald-400" />
               ORDER EXECUTION PIPELINE ARCHITECTURE
             </span>
-            <span>AVERAGE LATENCY: 3.8ms</span>
+            <span>AVERAGE LATENCY: &lt; 0.5ms (EQUINIX LD4/NY4 DIRECT FIBER)</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs font-mono relative">

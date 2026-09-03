@@ -365,13 +365,93 @@ HeartBtInt=30`
         </div>
       </section>
 
-      {/* 4. API CAPABILITIES GRID */}
+      {/* 4. SEARCHABLE ECOSYSTEM INTEGRATIONS DIRECTORY */}
+      <section className="py-16 sm:py-20 bg-slate-100 dark:bg-[#0C121E] border-b border-slate-200 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+          
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-500/20">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>TURNKEY ECOSYSTEM DIRECTORY</span>
+            </div>
+            <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+              Pre-Integrated Liquidity, PSP, KYC &amp; Bridge Network
+            </h2>
+            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+              Connect to 100+ pre-certified liquidity partners, payment gateways, identity verification systems, and bridge connectors out of the box.
+            </p>
+          </div>
+
+          {/* Search & Category Filter Bar */}
+          <div className="max-w-4xl mx-auto space-y-4">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search 100+ turnkey partners (e.g., LMAX, Sumsub, Stripe, MT5, cTrader, Equinix)..."
+                className="w-full px-5 py-4 pl-12 bg-white dark:bg-[#141C2B] border border-slate-200 dark:border-slate-700 rounded-2xl text-sm text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:border-emerald-500 shadow-sm"
+              />
+              <Globe className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
+            </div>
+
+            {/* Category Filter Pills */}
+            <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+              <button className="px-4 py-2 bg-emerald-600 text-white rounded-xl text-xs font-bold shadow-xs cursor-pointer">
+                All Partners (100+)
+              </button>
+              <button className="px-4 py-2 bg-white dark:bg-[#141C2B] hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold cursor-pointer">
+                Liquidity Providers (LPs)
+              </button>
+              <button className="px-4 py-2 bg-white dark:bg-[#141C2B] hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold cursor-pointer">
+                Payment PSPs (50+)
+              </button>
+              <button className="px-4 py-2 bg-white dark:bg-[#141C2B] hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold cursor-pointer">
+                KYC &amp; AML Compliance
+              </button>
+              <button className="px-4 py-2 bg-white dark:bg-[#141C2B] hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-800 rounded-xl text-xs font-bold cursor-pointer">
+                Bridge &amp; Platforms
+              </button>
+            </div>
+          </div>
+
+          {/* Directory Cards Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[
+              { name: "LMAX Exchange", cat: "Liquidity LP", status: "Sub-1ms FIX" },
+              { name: "Match-Prime", cat: "Liquidity LP", status: "Pre-Certified" },
+              { name: "Equinix NY4/LD4", cat: "Datacenter", status: "Co-Located" },
+              { name: "Sumsub KYC", cat: "KYC / AML", status: "Auto-Verify" },
+              { name: "Jumio Identity", cat: "KYC / AML", status: "Biometric AI" },
+              { name: "Stripe Connect", cat: "PSP Gateway", status: "Instant Credit" },
+              { name: "Nuvei Payments", cat: "PSP Gateway", status: "50+ Currencies" },
+              { name: "Skrill / Neteller", cat: "E-Wallet", status: "Global PSP" },
+              { name: "MetaTrader 5", cat: "Platform", status: "Native Server" },
+              { name: "cTrader Engine", cat: "Platform", status: "Open API v2" },
+              { name: "OneZero Bridge", cat: "Bridge Engine", status: "Sub-0.5ms" },
+              { name: "PrimeXM XCore", cat: "Bridge Engine", status: "Ultra-Fast" }
+            ].map((partner, idx) => (
+              <div key={idx} className="bg-white dark:bg-[#141C2B] p-4 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xs space-y-2 hover:border-emerald-500/50 transition-all text-center">
+                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-mono font-bold text-xs flex items-center justify-center mx-auto">
+                  {partner.name.substring(0, 2).toUpperCase()}
+                </div>
+                <h4 className="text-xs font-bold text-slate-900 dark:text-white truncate">{partner.name}</h4>
+                <div className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">{partner.cat}</div>
+                <span className="inline-block text-[9px] bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 px-2 py-0.5 rounded font-mono font-bold">
+                  {partner.status}
+                </span>
+              </div>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* 5. API CAPABILITIES GRID */}
       <section className="py-16 sm:py-20 border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Powerful API Features Built for Speed & Reliability
+              Powerful API Features Built for Speed &amp; Reliability
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
               Everything developers and brokerage engineers need for seamless system integration.

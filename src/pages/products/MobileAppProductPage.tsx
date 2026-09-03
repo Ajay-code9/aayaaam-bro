@@ -110,34 +110,34 @@ export const MobileAppProductPage: React.FC<MobileAppProductPageProps> = ({ onOp
             
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-emerald-50 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 shadow-xs">
               <Smartphone className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>Mobile Trading Platform Module</span>
+              <span>WHITE-LABEL NATIVE MOBILE TRADING APPS</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] text-slate-900 dark:text-white">
-              White-Label Mobile{' '}
+              Turnkey iOS &amp; Android{' '}
               <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-500 dark:from-emerald-400 dark:via-teal-400 dark:to-emerald-400 bg-clip-text text-transparent">
-                Trading Apps for iOS & Android
+                Native Trading Apps
               </span>
             </h1>
 
             <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium">
-              Deliver a world-class mobile trading experience under your brokerage brand. Native iOS & Android apps with TradingView charts, biometric login, push alerts, and 1-tap order execution.
+              Deliver a world-class mobile trading experience published under your brokerage brand. Native iOS &amp; Android apps with TradingView charts, biometric Face ID, push notifications, in-app deposit funding, and sub-12ms order execution.
             </p>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-3">
               <button
                 onClick={onOpenAccount}
-                className="w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm rounded-xl shadow-xl shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer group"
+                className="w-full sm:w-auto px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm rounded-xl shadow-md shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer group"
               >
-                <span>Request App Store Demo Build</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <span>Book a Mobile App Demo</span>
+                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </button>
               <button
                 onClick={onOpenAccount}
-                className="w-full sm:w-auto px-7 py-4 font-bold text-sm rounded-xl border transition-all flex items-center justify-center gap-2 cursor-pointer bg-slate-50 dark:bg-[#121520] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-800 shadow-xs"
+                className="w-full sm:w-auto px-4 py-2.5 font-bold text-xs sm:text-sm rounded-xl border transition-all flex items-center justify-center gap-2 cursor-pointer bg-slate-50 dark:bg-[#121520] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-800 shadow-xs"
               >
-                <Download className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                <span>Mobile SDK Documentation</span>
+                <Download className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
+                <span>SDK Documentation</span>
               </button>
             </div>
 
@@ -148,8 +148,31 @@ export const MobileAppProductPage: React.FC<MobileAppProductPageProps> = ({ onOp
             </div>
           </div>
 
+          {/* Below-Text Hero Image / App Screenshot Slot (On Scroll) */}
+          <div className="mt-12 max-w-4xl mx-auto relative group">
+            <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-400 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500" />
+            <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-900 shadow-2xl p-6 sm:p-8 flex flex-col items-center justify-center min-h-[320px] text-center space-y-4">
+              <div className="w-16 h-16 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+                <Smartphone className="w-8 h-8" />
+              </div>
+              <div className="space-y-1.5 max-w-md">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+                  Mobile Trading App Image Slot
+                </span>
+                <h4 className="text-lg font-extrabold text-white">iOS & Android App Screenshot / Mockup Preview</h4>
+                <p className="text-xs text-slate-400">
+                  Insert your mobile trading app UI mockup, App Store preview graphic, or screenshot image here.
+                </p>
+              </div>
+              <div className="pt-2 flex items-center gap-2 text-[11px] font-mono text-slate-500">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                <span>Scroll Down Image Section Active</span>
+              </div>
+            </div>
+          </div>
+
           {/* Interactive Mobile Terminal Preview Card */}
-          <div className="mt-14 max-w-4xl mx-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#121520] shadow-2xl p-6 sm:p-8 space-y-6">
+          <div className="mt-8 max-w-4xl mx-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#121520] shadow-2xl p-6 sm:p-8 space-y-6">
             
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
               <div className="flex items-center gap-3">

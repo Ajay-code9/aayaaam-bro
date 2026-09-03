@@ -51,13 +51,13 @@ export const AboutPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold rounded-md border border-emerald-200 dark:border-emerald-500/20">
             <Building2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>ABOUT BROKERBROS INSTITUTIONAL</span>
+            <span>ABOUT BROKER BROS B2B TECHNOLOGY PROVIDER</span>
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl text-slate-900 dark:text-white font-sans">
-            Built on Capital Strength, Transparent Pricing & Direct Execution
+            Enterprise Brokerage Software Engineering &amp; Infrastructure
           </h1>
           <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-3xl font-sans leading-relaxed">
-            BrokerBros is a global financial institution servicing over 3.8 million individual and institutional accounts worldwide. We engineer high-precision trading technology without payment for order flow conflicts.
+            Broker Bros is a specialized B2B technology provider engineering white-label Forex CRMs, HTML5 WebTraders, native mobile trading apps, FIX 4.4 liquidity bridges, MT5 server plugins, and automated risk management systems for brokers, prop firms, and financial institutions worldwide.
           </p>
 
           <div className="pt-8 border-t border-slate-200 dark:border-[#1E293B] grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl font-mono">

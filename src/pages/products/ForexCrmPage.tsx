@@ -9,10 +9,12 @@ interface PageProps {
 export const ForexCrmPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ProductMasterPageTemplate
-      productTitle="BrokerBros Forex CRM"
-      heroBadge="ALL-IN-ONE BROKERAGE CRM & CLIENT PORTAL"
-      heroDescription="All-in-one software to manage your brokerage clients, verify KYC documents instantly, track IB referrals, and process trader deposits automatically from one dashboard."
-      productMetric={{ label: "KYC Verification Time", value: "Instant", sub: "Automated Document & ID Verification" }}
+      productTitle="White-Label Forex CRM & Back Office"
+      heroBadge="ENTERPRISE BROKER CRM & CLIENT PORTAL"
+      heroDescription="Empower your brokerage with an end-to-end client portal, automated Sumsub/Jumio KYC verification, 50+ fiat/crypto PSP gateways, and real-time MT4/MT5 trading account synchronization."
+      heroImageDark="/Hero-Images/forex-crm-black.png"
+      heroImageLight="/Hero-Images/forex-crm-white.png"
+      productMetric={{ label: "KYC & Wallet Sync", value: "Real-Time", sub: "Automated Document Verification & PSP Sync" }}
       workflowSteps={[
         { num: '01', title: 'Setup Admin Portal', desc: 'Provision your branded broker CRM with your logo, brand colors, and custom staff access roles.', icon: Settings },
         { num: '02', title: 'Configure PSPs & KYC', desc: 'Connect payment gateways (credit card, wire, crypto) and instant AI passport verification APIs.', icon: CreditCard },

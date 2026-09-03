@@ -9,10 +9,17 @@ interface PageProps {
 export const PluginsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ProductMasterPageTemplate
-      productTitle="BrokerBros MT5 & Bridge Plugins"
-      heroBadge="HIGH-PERFORMANCE SERVER ADD-ONS"
-      heroDescription="Enterprise MetaTrader 5 server plugins, custom bridge extensions, margin risk managers, and automated Execution Manager add-ons built in native C++."
-      productMetric={{ label: "Plugin Latency", value: "< 0.5 ms", sub: "Native C++ MT5 Server API Plugins" }}
+      productTitle="Enterprise MT5 Server Plugins"
+      heroBadge="NATIVE C++ MT5 SERVER API EXTENSIONS"
+      heroDescription="High-performance MetaTrader 5 server plugins, virtual dealer engines, dynamic spread markups, leverage controllers, and automated swap managers built in native C++ for sub-0.5ms server execution."
+      heroImage="/module-showcase.webp"
+      productMetric={{ label: "Server Execution Overhead", value: "< 0.5 ms", sub: "Native C++ MT5 Server API Add-Ons" }}
+      workflowSteps={[
+        { num: '01', title: 'Select Server Plugins', desc: 'Choose from Virtual Dealer, Dynamic Swap Manager, Margin Protection, and Multi-Asset FIX Bridge plugins.', icon: Cpu },
+        { num: '02', title: 'Configure Dealer Rules', desc: 'Define per-group spread markups, toxic scalping flags, max slippage limits, and swap rates.', icon: Code2 },
+        { num: '03', title: 'Dynamic Hot-Load Deployment', desc: 'Hot-load compiled C++ DLL modules into MT5 Trade Server Manager without requiring server restarts.', icon: Server },
+        { num: '04', title: 'Live Microsecond Processing', desc: 'Execute order rules, margin checks, and hedging signals in sub-0.5ms latency without dealer delay.', icon: Zap }
+      ]}
       visualizerTabs={[
         { id: "risk", label: "Margin & Liquidation Plugin", previewText: "Monitors client margins in microsecond intervals and executes partial liquidations before negative balance occurs." },
         { id: "bridge", label: "FIX Liquidity Bridge Gateway", previewText: "Direct FIX 4.4 bridge connecting MT5 trade server directly to institutional LPs." }

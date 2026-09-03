@@ -217,7 +217,7 @@ export const PricingTiersSection: React.FC<{ onOpenAccount: () => void }> = ({ o
                     </div>
                     {!isCustom && isAnnual && (
                       <div className="text-[11px] text-emerald-600 dark:text-emerald-400 font-semibold mt-1">
-                        Billed annually (Save ${( (tier.priceMonthly as number - tier.priceAnnual) * 12 ).toLocaleString()}/yr)
+                        Billed annually (Save ${( (Number(tier.priceMonthly) - Number(tier.priceAnnual)) * 12 ).toLocaleString()}/yr)
                       </div>
                     )}
                   </div>

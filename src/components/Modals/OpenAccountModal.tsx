@@ -33,10 +33,10 @@ export const OpenAccountModal: React.FC<OpenAccountModalProps> = ({ isOpen, onCl
             </div>
             <div>
               <h3 className="text-lg font-serif-heading font-semibold text-white">
-                BrokerBros Digital Onboarding Portal
+                Broker Bros B2B Technical Demo &amp; Consultation
               </h3>
               <p className="text-[11px] text-slate-400 font-mono">
-                SEC / FINRA Regulated Global Account Setup
+                Enterprise White-Label Technology Infrastructure Setup
               </p>
             </div>
           </div>

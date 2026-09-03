@@ -22,19 +22,19 @@ const HERO_SLIDES: SlideItem[] = [
   {
     id: 1,
     bgImage: '/Homepage/hero-one.webp',
-    badge: 'MULTI-ASSET TRADING VENUE',
-    headline: 'Lowest Costs. Global Access.\nUncompromising Execution.',
-    subtext: 'Invest globally in stocks, options, futures, currencies, bonds, and funds from a single unified account. Benefit from $0.00 commissions and zero-PFOF SmartRouting.',
-    buttonText: 'EXPLORE GLOBAL VENUES',
-    actionType: 'platforms',
+    badge: 'BROKERAGE TECHNOLOGY INFRASTRUCTURE',
+    headline: 'Brokerage Technology Infrastructure Built for Forex & Multi-Asset Brokers',
+    subtext: 'Launch or modernize your brokerage with connected CRM, IB management, trading apps, social trading, PAMM/MAM, MT5 integrations, FIX connectivity, bridge and risk-management infrastructure—delivered as modular or white-label technology.',
+    buttonText: 'BOOK A TECHNICAL DEMO',
+    actionType: 'crm',
     textColor: 'black',
   },
   {
     id: 2,
     bgImage: '/Homepage/hero-two.webp',
     badge: 'TURNKEY BROKERAGE INFRASTRUCTURE',
-    headline: 'White-Label Broker CRM &\nAdmin Backoffice Suite.',
-    subtext: 'Comprehensive broker operating system featuring multi-level IB management, client onboarding, risk monitoring, and prop firm evaluation engines.',
+    headline: 'White-Label Broker CRM &\nAdmin Backoffice Suite',
+    subtext: 'Comprehensive broker operating system featuring multi-level IB management, client onboarding, risk monitoring, automated KYC workflows, and prop firm evaluation engines.',
     buttonText: 'EXPLORE BROKER CRM',
     actionType: 'crm',
     textColor: 'white',
@@ -42,10 +42,10 @@ const HERO_SLIDES: SlideItem[] = [
   {
     id: 3,
     bgImage: '/Homepage/hero-three.webp',
-    badge: 'INSTITUTIONAL CONNECTIVITY',
-    headline: 'Tier-1 Liquidity Bridge &\nLow-Latency FIX APIs.',
-    subtext: 'Direct FIX 4.4/5.0 liquidity bridges, MT5 server hooks, real-time WebSocket tick feeds, and automated multi-chain crypto gateways.',
-    buttonText: 'CONNECT TO LIQUIDITY',
+    badge: 'EXECUTION & RISK INFRASTRUCTURE',
+    headline: 'Tier-1 Liquidity Bridge &\nLow-Latency FIX Connectivity',
+    subtext: 'Direct FIX 4.4/5.0 liquidity bridges, MT5 server plugins, A/B/Hybrid risk management engine, real-time exposure monitoring, and automated liquidity aggregation.',
+    buttonText: 'EXPLORE EXECUTION BRIDGE',
     actionType: 'institutional',
     textColor: 'black',
   },
@@ -123,13 +123,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAccount, onExplo
                 {slide.subtext}
               </p>
 
-              {/* Action Button */}
-              <div className="pt-3">
+              {/* Action Buttons */}
+              <div className="pt-3 flex flex-wrap gap-3 items-center">
                 <button
                   onClick={() => handleAction(slide.actionType)}
                   className="px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-none transition-colors cursor-pointer text-xs sm:text-sm tracking-wider uppercase font-sans shadow-sm"
                 >
                   {slide.buttonText}
+                </button>
+                <button
+                  onClick={onExplorePlatforms}
+                  className={`px-6 py-3.5 border text-xs sm:text-sm tracking-wider uppercase font-bold transition-colors cursor-pointer rounded-none ${
+                    isWhiteText
+                      ? 'border-white/80 text-white hover:bg-white hover:text-slate-900'
+                      : 'border-slate-900 text-slate-950 hover:bg-slate-950 hover:text-white'
+                  }`}
+                >
+                  EXPLORE PRODUCTS
                 </button>
               </div>
             </motion.div>

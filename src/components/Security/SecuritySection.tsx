@@ -38,7 +38,7 @@ export const SecuritySection: React.FC<SecuritySectionProps> = ({ onOpenAccount 
             <div className="flex flex-wrap items-center gap-2 pt-1">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7]/60 text-emerald-800 text-xs font-semibold border border-emerald-200/60">
                 <CheckCircle className="w-3.5 h-3.5 text-[#22C55E]" />
-                <span>ISO 27001 Certified</span>
+                <span>256-Bit SSL Encrypted</span>
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#DCFCE7]/60 text-emerald-800 text-xs font-semibold border border-emerald-200/60">
                 <CheckCircle className="w-3.5 h-3.5 text-[#22C55E]" />
@@ -152,7 +152,7 @@ export const SecuritySection: React.FC<SecuritySectionProps> = ({ onOpenAccount 
             <CheckCircle className="w-4 h-4 text-[#22C55E] group-hover:drop-shadow-[0_0_6px_rgba(34,197,94,0.4)] transition-all" /> VFSC / FSA Offshore Ready
           </span>
           <span className="flex items-center gap-2 px-3 py-1.5 rounded-full border border-transparent hover:border-emerald-300 hover:bg-[#FAFFFB] hover:-translate-y-0.5 transition-all duration-200 cursor-pointer group">
-            <CheckCircle className="w-4 h-4 text-[#22C55E] group-hover:drop-shadow-[0_0_6px_rgba(34,197,94,0.4)] transition-all" /> ISO 27001 Security
+            <CheckCircle className="w-4 h-4 text-[#22C55E] group-hover:drop-shadow-[0_0_6px_rgba(34,197,94,0.4)] transition-all" /> AES-256 Vault Security
           </span>
         </div>
 

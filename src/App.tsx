@@ -7,6 +7,7 @@ import { Footer } from './components/Footer/Footer';
 import { OpenAccountModal } from './components/Modals/OpenAccountModal';
 import { LoginModal } from './components/Modals/LoginModal';
 import { SearchModal } from './components/Modals/SearchModal';
+import { CookieConsentBanner } from './components/Common/CookieConsentBanner';
 import { TickerItem } from './types';
 
 // Pages
@@ -49,6 +50,8 @@ import { OtherFeesPage } from './pages/pricing/OtherFeesPage';
 import { AccountsPage } from './pages/AccountsPage';
 import { FundingWithdrawalsPage } from './pages/FundingWithdrawalsPage';
 import { SecurityPage } from './pages/SecurityPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { TermsConditionsPage } from './pages/TermsConditionsPage';
 import { RegulationPage } from './pages/RegulationPage';
 import { ClientProtectionPage } from './pages/ClientProtectionPage';
 import { InstitutionalServicesPage } from './pages/InstitutionalServicesPage';
@@ -73,16 +76,16 @@ import { CryptoGatewayPage } from './pages/solutions/CryptoGatewayPage';
 import { FixApiLiquidityPage } from './pages/solutions/FixApiLiquidityPage';
 
 // 13 Dedicated Product Pages
+import { BrokerBrosWebTraderPage } from './pages/products/BrokerBrosWebTraderPage';
 import { BrokerBrosTraderPage } from './pages/products/BrokerBrosTraderPage';
 import { WebTraderPage } from './pages/products/WebTraderPage';
 import { MobileAppProductPage } from './pages/products/MobileAppProductPage';
 import { ForexCrmPage } from './pages/products/ForexCrmPage';
-import { SimplexPage } from './pages/products/SimplexPage';
+import { BridgePage } from './pages/products/BridgePage';
 import { SocialTradingPage } from './pages/products/SocialTradingPage';
 import { FinancialChartsPage } from './pages/products/FinancialChartsPage';
 import { PammMamPage } from './pages/products/PammMamPage';
-import { QuoteEnginePage } from './pages/products/QuoteEnginePage';
-import { CryptoEtfsPage } from './pages/products/CryptoEtfsPage';
+import { RiskManagementPage } from './pages/products/RiskManagementPage';
 import { IbPortalPage } from './pages/products/IbPortalPage';
 import { FinancialWidgetsPage } from './pages/products/FinancialWidgetsPage';
 import { PluginsPage } from './pages/products/PluginsPage';
@@ -153,25 +156,23 @@ function AppContent() {
       case '/services/custom-system-development':
         return <CustomDevelopmentPage onOpenAccount={handleOpenAccount} />;
       case '/products/brokerbros-trader':
-        return <BrokerBrosTraderPage onOpenAccount={handleOpenAccount} />;
       case '/products/web-trader':
-        return <WebTraderPage onOpenAccount={handleOpenAccount} />;
+      case '/products/brokerbros-webtrader':
+        return <BrokerBrosWebTraderPage onOpenAccount={handleOpenAccount} />;
       case '/products/mobile-app':
         return <MobileAppProductPage onOpenAccount={handleOpenAccount} />;
       case '/products/forex-crm':
         return <ForexCrmPage onOpenAccount={handleOpenAccount} />;
-      case '/products/simplex':
-        return <SimplexPage onOpenAccount={handleOpenAccount} />;
+      case '/products/bridge':
+        return <BridgePage onOpenAccount={handleOpenAccount} />;
       case '/products/social-trading':
         return <SocialTradingPage onOpenAccount={handleOpenAccount} />;
       case '/products/financial-charts':
         return <FinancialChartsPage onOpenAccount={handleOpenAccount} />;
       case '/products/pamm-mam':
         return <PammMamPage onOpenAccount={handleOpenAccount} />;
-      case '/products/quote-engine':
-        return <QuoteEnginePage onOpenAccount={handleOpenAccount} />;
-      case '/products/crypto-etfs':
-        return <CryptoEtfsPage onOpenAccount={handleOpenAccount} />;
+      case '/products/risk-management':
+        return <RiskManagementPage onOpenAccount={handleOpenAccount} />;
       case '/products/ib-portal':
         return <IbPortalPage onOpenAccount={handleOpenAccount} />;
       case '/products/financial-widgets':
@@ -259,6 +260,8 @@ function AppContent() {
         return <FundingWithdrawalsPage onOpenAccount={handleOpenAccount} />;
       case '/security':
         return <SecurityPage onOpenAccount={handleOpenAccount} />;
+      case '/privacy-policy':
+        return <PrivacyPolicyPage onOpenAccount={handleOpenAccount} />;
       case '/security/regulation':
         return <RegulationPage onOpenAccount={handleOpenAccount} />;
       case '/security/client-protection':
@@ -300,9 +303,9 @@ function AppContent() {
       case '/blog':
         return <BlogPage onOpenAccount={handleOpenAccount} />;
       case '/legal':
-      case '/privacy-policy':
+      case '/terms-and-conditions':
       case '/terms-conditions':
-        return <LegalPage onOpenAccount={handleOpenAccount} />;
+        return <TermsConditionsPage onOpenAccount={handleOpenAccount} />;
       case '/login':
         return <LoginPage onOpenAccount={handleOpenAccount} />;
       case '/open-account':
@@ -364,6 +367,8 @@ function AppContent() {
           setIsOpenAccountModalOpen(true);
         }}
       />
+
+      <CookieConsentBanner />
     </div>
   );
 }

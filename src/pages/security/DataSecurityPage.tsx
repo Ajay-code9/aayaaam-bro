@@ -38,19 +38,23 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
           
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800/50">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>BROKERBROS DATA SECURITY SERVICES</span>
+            <span>FACTUAL SECURITY CONTROLS &amp; OPERATIONAL TRUST</span>
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-            Data Security & Protection <br />
+            Security &amp; Operational Trust <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-400">
-              Guaranteed Brokerage Vault SLA
+              Enterprise Broker Infrastructure Protection
             </span>
           </h1>
 
           <p className="max-w-3xl mx-auto text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-            Data security and protection are paramount. BrokerBros fortifies your brokerage CRM, client phone numbers, and financial records with asymmetric RSA encryption, isolated dedicated vaults, and zero-trust IP allowlisting.
+            A factual view of how Broker Bros protects access, client data, and production infrastructure across its modular software stack and managed hosting environments with AES-256 encryption, zero-trust RBAC, and Equinix co-location.
           </p>
+
+          <div className="max-w-3xl mx-auto p-3.5 bg-slate-100 dark:bg-slate-900/80 rounded-xl border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 text-left">
+            <strong className="text-slate-800 dark:text-slate-200 font-bold">Factual Compliance Notice:</strong> All security features listed represent active technical controls implemented in production (256-bit AES encryption, RBAC, isolated DB vaults, DDoS mitigation, and co-located datacenters). Certified scopes and specific enterprise security audit reports apply as verified under signed master services agreements.
+          </div>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button

@@ -1,0 +1,22 @@
+# Broker Bros Robots.txt Configuration
+# Directives for search crawlers & AI discovery bots
+
+User-agent: *
+Allow: /
+Disallow: /login
+Disallow: /open-account
+Disallow: /signup
+Disallow: /register
+
+# Allow AI Search & Generative Crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap Location
+Sitemap: https://broker-bros.com/sitemap.xml

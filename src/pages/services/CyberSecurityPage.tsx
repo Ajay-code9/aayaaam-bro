@@ -40,7 +40,7 @@ export const CyberSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       faqs={[
         { q: "How does BrokerBros protect against Layer 7 HTTP flood attacks?", a: "Our proprietary Web Application Firewall (WAF) analyzes incoming request behavior in under 1 millisecond, identifying and scrubbing botnet floods before they reach your web servers." },
         { q: "Will DDoS scrubbing increase latency for our traders?", a: "No. Our global scrubbing centers are co-located in major internet exchange points worldwide, adding zero noticeable latency (<0.5ms) to legitimate trading traffic." },
-        { q: "Can you provide penetration test reports for regulatory submission?", a: "Yes. Our SOC generates comprehensive ISO 27001-compliant security audit reports accepted by global regulatory authorities." }
+        { q: "Can you provide penetration test reports for regulatory submission?", a: "Yes. Our SOC generates comprehensive enterprise security audit reports accepted by global regulatory authorities." }
       ]}
       onOpenAccount={onOpenAccount}
     />

@@ -58,7 +58,7 @@ export const NewsInsightsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       readTime: '4 min read',
       impact: 'High',
       author: 'Marcus Vance, Chief Macro Strategist',
-      imageSrc: '/research-hero-one.webp',
+      imageSrc: '/wallstreet_trader_analytics.webp',
       trending: true
     },
     {
@@ -70,7 +70,7 @@ export const NewsInsightsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       readTime: '3 min read',
       impact: 'High',
       author: 'Elena Rostova, FX Analyst',
-      imageSrc: '/stock-trading-bg.webp',
+      imageSrc: '/global_economy_network.webp',
       trending: true
     },
     {
@@ -82,7 +82,7 @@ export const NewsInsightsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       readTime: '5 min read',
       impact: 'Medium',
       author: 'David Chen, Senior Equity Strategist',
-      imageSrc: '/trader-workstation.webp'
+      imageSrc: '/desktop-terminal.webp'
     },
     {
       id: '4',
@@ -104,7 +104,7 @@ export const NewsInsightsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       readTime: '4 min read',
       impact: 'High',
       author: 'Tariq Al-Mansoor, Energy Analyst',
-      imageSrc: '/b2b-crm-dash.webp'
+      imageSrc: '/broker-crm-img-one.webp'
     },
     {
       id: '6',
@@ -115,7 +115,7 @@ export const NewsInsightsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       readTime: '4 min read',
       impact: 'Low',
       author: 'Kenji Sato, Asia-Pac Economist',
-      imageSrc: '/liquidity-engine.webp'
+      imageSrc: '/fix-bridge-showcase.webp'
     }
   ];
 

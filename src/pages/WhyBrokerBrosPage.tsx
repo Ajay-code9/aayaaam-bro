@@ -29,27 +29,27 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
   const [selectedLatencyLoc, setSelectedLatencyLoc] = useState<'ny4' | 'ld4' | 'ty3'>('ny4');
 
   const speedMetrics = [
-    { label: "Execution Latency", value: "< 8.4 ms", sub: "Equinix NY4 Direct Fiber", highlight: "Sub-10ms Standard" },
-    { label: "SLA Uptime", value: "99.999%", sub: "Multi-Region Redundant Node", highlight: "Zero Downtime" },
-    { label: "Human Support Response", value: "< 30 Sec", sub: "24/7 Direct Desk Access", highlight: "No Support Bots" },
-    { label: "Order Execution Rate", value: "12M+/Day", sub: "Zero-PFOF SmartRouting", highlight: "100% Transparent" },
-    { label: "Capital Equity Base", value: "$28.4 Billion", sub: "Tier-1 Capital Reserves", highlight: "S&P Rated" },
-    { label: "Segregated Accounts", value: "100% Isolated", sub: "Top-Tier Bank Accounts", highlight: "Audit-Ready" }
+    { label: "Execution Latency", value: "< 0.5 ms", sub: "Equinix LD4 / NY4 Direct Fiber", highlight: "Microsecond Standard" },
+    { label: "Infrastructure Uptime SLA", value: "99.999%", sub: "Multi-Region Redundant Nodes", highlight: "Zero Downtime" },
+    { label: "SaaS Pricing Model", value: "Flat Monthly", sub: "Zero Revenue-Share Cut", highlight: "100% Predictable" },
+    { label: "Human Support Response", value: "< 30 Sec", sub: "24/7 Direct Engineer Desk", highlight: "No Support Bots" },
+    { label: "Modular Tech Stack", value: "14 SaaS Modules", sub: "CRM, WebTrader, FIX & RMS", highlight: "Full White-Label" },
+    { label: "Global Co-Location", value: "Equinix LD4/NY4", sub: "Direct Fiber Cross-Connects", highlight: "Institutional Grade" }
   ];
 
   const speedPillars = [
     {
-      title: "Sub-10ms Direct Fiber Interconnects",
-      desc: "Co-located directly inside Equinix NY4, LD4, and TY3 financial datacenters. Our ultra-low latency fiber cross-connects route your orders to prime liquidity providers in single-digit milliseconds.",
+      title: "Sub-Millisecond Direct Fiber Interconnects",
+      desc: "Co-located directly inside Equinix NY4 (New York), LD4 (London), and TY3 (Tokyo) financial datacenters. Our ultra-low latency fiber cross-connects route your orders to liquidity providers in microsecond speeds.",
       icon: Zap,
-      metric: "8.4ms Avg Speed",
+      metric: "< 0.5ms Speed",
       color: "emerald"
     },
     {
-      title: "Human-Centric 24/7 Trading Desk",
-      desc: "We believe institutional trading requires genuine human intellect. Speak directly to senior market specialists in under 30 seconds — no frustrating AI support bots or phone mazes.",
+      title: "24/7 Dedicated Senior Engineering Desk",
+      desc: "We believe institutional broker operations require expert engineering. Speak directly to senior MT5, FIX bridge, and CRM developers in under 30 seconds — no frustrating AI support bots.",
       icon: Headphones,
-      metric: "24/7 Human Desk",
+      metric: "24/7 Engineer Desk",
       color: "blue"
     },
     {
@@ -60,24 +60,24 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
       color: "purple"
     },
     {
-      title: "Zero PFOF & Pure SmartRouting",
-      desc: "We never sell your order flow to third-party internalizers or market makers. Every trade is routed directly to liquidity venues to secure the absolute best price execution for your firm.",
+      title: "Zero Revenue Share & Transparent SaaS Pricing",
+      desc: "We never take a cut of your trading volume or broker profits. Enjoy predictable flat monthly pricing with full control over your spreads and liquidity markups.",
       icon: Cpu,
-      metric: "Zero PFOF",
+      metric: "Zero Rev-Share",
       color: "amber"
     },
     {
-      title: "Transparent & Accountable Culture",
-      desc: "Zero hidden markups, zero overnight surprise fees, and full microsecond execution timestamp logs provided for every filled order. Complete clarity from onboarding to execution.",
+      title: "Transparent & Accountable Operating Model",
+      desc: "Zero hidden markups, zero surprise maintenance fees, and full microsecond execution timestamp logs provided for every filled order. Complete clarity from onboarding to live launch.",
       icon: FileCheck2,
       metric: "100% Transparent",
       color: "teal"
     },
     {
-      title: "Institutional $28.4B Capital Base",
-      desc: "Your capital is safeguarded by a conservative $28.4B equity base, holding 28.5% CET1 ratio — nearly 3x the global regulatory requirement.",
+      title: "Institutional White-Label Infrastructure",
+      desc: "Your brokerage is powered by enterprise-grade technology—white-label CRM, native mobile trading apps, WebTrader, FIX bridge, and automated A/B book risk management.",
       icon: ShieldCheck,
-      metric: "$28.4B Capital",
+      metric: "Enterprise Stack",
       color: "cyan"
     }
   ];
