@@ -121,7 +121,7 @@ export const WebSocketsStreamingPage: React.FC<PageProps> = ({ onOpenAccount }) 
               
               <div className="relative">
                 <img 
-                  src="/broker-crm-img-one.webp" 
+                  src="/broker-crm-img-one.png" 
                   alt="Broker CRM Interface" 
                   className="w-full h-auto rounded-[18px] shadow-2xl border border-slate-200 dark:border-slate-800 relative z-10" 
                 />
@@ -137,7 +137,7 @@ export const WebSocketsStreamingPage: React.FC<PageProps> = ({ onOpenAccount }) 
         title="Ultra-Low Latency WebSockets Streaming Tour"
         subtitle="Watch live streaming of L2 order books, real-time bid/ask tickers, and instant account equity updates across global edge servers."
         videoSrc="/test2.mp4"
-        posterSrc="/webterminal.webp"
+        posterSrc="/webterminal.png"
       />
 
       {/* PRODUCT GALLERY SHOWCASE (2 SECTIONS BELOW HERO) */}

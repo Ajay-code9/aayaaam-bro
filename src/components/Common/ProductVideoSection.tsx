@@ -18,7 +18,7 @@ export const ProductVideoSection: React.FC<ProductVideoSectionProps> = ({
   title = 'Product Video Walkthrough',
   subtitle = 'Watch how our institutional platform powers real-time execution, admin management, and automated client workflows.',
   videoSrc = '/test.mp4',
-  posterSrc = '/broker-crm-img-one.webp',
+  posterSrc = '/broker-crm-img-one.png',
   chapters = [
     { time: '0:00', title: 'Platform Overview & Architecture' },
     { time: '1:15', title: 'Live Client & Admin Workspace' },

@@ -41,13 +41,13 @@ export const MobileAppPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     chart: {
       title: 'Full-Screen Touch Gesture Charting',
       subtitle: 'Pinch-to-zoom candlestick charts with technical indicators, drawing tools, and crosshair price inspection on mobile screens.',
-      image: '/webterminal.webp',
+      image: '/webterminal.png',
       badge: 'Touch Chart Active'
     },
     order: {
       title: '1-Tap Order Ticket & Bracket Stop-Loss',
       subtitle: 'Set preset lot sizes, stop-losses, and profit targets. Place market or limit orders instantly with biometric FaceID authorization.',
-      image: '/broker-crm-img-one.webp',
+      image: '/broker-crm-img-one.png',
       badge: 'Order Ticket Active'
     }
   };
@@ -278,7 +278,7 @@ export const MobileAppPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-950 shadow-xl group md:order-2 order-1">
               <img
-                src="/broker-crm-img-one.webp"
+                src="/broker-crm-img-one.png"
                 alt="Biometric Security Enclave"
                 className="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -308,14 +308,14 @@ export const MobileAppPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             id: 'mob-2',
             title: 'Web & Mobile Synchronized Portal',
             category: 'Overview',
-            imageSrc: '/broker-crm-img-one.webp',
+            imageSrc: '/broker-crm-img-one.png',
             description: 'Cloud synchronized account dashboard tracking deposits, margin requirements, and active watchlists.'
           },
           {
             id: 'mob-3',
             title: 'Mobile Trading Workstation',
             category: 'Client Portal',
-            imageSrc: '/webterminal.webp',
+            imageSrc: '/webterminal.png',
             description: 'Full responsive trading terminal accessible across smartphone browsers and native app wrappers.'
           }
         ]}

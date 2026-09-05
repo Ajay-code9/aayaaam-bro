@@ -12,7 +12,7 @@ export const PluginsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       productTitle="Enterprise MT5 Server Plugins"
       heroBadge="NATIVE C++ MT5 SERVER API EXTENSIONS"
       heroDescription="High-performance MetaTrader 5 server plugins, virtual dealer engines, dynamic spread markups, leverage controllers, and automated swap managers built in native C++ for sub-0.5ms server execution."
-      heroImage="/module-showcase.webp"
+      heroImage="/module-showcase.png"
       productMetric={{ label: "Server Execution Overhead", value: "< 0.5 ms", sub: "Native C++ MT5 Server API Add-Ons" }}
       workflowSteps={[
         { num: '01', title: 'Select Server Plugins', desc: 'Choose from Virtual Dealer, Dynamic Swap Manager, Margin Protection, and Multi-Asset FIX Bridge plugins.', icon: Cpu },

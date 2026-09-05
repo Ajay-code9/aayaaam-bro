@@ -93,7 +93,7 @@ export const NewsInsightsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       readTime: '3 min read',
       impact: 'Medium',
       author: 'Sarah Jenkins, Crypto Lead',
-      imageSrc: '/copy-pamm-showcase.webp'
+      imageSrc: '/copy-pamm-showcase.png'
     },
     {
       id: '5',
@@ -104,7 +104,7 @@ export const NewsInsightsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       readTime: '4 min read',
       impact: 'High',
       author: 'Tariq Al-Mansoor, Energy Analyst',
-      imageSrc: '/broker-crm-img-one.webp'
+      imageSrc: '/broker-crm-img-one.png'
     },
     {
       id: '6',
@@ -115,7 +115,7 @@ export const NewsInsightsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       readTime: '4 min read',
       impact: 'Low',
       author: 'Kenji Sato, Asia-Pac Economist',
-      imageSrc: '/fix-bridge-showcase.webp'
+      imageSrc: '/fix-bridge-showcase.png'
     }
   ];
 

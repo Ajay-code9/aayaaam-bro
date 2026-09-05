@@ -37,13 +37,13 @@ export const WebPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     day: {
       title: 'Day Trader Multi-Chart Layout',
       subtitle: 'Configured for high-frequency scalpers needing 4 simultaneous TradingView chart windows, Level 2 depth DOM, and 1-click execution hotkeys.',
-      image: '/webterminal.webp',
+      image: '/webterminal.png',
       badge: '4-Chart Grid Active'
     },
     options: {
       title: 'Options Volatility & Greeks Matrix View',
       subtitle: 'Optimized for options traders tracking implied volatility skew curves, multi-leg order entry tickets, and real-time Delta/Gamma exposure.',
-      image: '/pricing-showcase.webp',
+      image: '/pricing-showcase.png',
       badge: 'Option Chain Active'
     },
     swing: {
@@ -125,7 +125,7 @@ export const WebPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
           title="See How Easy It Is to Trade in Your Browser"
           subtitle="Watch how you can customize your watchlists, open TradingView charts, set stop-losses, and track your account balance in real-time."
           videoSrc="/test2.mp4"
-          posterSrc="/webterminal.webp"
+          posterSrc="/webterminal.png"
           chapters={[
             { time: '0:00', title: 'Web Terminal Overview' },
             { time: '1:10', title: 'Chart Indicators & Drawing Tools' },
@@ -212,7 +212,7 @@ export const WebPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-950 shadow-xl group">
               <img
-                src="/webterminal.webp"
+                src="/webterminal.png"
                 alt="Built-in TradingView Engine"
                 className="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -278,7 +278,7 @@ export const WebPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-950 shadow-xl group md:order-2 order-1">
               <img
-                src="/pricing-showcase.webp"
+                src="/pricing-showcase.png"
                 alt="Order Ticket & Risk Controls"
                 className="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -301,7 +301,7 @@ export const WebPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             id: 'web-1',
             title: 'Web Trading Workspace Overview',
             category: 'Overview',
-            imageSrc: '/webterminal.webp',
+            imageSrc: '/webterminal.png',
             description: 'Clean multi-asset trading dashboard featuring live TradingView charts, watchlists, and order book widgets.'
           },
           {
@@ -322,7 +322,7 @@ export const WebPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             id: 'web-4',
             title: 'White-Label Client Account Portal',
             category: 'Overview',
-            imageSrc: '/broker-crm-img-one.webp',
+            imageSrc: '/broker-crm-img-one.png',
             description: 'Client funding, deposit history, account leverage settings, and security controls.'
           }
         ]}

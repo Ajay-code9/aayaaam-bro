@@ -104,6 +104,11 @@ import { CyberSecurityPage } from './pages/services/CyberSecurityPage';
 import { WebsiteDevPage } from './pages/services/WebsiteDevPage';
 import { UserTrainingPage } from './pages/services/UserTrainingPage';
 import { CustomDevelopmentPage } from './pages/services/CustomDevelopmentPage';
+import { DigitalMarketingPage } from './pages/services/DigitalMarketingPage';
+import { SeoMarketingPage } from './pages/services/SeoMarketingPage';
+import { PaidOrganicMarketingPage } from './pages/services/PaidOrganicMarketingPage';
+import { SocialMediaMarketingPage } from './pages/services/SocialMediaMarketingPage';
+import { BrokerReviewPage } from './pages/services/BrokerReviewPage';
 
 function AppContent() {
   const { currentPath, navigate } = useRouter();
@@ -155,6 +160,17 @@ function AppContent() {
         return <UserTrainingPage onOpenAccount={handleOpenAccount} />;
       case '/services/custom-system-development':
         return <CustomDevelopmentPage onOpenAccount={handleOpenAccount} />;
+      case '/services/marketing':
+      case '/services/marketing/complete-digital-marketing':
+        return <DigitalMarketingPage onOpenAccount={handleOpenAccount} />;
+      case '/services/marketing/seo':
+        return <SeoMarketingPage onOpenAccount={handleOpenAccount} />;
+      case '/services/marketing/paid-organic':
+        return <PaidOrganicMarketingPage onOpenAccount={handleOpenAccount} />;
+      case '/services/marketing/social-media':
+        return <SocialMediaMarketingPage onOpenAccount={handleOpenAccount} />;
+      case '/services/marketing/broker-review':
+        return <BrokerReviewPage onOpenAccount={handleOpenAccount} />;
       case '/products/brokerbros-trader':
       case '/products/web-trader':
       case '/products/brokerbros-webtrader':

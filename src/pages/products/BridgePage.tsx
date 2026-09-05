@@ -12,7 +12,7 @@ export const BridgePage: React.FC<PageProps> = ({ onOpenAccount }) => {
       productTitle="BrokerBros Bridge"
       heroBadge="TURNKEY BROKERAGE LIQUIDITY BRIDGE"
       heroDescription="Connect your MetaTrader, cTrader, or custom web platform directly to top Liquidity Providers (LPs) for ultra-fast, sub-millisecond order execution."
-      heroImage="/fix-bridge-showcase.webp"
+      heroImage="/fix-bridge-showcase.png"
       productMetric={{ label: "Routing Latency", value: "< 1ms", sub: "Ultra-Fast Direct LP Execution" }}
       visualizerTabs={[
         { id: "routing", label: "Smart Order Router (SOR)", previewText: "Combines liquidity from multiple providers to get your traders the best possible spread and execution price." },

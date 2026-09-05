@@ -143,7 +143,7 @@ export const IbPartnerModulePage: React.FC<PageProps> = ({ onOpenAccount }) => {
               
               <div className="relative">
                 <img 
-                  src="/broker-crm-img-one.webp" 
+                  src="/broker-crm-img-one.png" 
                   alt="IB Partner Portal Interface" 
                   className="w-full h-auto rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 relative z-10" 
                 />
@@ -159,7 +159,7 @@ export const IbPartnerModulePage: React.FC<PageProps> = ({ onOpenAccount }) => {
         title="Multi-Tier IB & Partner Module Tour"
         subtitle="Discover how multi-level affiliate tracking, real-time rebate calculations, and automated payouts empower your partner network."
         videoSrc="/test2.mp4"
-        posterSrc="/copy-pamm-showcase.webp"
+        posterSrc="/copy-pamm-showcase.png"
       />
 
       {/* PRODUCT GALLERY SHOWCASE (2 SECTIONS BELOW HERO) */}

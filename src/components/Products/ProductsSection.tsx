@@ -49,7 +49,7 @@ const B2B_MODULE_TABS: B2BModuleTab[] = [
     description: 'Comprehensive broker operating system featuring multi-level IB rebate hierarchies, automated KYC document processing, multi-currency client wallets, and granular admin compliance queues.',
     deploymentTime: '1 - 3 Days',
     slaMetric: 'Unlimited IBs',
-    image: '/module-showcase.webp',
+    image: '/module-showcase.png',
     highlights: [
       'Multi-currency client portal with instant deposit/withdrawal workflows',
       'Unlimited multi-tier IB rebate tree with real-time lot calculations',
@@ -136,7 +136,7 @@ const B2B_MODULE_TABS: B2BModuleTab[] = [
     description: 'Scale social trading and asset management programs. Connect signal providers to unlimited followers with sub-millisecond copier execution, equity/balance proportional modes, and high-watermark fee splits.',
     deploymentTime: 'Instant Hook',
     slaMetric: '< 1ms Copy Latency',
-    image: '/copy-pamm-showcase.webp',
+    image: '/copy-pamm-showcase.png',
     highlights: [
       'Sub-millisecond trade replication with zero slippage or execution lag',
       'Flexible allocation modes: Equity Ratio, Balance Ratio, Lot Multiplier',
@@ -165,7 +165,7 @@ const B2B_MODULE_TABS: B2BModuleTab[] = [
     description: 'Connect directly to Tier-1 prime brokers, bank ECNs, and crypto LPs via standardized FIX 4.4/5.0 protocols. Includes server-side MT5 C++ API hooks and automated multi-chain crypto deposit gateways.',
     deploymentTime: 'Direct LP Hook',
     slaMetric: '150+ Connected LPs',
-    image: '/fix-bridge-showcase.webp',
+    image: '/fix-bridge-showcase.png',
     highlights: [
       'FIX 4.4 / 5.0 standardized protocol bridge connecting 150+ Tier-1 LPs',
       'MetaTrader 5 server-side API hooks for custom EA execution & account sync',

@@ -90,55 +90,96 @@ export const ServiceMasterPageTemplate: React.FC<ServiceMasterPageProps> = ({
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-[#090D14] text-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans">
 
-      {/* 1. HERO SECTION (100% ABOVE-THE-FOLD AT LANDING TIME WITH ENLARGED TEXT & BALANCED PADDING) */}
-      <section className="relative min-h-[calc(100vh-90px)] flex flex-col justify-center py-6 sm:py-10 overflow-hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0E1420]">
-        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:28px_28px] opacity-60 pointer-events-none" />
-        <div className="absolute top-1/4 right-10 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none" />
+      {/* 1. HERO SECTION (100% ABOVE-THE-FOLD LANDING WITH ZERO CLIPPING) */}
+      <section className="relative py-8 sm:py-12 lg:py-14 overflow-hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0E1420] text-slate-900 dark:text-white">
+        {/* Subtle Background Radial Grid & Glows */}
+        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:32px_32px] opacity-60 pointer-events-none" />
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-[140px] pointer-events-none" />
+        <div className="absolute bottom-0 left-10 w-80 h-80 bg-blue-500/10 dark:bg-blue-500/10 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4 sm:space-y-5 my-auto w-full">
-          
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800/50">
-            <Headphones className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>{heroBadge}</span>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+            
+            {/* Left Content Column */}
+            <div className="lg:col-span-7 space-y-4 text-left">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-extrabold border border-emerald-200 dark:border-emerald-800/60">
+                <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                <span>{heroBadge}</span>
+              </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">
-            {serviceTitle} <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-400">
-              Guaranteed Broker Service SLA
-            </span>
-          </h1>
+              <h1 className="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.15]">
+                {serviceTitle}
+              </h1>
 
-          <p className="max-w-3xl mx-auto text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-            {heroDescription}
-          </p>
+              <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-300 font-medium leading-relaxed max-w-2xl">
+                {heroDescription}
+              </p>
 
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={onOpenAccount}
-              className="w-full sm:w-auto px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-sm rounded-xl shadow-md shadow-emerald-600/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
-            >
-              <span>Book Service Consultation</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          </div>
-
-          {/* Integrated SLA Metric Card */}
-          <div className="pt-3 max-w-xl mx-auto w-full">
-            <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#131926] border border-slate-200 dark:border-slate-800 shadow-xs flex items-center justify-between">
-              <div className="text-left space-y-0.5">
-                <div className="text-xs font-mono font-extrabold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                  <span>{slaMetric.label}</span>
+              {/* Action Buttons */}
+              <div className="pt-1 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <button
+                  onClick={onOpenAccount}
+                  className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-xs sm:text-sm rounded-xl shadow-md shadow-emerald-600/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
+                >
+                  <span>Book Strategy Consultation</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+                <div className="flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-100 dark:bg-slate-800/80 rounded-xl border border-slate-200 dark:border-slate-700/80 text-xs font-mono font-semibold text-slate-700 dark:text-slate-300">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+                  <span>Broker Compliance Verified</span>
                 </div>
-                <div className="text-xs font-medium text-slate-600 dark:text-slate-400">
+              </div>
+
+              {/* Quick Specs Pills */}
+              <div className="pt-4 grid grid-cols-2 sm:grid-cols-4 gap-3 border-t border-slate-200 dark:border-slate-800">
+                {specs.map((item, idx) => (
+                  <div key={idx} className="space-y-0.5">
+                    <div className="text-[10px] font-mono text-slate-500 dark:text-slate-400 uppercase font-semibold">{item.label}</div>
+                    <div className="text-xs font-bold font-mono text-emerald-600 dark:text-emerald-400 truncate">{item.value}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Right Metric & Feature Grid */}
+            <div className="lg:col-span-5 space-y-3">
+              {/* Metric Card */}
+              <div className="p-5 rounded-2xl bg-slate-50 dark:bg-slate-800/90 border border-slate-200 dark:border-slate-700/80 shadow-md dark:shadow-xl space-y-2">
+                <div className="flex items-center justify-between text-[11px] font-mono font-bold text-slate-500 dark:text-slate-400 uppercase">
+                  <span>{slaMetric.label}</span>
+                  <span className="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-500/20 text-[10px] font-extrabold">
+                    GUARANTEED SLA
+                  </span>
+                </div>
+                <div className="text-2xl sm:text-3xl font-extrabold font-mono text-emerald-600 dark:text-emerald-400">
+                  {slaMetric.value}
+                </div>
+                <div className="text-xs text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
                   {slaMetric.sub}
                 </div>
               </div>
-              <div className="text-xl sm:text-2xl font-extrabold font-mono text-emerald-600 dark:text-emerald-400 px-3.5 py-1 rounded-lg bg-emerald-500/10 border border-emerald-500/20">
-                {slaMetric.value}
+
+              {/* Key Deliverables Cards */}
+              <div className="grid grid-cols-1 gap-2.5">
+                {deliverables.slice(0, 3).map((item, dIdx) => {
+                  const IconComp = item.icon;
+                  return (
+                    <div key={dIdx} className="p-3 sm:p-3.5 rounded-xl bg-white dark:bg-slate-800/60 border border-slate-200 dark:border-slate-700/60 shadow-xs flex items-center justify-between gap-3">
+                      <div className="flex items-center gap-2.5">
+                        <div className="p-2 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/20">
+                          <IconComp className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="text-xs font-bold text-slate-800 dark:text-slate-200">{item.title}</span>
+                      </div>
+                      <span className="text-[10px] font-mono font-bold text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-900/80 px-2 py-0.5 rounded border border-slate-200 dark:border-slate-700">
+                        {item.sla}
+                      </span>
+                    </div>
+                  );
+                })}
               </div>
             </div>
+
           </div>
         </div>
       </section>

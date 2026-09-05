@@ -26,28 +26,28 @@ export const ProductGallerySection: React.FC<ProductGallerySectionProps> = ({
       id: '1',
       title: 'Main Operations Dashboard',
       category: 'Overview',
-      imageSrc: '/broker-crm-img-one.webp',
+      imageSrc: '/broker-crm-img-one.png',
       description: 'Real-time overview of active clients, daily volume, pending KYC requests, and key financial performance indicators.'
     },
     {
       id: '2',
       title: 'White-Label Client Portal',
       category: 'Client Portal',
-      imageSrc: '/copy-pamm-showcase.webp',
+      imageSrc: '/copy-pamm-showcase.png',
       description: 'Mobile-responsive client portal allowing traders to deposit, manage accounts, submit documents, and view trading logs.'
     },
     {
       id: '3',
       title: 'Risk & Dealing Operations',
       category: 'Admin Desk',
-      imageSrc: '/fix-bridge-showcase.webp',
+      imageSrc: '/fix-bridge-showcase.png',
       description: 'Granular A/B book routing controls, live market exposure monitors, and automated margin warning triggers.'
     },
     {
       id: '4',
       title: 'Performance & Revenue Analytics',
       category: 'Analytics',
-      imageSrc: '/pricing-showcase.webp',
+      imageSrc: '/pricing-showcase.png',
       description: 'Comprehensive business intelligence reports tracking LTV, cohort retention, deposit channels, and referral rebates.'
     },
     {

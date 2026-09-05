@@ -120,7 +120,7 @@ export const PropFirmCrmPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               
               <div className="relative">
                 <img 
-                  src="/broker-crm-img-one.webp" 
+                  src="/broker-crm-img-one.png" 
                   alt="Broker CRM Interface" 
                   className="w-full h-auto rounded-[18px] shadow-2xl border border-slate-200 dark:border-slate-800 relative z-10" 
                 />
@@ -136,7 +136,7 @@ export const PropFirmCrmPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         title="Prop Firm Challenge Engine Walkthrough"
         subtitle="Watch automated evaluation checks, real-time drawdown monitoring, breach enforcement, and funded account scaling."
         videoSrc="/test3.mp4"
-        posterSrc="/module-showcase.webp"
+        posterSrc="/module-showcase.png"
       />
 
       {/* PRODUCT GALLERY SHOWCASE (2 SECTIONS BELOW HERO) */}

@@ -211,7 +211,7 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
           {/* Left Column Graphic */}
           <div className="lg:col-span-5">
             <img
-              src="/pricing-showcase.webp"
+              src="/pricing-showcase.png"
               alt="BrokerBros B2B Modular Analytics"
               className="w-full h-auto object-cover rounded-none border border-slate-200 dark:border-slate-800 shadow-sm"
             />

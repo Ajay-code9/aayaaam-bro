@@ -42,13 +42,13 @@ export const DesktopPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     dom: {
       title: 'Level 2 Depth of Market & Time and Sales',
       subtitle: 'Inspect real-time bid/ask queue volumes across major exchanges to identify institutional support levels and seller walls.',
-      image: '/fix-bridge-showcase.webp',
+      image: '/fix-bridge-showcase.png',
       badge: 'Level 2 DOM Active'
     },
     algo: {
       title: 'Python Strategy Backtester & FIX API Console',
       subtitle: 'Connect custom algorithmic trading bots in Python or C++ via direct FIX 4.4 protocol for sub-millisecond strategy execution.',
-      image: '/webterminal.webp',
+      image: '/webterminal.png',
       badge: 'Python SDK Active'
     }
   };
@@ -279,7 +279,7 @@ export const DesktopPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-950 shadow-xl group md:order-2 order-1">
               <img
-                src="/fix-bridge-showcase.webp"
+                src="/fix-bridge-showcase.png"
                 alt="Keyboard Hotkey Execution"
                 className="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -309,14 +309,14 @@ export const DesktopPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             id: 'desk-2',
             title: 'Web & Desktop Trading Terminal',
             category: 'Client Portal',
-            imageSrc: '/webterminal.webp',
+            imageSrc: '/webterminal.png',
             description: 'High-speed order entry workstation featuring live TradingView charts and watchlists.'
           },
           {
             id: 'desk-3',
             title: 'Risk Desk & Execution Routing Workstation',
             category: 'Admin Desk',
-            imageSrc: '/fix-bridge-showcase.webp',
+            imageSrc: '/fix-bridge-showcase.png',
             description: 'FIX API liquidity routing matrix and order matching engine monitoring dashboard.'
           }
         ]}
