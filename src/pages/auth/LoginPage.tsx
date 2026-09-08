@@ -77,7 +77,7 @@ export const LoginPage: React.FC<LoginPageProps> = ({ onOpenAccount }) => {
             <span>256-Bit SSL Encrypted • Member SIPC & FINRA</span>
           </div>
           <div className="flex items-center gap-4">
-            <button onClick={() => navigate('/legal')} className="hover:text-slate-700 transition-colors">Privacy</button>
+            <button onClick={() => navigate('/privacy-policy')} className="hover:text-slate-700 transition-colors">Privacy</button>
             <button onClick={() => navigate('/security')} className="hover:text-slate-700 transition-colors">Security</button>
             <button onClick={() => navigate('/help')} className="hover:text-slate-700 transition-colors">Support</button>
           </div>

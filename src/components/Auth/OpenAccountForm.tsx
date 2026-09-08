@@ -17,6 +17,8 @@ import {
   ChevronDown
 } from 'lucide-react';
 
+import { ALL_COUNTRIES } from '../../data/countriesData';
+
 interface OpenAccountFormProps {
   currentStep: number;
   onStepChange: (step: number) => void;
@@ -319,16 +321,11 @@ export const OpenAccountForm: React.FC<OpenAccountFormProps> = ({
                     onChange={(e) => setCountry(e.target.value)}
                     className="w-full pl-10 pr-10 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 text-sm font-sans focus:outline-none focus:border-emerald-600 focus:bg-white focus:ring-2 focus:ring-emerald-500/20 appearance-none cursor-pointer"
                   >
-                    <option value="United States">United States</option>
-                    <option value="United Kingdom">United Kingdom</option>
-                    <option value="Singapore">Singapore</option>
-                    <option value="Germany">Germany</option>
-                    <option value="Canada">Canada</option>
-                    <option value="Australia">Australia</option>
-                    <option value="Switzerland">Switzerland</option>
-                    <option value="Hong Kong">Hong Kong</option>
-                    <option value="Japan">Japan</option>
-                    <option value="United Arab Emirates">United Arab Emirates</option>
+                    {ALL_COUNTRIES.map((c) => (
+                      <option key={c} value={c}>
+                        {c}
+                      </option>
+                    ))}
                   </select>
                   <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                 </div>

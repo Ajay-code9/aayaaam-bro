@@ -36,7 +36,7 @@ export const DesktopPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     matrix: {
       title: '8-Screen Multi-Monitor Matrix Layout',
       subtitle: 'Pop out charts, watchlists, Level 2 depth DOMs, and order logs across up to 8 4K displays without slowing down your graphics card.',
-      image: '/desktop-terminal.webp',
+      image: '/multi-monitor-matrix-light.png',
       badge: '8-Screen Grid Active'
     },
     dom: {
@@ -125,17 +125,17 @@ export const DesktopPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         </div>
       </section>
 
-      {/* 2. DEMO VIDEO SHOWCASE */}
+      {/* 2. DEMO SHOWCASE (THEME-ADAPTIVE IMAGES) */}
       <ProductVideoSection
-        title="See How the Desktop Workstation Performs"
-        subtitle="Watch how easily you can pop out multi-chart windows, map hotkeys, view Level 2 depth of market, and execute orders across multiple 4K monitors."
-        videoSrc="/test3.mp4"
-        posterSrc="/desktop-terminal.webp"
-        chapters={[
-          { time: '0:00', title: 'Multi-Monitor Layout Setup' },
-          { time: '1:20', title: 'Level 2 DOM & Time and Sales' },
-          { time: '2:40', title: 'Keyboard Hotkey Customization' },
-          { time: '4:00', title: 'Strategy Backtesting & Python API' }
+        title="Desktop Workstation Interface Preview"
+        subtitle="Explore our institutional multi-chart workstation featuring pop-out trading windows, customizable hotkeys, Level 2 depth of market, and 4K multi-monitor order execution."
+        lightImageSrc="/desktop-workstation-light.png"
+        darkImageSrc="/desktop-workstation-dark.png"
+        featureTags={[
+          'Multi-Monitor Layout',
+          'Level 2 DOM & Time & Sales',
+          'Keyboard Hotkeys',
+          'Python API & Backtesting'
         ]}
       />
 
@@ -213,7 +213,7 @@ export const DesktopPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-950 shadow-xl group">
               <img
-                src="/desktop-terminal.webp"
+                src="/detachable-workspaces.png"
                 alt="Multi-Monitor Grid Setup"
                 className="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500"
               />
@@ -279,7 +279,7 @@ export const DesktopPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-950 shadow-xl group md:order-2 order-1">
               <img
-                src="/fix-bridge-showcase.png"
+                src="/keyboard-hotkeys.png"
                 alt="Keyboard Hotkey Execution"
                 className="w-full aspect-[16/10] object-cover group-hover:scale-105 transition-transform duration-500"
               />

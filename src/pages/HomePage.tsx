@@ -19,6 +19,7 @@ import { CTASection } from '../components/CTA/CTASection';
 interface HomePageProps {
   onOpenAccount: () => void;
   onExplorePlatforms: () => void;
+  onOpenInquiry?: () => void;
 }
 
 // Varied animation presets to avoid monotony across sections
@@ -41,7 +42,7 @@ const Section: React.FC<{
   </motion.div>
 );
 
-export const HomePage: React.FC<HomePageProps> = ({ onOpenAccount, onExplorePlatforms }) => {
+export const HomePage: React.FC<HomePageProps> = ({ onOpenAccount, onExplorePlatforms, onOpenInquiry }) => {
   return (
     <div className="selection:bg-emerald-500 selection:text-white font-sans overflow-x-hidden bg-white dark:bg-[#090D14] text-slate-900 dark:text-slate-100 transition-colors duration-300">
 
@@ -103,7 +104,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenAccount, onExplorePlat
 
       {/* ⑬ FREQUENTLY ASKED QUESTIONS */}
       <Section anim={fadeLeft}>
-        <FaqSection />
+        <FaqSection onOpenInquiry={onOpenInquiry} />
       </Section>
 
       {/* ⑭ FINAL CINEMATIC CTA */}

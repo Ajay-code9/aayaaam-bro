@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { HIDE_BOOK_DEMO } from '../../config/flags';
 
 interface HeroSectionProps {
   onOpenAccount: () => void;
@@ -125,12 +126,14 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAccount, onExplo
 
               {/* Action Buttons */}
               <div className="pt-3 flex flex-wrap gap-3 items-center">
-                <button
-                  onClick={() => handleAction(slide.actionType)}
-                  className="px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-none transition-colors cursor-pointer text-xs sm:text-sm tracking-wider uppercase font-sans shadow-sm"
-                >
-                  {slide.buttonText}
-                </button>
+                {!(HIDE_BOOK_DEMO && slide.buttonText.includes('DEMO')) && (
+                  <button
+                    onClick={() => handleAction(slide.actionType)}
+                    className="px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-none transition-colors cursor-pointer text-xs sm:text-sm tracking-wider uppercase font-sans shadow-sm"
+                  >
+                    {slide.buttonText}
+                  </button>
+                )}
                 <button
                   onClick={onExplorePlatforms}
                   className={`px-6 py-3.5 border text-xs sm:text-sm tracking-wider uppercase font-bold transition-colors cursor-pointer rounded-none ${

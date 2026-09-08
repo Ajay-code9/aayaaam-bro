@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { FAQ_ITEMS } from '../../data/mockData';
 import { HelpCircle, Search, ChevronDown, ChevronUp, MessageSquare, PhoneCall } from 'lucide-react';
 
-export const FaqSection: React.FC = () => {
+interface FaqSectionProps {
+  onOpenInquiry?: () => void;
+}
+
+export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenInquiry }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [openFaqId, setOpenFaqId] = useState<string>(FAQ_ITEMS[0].id);
@@ -127,7 +131,13 @@ export const FaqSection: React.FC = () => {
           </div>
           <div className="flex items-center gap-3 shrink-0">
             <button
-              onClick={() => window.location.href = '#contact'}
+              onClick={() => {
+                if (onOpenInquiry) {
+                  onOpenInquiry();
+                } else {
+                  window.location.href = '#contact';
+                }
+              }}
               className="px-4 py-2.5 bg-slate-900 dark:bg-emerald-600 hover:bg-slate-800 dark:hover:bg-emerald-500 text-white font-bold text-xs rounded-xl transition-all flex items-center gap-2 cursor-pointer"
             >
               <MessageSquare className="w-3.5 h-3.5 text-emerald-400 dark:text-white" />

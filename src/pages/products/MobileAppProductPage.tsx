@@ -148,7 +148,8 @@ export const MobileAppProductPage: React.FC<MobileAppProductPageProps> = ({ onOp
             </div>
           </div>
 
-          {/* Below-Text Hero Image / App Screenshot Slot (On Scroll) */}
+          {/* Below-Text Hero Image / App Screenshot Slot (Hidden until mobile screen images are added) */}
+          {/* 
           <div className="mt-12 max-w-4xl mx-auto relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-400 rounded-3xl blur-xl opacity-25 group-hover:opacity-40 transition duration-500" />
             <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-slate-900 shadow-2xl p-6 sm:p-8 flex flex-col items-center justify-center min-h-[320px] text-center space-y-4">
@@ -170,6 +171,7 @@ export const MobileAppProductPage: React.FC<MobileAppProductPageProps> = ({ onOp
               </div>
             </div>
           </div>
+          */}
 
           {/* Interactive Mobile Terminal Preview Card */}
           <div className="mt-8 max-w-4xl mx-auto rounded-2xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-[#121520] shadow-2xl p-6 sm:p-8 space-y-6">

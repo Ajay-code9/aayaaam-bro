@@ -103,7 +103,7 @@ export const ResearchNewsletter: React.FC = () => {
                   </button>
 
                   <p className="text-[11px] text-slate-400 text-center font-sans">
-                    We respect your privacy. Read our <a href="/legal" className="underline hover:text-slate-600">Privacy Policy</a>.
+                    We respect your privacy. Read our <a href="/privacy-policy" className="underline hover:text-slate-600">Privacy Policy</a>.
                   </p>
                 </form>
               )}

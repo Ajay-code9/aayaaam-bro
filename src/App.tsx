@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { HIDE_CLIENT_PORTAL_LOGIN, HIDE_BOOK_DEMO } from './config/flags';
 import { RouterProvider, useRouter } from './router';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
 import { MarketTicker } from './components/Header/MarketTicker';
@@ -7,6 +8,7 @@ import { Footer } from './components/Footer/Footer';
 import { OpenAccountModal } from './components/Modals/OpenAccountModal';
 import { LoginModal } from './components/Modals/LoginModal';
 import { SearchModal } from './components/Modals/SearchModal';
+import { InquiryModal } from './components/Modals/InquiryModal';
 import { CookieConsentBanner } from './components/Common/CookieConsentBanner';
 import { TickerItem } from './types';
 
@@ -117,9 +119,10 @@ function AppContent() {
   const [isOpenAccountModalOpen, setIsOpenAccountModalOpen] = useState<boolean>(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState<boolean>(false);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState<boolean>(false);
+  const [isInquiryModalOpen, setIsInquiryModalOpen] = useState<boolean>(false);
 
   const handleOpenAccount = () => {
-    navigate('/open-account');
+    setIsInquiryModalOpen(true);
   };
 
   const handleLogin = () => {
@@ -132,10 +135,22 @@ function AppContent() {
     handleOpenAccount();
   };
 
+  React.useEffect(() => {
+    if (currentPath === '/open-account' || currentPath === '/signup' || currentPath === '/register') {
+      setIsInquiryModalOpen(true);
+    }
+  }, [currentPath]);
+
   const renderPage = () => {
     switch (currentPath) {
       case '/':
-        return <HomePage onOpenAccount={handleOpenAccount} onExplorePlatforms={() => navigate('/platforms')} />;
+        return (
+          <HomePage
+            onOpenAccount={handleOpenAccount}
+            onExplorePlatforms={() => navigate('/platforms')}
+            onOpenInquiry={() => setIsInquiryModalOpen(true)}
+          />
+        );
       case '/about':
         return <AboutPage onOpenAccount={handleOpenAccount} />;
       case '/why-brokerbros':
@@ -323,11 +338,14 @@ function AppContent() {
       case '/terms-conditions':
         return <TermsConditionsPage onOpenAccount={handleOpenAccount} />;
       case '/login':
+        if (HIDE_CLIENT_PORTAL_LOGIN) {
+          return <HomePage onOpenAccount={handleOpenAccount} onExplorePlatforms={() => navigate('/platforms')} />;
+        }
         return <LoginPage onOpenAccount={handleOpenAccount} />;
       case '/open-account':
       case '/signup':
       case '/register':
-        return <OpenAccountPage onLoginRedirect={handleLogin} />;
+        return <HomePage onOpenAccount={handleOpenAccount} onExplorePlatforms={() => navigate('/platforms')} />;
       default:
         return <HomePage onOpenAccount={handleOpenAccount} onExplorePlatforms={() => navigate('/platforms')} />;
     }
@@ -346,6 +364,7 @@ function AppContent() {
             onOpenAccount={handleOpenAccount}
             onLogin={handleLogin}
             onOpenSearch={handleOpenSearch}
+            onOpenInquiry={() => setIsInquiryModalOpen(true)}
             selectedSegment={selectedSegment}
             setSelectedSegment={setSelectedSegment}
           />
@@ -382,6 +401,11 @@ function AppContent() {
           setIsSearchModalOpen(false);
           setIsOpenAccountModalOpen(true);
         }}
+      />
+
+      <InquiryModal
+        isOpen={isInquiryModalOpen}
+        onClose={() => setIsInquiryModalOpen(false)}
       />
 
       <CookieConsentBanner />

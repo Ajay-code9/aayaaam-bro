@@ -11,20 +11,21 @@ interface ProductVideoSectionProps {
   subtitle?: string;
   videoSrc?: string;
   posterSrc?: string;
+  lightImageSrc?: string;
+  darkImageSrc?: string;
   chapters?: VideoChapter[];
+  featureTags?: string[];
 }
 
 export const ProductVideoSection: React.FC<ProductVideoSectionProps> = ({
-  title = 'Product Video Walkthrough',
-  subtitle = 'Watch how our institutional platform powers real-time execution, admin management, and automated client workflows.',
+  title = 'Product Showcase',
+  subtitle = 'Explore our institutional platform interface powering real-time execution, admin management, and automated client workflows.',
   videoSrc = '/test.mp4',
   posterSrc = '/broker-crm-img-one.png',
-  chapters = [
-    { time: '0:00', title: 'Platform Overview & Architecture' },
-    { time: '1:15', title: 'Live Client & Admin Workspace' },
-    { time: '2:40', title: 'Real-Time Risk & Execution Controls' },
-    { time: '4:10', title: 'Automated Workflows & Reporting' },
-  ]
+  lightImageSrc,
+  darkImageSrc,
+  chapters,
+  featureTags
 }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
@@ -82,67 +83,101 @@ export const ProductVideoSection: React.FC<ProductVideoSectionProps> = ({
         <div className="max-w-4xl mx-auto">
           <div className="relative rounded-xl overflow-hidden border border-slate-200 dark:border-[#1E293B] bg-white dark:bg-[#141C2B] shadow-2xl group">
             
-            {/* Video Container (Hover to Play) */}
-            <div 
-              className="relative aspect-video w-full bg-slate-950 overflow-hidden cursor-pointer"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              onClick={() => setModalOpen(true)}
-            >
-              <video
-                ref={videoRef}
-                src={videoSrc}
-                poster={posterSrc}
-                muted={isMuted}
-                loop
-                playsInline
-                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
-              />
-
-              {/* Center Play/Pause overlay button on hover */}
+            {/* Video or Theme-Adaptive Image Container */}
+            {lightImageSrc && darkImageSrc ? (
               <div 
-                className={`absolute inset-0 flex items-center justify-center transition-opacity duration-250 ${
-                  isHovered || !isPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'
-                }`}
+                className="relative aspect-video w-full bg-slate-950 overflow-hidden cursor-pointer"
+                onClick={() => setModalOpen(true)}
               >
-                <button
-                  onClick={togglePlay}
-                  className="w-14 h-14 rounded-full bg-emerald-600/90 hover:bg-emerald-500 text-white flex items-center justify-center transition-all duration-200 shadow-[0_0_25px_rgba(16,185,129,0.4)] border border-emerald-400/40 cursor-pointer"
-                  title={isPlaying ? 'Pause Video' : 'Play Video'}
-                >
-                  {isPlaying ? (
-                    <Pause className="w-6 h-6 fill-current" />
-                  ) : (
-                    <Play className="w-6 h-6 fill-current ml-0.5" />
-                  )}
-                </button>
+                {/* Light mode image */}
+                <img 
+                  src={lightImageSrc} 
+                  alt={title}
+                  className="w-full h-full object-cover dark:hidden transition-transform duration-500 hover:scale-[1.01]"
+                />
+                {/* Dark mode image */}
+                <img 
+                  src={darkImageSrc} 
+                  alt={title}
+                  className="w-full h-full object-cover hidden dark:block transition-transform duration-500 hover:scale-[1.01]"
+                />
               </div>
-            </div>
+            ) : (
+              <div 
+                className="relative aspect-video w-full bg-slate-950 overflow-hidden cursor-pointer"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+                onClick={() => setModalOpen(true)}
+              >
+                <video
+                  ref={videoRef}
+                  src={videoSrc}
+                  poster={posterSrc}
+                  muted={isMuted}
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300"
+                />
 
-            {/* Video Chapters Footer */}
-            <div className="p-3.5 bg-white dark:bg-[#0E1420] border-t border-slate-200 dark:border-[#1E293B] grid sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
-              {chapters.map((chap, i) => (
-                <button
-                  key={i}
-                  onClick={() => setModalOpen(true)}
-                  className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-[#1B2538] transition-colors text-left group/chap cursor-pointer border border-slate-200 dark:border-[#1E293B]"
+                {/* Center Play/Pause overlay button on hover */}
+                <div 
+                  className={`absolute inset-0 flex items-center justify-center transition-opacity duration-250 ${
+                    isHovered || !isPlaying ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                  }`}
                 >
-                  <span className="text-[10px] font-mono font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-500/20 flex-shrink-0">
-                    {chap.time}
-                  </span>
-                  <span className="text-xs font-medium text-slate-700 dark:text-slate-300 group-hover/chap:text-emerald-600 dark:group-hover/chap:text-emerald-400 transition-colors line-clamp-1">
-                    {chap.title}
-                  </span>
-                </button>
-              ))}
-            </div>
+                  <button
+                    onClick={togglePlay}
+                    className="w-14 h-14 rounded-full bg-emerald-600/90 hover:bg-emerald-500 text-white flex items-center justify-center transition-all duration-200 shadow-[0_0_25px_rgba(16,185,129,0.4)] border border-emerald-400/40 cursor-pointer"
+                    title={isPlaying ? 'Pause Video' : 'Play Video'}
+                  >
+                    {isPlaying ? (
+                      <Pause className="w-6 h-6 fill-current" />
+                    ) : (
+                      <Play className="w-6 h-6 fill-current ml-0.5" />
+                    )}
+                  </button>
+                </div>
+              </div>
+            )}
+
+            {/* Footer Bar (Feature Tags or Video Chapters) */}
+            {featureTags && featureTags.length > 0 ? (
+              <div className="p-3.5 bg-white dark:bg-[#0E1420] border-t border-slate-200 dark:border-[#1E293B] flex flex-wrap items-center justify-center gap-3">
+                {featureTags.map((tag, i) => (
+                  <div
+                    key={i}
+                    className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-50 dark:bg-[#1B2538] border border-slate-200 dark:border-[#1E293B] text-xs font-semibold text-slate-700 dark:text-slate-200"
+                  >
+                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                    <span>{tag}</span>
+                  </div>
+                ))}
+              </div>
+            ) : chapters && chapters.length > 0 ? (
+              <div className="p-3.5 bg-white dark:bg-[#0E1420] border-t border-slate-200 dark:border-[#1E293B] grid sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
+                {chapters.map((chap, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setModalOpen(true)}
+                    className="flex items-center gap-2.5 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-[#1B2538] transition-colors text-left group/chap cursor-pointer border border-slate-200 dark:border-[#1E293B]"
+                  >
+                    <span className="text-[10px] font-mono font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-500/20 flex-shrink-0">
+                      {chap.time}
+                    </span>
+                    <span className="text-xs font-medium text-slate-700 dark:text-slate-300 group-hover/chap:text-emerald-600 dark:group-hover/chap:text-emerald-400 transition-colors line-clamp-1">
+                      {chap.title}
+                    </span>
+                  </button>
+                ))}
+              </div>
+            ) : null}
 
           </div>
         </div>
 
       </div>
 
-      {/* Video Modal Lightbox */}
+      {/* Modal Lightbox (Image or Video Fullscreen) */}
       {modalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md animate-in fade-in duration-150">
           <div className="relative w-full max-w-5xl bg-[#121520] border border-slate-800 rounded-xl overflow-hidden shadow-2xl">
@@ -151,16 +186,18 @@ export const ProductVideoSection: React.FC<ProductVideoSectionProps> = ({
             <div className="px-6 py-3.5 border-b border-slate-800 flex items-center justify-between bg-[#0a0a0a]">
               <div className="flex items-center gap-3">
                 <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-                <h4 className="text-sm font-bold text-white tracking-wide">{title} — Fullscreen Walkthrough</h4>
+                <h4 className="text-sm font-bold text-white tracking-wide">{title} — High Resolution Preview</h4>
               </div>
               <div className="flex items-center gap-2">
-                <button
-                  onClick={() => setIsMuted(!isMuted)}
-                  className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors cursor-pointer"
-                  title={isMuted ? 'Unmute' : 'Mute'}
-                >
-                  {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                </button>
+                {!(lightImageSrc && darkImageSrc) && (
+                  <button
+                    onClick={() => setIsMuted(!isMuted)}
+                    className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors cursor-pointer"
+                    title={isMuted ? 'Unmute' : 'Mute'}
+                  >
+                    {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                  </button>
+                )}
                 <button
                   onClick={() => setModalOpen(false)}
                   className="p-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition-colors cursor-pointer"
@@ -170,15 +207,22 @@ export const ProductVideoSection: React.FC<ProductVideoSectionProps> = ({
               </div>
             </div>
 
-            {/* Video Player */}
+            {/* Display Content (Image or Video Player) */}
             <div className="relative aspect-video bg-black flex items-center justify-center">
-              <video
-                src={videoSrc}
-                controls
-                autoPlay
-                muted={isMuted}
-                className="w-full h-full object-contain"
-              />
+              {lightImageSrc && darkImageSrc ? (
+                <>
+                  <img src={lightImageSrc} alt={title} className="w-full h-full object-contain dark:hidden" />
+                  <img src={darkImageSrc} alt={title} className="w-full h-full object-contain hidden dark:block" />
+                </>
+              ) : (
+                <video
+                  src={videoSrc}
+                  controls
+                  autoPlay
+                  muted={isMuted}
+                  className="w-full h-full object-contain"
+                />
+              )}
             </div>
           </div>
         </div>

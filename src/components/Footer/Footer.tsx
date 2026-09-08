@@ -1,4 +1,5 @@
 import React from 'react';
+import { HIDE_CLIENT_PORTAL_LOGIN, HIDE_BOOK_DEMO } from '../../config/flags';
 import { ShieldCheck, AlertTriangle, ArrowUpRight, Lock, Globe } from 'lucide-react';
 import { useRouter } from '../../router';
 
@@ -44,20 +45,26 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAccount, onLogin }) => {
           </div>
 
           {/* Quick CTA buttons */}
-          <div className="flex items-center gap-3">
-            <button
-              onClick={onLogin}
-              className="px-4 py-2 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-xs rounded-lg border border-slate-200 dark:border-slate-700/80 shadow-xs transition-all cursor-pointer"
-            >
-              Client Portal Login
-            </button>
-            <button
-              onClick={onOpenAccount}
-              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-lg shadow-sm shadow-emerald-600/20 transition-all flex items-center gap-1.5 cursor-pointer"
-            >
-              Get Demo <ArrowUpRight className="w-3.5 h-3.5" />
-            </button>
-          </div>
+          {(!HIDE_CLIENT_PORTAL_LOGIN || !HIDE_BOOK_DEMO) && (
+            <div className="flex items-center gap-3">
+              {!HIDE_CLIENT_PORTAL_LOGIN && (
+                <button
+                  onClick={onLogin}
+                  className="px-4 py-2 bg-white dark:bg-slate-900 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold text-xs rounded-lg border border-slate-200 dark:border-slate-700/80 shadow-xs transition-all cursor-pointer"
+                >
+                  Client Portal Login
+                </button>
+              )}
+              {!HIDE_BOOK_DEMO && (
+                <button
+                  onClick={onOpenAccount}
+                  className="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-lg shadow-sm shadow-emerald-600/20 transition-all flex items-center gap-1.5 cursor-pointer"
+                >
+                  Get Demo <ArrowUpRight className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
+          )}
         </div>
 
         {/* Normal Spaced Sitemap Grid */}
@@ -131,8 +138,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAccount, onLogin }) => {
             <ul className="space-y-2.5 text-slate-600 dark:text-slate-400 text-[8.5px]">
               <li><button onClick={() => navigate('/why-brokerbros')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Why BrokerBros</button></li>
               <li><button onClick={() => navigate('/security/regulation')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Security & Compliance</button></li>
-              <li><button onClick={() => navigate('/legal')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Terms & SLA Agreement</button></li>
-              <li><button onClick={() => navigate('/legal')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Privacy Policy</button></li>
+              <li><button onClick={() => navigate('/terms-conditions')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Terms & SLA Agreement</button></li>
+              <li><button onClick={() => navigate('/privacy-policy')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Privacy Policy</button></li>
               <li><button onClick={() => navigate('/contact')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Contact Institutional Desk</button></li>
             </ul>
           </div>
@@ -163,9 +170,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAccount, onLogin }) => {
             <div className="flex items-center gap-3.5 text-slate-600 dark:text-slate-400 font-mono text-[10px]">
               <button onClick={() => navigate('/security/regulation')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Security</button>
               <span>·</span>
-              <button onClick={() => navigate('/legal')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Terms</button>
+              <button onClick={() => navigate('/terms-conditions')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Terms</button>
               <span>·</span>
-              <button onClick={() => navigate('/legal')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Privacy</button>
+              <button onClick={() => navigate('/privacy-policy')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Privacy</button>
               <span>·</span>
               <button onClick={() => navigate('/contact')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Contact Desk</button>
             </div>
