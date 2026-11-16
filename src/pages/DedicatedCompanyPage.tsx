@@ -337,18 +337,16 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
               </div>
 
               {/* Mission Statement Card */}
-              <div className="relative overflow-hidden rounded-2xl border border-emerald-600/30 bg-gradient-to-br from-emerald-900/[0.06] via-white to-teal-900/[0.04] p-7 dark:border-emerald-500/25 dark:from-emerald-950/40 dark:via-[#0E151A] dark:to-teal-950/30 shadow-md">
-                <div className="flex items-center justify-between pb-3 border-b border-emerald-500/20 mb-4">
-                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400 flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <div className="relative overflow-hidden rounded-2xl border border-slate-200 dark:border-white/10 bg-slate-50/70 dark:bg-[#11171E] p-7 shadow-sm">
+                <div className="pb-3 border-b border-slate-200/80 dark:border-white/10 mb-4">
+                  <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-slate-500 dark:text-slate-400">
                     OUR CORE MISSION
                   </span>
-                  <Sparkles className="w-4 h-4 text-emerald-500 opacity-70" />
                 </div>
                 <p className="text-lg sm:text-xl font-bold text-slate-900 dark:text-white leading-snug tracking-tight">
                   Design, build and support software that businesses can operate today and adapt as their needs change.
                 </p>
-                <div className="mt-4 pt-3 border-t border-slate-100 dark:border-white/5 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
+                <div className="mt-4 pt-3 border-t border-slate-200/80 dark:border-white/5 flex items-center justify-between text-[11px] text-slate-500 dark:text-slate-400 font-mono">
                   <span>Architecture · Execution · Support</span>
                   <span className="text-emerald-600 dark:text-emerald-400 font-semibold">AyaamX Quality Standard</span>
                 </div>
@@ -447,7 +445,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
           <div className="relative isolate overflow-hidden rounded-[2.2rem] border border-slate-200/80 bg-white p-7 shadow-sm transition-all dark:border-white/10 dark:bg-[#0D0D12] sm:p-10 lg:p-12 space-y-10">
             <div className="pointer-events-none absolute -right-24 -top-24 -z-10 h-72 w-72 rounded-full bg-teal-500/10 blur-[90px] dark:bg-teal-500/15" />
 
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
+            <div className="pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Know What We’re Building and What Comes Next.
@@ -455,11 +453,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                   Start with the user, the business goal and the systems involved. Review working software as it takes shape, then plan the transition to everyday use.
                 </p>
-              </div>
-
-              <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-50 dark:bg-[#11171E] border border-slate-200/80 dark:border-white/10 text-xs font-mono text-slate-600 dark:text-slate-300 shrink-0">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>3-Stage Milestone Delivery</span>
               </div>
             </div>
 
@@ -470,7 +463,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                 <div>
                   <div className="flex items-center justify-between mb-5">
                     <span className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400">01</span>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">Discovery &amp; Scope</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Discovery &amp; Scope</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                     Align &amp; Scope
@@ -496,7 +489,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                 <div>
                   <div className="flex items-center justify-between mb-5">
                     <span className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400">02</span>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">Iterative Sprints</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Iterative Sprints</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                     Build &amp; Review
@@ -522,7 +515,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                 <div>
                   <div className="flex items-center justify-between mb-5">
                     <span className="text-3xl font-black font-mono text-emerald-600 dark:text-emerald-400">03</span>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">Production Rollout</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Production Rollout</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                     Launch &amp; Handover
@@ -573,7 +566,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
           <div className="relative isolate overflow-hidden rounded-[2.2rem] border border-slate-200/80 bg-white p-7 shadow-sm transition-all dark:border-white/10 dark:bg-[#0D0D12] sm:p-10 lg:p-12 space-y-10">
             <div className="pointer-events-none absolute -left-20 -top-24 -z-10 h-72 w-72 rounded-full bg-emerald-500/10 blur-[90px] dark:bg-emerald-500/15" />
 
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
+            <div className="pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Choose Technology Around What the Product Needs.
@@ -581,11 +574,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                   AyaamX works across customer interfaces, backend systems, cloud infrastructure and specialised platforms. We scope the stack around your users, data and existing tools.
                 </p>
-              </div>
-
-              <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-50 dark:bg-[#11171E] border border-slate-200/80 dark:border-white/10 text-xs font-mono text-slate-600 dark:text-slate-300 shrink-0">
-                <Layers className="w-4 h-4 text-emerald-500" />
-                <span>Modern Cloud-Native Tech Stack</span>
               </div>
             </div>
 
@@ -748,7 +736,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
           <div className="relative isolate overflow-hidden rounded-[2.2rem] border border-slate-200/80 bg-white p-7 shadow-sm transition-all dark:border-white/10 dark:bg-[#0D0D12] sm:p-10 lg:p-12 space-y-10">
             <div className="pointer-events-none absolute -right-20 -top-20 -z-10 h-72 w-72 rounded-full bg-teal-500/10 blur-[90px] dark:bg-teal-500/15" />
 
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
+            <div className="pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Meet the Roles Behind Your Project.
@@ -756,11 +744,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                   A software project needs clear ownership across product decisions, technical design and delivery. Here is what those responsibilities look like when you work with AyaamX.
                 </p>
-              </div>
-
-              <div className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-slate-50 dark:bg-[#11171E] border border-slate-200/80 dark:border-white/10 text-xs font-mono text-slate-600 dark:text-slate-300 shrink-0">
-                <CheckCircle2 className="w-4 h-4 text-emerald-500" />
-                <span>Dedicated Technical Ownership</span>
               </div>
             </div>
 
@@ -772,7 +755,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                     <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-bold">
                       <Target className="w-6 h-6" />
                     </div>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-200/70 dark:bg-white/10 text-slate-700 dark:text-slate-300">Strategy</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Strategy</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                     Product &amp; Delivery Management
@@ -800,7 +783,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                     <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-bold">
                       <Cpu className="w-6 h-6" />
                     </div>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-200/70 dark:bg-white/10 text-slate-700 dark:text-slate-300">Architecture</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Architecture</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                     Technical Architecture
@@ -828,7 +811,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                     <div className="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-bold">
                       <Code2 className="w-6 h-6" />
                     </div>
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-slate-200/70 dark:bg-white/10 text-slate-700 dark:text-slate-300">Execution</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Execution</span>
                   </div>
                   <h3 className="text-xl font-bold text-slate-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                     Engineering &amp; Quality
@@ -857,7 +840,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
           <div className="relative isolate overflow-hidden rounded-[2.2rem] border border-slate-200/80 bg-white p-7 shadow-sm transition-all dark:border-white/10 dark:bg-[#0D0D12] sm:p-10 lg:p-12 space-y-10">
             <div className="pointer-events-none absolute -left-20 -bottom-20 -z-10 h-72 w-72 rounded-full bg-emerald-500/10 blur-[90px] dark:bg-emerald-500/15" />
 
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
+            <div className="pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Help Businesses Build and Use Better Software.
@@ -866,11 +849,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                   AyaamX works across custom software, fintech platforms, APIs and digital products. We are continually seeking ambitious engineering talent and technical leaders.
                 </p>
               </div>
-
-              <div className="flex items-center gap-3 px-4 py-3 rounded-2xl bg-slate-50 dark:bg-[#11171E] border border-slate-200/80 dark:border-white/10 text-xs font-mono text-slate-600 dark:text-slate-300 shrink-0">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Ahmedabad HQ &amp; Hybrid Opportunities</span>
-              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -878,7 +856,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
               <div className="group rounded-2xl border border-slate-200/90 bg-slate-50/70 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:bg-white hover:shadow-xl dark:border-white/10 dark:bg-[#11171E] dark:hover:bg-[#141C24] dark:hover:border-emerald-500/30 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">Commercial &amp; Growth</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Commercial &amp; Growth</span>
                     <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-500 transition-colors" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
@@ -898,7 +876,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
               <div className="group rounded-2xl border border-slate-200/90 bg-slate-50/70 p-7 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:bg-white hover:shadow-xl dark:border-white/10 dark:bg-[#11171E] dark:hover:bg-[#141C24] dark:hover:border-emerald-500/30 flex flex-col justify-between">
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-300 border border-emerald-500/20">Engineering &amp; Mentorship</span>
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Engineering &amp; Mentorship</span>
                     <ArrowUpRight className="w-4 h-4 text-slate-400 group-hover:text-emerald-500 transition-colors" />
                   </div>
                   <h3 className="text-xl font-bold text-slate-950 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
@@ -942,7 +920,7 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
           <div className="relative isolate overflow-hidden rounded-[2.2rem] border border-slate-200/80 bg-white p-7 shadow-sm transition-all dark:border-white/10 dark:bg-[#0D0D12] sm:p-10 lg:p-12 space-y-10">
             <div className="pointer-events-none absolute -right-20 -bottom-20 -z-10 h-72 w-72 rounded-full bg-emerald-500/10 blur-[90px] dark:bg-emerald-500/15" />
 
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
+            <div className="pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Tell Us What You Want to Build.
@@ -950,11 +928,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                 <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
                   Tell us what you want to build, who will use it and which tools it needs to connect to. Share any timeline or constraints that will shape the first release.
                 </p>
-              </div>
-
-              <div className="flex items-center gap-2 px-4 py-3 rounded-2xl bg-slate-50 dark:bg-[#11171E] border border-slate-200/80 dark:border-white/10 text-xs font-mono text-slate-600 dark:text-slate-300 shrink-0">
-                <Clock className="w-4 h-4 text-emerald-500" />
-                <span>Direct Executive Response &lt; 24h</span>
               </div>
             </div>
 
