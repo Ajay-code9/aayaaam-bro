@@ -3,24 +3,24 @@ import React from 'react';
 export const FeatureStripSection: React.FC = () => {
   const features = [
     {
+      imageSrc: '/icon-four.png',
+      title: 'Web, Mobile & SaaS',
+      description: 'Customer portals, mobile applications and multi-tenant software built around how your users work.',
+    },
+    {
       imageSrc: '/icon-one.png',
-      title: 'AI & Workflow Automation',
-      description: 'Document extraction, intelligent assistants, and automated operational review pipelines.',
+      title: 'AI & Automation',
+      description: 'Document extraction, knowledge retrieval and human-in-the-loop workflows connected to your data.',
     },
     {
       imageSrc: '/icon-two.png',
-      title: 'Fintech & Trading Systems',
-      description: 'Broker CRM backoffices, multi-tier IB trees, and real-time trader evaluation engines.',
+      title: 'Trading & Blockchain',
+      description: 'Order routing, digital wallet integration and transaction systems designed for live operational use.',
     },
     {
       imageSrc: '/icon-three.png',
-      title: 'Blockchain & Digital Assets',
-      description: 'Multi-network crypto payment gateways, non-custodial wallets, and audited smart contracts.',
-    },
-    {
-      imageSrc: '/icon-four.png',
-      title: 'Scalable Digital Engineering',
-      description: 'Turnkey customer portals, mobile apps, and microservice cloud infrastructure.',
+      title: 'Cloud, APIs & Migration',
+      description: 'Backend services, database architectures and system integrations that replace or modernise legacy tools.',
     },
   ];
 
