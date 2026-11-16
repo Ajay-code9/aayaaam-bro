@@ -35,12 +35,12 @@ const B2B_MODULE_TABS: B2BModuleTab[] = [
   {
     id: 'forex-crm',
     name: 'Broker CRM & Client Portal',
-    shortTag: 'Trading Tech',
+    shortTag: 'Brokerage Software Suite',
     icon: Database,
-    tagline: 'Give Traders and Staff a Shared View of Every Account',
-    description: 'Connect trader registration, KYC identity checks, and wallet deposits through an intuitive client portal and central backoffice CRM — keeping all your team workflows in one clean workspace.',
-    deploymentTime: '1 - 3 Days Go-Live',
-    slaMetric: 'Unlimited Accounts',
+    tagline: 'Complete Turnkey Brokerage CRM & Trader Onboarding Portal',
+    description: 'We license and deploy a custom-branded client portal and centralized backoffice CRM for your brokerage — uniting automated KYC verification, payment gateway processing, and multi-tier IB hierarchies in one system.',
+    deploymentTime: '1 - 3 Days Turnkey Deployment',
+    slaMetric: 'Unlimited Accounts & Full Isolation',
     image: '/tab-crm-portal.png',
     highlights: [
       'Clean client portal for instant deposits, account creation & balance history',
@@ -52,12 +52,12 @@ const B2B_MODULE_TABS: B2BModuleTab[] = [
   {
     id: 'prop-trading',
     name: 'Prop Firm Evaluation Engine',
-    shortTag: 'Evaluation Suite',
+    shortTag: 'Prop Firm Suite',
     icon: ShieldCheck,
-    tagline: 'Run Trader Challenges From Sign-Up to Payout Review',
-    description: 'Purpose-built evaluation platform for funded trader firms. Gives traders a clear view of their challenge progress and gives your staff reliable rules to review results and process payouts.',
-    deploymentTime: 'Turnkey Configuration',
-    slaMetric: 'Real-Time Breach Logic',
+    tagline: 'Automated Prop Firm Challenge & Real-Time Risk Suite',
+    description: 'Deploy our battle-tested prop firm evaluation platform. Automate challenge tier onboarding, live equity trailing drawdown surveillance, automated breach lockouts, and instant profit split approvals.',
+    deploymentTime: 'Pre-Built Turnkey Suite',
+    slaMetric: 'Sub-Millisecond Breach Detection',
     image: '/tab-prop-firm.png',
     highlights: [
       'Automated daily equity snapshot & trailing drawdown breach detection',
@@ -69,11 +69,11 @@ const B2B_MODULE_TABS: B2BModuleTab[] = [
   {
     id: 'trading-terminals',
     name: 'WebTrader & Mobile Apps',
-    shortTag: 'Trading Experience',
+    shortTag: 'Trading Terminal Suite',
     icon: Cpu,
-    tagline: 'High-Performance Web & Native iOS / Android Trading Apps',
-    description: 'Deploy custom branded trading platforms for web and mobile. Features native TradingView charting, sub-10ms order routing, depth of market (DOM), and custom brand themes.',
-    deploymentTime: 'Custom Branded',
+    tagline: 'Custom Branded WebTrader & Native iOS / Android Trading Apps',
+    description: 'License a cross-platform trading terminal branded completely under your firm. Features native TradingView charting, Depth of Market (DOM), one-click execution, and sub-10ms direct order routing.',
+    deploymentTime: 'White-Label Under Your Brand',
     slaMetric: 'Sub-10ms Order Execution',
     image: '/tab-web-mobile.png',
     highlights: [
@@ -88,10 +88,10 @@ const B2B_MODULE_TABS: B2BModuleTab[] = [
     name: 'Copy Trading & PAMM / MAM',
     shortTag: 'Social & Asset Management',
     icon: Users,
-    tagline: 'Sub-Millisecond Master-Follower Copier & PAMM Suite',
-    description: 'Scale social trading and asset management programs. Connect strategy providers to followers with sub-millisecond copier execution, equity/balance proportional modes, and high-watermark fee splits.',
-    deploymentTime: 'Instant Hook',
-    slaMetric: '< 1ms Copy Latency',
+    tagline: 'Institutional Social Copy Trading & PAMM / MAM Allocation Engine',
+    description: 'Expand your brokerage offering with our high-speed social trading and investment engine. Replicate master trades across thousands of follower accounts in sub-milliseconds with automated high-watermark fee splits.',
+    deploymentTime: 'Instant Server-Side Hook',
+    slaMetric: '< 1ms Copy Latency & 0 Slippage',
     image: '/tab-copy-pamm.png',
     highlights: [
       'Sub-millisecond trade replication with zero slippage or execution lag',
@@ -103,12 +103,12 @@ const B2B_MODULE_TABS: B2BModuleTab[] = [
   {
     id: 'ai-automation',
     name: 'AI Document & Workflow Agents',
-    shortTag: 'Autonomous AI',
+    shortTag: 'Enterprise AI Suite',
     icon: Brain,
-    tagline: 'Give Repetitive Operations a Reviewable AI Workflow',
-    description: 'Build AI assistants and document processing tools that work with your approved sources, show the information behind every output, and hand exceptions to staff for review.',
-    deploymentTime: 'Custom AI Pipeline',
-    slaMetric: 'Human-in-the-Loop',
+    tagline: 'Enterprise AI Agents for Document Processing & Workflow Automation',
+    description: 'We build and integrate private domain AI agents directly into your backoffice. Automatically extract data from invoices and statements, pre-screen compliance documents, and resolve client inquiries with full audit logs.',
+    deploymentTime: 'Private Cloud Deployment',
+    slaMetric: 'Zero Public Model Training',
     image: '/tab-ai-agents.png',
     highlights: [
       'Extract structured data from unstructured invoices, PDFs, and customer requests',
@@ -120,11 +120,11 @@ const B2B_MODULE_TABS: B2BModuleTab[] = [
   {
     id: 'fix-blockchain',
     name: 'FIX Bridge & Crypto Gateways',
-    shortTag: 'Liquidity & Web3',
+    shortTag: 'Liquidity & Crypto Suite',
     icon: Blocks,
-    tagline: 'Direct LP Aggregation & Multi-Chain Payment Settlement',
-    description: 'Connect directly to Tier-1 liquidity providers via standardized FIX 4.4/5.0 protocols paired with non-custodial crypto payment gateways supporting 8+ major blockchain networks.',
-    deploymentTime: 'Direct Protocol Hook',
+    tagline: 'Sub-Millisecond FIX 4.4 Bridge & Non-Custodial Crypto Gateway',
+    description: 'Connect your platform directly to 150+ Tier-1 liquidity providers via ultra-low latency FIX 4.4/5.0 protocols. Comes pre-integrated with automated non-custodial crypto payment gateways supporting 8+ major blockchains.',
+    deploymentTime: 'Equinix NY4 / LD4 Cross-Connect',
     slaMetric: '150+ LPs & 8+ Chains',
     image: '/tab-fix-bridge.png',
     highlights: [
@@ -147,11 +147,11 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onOpenAccount 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-2.5">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white tracking-tight font-sans">
-            Explore AyaamX Modular Platforms &amp; Solutions
+            Turnkey Software Platforms &amp; Modular Engines
           </h2>
 
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium font-sans">
-            Select a platform module below to see core capabilities, workflow previews, and deployment specifications tailored to your business model.
+            Select a software suite below to inspect turnkey capabilities, architecture specifications, and enterprise deployment options for your brand.
           </p>
         </div>
 
