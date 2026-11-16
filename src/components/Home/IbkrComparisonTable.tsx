@@ -90,7 +90,7 @@ export const IbkrComparisonTable: React.FC<IbkrComparisonTableProps> = ({ onOpen
           </h2>
 
           <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium font-sans">
-            Compare AyaamX end-to-end product engineering, trading engines, and custom AI systems against legacy off-the-shelf software and high-risk in-house builds.
+            Compare AyaamX turnkey software licensing, dedicated source code delivery, and custom engineering against restrictive off-the-shelf SaaS and high-cost internal builds.
           </p>
         </div>
 
@@ -144,12 +144,12 @@ export const IbkrComparisonTable: React.FC<IbkrComparisonTableProps> = ({ onOpen
             <table className="w-full text-left border-collapse font-sans text-xs">
               <thead>
                 <tr className="bg-slate-100 dark:bg-[#090D14] border-b border-slate-200 dark:border-[#1E293B] text-slate-700 dark:text-slate-300 font-bold uppercase tracking-wider text-[11px]">
-                  <th className="py-4 px-5 min-w-[260px]">Capability &amp; Deliverable</th>
+                  <th className="py-4 px-5 min-w-[260px]">Software Module &amp; Capability</th>
                   <th className="py-4 px-5 min-w-[220px] bg-emerald-50 dark:bg-emerald-500/10 text-emerald-900 dark:text-emerald-400 border-x border-emerald-200 dark:border-emerald-500/30 font-extrabold">
-                    AyaamX Engineering Standard
+                    AyaamX Turnkey License &amp; Delivery
                   </th>
-                  <th className="py-4 px-5 min-w-[190px] text-slate-600 dark:text-slate-400">Legacy Off-The-Shelf Vendors</th>
-                  <th className="py-4 px-5 min-w-[190px] text-slate-600 dark:text-slate-400">Custom In-House Build</th>
+                  <th className="py-4 px-5 min-w-[190px] text-slate-600 dark:text-slate-400">Traditional SaaS Vendors</th>
+                  <th className="py-4 px-5 min-w-[190px] text-slate-600 dark:text-slate-400">Building In-House (From Scratch)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-200 dark:divide-[#1E293B]">
