@@ -11,46 +11,46 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
 
   const modularEngines = [
     {
-      title: 'AyaamX Forex CRM & Client Operations',
-      subtitle: 'Trader Portal & Broker CRM Ecosystem',
+      title: 'AyaamX Broker CRM & Client Operations',
+      subtitle: 'Turnkey Broker Backoffice & Client Portal',
       desc: 'Connect trader registration, automated KYC verification queues, multi-currency deposit wallets, and multi-tier introducing broker rebate hierarchies with instant ledger synchronization.',
       route: '/products/forex-crm',
-      btnText: 'Explore CRM Suite'
+      btnText: 'View CRM Platform Suite'
     },
     {
-      title: 'Prop Trading Evaluation & Challenge Engine',
-      subtitle: 'Real-Time Drawdown & Breach Rules',
+      title: 'Prop Trading Challenge & Risk Engine',
+      subtitle: 'Proprietary Firm Evaluation Software',
       desc: 'Automate multi-phase evaluation challenges, trailing drawdown surveillance, automated account breach lockouts, and verified funded trader profit-split payouts.',
       route: '/products/prop-trading-crm',
-      btnText: 'Explore Prop Firm Engine'
+      btnText: 'View Prop Firm Suite'
     },
     {
-      title: 'Branded Web & Mobile Trading Platforms',
-      subtitle: 'High-Speed WebTrader, iOS & Android',
+      title: 'Branded WebTrader & Mobile Apps',
+      subtitle: 'White-Label Trading Interface',
       desc: 'Cross-platform trading platforms built with native TradingView charting, depth of market (DOM), one-click execution, and sub-10ms latency under your brand.',
       route: '/products/web-trader',
-      btnText: 'Explore Trading Apps'
+      btnText: 'View Trading Apps'
     },
     {
       title: 'Social Copy Trading & PAMM / MAM Suite',
-      subtitle: 'Master-Follower Replication & Asset Management',
+      subtitle: 'Investment & Allocation Software',
       desc: 'Scale social trading with sub-millisecond copier execution, equity/balance proportional modes, and automated high-watermark performance fee distribution.',
       route: '/products/pamm-mam',
-      btnText: 'Explore Copy & PAMM'
+      btnText: 'View Copy Trading Suite'
     },
     {
-      title: 'Autonomous AI Workflow & Document Agents',
-      subtitle: 'Intelligent Enterprise Process Automation',
+      title: 'Autonomous AI Workflow & Compliance Agents',
+      subtitle: 'Enterprise Automation & Document AI',
       desc: 'Deploy custom AI agents that extract structured data from financial records, automate compliance checking, and prepare draft responses with verified staff review.',
       route: '/services',
-      btnText: 'Explore AI Solutions'
+      btnText: 'View AI Automation'
     },
     {
-      title: 'FIX 4.4 Bridge & Multi-Chain Payment Gateway',
-      subtitle: 'Institutional Liquidity & Crypto Settlement',
+      title: 'FIX 4.4 Engine & Crypto Payment Gateway',
+      subtitle: 'Liquidity Routing & Digital Asset Gateway',
       desc: 'Direct sub-millisecond FIX protocol session routing to 150+ Tier-1 LPs paired with non-custodial crypto payment gateways supporting 8+ major blockchain networks.',
       route: '/api-integrations',
-      btnText: 'Explore FIX & Gateways'
+      btnText: 'View FIX & Payments'
     }
   ];
 
@@ -143,10 +143,10 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
         <div className="space-y-10">
           <div className="text-center max-w-3xl mx-auto space-y-2.5">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight font-sans">
-              Complete Modular Infrastructure Engine
+              Turnkey Software Modules &amp; Trading Engines
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium font-sans">
-              Turnkey software modules designed to launch, operate, and scale modern brokerages, prop trading firms, and intelligent digital enterprises.
+              Deploy production-ready broker platforms, proprietary trading suites, and AI engines — customized and licensed under your enterprise brand.
             </p>
           </div>
 
@@ -195,7 +195,7 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
                 className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500"
               />
               <div className="absolute top-4 left-4">
-                <span className="px-3 py-1 rounded-full text-[10px] font-mono font-bold bg-slate-900/85 text-emerald-400 border border-emerald-500/30 backdrop-blur-md">
+                <span className="text-[10px] font-mono font-bold text-emerald-400 bg-slate-900/90 px-2.5 py-1 rounded tracking-wider uppercase">
                   TRANSPARENT DELIVERY
                 </span>
               </div>
