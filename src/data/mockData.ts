@@ -126,59 +126,59 @@ export const MARKET_CATEGORIES: MarketCategory[] = [
 export const ACCOUNT_TYPES: AccountType[] = [
   {
     id: 'individual',
-    title: 'White-Label Client Accounts',
-    subtitle: 'Multi-Currency Client Portal',
-    description: 'Full-featured branded client account portal with instant deposit/withdrawal, multi-currency wallets, and real-time balance dashboards.',
+    title: 'Client Portal & Onboarding Software',
+    subtitle: 'Turnkey Trader Web & Mobile Suite',
+    description: 'We license and deploy a custom-branded client portal for your brokerage, complete with multi-currency wallets, KYC verification workflows, and automated deposit processing.',
     features: [
-      'Branded portal under your own domain & logo',
-      'Multi-currency wallets (26 currency pairs)',
-      'Instant deposit & withdrawal processing',
-      'Real-time P&L and statement generation'
+      'Delivered under your brand, logo & custom domain',
+      'Multi-currency balance & payment gateways',
+      'Automated KYC onboarding & document review',
+      'Real-time transaction tracking & reporting'
     ],
-    minDeposit: 'SaaS Module Pricing',
-    recommendedFor: 'Retail Brokers & White-Label Operators'
+    minDeposit: 'Turnkey Software License',
+    recommendedFor: 'Emerging & Established Brokerage Brands'
   },
   {
     id: 'joint',
-    title: 'Multi-Tier IB Partner Accounts',
-    subtitle: 'Unlimited IB Rebate Tree Network',
-    description: 'Deploy unlimited multi-level Introducing Broker networks with automated lot-based rebate calculations and real-time commission tracking.',
+    title: 'Multi-Tier IB & Affiliate Engine',
+    subtitle: 'Automated Commission & Rebate Software',
+    description: 'B2B affiliate management software engineered for brokers. Calculates complex multi-level IB trees, lot-based rebate distributions, and partner payouts with zero manual overhead.',
     features: [
-      'Unlimited IB tree depth & sub-IB hierarchy',
-      'Automated lot-based rebate calculations',
-      'Real-time commission & volume dashboards',
-      'Custom rebate rules per asset class'
+      'Unlimited IB tree hierarchy & sub-partner tiers',
+      'Real-time automated lot-based rebate calculation',
+      'Dedicated partner dashboard with exportable data',
+      'Granular rule builder per asset class & volume'
     ],
-    minDeposit: 'SaaS Module Pricing',
-    recommendedFor: 'IB Networks & Affiliate Managers'
+    minDeposit: 'Turnkey Software License',
+    recommendedFor: 'Brokerages Operating High-Volume IB Networks'
   },
   {
     id: 'trust',
-    title: 'Prop Firm Funded Trader Accounts',
-    subtitle: 'Challenge & Evaluation Engine',
-    description: 'Automated prop firm evaluation with configurable daily drawdown limits, profit targets, breach lock mechanisms, and funded account payouts.',
+    title: 'Prop Firm Evaluation Engine',
+    subtitle: 'Automated Risk Surveillance & Challenge Suite',
+    description: 'Turnkey proprietary trading platform software. Manages challenge tiers, real-time equity drawdown breach detection, account automation, and profit split workflows.',
     features: [
-      'Configurable challenge phases & profit targets',
-      'Automated drawdown breach & account lock',
-      'Funded trader dashboard with payout rules',
-      'MT5 & FIX API integration for live feeds'
+      'Automated 1-step, 2-step & instant challenge rules',
+      'Real-time trailing drawdown surveillance & lock',
+      'Branded trader dashboard with payout automation',
+      'Pre-integrated with MT4, MT5, cTrader & TradeLocker'
     ],
-    minDeposit: 'SaaS Module Pricing',
-    recommendedFor: 'Prop Firms & Funded Trader Platforms'
+    minDeposit: 'Turnkey Software License',
+    recommendedFor: 'Proprietary Trading Firms & Challenge Operators'
   },
   {
     id: 'institutional',
-    title: 'Omnibus Clearing Accounts',
-    subtitle: 'Prime Brokerage & FIX Execution',
-    description: 'Institutional-grade prime brokerage clearing with omnibus sub-accounts, FIX 4.4 bridge connectivity, and dedicated LP relationship management.',
+    title: 'FIX 4.4 Bridge & Liquidity Software',
+    subtitle: 'High-Throughput Order Routing Engine',
+    description: 'Sub-millisecond institutional order execution engine. Connect your trading interfaces to multiple Tier-1 Liquidity Providers with smart order routing and markup control.',
     features: [
-      'Omnibus sub-account & prime clearing structure',
-      'FIX 4.4 & REST API low-latency execution',
-      'Dedicated Liquidity & LP Relationship Manager',
-      'Custom spread markup & volume-based pricing'
+      'Ultra-low latency FIX 4.4 smart order routing',
+      'Multi-LP aggregation & depth of market (DOM)',
+      'Custom spread markup & A/B-book risk routing',
+      'Full source-code license & private cloud deployment'
     ],
-    minDeposit: 'Enterprise Quotation',
-    recommendedFor: 'Institutional Brokers & Prime Clearing',
+    minDeposit: 'Enterprise Software License',
+    recommendedFor: 'Institutional Desks & Regulated Brokerages',
     badge: 'Enterprise Tier'
   }
 ];

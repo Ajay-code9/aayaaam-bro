@@ -69,12 +69,12 @@ export const GlobalMapSection: React.FC<GlobalMapSectionProps> = ({ onOpenAccoun
 
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold tracking-tight text-[#0F172A] dark:text-white font-sans leading-[1.15]">
-              Worldwide Trading Infrastructure & Low-Latency Connectivity
+              Global Cloud Deployment &amp; Low-Latency Server Architecture
             </h2>
 
             {/* Description */}
             <p className="text-[#64748B] dark:text-slate-300 text-sm sm:text-base leading-relaxed font-normal max-w-lg">
-              Deploy your broker CRMs, prop firm evaluation engines, and trading apps across low-latency financial datacenters worldwide. Direct FIX cross-connects to 150+ Tier-1 LPs with sub-millisecond execution.
+              We deploy your software stacks, broker backoffices, and prop firm engines directly onto dedicated cloud regions (AWS, Equinix, GCP) pre-configured to interface with your chosen liquidity providers and banking gateways.
             </p>
 
             {/* Three Statistic Cards (Subtle Border, Soft Shadow, 16px Rounded, Hover Effect, Icon Bag) */}

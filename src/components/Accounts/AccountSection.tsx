@@ -18,11 +18,11 @@ export const AccountSection: React.FC<AccountSectionProps> = ({ onOpenAccount })
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-[#1F1F28] pb-5">
           <div className="space-y-2 max-w-2xl">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-sans">
-              Configured for Your Specific Business Model
+              Turnkey Software Platforms &amp; Modules We License
             </h2>
           </div>
           <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed max-w-md font-sans">
-            From Fintech startups and multi-tier brokerages to enterprise AI workflows and Web3 platforms — choose an engagement and architecture framework aligned with your scale.
+            We deliver and deploy complete, production-ready software platforms for brokerages, prop trading firms, and enterprise fintechs — fully branded under your company identity.
           </p>
         </div>
 
@@ -85,7 +85,7 @@ export const AccountSection: React.FC<AccountSectionProps> = ({ onOpenAccount })
                       isSelected ? 'text-emerald-700 dark:text-emerald-400 hover:text-emerald-800 dark:hover:text-emerald-300' : 'text-emerald-700 dark:text-emerald-400 hover:text-emerald-800'
                     }`}
                   >
-                    <span>Configure</span>
+                    <span>Request Demo</span>
                     <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
                   </button>
                 </div>

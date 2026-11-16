@@ -24,11 +24,14 @@ export const TerminalShowcase: React.FC<TerminalShowcaseProps> = ({ onOpenAccoun
           <div className="lg:col-span-5 space-y-5">
             {/* Header */}
             <div className="space-y-2.5">
+              <div className="text-[11px] font-mono font-bold tracking-widest text-emerald-700 dark:text-emerald-400 uppercase">
+                WHITE-LABEL SOFTWARE WE LICENSE &amp; DEPLOY
+              </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white font-sans leading-tight">
-                Branded Trading Terminals & Client Portals
+                Branded Trading Terminals &amp; Client Portals For Your Firm
               </h2>
               <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm leading-relaxed font-sans">
-                Deploy high-speed web traders, intuitive client onboarding portals, and native mobile apps built specifically for your brokerage or prop firm brand.
+                We engineer, brand, and license turnkey browser WebTraders, custom trader portals, and native iOS &amp; Android trading applications directly to brokerages and proprietary firms.
               </p>
             </div>
 
