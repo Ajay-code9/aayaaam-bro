@@ -160,7 +160,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }`}
                 >
                   {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[28%] w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500" />
+                  <div className="absolute -top-2 left-[33.5%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
 
                   {/* 4 Column Layout matching reference screenshot media_1794498004827_118a8b60.jpg */}
                   <div className="grid grid-cols-4 gap-6">
@@ -368,7 +368,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }`}
                 >
                   {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[39%] w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500" />
+                  <div className="absolute -top-2 left-[42.1%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
 
                   {/* 4 Column Layout matching reference screenshot */}
                   <div className="grid grid-cols-4 gap-6">
@@ -573,7 +573,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }`}
                 >
                   {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[50%] w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500" />
+                  <div className="absolute -top-2 left-[50.5%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
 
                   {/* 4 Columns Grid matching reference screenshot */}
                   <div className="grid grid-cols-4 gap-6">
@@ -773,7 +773,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }`}
                 >
                   {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[61%] w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500" />
+                  <div className="absolute -top-2 left-[58.5%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
 
                   {/* 4 Columns Grid matching reference screenshot */}
                   <div className="grid grid-cols-4 gap-6">
@@ -972,7 +972,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   }`}
                 >
                   {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[72%] w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500" />
+                  <div className="absolute -top-2 left-[66.3%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
 
                   {/* 4 Columns Grid matching reference screenshot */}
                   <div className="grid grid-cols-4 gap-6">
