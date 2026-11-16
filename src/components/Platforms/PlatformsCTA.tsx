@@ -22,7 +22,7 @@ export const PlatformsCTA: React.FC<{ onOpenAccount: () => void }> = ({ onOpenAc
         </h2>
 
         <p className="text-slate-300 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
-          Open your BrokerBros account today to access sub-12ms SmartRouting, multi-monitor C++ Desktop Pro, and full options chaining on mobile.
+          Open your AyaamX account today to access sub-12ms SmartRouting, multi-monitor C++ Desktop Pro, and full options chaining on mobile.
         </p>
 
         {/* Buttons */}

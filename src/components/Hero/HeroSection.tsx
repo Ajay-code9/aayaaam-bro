@@ -23,30 +23,30 @@ const HERO_SLIDES: SlideItem[] = [
   {
     id: 1,
     bgImage: '/Homepage/hero-one.webp',
-    badge: 'BROKERAGE TECHNOLOGY INFRASTRUCTURE',
-    headline: 'Brokerage Technology Infrastructure Built for Forex & Multi-Asset Brokers',
-    subtext: 'Launch or modernize your brokerage with connected CRM, IB management, trading apps, social trading, PAMM/MAM, MT5 integrations, FIX connectivity, bridge and risk-management infrastructure—delivered as modular or white-label technology.',
-    buttonText: 'BOOK A TECHNICAL DEMO',
+    badge: 'INTELLIGENT SOFTWARE & TRADING TECH',
+    headline: 'Engineering Scalable Software, AI & Trading Systems',
+    subtext: 'AyaamX builds connected digital products, high-throughput broker CRM & prop firm platforms, AI automation assistants, and enterprise Web3 solutions tailored around your business workflows.',
+    buttonText: 'EXPLORE SOLUTIONS',
     actionType: 'crm',
     textColor: 'black',
   },
   {
     id: 2,
     bgImage: '/Homepage/hero-two.webp',
-    badge: 'TURNKEY BROKERAGE INFRASTRUCTURE',
-    headline: 'White-Label Broker CRM &\nAdmin Backoffice Suite',
-    subtext: 'Comprehensive broker operating system featuring multi-level IB management, client onboarding, risk monitoring, automated KYC workflows, and prop firm evaluation engines.',
-    buttonText: 'EXPLORE BROKER CRM',
+    badge: 'FINTECH & BROKERAGE TECHNOLOGY',
+    headline: 'Broker CRM, Prop Firm &\nTrader Lifecycle Ecosystem',
+    subtext: 'Connect trader onboarding, account operations, multi-tier IB management, real-time risk surveillance, and automated evaluations in one unified high-performance operating stack.',
+    buttonText: 'DISCOVER TRADING TECH',
     actionType: 'crm',
     textColor: 'white',
   },
   {
     id: 3,
     bgImage: '/Homepage/hero-three.webp',
-    badge: 'EXECUTION & RISK INFRASTRUCTURE',
-    headline: 'Tier-1 Liquidity Bridge &\nLow-Latency FIX Connectivity',
-    subtext: 'Direct FIX 4.4/5.0 liquidity bridges, MT5 server plugins, A/B/Hybrid risk management engine, real-time exposure monitoring, and automated liquidity aggregation.',
-    buttonText: 'EXPLORE EXECUTION BRIDGE',
+    badge: 'AI & DIGITAL ENGINEERING',
+    headline: 'AI Agents, Blockchain &\nEnterprise Cloud Platforms',
+    subtext: 'From document intelligence and smart automation to custom wallets, Web3 contracts, and resilient cloud architecture—engineered from discovery through scale.',
+    buttonText: 'VIEW ENGINEERING SUITE',
     actionType: 'institutional',
     textColor: 'black',
   },
@@ -80,27 +80,29 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAccount, onExplo
 
   return (
     <section
-      className="relative bg-slate-900 text-white min-h-[460px] sm:min-h-[510px] flex items-center overflow-hidden border-b border-slate-800 font-sans select-none"
+      className="relative bg-slate-900 text-white flex-1 flex items-center overflow-hidden border-b border-slate-800 font-sans select-none sm:min-h-[520px] py-4 sm:py-0"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* Original Still Background Image Carousel (Untouched by theme transitions) */}
+      {/* Original Still Background Image Carousel */}
       <div className="absolute inset-0 w-full h-full no-theme-transition">
         {HERO_SLIDES.map((item, idx) => (
           <img
             key={item.id}
             src={item.bgImage}
-            alt={`BrokerBros Hero Slide ${item.id}`}
+            alt={`AyaamX Hero Slide ${item.id}`}
             className={`absolute inset-0 w-full h-full object-cover object-center pointer-events-none transition-opacity duration-500 ease-in-out no-theme-transition ${
               currentSlide === idx ? 'opacity-100 z-0' : 'opacity-0 z-0'
             }`}
           />
         ))}
+        {/* Soft gradient mask for mobile legibility */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent sm:hidden pointer-events-none" />
       </div>
 
       {/* Content Container */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full py-12 sm:py-16">
-        <div className="max-w-2xl space-y-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-4 pb-10 sm:py-16">
+        <div className="max-w-2xl space-y-3 sm:space-y-4">
           <AnimatePresence mode="wait">
             <motion.div
               key={slide.id}
@@ -108,38 +110,38 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAccount, onExplo
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25, ease: 'easeOut' }}
-              className="space-y-4"
+              className="space-y-3 sm:space-y-4"
             >
               {/* Headline - Dynamic Black or White based on slide background */}
-              <h1 className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] whitespace-pre-line font-sans ${
+              <h1 className={`text-[1.35rem] leading-[1.22] sm:text-4xl lg:text-5xl font-black tracking-tight sm:whitespace-pre-line break-words max-w-full font-sans ${
                 isWhiteText ? 'text-white drop-shadow-md' : 'text-slate-950'
               }`}>
                 {slide.headline}
               </h1>
 
               {/* Subtext */}
-              <p className={`text-sm sm:text-base leading-relaxed font-medium max-w-xl font-sans ${
-                isWhiteText ? 'text-slate-100 drop-shadow-sm' : 'text-slate-900'
+              <p className={`text-xs sm:text-base leading-relaxed font-normal sm:font-medium max-w-xl font-sans ${
+                isWhiteText ? 'text-slate-100 drop-shadow-sm' : 'text-slate-800'
               }`}>
                 {slide.subtext}
               </p>
 
               {/* Action Buttons */}
-              <div className="pt-3 flex flex-wrap gap-3 items-center">
+              <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row gap-2.5 sm:gap-3 items-stretch sm:items-center">
                 {!(HIDE_BOOK_DEMO && slide.buttonText.includes('DEMO')) && (
                   <button
                     onClick={() => handleAction(slide.actionType)}
-                    className="px-7 py-3.5 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-none transition-colors cursor-pointer text-xs sm:text-sm tracking-wider uppercase font-sans shadow-sm"
+                    className="w-full sm:w-auto px-5 py-2.5 sm:px-7 sm:py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-lg transition-all cursor-pointer text-xs sm:text-sm tracking-wider uppercase font-sans shadow-md text-center"
                   >
                     {slide.buttonText}
                   </button>
                 )}
                 <button
                   onClick={onExplorePlatforms}
-                  className={`px-6 py-3.5 border text-xs sm:text-sm tracking-wider uppercase font-bold transition-colors cursor-pointer rounded-none ${
+                  className={`w-full sm:w-auto px-5 py-2.5 sm:px-6 sm:py-3.5 border rounded-lg text-xs sm:text-sm tracking-wider uppercase font-bold transition-all cursor-pointer text-center ${
                     isWhiteText
-                      ? 'border-white/80 text-white hover:bg-white hover:text-slate-900'
-                      : 'border-slate-900 text-slate-950 hover:bg-slate-950 hover:text-white'
+                      ? 'border-white/80 text-white bg-black/20 backdrop-blur-xs hover:bg-white hover:text-slate-900'
+                      : 'border-slate-900 text-slate-950 bg-white/40 backdrop-blur-xs hover:bg-slate-950 hover:text-white'
                   }`}
                 >
                   EXPLORE PRODUCTS

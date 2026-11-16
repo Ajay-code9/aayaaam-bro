@@ -49,7 +49,7 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
           </h1>
 
           <p className="max-w-3xl mx-auto text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-            A factual view of how Broker Bros protects access, client data, and production infrastructure across its modular software stack and managed hosting environments with AES-256 encryption, zero-trust RBAC, and Equinix co-location.
+            A factual view of how AyaamX protects access, client data, and production infrastructure across its modular software stack and managed hosting environments with AES-256 encryption, zero-trust RBAC, and Equinix co-location.
           </p>
 
           <div className="max-w-3xl mx-auto p-3.5 bg-slate-100 dark:bg-slate-900/80 rounded-xl border border-slate-200 dark:border-slate-800 text-xs text-slate-600 dark:text-slate-400 text-left">
@@ -97,7 +97,7 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               <span>STEP-BY-STEP DATA PROTECTION WORKFLOW</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              How BrokerBros Vault System Protects Your Data
+              How AyaamX Vault System Protects Your Data
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
               Simple 4-step security process from vault isolation to real-time compliance logging.
@@ -172,7 +172,7 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               Data Security and Protection as Top Priority
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              At BrokerBros, data security and protection are paramount. We implement stringent multi-layer controls ensuring your client records remain safe, un-tampered, and accessible only to authorized staff.
+              At AyaamX, data security and protection are paramount. We implement stringent multi-layer controls ensuring your client records remain safe, un-tampered, and accessible only to authorized staff.
             </p>
           </div>
 
@@ -211,7 +211,7 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         </div>
       </section>
 
-      {/* 3. THE BROKERBROS VAULT SYSTEM */}
+      {/* 3. THE AyaamX VAULT SYSTEM */}
       <section id="vault-architecture" className="py-16 sm:py-20 bg-slate-900 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/40 via-slate-900 to-slate-900 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
@@ -222,10 +222,10 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               <span>ISOLATED BRAND STORAGE</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
-              The BrokerBros Vault System — Dedicated Standalone Server Isolation
+              The AyaamX Vault System — Dedicated Standalone Server Isolation
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed">
-              We have developed the **BrokerBros Vault System** to decrypt sensitive fields (such as client phone numbers) hosted on dedicated stand-alone servers per customer brand. This ensures zero multi-tenant leakage and the highest security standards in financial software.
+              We have developed the **AyaamX Vault System** to decrypt sensitive fields (such as client phone numbers) hosted on dedicated stand-alone servers per customer brand. This ensures zero multi-tenant leakage and the highest security standards in financial software.
             </p>
           </div>
 
@@ -233,7 +233,7 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
           <div className="bg-slate-950 p-6 sm:p-8 rounded-2xl border border-slate-800 space-y-6 shadow-2xl">
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
               <div className="flex items-center gap-3">
-                <span className="font-mono text-xs font-bold text-emerald-400">BROKERBROS VAULT REPO: STANDALONE_NODE_UK_04</span>
+                <span className="font-mono text-xs font-bold text-emerald-400">AyaamX VAULT REPO: STANDALONE_NODE_UK_04</span>
               </div>
               <button
                 onClick={() => setMaskedPreview(!maskedPreview)}
@@ -356,7 +356,7 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               Hosting Environment & Advanced Protection
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              BrokerBros relies on reputable cloud infrastructure and AI-driven security defenses to keep your platform online 24/7/365.
+              AyaamX relies on reputable cloud infrastructure and AI-driven security defenses to keep your platform online 24/7/365.
             </p>
           </div>
 
@@ -401,7 +401,7 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
           <div className="p-8 rounded-2xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white space-y-4 text-center max-w-4xl mx-auto shadow-xl">
             <h3 className="text-2xl font-extrabold">Our Uncompromising Commitment to Data Security</h3>
             <p className="text-sm leading-relaxed text-emerald-50 font-medium">
-              BrokerBros is committed to delivering the highest security and protection for our client's data. We continuously strive to maintain our clients' trust and confidence by upholding the most stringent security standards, protocols, and audit logs.
+              AyaamX is committed to delivering the highest security and protection for our client's data. We continuously strive to maintain our clients' trust and confidence by upholding the most stringent security standards, protocols, and audit logs.
             </p>
             <div className="pt-2">
               <button

@@ -11,7 +11,7 @@ export const PrivacyPolicyPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "1",
       title: "Who Is Responsible for Your Data (Controller vs Processor)",
-      content: "For public website visitors (broker-bros.com) and sales/demo lead enquiries, Broker Bros acts as the Data Controller responsible for deciding how personal data is processed. For enterprise software services (e.g. Forex CRM, IB portal, and client area deployment), Broker Bros acts as a Data Processor on behalf of the brokerage operator under a Data Processing Agreement (DPA)."
+      content: "For public website visitors (ayaamx.com) and sales/demo lead enquiries, AyaamX acts as the Data Controller responsible for deciding how personal data is processed. For enterprise software services (e.g. Forex CRM, IB portal, and client area deployment), AyaamX acts as a Data Processor on behalf of the brokerage operator under a Data Processing Agreement (DPA)."
     },
     {
       num: "2",
@@ -21,7 +21,7 @@ export const PrivacyPolicyPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "3",
       title: "Data We Collect — Technical and Usage Data",
-      content: "When you navigate broker-bros.com, we automatically receive technical telemetry such as IP address, browser type, approximate geographic location, referral/UTM parameters, pages viewed, and session interaction metrics through server logs and analytics cookies."
+      content: "When you navigate ayaamx.com, we automatically receive technical telemetry such as IP address, browser type, approximate geographic location, referral/UTM parameters, pages viewed, and session interaction metrics through server logs and analytics cookies."
     },
     {
       num: "4",
@@ -36,7 +36,7 @@ export const PrivacyPolicyPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "6",
       title: "Marketing Communications & Opt-Out",
-      content: "You may opt out of promotional emails at any time using the unsubscribe link or by contacting privacy@broker-bros.com. Operational, transactional, and security notifications regarding active enterprise accounts will continue as necessary."
+      content: "You may opt out of promotional emails at any time using the unsubscribe link or by contacting privacy@ayaamx.com. Operational, transactional, and security notifications regarding active enterprise accounts will continue as necessary."
     },
     {
       num: "7",
@@ -51,7 +51,7 @@ export const PrivacyPolicyPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "9",
       title: "International Data Transfers",
-      content: "Broker Bros operates globally with server infrastructure in Equinix LD4 (London) and NY4 (New York). International transfers comply with applicable data transfer mechanisms, including Standard Contractual Clauses (SCCs) where required."
+      content: "AyaamX operates globally with server infrastructure in Equinix LD4 (London) and NY4 (New York). International transfers comply with applicable data transfer mechanisms, including Standard Contractual Clauses (SCCs) where required."
     },
     {
       num: "10",
@@ -66,12 +66,12 @@ export const PrivacyPolicyPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "12",
       title: "Your Privacy Rights",
-      content: "Depending on your jurisdiction, you may have rights to request access, correction, deletion, restriction, or portability of your personal data. To exercise any data subject rights, please contact privacy@broker-bros.com."
+      content: "Depending on your jurisdiction, you may have rights to request access, correction, deletion, restriction, or portability of your personal data. To exercise any data subject rights, please contact privacy@ayaamx.com."
     },
     {
       num: "13",
       title: "Enterprise Customer & End-Client Data",
-      content: "When a brokerage customer uses Broker Bros software to manage its retail traders or IB affiliates, that brokerage remains the Data Controller for its end-client data. End clients should direct privacy requests to their respective broker operator."
+      content: "When a brokerage customer uses AyaamX software to manage its retail traders or IB affiliates, that brokerage remains the Data Controller for its end-client data. End clients should direct privacy requests to their respective broker operator."
     },
     {
       num: "14",
@@ -81,7 +81,7 @@ export const PrivacyPolicyPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "15",
       title: "Third-Party Links",
-      content: "broker-bros.com may contain links to external partner platforms, documentation, or social channels. Third-party privacy practices are governed by their own respective notices."
+      content: "ayaamx.com may contain links to external partner platforms, documentation, or social channels. Third-party privacy practices are governed by their own respective notices."
     },
     {
       num: "16",
@@ -91,7 +91,7 @@ export const PrivacyPolicyPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "17",
       title: "Contact & Data Protection Officer",
-      content: "For privacy questions, data subject requests, or security inquiries, please contact our Data Protection Team at privacy@broker-bros.com or through our Contact Desk."
+      content: "For privacy questions, data subject requests, or security inquiries, please contact our Data Protection Team at privacy@ayaamx.com or through our Contact Desk."
     }
   ];
 
@@ -108,7 +108,7 @@ export const PrivacyPolicyPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             Website &amp; B2B Privacy Policy
           </h1>
           <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-3xl leading-relaxed font-sans font-medium">
-            Last Updated: September 2026. Transparent notice on how Broker Bros handles business data, cookies, lead information, and enterprise software processing roles.
+            Last Updated: September 2026. Transparent notice on how AyaamX handles business data, cookies, lead information, and enterprise software processing roles.
           </p>
         </div>
       </section>

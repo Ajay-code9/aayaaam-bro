@@ -9,7 +9,7 @@ interface PageProps {
 export const FinancialChartsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ProductMasterPageTemplate
-      productTitle="BrokerBros Financial Charts"
+      productTitle="AyaamX Financial Charts"
       heroBadge="PROFESSIONAL HTML5 CHARTING SUITE"
       heroDescription="High-speed HTML5 charting software for web and mobile. Give your traders 100+ technical indicators, drawing tools, and 1-click chart trading."
       heroImageDark="/Hero-Images/financial-charts-black.png"

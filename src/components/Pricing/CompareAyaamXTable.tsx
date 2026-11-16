@@ -1,11 +1,11 @@
 import React from 'react';
 import { Check, X, ShieldCheck, Sparkles, ArrowRight } from 'lucide-react';
 
-export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = ({ onOpenAccount }) => {
+export const CompareAyaamXTable: React.FC<{ onOpenAccount: () => void }> = ({ onOpenAccount }) => {
   const features = [
     {
       label: 'US Stock Commission',
-      brokerbros: '$0.00 Fixed / $0.0035 Tiered',
+      AyaamX: '$0.00 Fixed / $0.0035 Tiered',
       schwab: '$0.00 Fixed',
       etrade: '$0.00 Fixed',
       fidelity: '$0.00 Fixed',
@@ -14,7 +14,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
     },
     {
       label: 'Options Contract Fee',
-      brokerbros: '$0.15–$0.50 / contract',
+      AyaamX: '$0.15–$0.50 / contract',
       schwab: '$0.65 / contract',
       etrade: '$0.65 / contract',
       fidelity: '$0.65 / contract',
@@ -23,7 +23,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
     },
     {
       label: 'Uninvested Cash APY (USD)',
-      brokerbros: '4.85% APY (Auto Sweep)',
+      AyaamX: '4.85% APY (Auto Sweep)',
       schwab: '0.45% APY',
       etrade: '0.45% APY',
       fidelity: '2.72% APY',
@@ -32,7 +32,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
     },
     {
       label: 'Margin Borrow Rate ($100k)',
-      brokerbros: '5.83% APY',
+      AyaamX: '5.83% APY',
       schwab: '11.82% APY',
       etrade: '12.20% APY',
       fidelity: '11.50% APY',
@@ -41,7 +41,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
     },
     {
       label: 'Avg Price Improvement (per 100 shs)',
-      brokerbros: '$0.48 / 100 shares',
+      AyaamX: '$0.48 / 100 shares',
       schwab: '$0.28 / 100 shares',
       etrade: '$0.22 / 100 shares',
       fidelity: '$0.34 / 100 shares',
@@ -50,7 +50,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
     },
     {
       label: 'FX Currency Conversion Fee',
-      brokerbros: '0.02% (2 pips spot)',
+      AyaamX: '0.02% (2 pips spot)',
       schwab: '1.00%–2.50% markup',
       etrade: '1.50% markup',
       fidelity: '1.00% markup',
@@ -59,7 +59,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
     },
     {
       label: 'Direct Exchange DMA Routing',
-      brokerbros: 'Included (150+ venues)',
+      AyaamX: 'Included (150+ venues)',
       schwab: 'Restricted',
       etrade: 'Restricted',
       fidelity: 'Restricted',
@@ -68,7 +68,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
     },
     {
       label: 'Level-2 Real-Time Streaming Data',
-      brokerbros: 'Free for Active Accounts',
+      AyaamX: 'Free for Active Accounts',
       schwab: 'Paid / Restricted',
       etrade: 'Paid Surcharge',
       fidelity: 'Paid / Tiered',
@@ -77,7 +77,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
     },
     {
       label: 'Monthly Inactivity Fee',
-      brokerbros: '$0.00 Always',
+      AyaamX: '$0.00 Always',
       schwab: '$0.00',
       etrade: '$0.00',
       fidelity: '$0.00',
@@ -101,10 +101,10 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
             <span>COMPETITIVE BENCHMARK MATRIX</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-950 dark:text-white tracking-tight font-sans">
-            How BrokerBros Outperforms Legacy Brokers
+            How AyaamX Outperforms Legacy Brokers
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
-            See how BrokerBros stacks up against traditional retail brokerages on execution cost, margin rates, and cash yields.
+            See how AyaamX stacks up against traditional retail brokerages on execution cost, margin rates, and cash yields.
           </p>
         </div>
 
@@ -116,7 +116,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
                 <th className="py-4 px-5 font-bold text-white w-1/4">Feature / Pricing Dimension</th>
                 <th className="py-4 px-5 text-emerald-400 font-bold bg-slate-900 dark:bg-[#1B2538] border-x-2 border-emerald-500 shadow-inner">
                   <div className="flex items-center gap-1.5">
-                    <span>BrokerBros Pro</span>
+                    <span>AyaamX Pro</span>
                     <span className="text-[10px] bg-emerald-500 text-slate-950 px-1.5 py-0.5 rounded font-black">TOP CHOICE</span>
                   </div>
                 </th>
@@ -133,7 +133,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
                     {f.label}
                   </td>
                   <td className="py-3.5 px-5 font-mono font-extrabold text-emerald-700 dark:text-emerald-400 bg-emerald-50/60 dark:bg-emerald-500/10 border-x-2 border-emerald-500/80">
-                    {f.brokerbros}
+                    {f.AyaamX}
                   </td>
                   <td className="py-3.5 px-4 font-mono text-slate-600 dark:text-slate-300">{f.schwab}</td>
                   <td className="py-3.5 px-4 font-mono text-slate-600 dark:text-slate-300">{f.etrade}</td>
@@ -155,7 +155,7 @@ export const CompareBrokerBrosTable: React.FC<{ onOpenAccount: () => void }> = (
             onClick={onOpenAccount}
             className="px-5 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl shadow-md transition-all whitespace-nowrap cursor-pointer flex items-center gap-2"
           >
-            <span>Switch to BrokerBros Today</span>
+            <span>Switch to AyaamX Today</span>
             <ArrowRight className="w-4 h-4" />
           </button>
         </div>

@@ -9,9 +9,9 @@ import { ShortSaleCostsSection } from '../components/Pricing/ShortSaleCostsSecti
 import { MarketDataPricingSection } from '../components/Pricing/MarketDataPricingSection';
 import { OtherFeesAccordionSection } from '../components/Pricing/OtherFeesAccordionSection';
 import { FeeTransparencyCards } from '../components/Pricing/FeeTransparencyCards';
-import { CompareBrokerBrosTable } from '../components/Pricing/CompareBrokerBrosTable';
+import { CompareAyaamXTable } from '../components/Pricing/CompareAyaamXTable';
 import { InteractivePricingCalculator } from '../components/Pricing/InteractivePricingCalculator';
-import { WhyBrokerBrosSavesMoney } from '../components/Pricing/WhyBrokerBrosSavesMoney';
+import { WhyAyaamXSavesMoney } from '../components/Pricing/WhyAyaamXSavesMoney';
 import { PricingStatsGrid } from '../components/Pricing/PricingStatsGrid';
 import { PricingFAQAccordion } from '../components/Pricing/PricingFAQAccordion';
 import { PricingCTA } from '../components/Pricing/PricingCTA';
@@ -72,14 +72,14 @@ export const PricingPage: React.FC<PricingPageProps> = ({ onOpenAccount }) => {
       {/* 9. Fee Transparency Guarantee Cards */}
       <FeeTransparencyCards />
 
-      {/* 10. Compare BrokerBros Table */}
-      <CompareBrokerBrosTable onOpenAccount={onOpenAccount} />
+      {/* 10. Compare AyaamX Table */}
+      <CompareAyaamXTable onOpenAccount={onOpenAccount} />
 
       {/* 11. Interactive Pricing Calculator */}
       <InteractivePricingCalculator onOpenAccount={onOpenAccount} />
 
-      {/* 12. Why BrokerBros Saves You Money */}
-      <WhyBrokerBrosSavesMoney />
+      {/* 12. Why AyaamX Saves You Money */}
+      <WhyAyaamXSavesMoney />
 
       {/* 13. Pricing Statistics */}
       <PricingStatsGrid />

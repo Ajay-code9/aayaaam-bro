@@ -13,6 +13,7 @@ import { GlobalMapSection } from '../components/GlobalPresence/GlobalMapSection'
 import { ResearchSection } from '../components/Research/ResearchSection';
 import { AccountSection } from '../components/Accounts/AccountSection';
 import { AcademySection } from '../components/Education/AcademySection';
+import { CaseStudiesSection } from '../components/Home/CaseStudiesSection';
 import { FaqSection } from '../components/FAQ/FaqSection';
 import { CTASection } from '../components/CTA/CTASection';
 
@@ -46,18 +47,21 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenAccount, onExplorePlat
   return (
     <div className="selection:bg-emerald-500 selection:text-white font-sans overflow-x-hidden bg-white dark:bg-[#090D14] text-slate-900 dark:text-slate-100 transition-colors duration-300">
 
-      {/* ① INSTITUTIONAL PURE WHITE HERO SECTION */}
-      <HeroSection onOpenAccount={onOpenAccount} onExplorePlatforms={onExplorePlatforms} />
+      {/* ① & ② INITIAL LANDING VIEWPORT GROUP (Header + Hero + 4 Feature Cards = Exact 100dvh on Mobile) */}
+      <div className="flex flex-col min-h-[calc(100dvh-64px)] justify-between lg:block lg:min-h-0">
+        {/* ① INSTITUTIONAL HERO SECTION */}
+        <HeroSection onOpenAccount={onOpenAccount} onExplorePlatforms={onExplorePlatforms} />
 
-      {/* ② 4-COLUMN INSTITUTIONAL FEATURE STRIP */}
-      <FeatureStripSection />
+        {/* ② 4-COLUMN INSTITUTIONAL FEATURE STRIP */}
+        <FeatureStripSection />
+      </div>
 
-      {/* ③ IBKR-STYLE BROKERAGE COMPARISON TABLE */}
+      {/* ③ ENTERPRISE BROKERAGE COMPARISON TABLE */}
       <Section anim={fadeUp}>
         <IbkrComparisonTable onOpenAccount={onOpenAccount} />
       </Section>
 
-      {/* ④ ULTRA CLASSY IBKR-STYLE SHOWCASE (Clean Whitespace, Real Mockup & 2-Col Grid) */}
+      {/* ④ ULTRA CLASSY ENTERPRISE SHOWCASE (Clean Whitespace, Real Mockup & 2-Col Grid) */}
       <Section anim={fadeUp}>
         <InstitutionalClassyShowcase onOpenAccount={onOpenAccount} />
       </Section>
@@ -85,6 +89,11 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenAccount, onExplorePlat
       {/* ⑧ INSTITUTIONAL RESILIENCE & TRUST — Build confidence mid-scroll */}
       <Section anim={fadeUp} delay={0.05}>
         <TrustSection onOpenAccount={onOpenAccount} />
+      </Section>
+
+      {/* ⑧.b AYAAMX SELECTED PRODUCTION DELIVERABLES / CASE STUDIES */}
+      <Section anim={fadeUp}>
+        <CaseStudiesSection />
       </Section>
 
       {/* ⑨ OPERATOR KNOWLEDGE BASE & INTELLIGENCE PORTAL */}

@@ -1,6 +1,6 @@
 {
-  "name": "BrokerBros",
-  "description": "Institutional-grade global brokerage, trading platform, and wealth management services.",
+  "name": "AyaamX Technologies",
+  "description": "Enterprise software engineering, proprietary trading tech, AI automations, and digital product studio.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

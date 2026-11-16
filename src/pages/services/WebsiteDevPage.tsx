@@ -16,7 +16,7 @@ export const WebsiteDevPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       deliverables={[
         { title: "Custom Brand UI Design", desc: "Premium interface design tailored specifically to your brokerage brand identity.", icon: Palette, sla: "Custom UI" },
         { title: "Mobile & Terminal Optimization", desc: "Fast, responsive web design tested across all smartphones, tablets, and desktop displays.", icon: Layout, sla: "100% Responsive" },
-        { title: "CRM & Widget Integration", desc: "Seamless integration with BrokerBros CRM, live ticker widgets, and registration forms.", icon: Zap, sla: "CRM Ready" },
+        { title: "CRM & Widget Integration", desc: "Seamless integration with AyaamX CRM, live ticker widgets, and registration forms.", icon: Zap, sla: "CRM Ready" },
         { title: "Financial SEO & Speed Tuning", desc: "Optimized for Google 95+ speed performance score, fast page loads, and search rankings.", icon: Globe, sla: "SEO Ready" }
       ]}
       workflowSteps={[
@@ -38,8 +38,8 @@ export const WebsiteDevPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         { label: "SEO Readiness", value: "100% Optimized" }
       ]}
       faqs={[
-        { q: "Do you build websites from generic templates or custom design?", a: "Every BrokerBros website is designed from scratch in Figma to match your unique brand identity, regulatory requirements, and target audience." },
-        { q: "Will the website integrate cleanly with BrokerBros Client Portal & CRM?", a: "Yes. All registration forms, live account open buttons, deposit popups, and live market tickers link directly to your CRM back office out of the box." },
+        { q: "Do you build websites from generic templates or custom design?", a: "Every AyaamX website is designed from scratch in Figma to match your unique brand identity, regulatory requirements, and target audience." },
+        { q: "Will the website integrate cleanly with AyaamX Client Portal & CRM?", a: "Yes. All registration forms, live account open buttons, deposit popups, and live market tickers link directly to your CRM back office out of the box." },
         { q: "Is the website optimized for mobile phones and tablets?", a: "Yes. Our frontend engineers optimize every component for smartphones, tablets, laptops, and ultra-wide trading displays." }
       ]}
       onOpenAccount={onOpenAccount}

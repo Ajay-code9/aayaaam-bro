@@ -94,7 +94,7 @@ export const OpenAccountForm: React.FC<OpenAccountFormProps> = ({
               REGISTRATION SUBMITTED
             </span>
             <h3 className="text-3xl font-serif-heading font-bold text-slate-900">
-              Welcome to BrokerBros!
+              Welcome to AyaamX!
             </h3>
             <p className="text-slate-600 text-sm max-w-md mx-auto leading-relaxed">
               Your preliminary application for a <strong className="text-slate-900">{accountType} Account</strong> has been initiated. A temporary verification token has been sent to <strong className="text-slate-900">{email || 'your email'}</strong>.
@@ -425,7 +425,7 @@ export const OpenAccountForm: React.FC<OpenAccountFormProps> = ({
                     className="w-4 h-4 mt-0.5 rounded text-emerald-600 focus:ring-emerald-500 border-slate-300 shrink-0"
                   />
                   <span>
-                    I agree to the <a href="/legal" className="text-emerald-700 font-bold hover:underline">BrokerBros Customer Agreement</a> and electronic disclosure authorization.
+                    I agree to the <a href="/legal" className="text-emerald-700 font-bold hover:underline">AyaamX Customer Agreement</a> and electronic disclosure authorization.
                   </span>
                 </label>
 

@@ -21,7 +21,7 @@ export const ProductVideoSection: React.FC<ProductVideoSectionProps> = ({
   title = 'Product Showcase',
   subtitle = 'Explore our institutional platform interface powering real-time execution, admin management, and automated client workflows.',
   videoSrc = '/test.mp4',
-  posterSrc = '/broker-crm-img-one.png',
+  posterSrc = '/aayaamx-operations-platform.png',
   lightImageSrc,
   darkImageSrc,
   chapters,

@@ -38,7 +38,7 @@ export const TechnicalSupportPage: React.FC<PageProps> = ({ onOpenAccount }) => 
         { label: "Uptime Commitment", value: "99.999%" }
       ]}
       faqs={[
-        { q: "Do you use AI support chatbots for ticket triage?", a: "No. BrokerBros guarantees direct human connection to experienced FinTech engineers for every support ticket, phone call, or Slack message." },
+        { q: "Do you use AI support chatbots for ticket triage?", a: "No. AyaamX guarantees direct human connection to experienced FinTech engineers for every support ticket, phone call, or Slack message." },
         { q: "What is your emergency incident response SLA?", a: "P1 critical incidents receive an immediate priority answer under 30 seconds and active war-room escalation within 5 minutes." },
         { q: "Can our technical staff communicate over Slack or Teams?", a: "Yes. Enterprise clients receive dedicated private Slack, Microsoft Teams, and Telegram channels connected directly to our engineering desk." },
         { q: "Are support technicians knowledgeable about MT5, FIX APIs, and CRMs?", a: "All technicians are certified in MetaTrader 5 server administration, FIX protocol messaging, liquidity bridge routing, and CRM database management." }

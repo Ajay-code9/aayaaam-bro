@@ -51,7 +51,7 @@ export const WebSocketsStreamingPage: React.FC<PageProps> = ({ onOpenAccount }) 
   ];
 
   const testimonials = [
-    { quote: "We replaced our polling-based price feed with BrokerBros WebSockets and saw latency drop from 500ms to under 10ms. Our traders noticed the difference immediately.", name: "Tom Bergman", role: "CTO, Nordic Trading Solutions", rating: 5 },
+    { quote: "We replaced our polling-based price feed with AyaamX WebSockets and saw latency drop from 500ms to under 10ms. Our traders noticed the difference immediately.", name: "Tom Bergman", role: "CTO, Nordic Trading Solutions", rating: 5 },
     { quote: "The L2 order book streaming powers our custom trading interface. We can show real-time market depth to 50,000 concurrent users without any performance issues.", name: "Maria Gonzalez", role: "VP Engineering, LatAm Markets", rating: 5 },
     { quote: "Account equity streaming is seamless. Our mobile app shows real-time P&L and margin levels without any polling. The automatic reconnection logic handles network drops gracefully.", name: "Kevin Park", role: "Mobile Lead, K-Trade", rating: 5 }
   ];
@@ -121,7 +121,7 @@ export const WebSocketsStreamingPage: React.FC<PageProps> = ({ onOpenAccount }) 
               
               <div className="relative">
                 <img 
-                  src="/broker-crm-img-one.png" 
+                  src="/aayaamx-operations-platform.png" 
                   alt="Broker CRM Interface" 
                   className="w-full h-auto rounded-[18px] shadow-2xl border border-slate-200 dark:border-slate-800 relative z-10" 
                 />

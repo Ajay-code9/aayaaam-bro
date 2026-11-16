@@ -6,7 +6,7 @@ interface PageProps {
   onOpenAccount: () => void;
 }
 
-export const BrokerBrosWebTraderPage: React.FC<PageProps> = ({ onOpenAccount }) => {
+export const AyaamXWebTraderPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ProductMasterPageTemplate
       productTitle="Flagship HTML5 WebTrader Terminal"
@@ -42,10 +42,10 @@ export const BrokerBrosWebTraderPage: React.FC<PageProps> = ({ onOpenAccount }) 
         { label: "Security Standard", value: "TLS 1.3 + Biometric 2FA" }
       ]}
       faqs={[
-        { q: "What is BrokerBros WebTrader?", a: "BrokerBros WebTrader is a powerful, browser-based trading terminal that allows your brokerage clients to analyze markets and execute trades instantly without installing software." },
+        { q: "What is AyaamX WebTrader?", a: "AyaamX WebTrader is a powerful, browser-based trading terminal that allows your brokerage clients to analyze markets and execute trades instantly without installing software." },
         { q: "Do my clients need to install any software or plugins?", a: "No. WebTrader is 100% web-based and runs smoothly on Chrome, Safari, Edge, and mobile browsers on any device." },
         { q: "Can we customize WebTrader with our brokerage logo and custom domain?", a: "Yes! You can fully brand WebTrader with your logo, brand colors, custom domain (trader.yourbroker.com), default watchlists, and localized languages." },
-        { q: "How does WebTrader connect to our CRM and liquidity providers?", a: "WebTrader connects seamlessly to your BrokerBros CRM, MetaTrader 5 / FIX API gateways, and Tier-1 liquidity providers via real-time WebSocket feeds." }
+        { q: "How does WebTrader connect to our CRM and liquidity providers?", a: "WebTrader connects seamlessly to your AyaamX CRM, MetaTrader 5 / FIX API gateways, and Tier-1 liquidity providers via real-time WebSocket feeds." }
       ]}
       onOpenAccount={onOpenAccount}
     />

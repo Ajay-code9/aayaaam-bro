@@ -106,7 +106,7 @@ export const GlobalMarketAccessPage: React.FC<GlobalMarketAccessPageProps> = ({ 
   const faqs = [
     {
       q: "Can I trade international stocks using my existing single account?",
-      a: "Yes. BrokerBros operates on a unified global account architecture. With a single login and verified identity, you can immediately trade US, European, Asian, and Australian securities without opening separate regional accounts."
+      a: "Yes. AyaamX operates on a unified global account architecture. With a single login and verified identity, you can immediately trade US, European, Asian, and Australian securities without opening separate regional accounts."
     },
     {
       q: "How does currency conversion work when buying foreign stocks?",
@@ -114,11 +114,11 @@ export const GlobalMarketAccessPage: React.FC<GlobalMarketAccessPageProps> = ({ 
     },
     {
       q: "How are international dividends handled and taxed?",
-      a: "Dividends paid by international companies are automatically credited to your multi-currency cash balance in the dividend's native currency. BrokerBros automatically applies applicable double-taxation treaties (e.g. W-8BEN for US equities) to minimize withholding taxes at the source."
+      a: "Dividends paid by international companies are automatically credited to your multi-currency cash balance in the dividend's native currency. AyaamX automatically applies applicable double-taxation treaties (e.g. W-8BEN for US equities) to minimize withholding taxes at the source."
     },
     {
       q: "Is 24/5 trading available for non-US markets?",
-      a: "Yes. In addition to 24/5 US equity and index futures trading, BrokerBros provides direct market access to local exchange hours across Europe and Asia, allowing continuous trading coverage from Sunday evening to Friday evening EST."
+      a: "Yes. In addition to 24/5 US equity and index futures trading, AyaamX provides direct market access to local exchange hours across Europe and Asia, allowing continuous trading coverage from Sunday evening to Friday evening EST."
     },
     {
       q: "Are my international assets covered by the same regulatory protection?",
@@ -211,7 +211,7 @@ export const GlobalMarketAccessPage: React.FC<GlobalMarketAccessPageProps> = ({ 
               One Account. Universal Global Access.
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-              Eliminate the friction of opening multiple foreign brokerage accounts. BrokerBros aggregates world financial centers into a single streamlined trading workspace.
+              Eliminate the friction of opening multiple foreign brokerage accounts. AyaamX aggregates world financial centers into a single streamlined trading workspace.
             </p>
           </div>
 
@@ -368,7 +368,7 @@ export const GlobalMarketAccessPage: React.FC<GlobalMarketAccessPageProps> = ({ 
               <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900 dark:text-white">Market Coverage In Numbers</h2>
             </div>
             <p className="text-slate-600 dark:text-slate-300 text-sm max-w-md">
-              Institutional metrics representing the scope and execution speed of the BrokerBros global mesh.
+              Institutional metrics representing the scope and execution speed of the AyaamX global mesh.
             </p>
           </div>
 

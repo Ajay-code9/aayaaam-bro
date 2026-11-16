@@ -15,7 +15,7 @@ import { TickerItem } from './types';
 // Pages
 import { HomePage } from './pages/HomePage';
 import { AboutPage } from './pages/AboutPage';
-import { WhyBrokerBrosPage } from './pages/WhyBrokerBrosPage';
+import { WhyAyaamXPage } from './pages/WhyAyaamXPage';
 import { BestExecutionPage } from './pages/BestExecutionPage';
 import { GlobalMarketAccessPage } from './pages/GlobalMarketAccessPage';
 import { MarketsOverviewPage } from './pages/markets/MarketsOverviewPage';
@@ -78,8 +78,8 @@ import { CryptoGatewayPage } from './pages/solutions/CryptoGatewayPage';
 import { FixApiLiquidityPage } from './pages/solutions/FixApiLiquidityPage';
 
 // 13 Dedicated Product Pages
-import { BrokerBrosWebTraderPage } from './pages/products/BrokerBrosWebTraderPage';
-import { BrokerBrosTraderPage } from './pages/products/BrokerBrosTraderPage';
+import { AyaamXWebTraderPage } from './pages/products/AyaamXWebTraderPage';
+import { AyaamXTraderPage } from './pages/products/AyaamXTraderPage';
 import { WebTraderPage } from './pages/products/WebTraderPage';
 import { MobileAppProductPage } from './pages/products/MobileAppProductPage';
 import { ForexCrmPage } from './pages/products/ForexCrmPage';
@@ -97,6 +97,11 @@ import { ClientAreaPage } from './pages/products/ClientAreaPage';
 import { PartnerAreaPage } from './pages/products/PartnerAreaPage';
 import { B2bCrmPage } from './pages/products/B2bCrmPage';
 import { ServiceDeskPage } from './pages/products/ServiceDeskPage';
+import { UniversalServiceDetailPage } from './pages/services/UniversalServiceDetailPage';
+import { UniversalSolutionDetailPage } from './pages/solutions/UniversalSolutionDetailPage';
+import { UniversalIndustryDetailPage } from './pages/industries/UniversalIndustryDetailPage';
+import { UniversalProductPlatformDetailPage } from './pages/products/UniversalProductPlatformDetailPage';
+import { DedicatedCompanyPage } from './pages/DedicatedCompanyPage';
 
 // New Managed Service Submenu Pages
 import { TechnicalSupportPage } from './pages/services/TechnicalSupportPage';
@@ -151,16 +156,31 @@ function AppContent() {
             onOpenInquiry={() => setIsInquiryModalOpen(true)}
           />
         );
+      case '/company':
+        return <DedicatedCompanyPage onOpenAccount={handleOpenAccount} />;
       case '/about':
-        return <AboutPage onOpenAccount={handleOpenAccount} />;
-      case '/why-brokerbros':
-      case '/why-brokerbros/capital-safety':
+      case '/company/about':
+        return <DedicatedCompanyPage onOpenAccount={handleOpenAccount} initialTab="about" />;
+      case '/company/our-story':
+        return <DedicatedCompanyPage onOpenAccount={handleOpenAccount} initialTab="our-story" />;
+      case '/company/vision-mission':
+        return <DedicatedCompanyPage onOpenAccount={handleOpenAccount} initialTab="vision-mission" />;
+      case '/company/our-approach':
+        return <DedicatedCompanyPage onOpenAccount={handleOpenAccount} initialTab="our-approach" />;
+      case '/company/technology-expertise':
+        return <DedicatedCompanyPage onOpenAccount={handleOpenAccount} initialTab="technology-expertise" />;
+      case '/company/leadership-team':
+      case '/company/leadership':
+      case '/team':
+        return <DedicatedCompanyPage onOpenAccount={handleOpenAccount} initialTab="leadership-team" />;
+      case '/why-AyaamX':
+      case '/why-AyaamX/capital-safety':
       case '/capital-safety':
-      case '/why-brokerbros/best-execution':
+      case '/why-AyaamX/best-execution':
       case '/best-execution':
-      case '/why-brokerbros/global-market-access':
+      case '/why-AyaamX/global-market-access':
       case '/global-market-access':
-        return <WhyBrokerBrosPage onOpenAccount={handleOpenAccount} />;
+        return <WhyAyaamXPage onOpenAccount={handleOpenAccount} />;
       case '/services/technical-support':
         return <TechnicalSupportPage onOpenAccount={handleOpenAccount} />;
       case '/services/success-manager':
@@ -186,10 +206,10 @@ function AppContent() {
         return <SocialMediaMarketingPage onOpenAccount={handleOpenAccount} />;
       case '/services/marketing/broker-review':
         return <BrokerReviewPage onOpenAccount={handleOpenAccount} />;
-      case '/products/brokerbros-trader':
+      case '/products/AyaamX-trader':
       case '/products/web-trader':
-      case '/products/brokerbros-webtrader':
-        return <BrokerBrosWebTraderPage onOpenAccount={handleOpenAccount} />;
+      case '/products/AyaamX-webtrader':
+        return <AyaamXWebTraderPage onOpenAccount={handleOpenAccount} />;
       case '/products/mobile-app':
         return <MobileAppProductPage onOpenAccount={handleOpenAccount} />;
       case '/products/forex-crm':
@@ -299,6 +319,13 @@ function AppContent() {
         return <ClientProtectionPage onOpenAccount={handleOpenAccount} />;
       case '/institutional':
         return <InstitutionalServicesPage onOpenAccount={handleOpenAccount} />;
+      case '/solutions/fintech':
+      case '/solutions/forex-brokerage':
+      case '/solutions/prop-trading':
+      case '/solutions/blockchain':
+      case '/solutions/enterprise':
+      case '/solutions/ai-business':
+        return <UniversalSolutionDetailPage onOpenAccount={handleOpenAccount} />;
       case '/solutions/broker-crm':
         return <BrokerCrmPage />;
       case '/solutions/admin-backoffice':
@@ -328,9 +355,10 @@ function AppContent() {
       case '/faqs':
         return <HelpCenterPage onOpenAccount={handleOpenAccount} />;
       case '/contact':
-        return <ContactPage onOpenAccount={handleOpenAccount} />;
+      case '/contact-us':
+        return <DedicatedCompanyPage onOpenAccount={handleOpenAccount} initialTab="contact" />;
       case '/careers':
-        return <CareersPage onOpenAccount={handleOpenAccount} />;
+        return <DedicatedCompanyPage onOpenAccount={handleOpenAccount} initialTab="careers" />;
       case '/blog':
         return <BlogPage onOpenAccount={handleOpenAccount} />;
       case '/legal':
@@ -347,6 +375,18 @@ function AppContent() {
       case '/register':
         return <HomePage onOpenAccount={handleOpenAccount} onExplorePlatforms={() => navigate('/platforms')} />;
       default:
+        if (currentPath.startsWith('/services')) {
+          return <UniversalServiceDetailPage onOpenAccount={handleOpenAccount} />;
+        }
+        if (currentPath.startsWith('/solutions')) {
+          return <UniversalSolutionDetailPage onOpenAccount={handleOpenAccount} />;
+        }
+        if (currentPath.startsWith('/industries')) {
+          return <UniversalIndustryDetailPage onOpenAccount={handleOpenAccount} />;
+        }
+        if (currentPath.startsWith('/products/')) {
+          return <UniversalProductPlatformDetailPage onOpenAccount={handleOpenAccount} />;
+        }
         return <HomePage onOpenAccount={handleOpenAccount} onExplorePlatforms={() => navigate('/platforms')} />;
     }
   };
@@ -354,27 +394,25 @@ function AppContent() {
   const isAuthPage = currentPath === '/login' || currentPath === '/open-account' || currentPath === '/signup' || currentPath === '/register';
 
   return (
-    <div className={`min-h-screen max-w-full overflow-x-clip font-sans antialiased selection:bg-emerald-500 selection:text-white flex flex-col justify-between transition-colors duration-300 ${
+    <div className={`min-h-screen max-w-full font-sans antialiased selection:bg-emerald-500 selection:text-white flex flex-col justify-between transition-colors duration-300 ${
       theme === 'dark' ? 'bg-[#0a0a0a] text-slate-100' : 'bg-white text-slate-900'
     }`}>
-      <div>
-        {/* Enterprise Navigation */}
-        {!isAuthPage && (
-          <Navbar
-            onOpenAccount={handleOpenAccount}
-            onLogin={handleLogin}
-            onOpenSearch={handleOpenSearch}
-            onOpenInquiry={() => setIsInquiryModalOpen(true)}
-            selectedSegment={selectedSegment}
-            setSelectedSegment={setSelectedSegment}
-          />
-        )}
+      {/* Enterprise Navigation */}
+      {!isAuthPage && (
+        <Navbar
+          onOpenAccount={handleOpenAccount}
+          onLogin={handleLogin}
+          onOpenSearch={handleOpenSearch}
+          onOpenInquiry={() => setIsInquiryModalOpen(true)}
+          selectedSegment={selectedSegment}
+          setSelectedSegment={setSelectedSegment}
+        />
+      )}
 
-        {/* Dynamic Route View */}
-        <main id="main-content" className="w-full max-w-full overflow-x-clip">
-          {renderPage()}
-        </main>
-      </div>
+      {/* Dynamic Route View (offset by fixed 64px header) */}
+      <main id="main-content" className="w-full max-w-full overflow-x-clip pt-16">
+        {renderPage()}
+      </main>
 
       {/* Enterprise Footer */}
       {!isAuthPage && <Footer onOpenAccount={handleOpenAccount} onLogin={handleLogin} />}

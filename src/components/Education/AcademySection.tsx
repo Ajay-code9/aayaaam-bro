@@ -8,39 +8,39 @@ interface AcademySectionProps {
 export const AcademySection: React.FC<AcademySectionProps> = ({ onOpenAccount }) => {
   const courses = [
     {
-      title: 'White-Label Brokerage Operations: CRM, KYC & Backoffice Setup',
-      level: 'Admin Guide',
+      title: 'Enterprise Fintech & Broker Architecture: CRM, Portals & Ledgers',
+      level: 'Architecture Guide',
       levelColor: 'bg-emerald-50 text-emerald-800 border-emerald-200',
-      lessons: '10 Video Modules',
+      lessons: '10 Modules',
       duration: '35 mins',
-      desc: 'Complete walkthrough of your brokerage backoffice: managing client registration queues, approving KYC uploads, managing IB tree rebates, and tracking deposits.',
-      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=600',
+      desc: 'Complete walkthrough of high-volume digital financial systems: managing account lifecycles, automated verification pipelines, multi-tier rebate trees, and real-time ledger accounting.',
+      image: '/capabilities/trading-brokerage.webp',
       icon: TrendingUp
     },
     {
-      title: 'Prop Firm Engine Setup: Challenge Rules & Automated Risk Breach Locks',
-      level: 'Risk Guide',
+      title: 'AI Automation & Document Intelligence: Building Production Agents',
+      level: 'AI Guide',
       levelColor: 'bg-slate-100 text-slate-800 border-slate-200',
-      lessons: '14 Modules',
-      duration: '45 mins',
-      desc: 'Configure multi-phase prop evaluation rules, trailing drawdowns, automated breach lockout, and funded account payout automation using the BrokerBros Prop Engine.',
-      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=600',
+      lessons: '12 Modules',
+      duration: '40 mins',
+      desc: 'Deploy autonomous LLM agents that extract data from unstructured invoices, run automated compliance auditing, and draft responses with human review checkpoints.',
+      image: '/capabilities/ai-automation.webp',
       icon: Code
     },
     {
-      title: 'FIX 4.4 LP Bridge & MetaTrader 5 API Integration Guide',
-      level: 'Tech Guide',
+      title: 'Web3 & Multi-Chain Gateways: Non-Custodial Wallets & Settlement',
+      level: 'Web3 Guide',
       levelColor: 'bg-emerald-50 text-emerald-800 border-emerald-200',
       lessons: '9 Modules',
       duration: '30 mins',
-      desc: 'Connect your brokerage to Tier-1 liquidity providers via FIX 4.4, configure A-Book/B-Book routing rules, and link MT5 server APIs for live trade execution.',
-      image: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=600',
+      desc: 'Architecting non-custodial wallet infrastructure, automated deposit address generation, on-chain event listeners, and audited smart contract settlements.',
+      image: '/capabilities/blockchain-payments.webp',
       icon: Layers
     }
   ];
 
   return (
-    <section className="py-16 lg:py-20 bg-[#F8FAFC] dark:bg-[#0E1420] border-b border-slate-200/80 dark:border-[#1E293B] font-sans transition-colors duration-300">
+    <section className="py-16 lg:py-20 bg-[#F8FAFC] dark:bg-[#000000] border-b border-slate-200/80 dark:border-[#1F1F28] font-sans transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Section Header */}
@@ -48,14 +48,14 @@ export const AcademySection: React.FC<AcademySectionProps> = ({ onOpenAccount })
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-500/30">
               <GraduationCap className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>BROKER OPERATOR ACADEMY</span>
+              <span>AYAAMX TECHNICAL ACADEMY</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-slate-900 dark:text-white font-sans">
-              Master Your Brokerage Operations
+              Engineering Architecture &amp; Delivery Playbooks
             </h2>
           </div>
           <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed max-w-md font-sans">
-            Operator-focused training guides, integration playbooks, and step-by-step video walkthroughs for every BrokerBros infrastructure module.
+            Technical guides, system diagrams, and integration blueprints covering FinTech engines, AI workflow agents, and scalable Web3 deployments.
           </p>
         </div>
 
@@ -65,7 +65,7 @@ export const AcademySection: React.FC<AcademySectionProps> = ({ onOpenAccount })
             return (
               <div
                 key={idx}
-                className="bg-white dark:bg-[#141C2B] rounded-2xl border border-slate-200/80 dark:border-[#1E293B] overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:border-emerald-500/50 dark:hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white dark:bg-[#0D0D12] rounded-2xl border border-slate-200/80 dark:border-[#1F1F28] overflow-hidden hover:shadow-[0_8px_30px_rgba(0,0,0,0.04)] hover:border-emerald-500/50 dark:hover:border-emerald-500/50 transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Thumbnail Image with Glass Overlay Play Icon */}

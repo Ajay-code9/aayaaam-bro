@@ -45,7 +45,7 @@ export const AuthAccountBenefits: React.FC<AuthAccountBenefitsProps> = ({ onOpen
     {
       icon: BookOpen,
       title: 'Research & Education',
-      description: 'Wall Street analyst consensus ratings, financial statement breakdowns, live economic calendar, & BrokerBros Academy.',
+      description: 'Wall Street analyst consensus ratings, financial statement breakdowns, live economic calendar, & AyaamX Academy.',
       stat: 'Daily Reports'
     },
     {
@@ -68,7 +68,7 @@ export const AuthAccountBenefits: React.FC<AuthAccountBenefitsProps> = ({ onOpen
               <span>PLATFORM ADVANTAGES</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900 tracking-tight">
-              Why Investors Choose BrokerBros
+              Why Investors Choose AyaamX
             </h2>
           </div>
           <p className="text-slate-600 text-sm max-w-xl font-sans leading-relaxed">

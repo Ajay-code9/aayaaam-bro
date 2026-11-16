@@ -27,7 +27,7 @@ export const DedicatedPlatformShowcase: React.FC<SectionProps> = ({ onOpenAccoun
   const platformSections = [
     {
       id: "web-trader",
-      title: "BrokerBros Web Workstation",
+      title: "AyaamX Web Workstation",
       tag: "ZERO-INSTALLATION PRECISION",
       badge: "HTML5 & TRADINGVIEW INTEGRATION",
       description: "A complete browser-based trading workstation designed for speed, flexibility, and power. Built with HTML5 and WebSockets, offering full TradingView chart capabilities without downloading local software.",
@@ -51,7 +51,7 @@ export const DedicatedPlatformShowcase: React.FC<SectionProps> = ({ onOpenAccoun
     },
     {
       id: "desktop-pro",
-      title: "BrokerBros Workstation Pro (Desktop)",
+      title: "AyaamX Workstation Pro (Desktop)",
       tag: "NATIVE C++ MULTI-MONITOR MATRIX",
       badge: "HIGH-FREQUENCY PERFORMANCE",
       description: "Engineered from the ground up in native C++ for active professional day traders, quantitative arbitrageurs, and derivatives market makers requiring multi-monitor displays.",
@@ -75,7 +75,7 @@ export const DedicatedPlatformShowcase: React.FC<SectionProps> = ({ onOpenAccoun
     },
     {
       id: "mobile-app",
-      title: "BrokerBros Mobile Trading App",
+      title: "AyaamX Mobile Trading App",
       tag: "INSTITUTIONAL MOBILE PRECISION",
       badge: "BIOMETRIC 2FA SECURITY",
       description: "Complete portfolio management and multi-leg option chaining on iOS and Android. Stay connected to global markets with sub-second execution push notifications and face-id security.",

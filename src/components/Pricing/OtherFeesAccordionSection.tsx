@@ -49,7 +49,7 @@ export const OtherFeesAccordionSection: React.FC = () => {
       summaryText: 'Fund your trading account quickly with zero deposit fees. All electronic ACH deposits and incoming wire transfers are completely free.',
       details: [
         { label: 'Incoming ACH & Direct Deposit', value: '$0.00', note: 'Instant processing for connected bank accounts' },
-        { label: 'Incoming Domestic & Int. Wires', value: '$0.00', note: 'BrokerBros never charges incoming wire fees' },
+        { label: 'Incoming Domestic & Int. Wires', value: '$0.00', note: 'AyaamX never charges incoming wire fees' },
         { label: 'Outgoing ACH Withdrawals', value: '$0.00', note: '100% free unlimited ACH withdrawals' },
         { label: 'Outgoing Wire Transfer', value: '1 Free / Mo ($10 thereafter)', note: 'Covers bank processing costs' },
       ],

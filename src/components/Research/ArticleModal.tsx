@@ -32,7 +32,7 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose, on
 
           <div className="flex items-center gap-2">
             <button
-              onClick={() => alert("Article bookmarked to your BrokerBros library.")}
+              onClick={() => alert("Article bookmarked to your AyaamX library.")}
               className="p-2 text-slate-400 hover:text-slate-700 hover:bg-slate-100 rounded-lg transition-colors cursor-pointer"
               title="Bookmark"
             >
@@ -108,7 +108,7 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose, on
 
           {/* Callout Footer */}
           <div className="mt-8 bg-slate-900 text-white rounded-xl p-6 space-y-3">
-            <h4 className="text-base font-bold font-sans text-white">Trade This Insight on BrokerBros</h4>
+            <h4 className="text-base font-bold font-sans text-white">Trade This Insight on AyaamX</h4>
             <p className="text-xs text-slate-300 font-sans leading-relaxed">
               Get direct market access with $0 commission trading, real-time Level II market depth, and instant order execution.
             </p>
@@ -119,7 +119,7 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({ article, onClose, on
               }}
               className="px-5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-lg transition-colors inline-flex items-center gap-2 cursor-pointer"
             >
-              <span>Open BrokerBros Account</span>
+              <span>Open AyaamX Account</span>
               <ArrowRight className="w-3.5 h-3.5" />
             </button>
           </div>

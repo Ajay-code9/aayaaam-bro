@@ -1,8 +1,8 @@
 import React from 'react';
-import { BrokerBrosWebTraderPage } from './BrokerBrosWebTraderPage';
+import { AyaamXWebTraderPage } from './AyaamXWebTraderPage';
 
 interface PageProps {
   onOpenAccount: () => void;
 }
 
-export const WebTraderPage: React.FC<PageProps> = (props) => <BrokerBrosWebTraderPage {...props} />;
+export const WebTraderPage: React.FC<PageProps> = (props) => <AyaamXWebTraderPage {...props} />;

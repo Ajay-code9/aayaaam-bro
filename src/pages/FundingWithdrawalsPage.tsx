@@ -9,7 +9,7 @@ interface PageProps {
 export const FundingWithdrawalsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   const methods = [
     { name: "Instant ACH Transfer", depositTime: "Instant (up to $50k/day)", fee: "$0.00", limit: "$100,000 / day" },
-    { name: "FedWire & SWIFT Wire", depositTime: "Same Day / 1 Business Day", fee: "$0.00 BrokerBros Fee", limit: "Unlimited" },
+    { name: "FedWire & SWIFT Wire", depositTime: "Same Day / 1 Business Day", fee: "$0.00 AyaamX Fee", limit: "Unlimited" },
     { name: "Direct ACATS Account Transfer", depositTime: "3 - 5 Business Days", fee: "$0.00 (Reimburse transfer fees up to $150)", limit: "Unlimited" },
     { name: "Multi-Currency Spot FX Conversion", depositTime: "Instant Execution", fee: "0.08 - 0.20 bps above interbank", limit: "26 Settled Currencies" }
   ];

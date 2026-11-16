@@ -179,7 +179,7 @@ export const MobileAppProductPage: React.FC<MobileAppProductPageProps> = ({ onOp
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
               <div className="flex items-center gap-3">
                 <Smartphone className="w-5 h-5 text-emerald-500" />
-                <span className="text-xs font-mono font-bold text-slate-900 dark:text-white">BrokerBros Mobile Terminal v3.2</span>
+                <span className="text-xs font-mono font-bold text-slate-900 dark:text-white">AyaamX Mobile Terminal v3.2</span>
               </div>
               <div className="flex items-center gap-2">
                 {(['ios', 'android'] as const).map((device) => (

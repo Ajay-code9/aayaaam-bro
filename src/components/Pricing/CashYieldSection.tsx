@@ -202,7 +202,7 @@ export const CashYieldSection: React.FC<{ onOpenAccount: () => void }> = ({ onOp
             {/* Visual Comparison Bar Chart Box */}
             <div className="space-y-3 bg-slate-50 dark:bg-[#0E1420] p-4 rounded-xl border border-slate-200/80 dark:border-[#1E293B] font-mono text-xs">
               <div className="flex justify-between items-center text-slate-800 dark:text-slate-200">
-                <span className="font-bold">BrokerBros ({activeYield.rateText}):</span>
+                <span className="font-bold">AyaamX ({activeYield.rateText}):</span>
                 <span className="text-emerald-700 dark:text-emerald-400 font-bold">+{activeYield.symbol}{annualEarnings.toLocaleString()} / yr</span>
               </div>
               <div className="w-full bg-slate-200 dark:bg-[#1E293B] h-2.5 rounded-full overflow-hidden">

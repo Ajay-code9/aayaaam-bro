@@ -19,10 +19,10 @@ interface TestimonialsSectionProps {
 
 export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
   title = "Trusted by Top Brokers & Financial Institutions",
-  subtitle = "See how leading brokerages, prop firms, and fund managers scale operations with BrokerBros infrastructure.",
+  subtitle = "See how leading brokerages, prop firms, and fund managers scale operations with AyaamX infrastructure.",
   testimonials = [
     {
-      quote: "BrokerBros CRM completely transformed our operations. We reduced KYC processing time from 24 hours to 3 minutes, and automated deposit flows significantly boosted our conversion rates.",
+      quote: "AyaamX CRM completely transformed our operations. We reduced KYC processing time from 24 hours to 3 minutes, and automated deposit flows significantly boosted our conversion rates.",
       name: "Marcus Reynolds",
       role: "CEO & Founder",
       company: "Vertex Markets Ltd",

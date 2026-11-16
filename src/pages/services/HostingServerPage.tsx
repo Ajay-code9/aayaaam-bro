@@ -38,7 +38,7 @@ export const HostingServerPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         { label: "Port Speed", value: "10 Gbps Direct" }
       ]}
       faqs={[
-        { q: "Where are BrokerBros servers co-located?", a: "Our primary hardware is co-located inside Equinix NY4 (Secaucus, NJ), Equinix LD4 (Slough, UK), and Equinix TY3 (Tokyo, Japan)." },
+        { q: "Where are AyaamX servers co-located?", a: "Our primary hardware is co-located inside Equinix NY4 (Secaucus, NJ), Equinix LD4 (Slough, UK), and Equinix TY3 (Tokyo, Japan)." },
         { q: "What happens if a server hardware failure occurs?", a: "Our active-active redundant node architecture instantly reroutes all incoming traffic to backup servers in under 100 milliseconds without dropping active connections." },
         { q: "Can you manage our existing MetaTrader or CRM servers?", a: "Yes. Our server management team can take over management, optimization, and security monitoring of your existing infrastructure." }
       ]}

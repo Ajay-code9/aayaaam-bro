@@ -11,7 +11,7 @@ export const InstitutionalServicesPage: React.FC<PageProps> = ({ onOpenAccount }
     { title: "Prime Brokerage Services", desc: "Consolidated multi-asset clearing, portfolio margin optimization, securities lending, and capital introduction." },
     { title: "Hedge Fund & Family Office Solutions", desc: "Master-sub account structures, custom commission schedules, and multi-advisor allocation engines." },
     { title: "Executing Broker Connectivity", desc: "Low-latency FIX 4.4 protocol gateways, dark pool aggregation, and algorithmic venue routing." },
-    { title: "White Label Clearing & Tech", desc: "Fully branded web, mobile, and desktop trading platforms powered by BrokerBros backend technology." }
+    { title: "White Label Clearing & Tech", desc: "Fully branded web, mobile, and desktop trading platforms powered by AyaamX backend technology." }
   ];
 
   return (
@@ -21,7 +21,7 @@ export const InstitutionalServicesPage: React.FC<PageProps> = ({ onOpenAccount }
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-semibold rounded-md border border-emerald-200 font-mono">
             <Building2 className="w-3.5 h-3.5 text-emerald-600" />
-            BROKERBROS PRIME SERVICES
+            AyaamX PRIME SERVICES
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-4xl text-slate-900 font-sans">
             Institutional Prime Brokerage & Algorithmic Liquidity

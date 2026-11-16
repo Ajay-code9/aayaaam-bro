@@ -47,16 +47,16 @@ export const RiskManagementPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       ]}
       faqs={[
         { 
-          q: "What is BrokerBros Risk Management System (RMS)?", 
-          a: "BrokerBros RMS is a comprehensive risk control software that monitors live trader positions, protects broker capital from toxic flow, and automates A/B book trade hedging." 
+          q: "What is AyaamX Risk Management System (RMS)?", 
+          a: "AyaamX RMS is a comprehensive risk control software that monitors live trader positions, protects broker capital from toxic flow, and automates A/B book trade hedging." 
         },
         { 
-          q: "How does BrokerBros RMS protect against toxic trading flow?", 
+          q: "How does AyaamX RMS protect against toxic trading flow?", 
           a: "It uses real-time behavioral metrics to detect latency arbitrage, news scalping, and coordinated predatory trading, allowing you to automatically route toxic flow to external Liquidity Providers." 
         },
         { 
-          q: "Does BrokerBros RMS integrate with MetaTrader and WebTrader?", 
-          a: "Yes! BrokerBros RMS connects seamlessly with MT4, MT5, WebTrader, and custom trading platforms via low-latency API connectors." 
+          q: "Does AyaamX RMS integrate with MetaTrader and WebTrader?", 
+          a: "Yes! AyaamX RMS connects seamlessly with MT4, MT5, WebTrader, and custom trading platforms via low-latency API connectors." 
         }
       ]}
       onOpenAccount={onOpenAccount}

@@ -24,7 +24,7 @@ export const InteractivePlatformSelector: React.FC<{ onOpenAccount: () => void }
 
   const recommendations: Record<ProfileType, Recommendation> = {
     beginner: {
-      title: "BrokerBros Web Trader & Mobile App",
+      title: "AyaamX Web Trader & Mobile App",
       badge: "STREAMLINED & ACCESSIBLE",
       matchScore: 99,
       primaryPlatform: "Web Trader (Browser-based)",
@@ -60,7 +60,7 @@ export const InteractivePlatformSelector: React.FC<{ onOpenAccount: () => void }
       icon: Monitor
     },
     professional: {
-      title: "BrokerBros Workstation Pro (Desktop C++)",
+      title: "AyaamX Workstation Pro (Desktop C++)",
       badge: "ULTRA-LOW LATENCY MULTI-MONITOR",
       matchScore: 98,
       primaryPlatform: "Desktop Pro (Native C++)",

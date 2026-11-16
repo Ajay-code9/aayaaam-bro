@@ -17,7 +17,7 @@ const ThemeContext = createContext<ThemeContextType>({
 export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [theme, setThemeState] = useState<Theme>(() => {
     if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('bb_theme') as Theme;
+      const savedTheme = (localStorage.getItem('ayaamx_theme') || localStorage.getItem('bb_theme')) as Theme;
       if (savedTheme === 'light' || savedTheme === 'dark') {
         return savedTheme;
       }
@@ -42,7 +42,7 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     } else {
       root.classList.remove('dark');
     }
-    localStorage.setItem('bb_theme', nextTheme);
+    localStorage.setItem('ayaamx_theme', nextTheme);
     setThemeState(nextTheme);
   };
 
@@ -54,20 +54,42 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
       'startViewTransition' in document &&
       !window.matchMedia('(prefers-reduced-motion: reduce)').matches
     ) {
-      const x = event?.clientX ?? window.innerWidth / 2;
-      const y = event?.clientY ?? window.innerHeight / 2;
+      // Determine click origin coordinates reliably
+      let x = window.innerWidth - 40;
+      let y = 32;
+
+      if (event) {
+        if (typeof event.clientX === 'number' && event.clientX > 0) {
+          x = event.clientX;
+          y = event.clientY;
+        } else if (event.currentTarget) {
+          const rect = (event.currentTarget as HTMLElement).getBoundingClientRect();
+          x = rect.left + rect.width / 2;
+          y = rect.top + rect.height / 2;
+        }
+      } else if (typeof document !== 'undefined') {
+        const toggleBtn = document.querySelector('button[aria-label*="Theme"], button[aria-label*="theme"]');
+        if (toggleBtn) {
+          const rect = toggleBtn.getBoundingClientRect();
+          x = rect.left + rect.width / 2;
+          y = rect.top + rect.height / 2;
+        }
+      }
 
       const endRadius = Math.hypot(
         Math.max(x, window.innerWidth - x),
         Math.max(y, window.innerHeight - y)
       );
 
+      // Disable individual CSS element transitions during the circular wave reveal to prevent jank
+      root.classList.add('theme-transitioning');
+
       const transition = (document as any).startViewTransition(() => {
         applyTheme(newTheme);
       });
 
       transition.ready.then(() => {
-        document.documentElement.animate(
+        const anim = document.documentElement.animate(
           {
             clipPath: [
               `circle(0px at ${x}px ${y}px)`,
@@ -75,11 +97,15 @@ export const ThemeProvider: React.FC<{ children: React.ReactNode }> = ({ childre
             ]
           },
           {
-            duration: 320,
-            easing: 'cubic-bezier(0.16, 1, 0.3, 1)',
+            duration: 400,
+            easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
             pseudoElement: '::view-transition-new(root)'
           }
         );
+
+        anim.finished.finally(() => {
+          root.classList.remove('theme-transitioning');
+        });
       });
     } else {
       applyTheme(newTheme);

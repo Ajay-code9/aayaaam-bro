@@ -49,7 +49,7 @@ export const BrokerCrmPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
   const testimonials = [
     {
-      quote: "BrokerBros CRM completely transformed our operations. We reduced KYC processing time from 24 hours to 3 minutes, and the automated deposit flows have significantly boosted our conversion rates.",
+      quote: "AyaamX CRM completely transformed our operations. We reduced KYC processing time from 24 hours to 3 minutes, and the automated deposit flows have significantly boosted our conversion rates.",
       name: "Marcus Reynolds",
       role: "CEO, Vertex Markets",
       rating: 5,
@@ -175,7 +175,7 @@ export const BrokerCrmPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               
               <div className="relative">
                 <img 
-                  src="/broker-crm-img-one.png" 
+                  src="/aayaamx-operations-platform.png" 
                   alt="Broker CRM Interface" 
                   className="w-full h-auto rounded-[18px] shadow-2xl border border-slate-200 dark:border-[#1E293B] relative z-10" 
                 />

@@ -25,7 +25,7 @@ export const InvestorTrustSection: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "The low latency and multi-monitor custom workspace layout on BrokerBros Desktop Pro transformed our active intraday strategies. Execution speed is unmatched.",
+      quote: "The low latency and multi-monitor custom workspace layout on AyaamX Desktop Pro transformed our active intraday strategies. Execution speed is unmatched.",
       author: "David Vance",
       role: "Managing Director, Apex Alpha Fund",
       stats: "$18M+ Portfolio Managed",

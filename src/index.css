@@ -38,6 +38,14 @@
     transition-property: none !important;
   }
 
+  /* When circular wave reveal is active, suspend individual element transitions to keep 60fps smooth */
+  html.theme-transitioning,
+  html.theme-transitioning *,
+  html.theme-transitioning *::before,
+  html.theme-transitioning *::after {
+    transition: none !important;
+  }
+
   /* View Transitions API Zero-Grey Circular Wave Reveal Configuration */
   ::view-transition-old(root) {
     animation: none !important;
@@ -59,8 +67,11 @@
     scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: #cbd5e1 transparent;
-    scrollbar-gutter: stable;
+    /* scrollbar-gutter: stable; */
     overflow-y: scroll;
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100%;
   }
 
   html.dark {
@@ -113,11 +124,15 @@
     line-height: 1.7;
     color: #4B5563;
     background-color: #ffffff;
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100%;
+    position: relative;
   }
 
   html.dark body {
-    color: #cbd5e1;
-    background-color: #0a0a0a;
+    color: #e2e8f0;
+    background-color: #000000 !important;
   }
 
   /* Type Scale System */
@@ -359,5 +374,62 @@
 .gpu-accelerated {
   will-change: transform;
   transform: translateZ(0);
+}
+
+/* Strict Responsive Layout Containment: Zero Horizontal Overflow */
+html {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+body {
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+  position: relative !important;
+}
+
+#root {
+  overflow-x: clip !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+main {
+  overflow-x: clip !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+header {
+  max-width: 100% !important;
+  width: 100% !important;
+  overflow-x: clip !important;
+}
+
+footer {
+  max-width: 100% !important;
+  width: 100% !important;
+  overflow-x: clip !important;
+}
+
+section {
+  max-width: 100% !important;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Contain decorative blur background elements only (exclude backdrop-blur UI containers) */
+[class*='blur-']:not([class*='backdrop-blur']) {
+  max-width: 100vw !important;
+  contain: paint !important;
+  pointer-events: none !important;
+}
+
+header, header * {
+  pointer-events: auto !important;
 }
 

@@ -53,7 +53,7 @@ export const LoginWorkstationGraphic: React.FC = () => {
                 <span>SSL GATEWAY CONNECTED</span>
               </div>
               <h3 className="text-base font-bold text-slate-100 font-sans mt-0.5">
-                BrokerBros Institutional Node #849
+                AyaamX Institutional Node #849
               </h3>
             </div>
           </div>

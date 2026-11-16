@@ -10,37 +10,37 @@ interface PageProps {
 export const AboutPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   const leadership = [
     {
-      name: "Marcus Sterling",
-      role: "Chief Executive Officer",
-      bio: "Former Head of Institutional Equity Trading at Goldman Sachs with 22 years of market microstructure experience.",
+      name: "Principal Architecture Group",
+      role: "Lead Software Architect",
+      bio: "Software architects and full-stack technologists leading AyaamX product engineering across Fintech, Trading Systems, AI, and Web3 platforms.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400"
     },
     {
-      name: "Elena Rostova",
-      role: "Chief Technology Officer",
-      bio: "Ex-Citadel Principal Engineer. Architected ultra-low latency FIX engines and distributed dark pool routing networks.",
+      name: "Engineering Team",
+      role: "Platform & Systems Engineering",
+      bio: "Cross-functional engineering specialists in high-concurrency Node.js, Next.js/React, TypeScript, Python AI models, and Solidity smart contracts.",
       image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400"
     },
     {
-      name: "David Vance, CFA",
-      role: "Chief Risk & Compliance Officer",
-      bio: "Former Director of Regulatory Supervision at FINRA with deep expertise in global capital adequacy requirements.",
+      name: "Fintech Advisory",
+      role: "Trading Operations & Risk Architect",
+      bio: "Deep domain advisory covering broker operations, multi-tier IB models, FIX bridges, and prop firm risk management frameworks.",
       image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400"
     },
     {
-      name: "Aisha Chen",
-      role: "Head of Global Prime Services",
-      bio: "Pioneered multi-asset clearing and cross-margin collateral optimization at Morgan Stanley Prime Brokerage.",
+      name: "Product & UI/UX",
+      role: "Head of Product Design",
+      bio: "Design thinking and UX engineering focused on intuitive customer portals, trading terminals, and enterprise management dashboards.",
       image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400"
     }
   ];
 
   const milestones = [
-    { year: "2011", title: "Founded in New York", desc: "Established with a mandate to deliver institutional dark-pool routing directly to retail investors without Payment for Order Flow." },
-    { year: "2015", title: "European & Asian Expansion", desc: "Secured FCA (UK) and MAS (Singapore) licenses, opening direct market connectivity to 80+ global exchanges." },
-    { year: "2019", title: "BrokerBros Pro Launch", desc: "Introduced native C++ and Python API trading engines processing over 4.2 million orders daily." },
-    { year: "2023", title: "$28.4B Equity Capital Milestone", desc: "Earned S&P 'A-' credit rating and expanded uninvested cash APY program up to 4.85%." },
-    { year: "2026", title: "3.8 Million Active Clients", desc: "Operating across 35 countries in 26 settled currencies with over $140B in client assets under custody." }
+    { year: "Phase 1", title: "Inception & Core Frameworks", desc: "Started developing high-throughput web architecture and modern trading interfaces in Ahmedabad, India." },
+    { year: "Phase 2", title: "Fintech & Broker Infrastructure", desc: "Delivered Succeed Capital FX end-to-end suite: web/mobile trading apps, broker CRM, and risk monitoring." },
+    { year: "Phase 3", title: "Web3 & Payment Gateway", desc: "Engineered high-security Blockchain Crypto Payment Gateway with multi-network automated confirmations." },
+    { year: "Phase 4", title: "AI Automation & Enterprise SaaS", desc: "Integrated intelligent document processing AI agents, automated evaluations, and multi-tier operational tooling." },
+    { year: "Today", title: "Next-Gen Digital Engineering Partner", desc: "Partnering with global startups and institutions across Fintech, Prop Trading, AI, and Web3." }
   ];
 
   return (
@@ -51,31 +51,31 @@ export const AboutPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold rounded-md border border-emerald-200 dark:border-emerald-500/20">
             <Building2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>ABOUT BROKER BROS B2B TECHNOLOGY PROVIDER</span>
+            <span>ABOUT AyaamX B2B TECHNOLOGY PROVIDER</span>
           </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl text-slate-900 dark:text-white font-sans">
-            Enterprise Brokerage Software Engineering &amp; Infrastructure
+            Engineering for the Way Your Business Works
           </h1>
           <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-3xl font-sans leading-relaxed">
-            Broker Bros is a specialized B2B technology provider engineering white-label Forex CRMs, HTML5 WebTraders, native mobile trading apps, FIX 4.4 liquidity bridges, MT5 server plugins, and automated risk management systems for brokers, prop firms, and financial institutions worldwide.
+            AyaamX is a software development and product engineering company based in Ahmedabad, India. We help startups and established businesses turn complex requirements into software their customers and teams can rely on.
           </p>
 
           <div className="pt-8 border-t border-slate-200 dark:border-[#1E293B] grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl font-mono">
             <div className="bg-slate-50 dark:bg-[#141C2B] p-4 rounded-xl border border-slate-200 dark:border-[#1E293B]">
-              <div className="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400">$28.4B</div>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-sans mt-0.5">Consolidated Equity Capital</div>
+              <div className="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400">4 Core</div>
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-sans mt-0.5">Technology Verticals</div>
             </div>
             <div className="bg-slate-50 dark:bg-[#141C2B] p-4 rounded-xl border border-slate-200 dark:border-[#1E293B]">
-              <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">3.8M+</div>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-sans mt-0.5">Global Accounts</div>
+              <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">50+</div>
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-sans mt-0.5">Platforms Delivered</div>
             </div>
             <div className="bg-slate-50 dark:bg-[#141C2B] p-4 rounded-xl border border-slate-200 dark:border-[#1E293B]">
-              <div className="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400">150+</div>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-sans mt-0.5">Market Centers</div>
+              <div className="text-2xl sm:text-3xl font-black text-emerald-600 dark:text-emerald-400">99.99%</div>
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-sans mt-0.5">High-Availability SLA</div>
             </div>
             <div className="bg-slate-50 dark:bg-[#141C2B] p-4 rounded-xl border border-slate-200 dark:border-[#1E293B]">
-              <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">S&P A-</div>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-sans mt-0.5">Credit Rating</div>
+              <div className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">100%</div>
+              <div className="text-[11px] text-slate-500 dark:text-slate-400 font-sans mt-0.5">Code Ownership</div>
             </div>
           </div>
         </div>

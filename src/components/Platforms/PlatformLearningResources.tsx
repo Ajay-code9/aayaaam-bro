@@ -124,7 +124,7 @@ export const PlatformLearningResources: React.FC = () => {
                 Official Platform User Guides & Keyboard Shortcuts PDF
               </h4>
               <p className="text-xs text-slate-500 font-sans">
-                Download the complete 84-page BrokerBros Workstation Pro manual and hotkey map.
+                Download the complete 84-page AyaamX Workstation Pro manual and hotkey map.
               </p>
             </div>
           </div>

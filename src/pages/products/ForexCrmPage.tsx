@@ -12,8 +12,9 @@ export const ForexCrmPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       productTitle="White-Label Forex CRM & Back Office"
       heroBadge="ENTERPRISE BROKER CRM & CLIENT PORTAL"
       heroDescription="Empower your brokerage with an end-to-end client portal, automated Sumsub/Jumio KYC verification, 50+ fiat/crypto PSP gateways, and real-time MT4/MT5 trading account synchronization."
-      heroImageDark="/Hero-Images/forex-crm-black.png"
-      heroImageLight="/Hero-Images/forex-crm-white.png"
+      heroImageDark="/forex-crm-white-label-hero.png"
+      heroImageLight="/forex-crm-white-label-hero.png"
+      heroImageFrameless
       productMetric={{ label: "KYC & Wallet Sync", value: "Real-Time", sub: "Automated Document Verification & PSP Sync" }}
       workflowSteps={[
         { num: '01', title: 'Setup Admin Portal', desc: 'Provision your branded broker CRM with your logo, brand colors, and custom staff access roles.', icon: Settings },

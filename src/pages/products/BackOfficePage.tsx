@@ -86,7 +86,7 @@ export const BackOfficePage: React.FC<BackOfficePageProps> = ({ onOpenAccount })
   const faqs = [
     {
       q: 'How does the Back Office integrate with MT4/MT5 servers?',
-      a: 'BrokerBros Back Office utilizes high-speed C++ server plugins and native Manager API integration to sync accounts, trades, leverage, and balance operations instantly without latency or platform restarts.'
+      a: 'AyaamX Back Office utilizes high-speed C++ server plugins and native Manager API integration to sync accounts, trades, leverage, and balance operations instantly without latency or platform restarts.'
     },
     {
       q: 'Can we configure custom A/B Book risk parameters per group?',
@@ -166,7 +166,7 @@ export const BackOfficePage: React.FC<BackOfficePageProps> = ({ onOpenAccount })
                 <div className="w-3 h-3 rounded-full bg-rose-500" />
                 <div className="w-3 h-3 rounded-full bg-amber-500" />
                 <div className="w-3 h-3 rounded-full bg-emerald-500" />
-                <span className="text-xs font-mono text-slate-500 dark:text-slate-400 ml-2">BrokerBros Admin Core v4.8</span>
+                <span className="text-xs font-mono text-slate-500 dark:text-slate-400 ml-2">AyaamX Admin Core v4.8</span>
               </div>
               <div className="flex items-center gap-2">
                 {(['risk', 'accounts', 'reporting'] as const).map((tab) => (

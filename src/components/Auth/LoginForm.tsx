@@ -55,7 +55,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onOpenAccount, onSuccessLo
       
       {/* Card Header with Clean Logo */}
       <div className="space-y-2.5 text-center flex flex-col items-center">
-        <img src="/logo-white.png" alt="BrokerBros" className="h-11 sm:h-14 w-auto object-contain mb-1" />
+        <img src="/logo-white.png" alt="AyaamX" className="h-11 sm:h-14 w-auto object-contain mb-1" />
         <div>
           <h1 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight font-sans">
             Client Portal Login
@@ -75,7 +75,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onOpenAccount, onSuccessLo
             Authentication Successful
           </h3>
           <p className="text-xs text-slate-600 max-w-xs mx-auto leading-relaxed">
-            Encrypted session established. Launching BrokerBros Pro Trading Terminal...
+            Encrypted session established. Launching AyaamX Pro Trading Terminal...
           </p>
           <div className="pt-2 flex items-center justify-center gap-2 text-xs font-mono font-bold text-emerald-700">
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
@@ -216,7 +216,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onOpenAccount, onSuccessLo
             onClick={onOpenAccount}
             className="text-emerald-700 font-bold hover:underline cursor-pointer inline-flex items-center gap-1 ml-0.5"
           >
-            <span>Open BrokerBros Account</span>
+            <span>Open AyaamX Account</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </p>

@@ -23,7 +23,7 @@ const MockMobileScreen = () => (
     <div className="bg-slate-900 px-4 py-3 flex items-center justify-between border-b border-slate-800">
       <div className="flex items-center gap-2">
         <div className="w-6 h-6 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-xs font-mono">B</div>
-        <span className="text-white font-bold text-xs">BrokerBros Mobile</span>
+        <span className="text-white font-bold text-xs">AyaamX Mobile</span>
       </div>
       <div className="flex items-center gap-1 bg-emerald-500/10 border border-emerald-500/30 px-2 py-0.5 rounded-full">
         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
@@ -98,7 +98,7 @@ export const MobileTradingAppsPage: React.FC<PageProps> = ({ onOpenAccount }) =>
   ];
 
   const workflowSteps = [
-    { step: '01', title: 'Download App', desc: 'Get BrokerBros Mobile on iOS App Store or Google Play Store.', icon: Smartphone },
+    { step: '01', title: 'Download App', desc: 'Get AyaamX Mobile on iOS App Store or Google Play Store.', icon: Smartphone },
     { step: '02', title: 'Biometric Setup', desc: 'Enable Face ID or Touch ID for frictionless and secure access.', icon: Fingerprint },
     { step: '03', title: 'Fund Account', desc: 'Deposit funds instantly via Apple Pay, ACH, wire, or crypto.', icon: Wallet },
     { step: '04', title: 'Customize Layout', desc: 'Set up watchlists, chart indicators, and quick-order presets.', icon: Layout },
@@ -106,16 +106,16 @@ export const MobileTradingAppsPage: React.FC<PageProps> = ({ onOpenAccount }) =>
   ];
 
   const faqs = [
-    { q: 'Is the mobile app free to download?', a: 'Yes! The BrokerBros Mobile app is completely free to download from both the Apple App Store and Google Play Store with no hidden subscription fees.' },
+    { q: 'Is the mobile app free to download?', a: 'Yes! The AyaamX Mobile app is completely free to download from both the Apple App Store and Google Play Store with no hidden subscription fees.' },
     { q: 'Are my watchlists synced between Web Terminal and Mobile?', a: 'Yes. Watchlists, open orders, positions, and alert rules synchronize instantly across Web, Desktop, and Mobile via our high-speed cloud engine.' },
     { q: 'Can I trade options on the mobile app?', a: 'Absolutely. The mobile app includes a full options suite with live chains, Greeks visualization, and spread order placement.' },
     { q: 'What security measures protect mobile trading?', a: 'We use 256-bit SSL encryption, mandatory biometric authentication (Face ID / Touch ID), 2FA, and automatic session lockouts.' },
   ];
 
   const testimonials = [
-    { quote: "Trading on mobile used to feel restrictive, but BrokerBros Mobile gives me full Level II depth and instant execution right on my phone.", name: "Marcus Vance", role: "FX Trader", rating: 5 },
+    { quote: "Trading on mobile used to feel restrictive, but AyaamX Mobile gives me full Level II depth and instant execution right on my phone.", name: "Marcus Vance", role: "FX Trader", rating: 5 },
     { quote: "The option chain module on iPhone is smooth and intuitive. Building 4-leg spreads while on the go has never been easier.", name: "Elena Rostova", role: "Options Specialist", rating: 5 },
-    { quote: "Push alerts fire faster than any other app I've used. I haven't missed a market breakout since switching to BrokerBros Mobile.", name: "David Kim", role: "Day Trader", rating: 5 },
+    { quote: "Push alerts fire faster than any other app I've used. I haven't missed a market breakout since switching to AyaamX Mobile.", name: "David Kim", role: "Day Trader", rating: 5 },
   ];
 
   const plans = [
@@ -368,7 +368,7 @@ export const MobileTradingAppsPage: React.FC<PageProps> = ({ onOpenAccount }) =>
 
       <section className="py-16 bg-[#0D1117] text-white">
         <div className="max-w-6xl mx-auto px-4 text-center space-y-6">
-          <h2 className="text-3xl sm:text-4xl font-black">Trade Anywhere With BrokerBros Mobile</h2>
+          <h2 className="text-3xl sm:text-4xl font-black">Trade Anywhere With AyaamX Mobile</h2>
           <button onClick={onOpenAccount} className="px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl text-sm transition-all inline-flex items-center gap-2">
             Get Started Now <ArrowRight className="w-4 h-4" />
           </button>
@@ -377,7 +377,7 @@ export const MobileTradingAppsPage: React.FC<PageProps> = ({ onOpenAccount }) =>
 
       <div className="py-6 bg-slate-50 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 text-xs text-slate-400 text-center">
-          <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Mobile trading involves substantial risk. Market conditions and network latency may affect execution. BrokerBros LLC is member FINRA/SIPC.
+          <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Mobile trading involves substantial risk. Market conditions and network latency may affect execution. AyaamX LLC is member FINRA/SIPC.
         </div>
       </div>
     </div>

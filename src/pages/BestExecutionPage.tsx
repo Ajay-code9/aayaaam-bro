@@ -97,38 +97,38 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
   const pfofComparison = [
     {
       feature: "Payment For Order Flow (PFOF)",
-      brokerbros: "ZERO (100% Rejected)",
+      AyaamX: "ZERO (100% Rejected)",
       retailApp: "Accepts $0.002–$0.005/sh",
       internalizer: "Pockets Spread Margin",
       isHighlight: true
     },
     {
       feature: "Order Routing Objective",
-      brokerbros: "Best Price & Price Improvement",
+      AyaamX: "Best Price & Price Improvement",
       retailApp: "Highest PFOF Bidder",
       internalizer: "Internal B-Book Matching"
     },
     {
       feature: "Price Improvement Rate",
-      brokerbros: "88.4% of Orders Improved",
+      AyaamX: "88.4% of Orders Improved",
       retailApp: "15%–35% (NBBO Fill)",
       internalizer: "Minimal / Negative Slippage"
     },
     {
       feature: "Venue Transparency (Rule 605/606)",
-      brokerbros: "Full Monthly Audit Disclosure",
+      AyaamX: "Full Monthly Audit Disclosure",
       retailApp: "Basic Aggregated Disclosures",
       internalizer: "Opaque Internal System"
     },
     {
       feature: "Direct Exchange Access (NYSE/NASDAQ/IEX)",
-      brokerbros: "Direct Member Connections",
+      AyaamX: "Direct Member Connections",
       retailApp: "Routed to 2-3 Market Makers",
       internalizer: "No External Lit Routing"
     },
     {
       feature: "Order Types Supported",
-      brokerbros: "Midpoint, Pegged, Iceberg, IOC",
+      AyaamX: "Midpoint, Pegged, Iceberg, IOC",
       retailApp: "Basic Market & Limit Only",
       internalizer: "Restricted Proprietary Types"
     }
@@ -159,8 +159,8 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
 
   const faqs = [
     {
-      q: "What is Payment for Order Flow (PFOF) and why does BrokerBros reject it?",
-      a: "Payment for Order Flow occurs when a brokerage receives cash rebates or compensation from high-frequency market makers in exchange for routing client orders to them. This creates an inherent conflict of interest, as the broker is incentivized to send trades to whichever market maker pays the highest rebate rather than the venue that offers the best price. BrokerBros rejects 100% of PFOF, ensuring every trade is routed purely for maximum price improvement."
+      q: "What is Payment for Order Flow (PFOF) and why does AyaamX reject it?",
+      a: "Payment for Order Flow occurs when a brokerage receives cash rebates or compensation from high-frequency market makers in exchange for routing client orders to them. This creates an inherent conflict of interest, as the broker is incentivized to send trades to whichever market maker pays the highest rebate rather than the venue that offers the best price. AyaamX rejects 100% of PFOF, ensuring every trade is routed purely for maximum price improvement."
     },
     {
       q: "How does SmartRouting achieve price improvement better than the NBBO?",
@@ -175,8 +175,8 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
       a: "Absolutely. Every client account has access to detailed execution reports showing the exact execution venue, execution timestamp down to the microsecond, price improvement amount saved, and NBBO benchmark comparison."
     },
     {
-      q: "Where can I view BrokerBros' SEC Rule 605 and Rule 606 disclosures?",
-      a: "Under SEC Rules 605 and 606, BrokerBros publishes detailed monthly public reports analyzing order execution quality and order routing statistics. You can download these audited PDF and XML files anytime from our Execution Transparency Center."
+      q: "Where can I view AyaamX' SEC Rule 605 and Rule 606 disclosures?",
+      a: "Under SEC Rules 605 and 606, AyaamX publishes detailed monthly public reports analyzing order execution quality and order routing statistics. You can download these audited PDF and XML files anytime from our Execution Transparency Center."
     }
   ];
 
@@ -214,7 +214,7 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
             </h1>
 
             <p className="text-slate-900 dark:text-slate-200 text-sm sm:text-base leading-relaxed max-w-2xl font-sans font-medium bg-white/70 dark:bg-slate-900/80 backdrop-blur-xs p-2.5 sm:p-3 rounded-xl border border-white/80 dark:border-slate-800 shadow-2xs">
-              BrokerBros rejects 100% of PFOF rebates. Our SmartRouting engine scans 150+ lit ECNs, market centers, and dark pools to deliver an average price improvement of $0.024 per share.
+              AyaamX rejects 100% of PFOF rebates. Our SmartRouting engine scans 150+ lit ECNs, market centers, and dark pools to deliver an average price improvement of $0.024 per share.
             </p>
 
             <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -390,10 +390,10 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
               TRANSPARENT EXECUTION COMPARISON
             </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900 dark:text-white">
-              BrokerBros Zero PFOF vs Industry Models
+              AyaamX Zero PFOF vs Industry Models
             </h2>
             <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
-              When a broker takes PFOF, they compromise execution quality for kickbacks. See how BrokerBros aligns 100% with trader interests.
+              When a broker takes PFOF, they compromise execution quality for kickbacks. See how AyaamX aligns 100% with trader interests.
             </p>
           </div>
 
@@ -403,7 +403,7 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
               <thead className="bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 text-xs uppercase font-mono border-b border-slate-200 dark:border-slate-800">
                 <tr>
                   <th className="py-4 px-6 font-bold">Execution Metric</th>
-                  <th className="py-4 px-6 font-bold text-emerald-800 dark:text-emerald-400 bg-emerald-50/80 dark:bg-emerald-500/10">BrokerBros (Zero PFOF)</th>
+                  <th className="py-4 px-6 font-bold text-emerald-800 dark:text-emerald-400 bg-emerald-50/80 dark:bg-emerald-500/10">AyaamX (Zero PFOF)</th>
                   <th className="py-4 px-6 font-bold">Standard Retail PFOF App</th>
                   <th className="py-4 px-6 font-bold">B-Book Internalizer</th>
                 </tr>
@@ -415,7 +415,7 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
                     <td className="py-4 px-6 font-mono font-bold text-emerald-900 dark:text-emerald-300 bg-emerald-50/30 dark:bg-emerald-500/5">
                       <span className="flex items-center gap-1.5">
                         <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                        {row.brokerbros}
+                        {row.AyaamX}
                       </span>
                     </td>
                     <td className="py-4 px-6 font-mono text-xs text-slate-600 dark:text-slate-400">{row.retailApp}</td>
@@ -497,7 +497,7 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
                 Best Execution Philosophy & Governance Policy
               </h2>
               <p className="text-slate-300 text-sm leading-relaxed font-sans">
-                BrokerBros maintains a dedicated Best Execution Committee that conducts regular quantitative reviews of execution speed, fill rates, price improvement, and venue toxicity. Under SEC Rule 605 and Rule 606, all quarterly order execution and order routing reports are published unedited for public review.
+                AyaamX maintains a dedicated Best Execution Committee that conducts regular quantitative reviews of execution speed, fill rates, price improvement, and venue toxicity. Under SEC Rule 605 and Rule 606, all quarterly order execution and order routing reports are published unedited for public review.
               </p>
             </div>
 

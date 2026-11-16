@@ -51,7 +51,7 @@ export const PropFirmCrmPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   ];
 
   const testimonials = [
-    { quote: "We launched our prop firm in 4 weeks using BrokerBros. The automated challenge system handles 5,000 active evaluations simultaneously. Breach detection is instant and flawless.", name: "Michael Torres", role: "Founder, Apex Funded", rating: 5 },
+    { quote: "We launched our prop firm in 4 weeks using AyaamX. The automated challenge system handles 5,000 active evaluations simultaneously. Breach detection is instant and flawless.", name: "Michael Torres", role: "Founder, Apex Funded", rating: 5 },
     { quote: "The scaling plan automation saved us 3 full-time employees. When a trader hits consistency milestones, the system auto-upgrades their account size. Zero manual work.", name: "Jessica Hartley", role: "COO, FundedEdge Capital", rating: 5 },
     { quote: "Revenue tracking and challenge fee collection is seamless. We can see exactly how many challenges were purchased, passed, failed, and refunded in real-time dashboards.", name: "Omar Khalil", role: "CEO, Desert Prop Trading", rating: 5 }
   ];
@@ -120,7 +120,7 @@ export const PropFirmCrmPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               
               <div className="relative">
                 <img 
-                  src="/broker-crm-img-one.png" 
+                  src="/aayaamx-operations-platform.png" 
                   alt="Broker CRM Interface" 
                   className="w-full h-auto rounded-[18px] shadow-2xl border border-slate-200 dark:border-slate-800 relative z-10" 
                 />

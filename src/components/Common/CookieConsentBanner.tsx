@@ -17,7 +17,7 @@ export const CookieConsentBanner: React.FC = () => {
   });
 
   useEffect(() => {
-    const savedConsent = localStorage.getItem('brokerbros_cookie_consent');
+    const savedConsent = localStorage.getItem('AyaamX_cookie_consent');
     if (!savedConsent) {
       setIsVisible(true);
     }
@@ -25,18 +25,18 @@ export const CookieConsentBanner: React.FC = () => {
 
   const handleAcceptAll = () => {
     const fullConsent = { essential: true, analytics: true, marketing: true };
-    localStorage.setItem('brokerbros_cookie_consent', JSON.stringify(fullConsent));
+    localStorage.setItem('AyaamX_cookie_consent', JSON.stringify(fullConsent));
     setIsVisible(false);
   };
 
   const handleRejectNonEssential = () => {
     const minConsent = { essential: true, analytics: false, marketing: false };
-    localStorage.setItem('brokerbros_cookie_consent', JSON.stringify(minConsent));
+    localStorage.setItem('AyaamX_cookie_consent', JSON.stringify(minConsent));
     setIsVisible(false);
   };
 
   const handleSavePreferences = () => {
-    localStorage.setItem('brokerbros_cookie_consent', JSON.stringify(prefs));
+    localStorage.setItem('AyaamX_cookie_consent', JSON.stringify(prefs));
     setIsVisible(false);
     setShowPreferences(false);
   };

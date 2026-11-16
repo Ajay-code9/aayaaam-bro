@@ -10,18 +10,18 @@ export const InteractivePricingCalculator: React.FC<{ onOpenAccount: () => void 
   // Math Logic
   // 1. Commission Savings
   const competitorAnnualCommission = tradesPerMonth * 12 * 7.50;
-  const brokerbrosAnnualCommission = tradesPerMonth * 12 * 1.50;
-  const commissionSavings = Math.max(0, Math.round(competitorAnnualCommission - brokerbrosAnnualCommission));
+  const AyaamXAnnualCommission = tradesPerMonth * 12 * 1.50;
+  const commissionSavings = Math.max(0, Math.round(competitorAnnualCommission - AyaamXAnnualCommission));
 
   // 2. Cash Yield Earned
-  const brokerbrosCashYield = Math.round(idleCash * 0.0485); // 4.85% APY
+  const AyaamXCashYield = Math.round(idleCash * 0.0485); // 4.85% APY
   const competitorCashYield = Math.round(idleCash * 0.0045); // 0.45% APY
-  const cashYieldAdvantage = Math.round(brokerbrosCashYield - competitorCashYield);
+  const cashYieldAdvantage = Math.round(AyaamXCashYield - competitorCashYield);
 
   // 3. Margin Interest Savings
   const competitorMarginCost = Math.round(marginLoan * 0.1180);
-  const brokerbrosMarginCost = Math.round(marginLoan * 0.0583);
-  const marginSavings = Math.max(0, Math.round(competitorMarginCost - brokerbrosMarginCost));
+  const AyaamXMarginCost = Math.round(marginLoan * 0.0583);
+  const marginSavings = Math.max(0, Math.round(competitorMarginCost - AyaamXMarginCost));
 
   // Total Annual Value
   const totalAnnualAdvantage = commissionSavings + cashYieldAdvantage + marginSavings;
@@ -124,7 +124,7 @@ export const InteractivePricingCalculator: React.FC<{ onOpenAccount: () => void 
             </div>
 
             <div className="text-[10px] text-slate-400 border-t border-slate-100 pt-2 font-mono">
-              * Calculations compare BrokerBros Pro Tier vs standard rates of major traditional US retail brokerages.
+              * Calculations compare AyaamX Pro Tier vs standard rates of major traditional US retail brokerages.
             </div>
           </div>
 
@@ -135,7 +135,7 @@ export const InteractivePricingCalculator: React.FC<{ onOpenAccount: () => void 
               <div className="flex items-center justify-between border-b border-slate-800 pb-3">
                 <div>
                   <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-wider">ESTIMATED ANNUAL VALUE</span>
-                  <h3 className="text-lg font-extrabold text-white font-sans">BrokerBros Value Advantage</h3>
+                  <h3 className="text-lg font-extrabold text-white font-sans">AyaamX Value Advantage</h3>
                 </div>
                 <Sparkles className="w-5 h-5 text-emerald-400" />
               </div>

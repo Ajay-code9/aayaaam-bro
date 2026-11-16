@@ -37,7 +37,7 @@ export const PluginsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         { label: "Compatibility", value: "MT5 Build 4000+" }
       ]}
       faqs={[
-        { q: "Are your plugins built in native C++ for MT5?", a: "Yes. All BrokerBros server plugins are written in optimized native C++ using the official MetaTrader 5 Server API for sub-millisecond execution." },
+        { q: "Are your plugins built in native C++ for MT5?", a: "Yes. All AyaamX server plugins are written in optimized native C++ using the official MetaTrader 5 Server API for sub-millisecond execution." },
         { q: "Will installing plugins require restarting our MT5 trade server?", a: "Most plugins can be loaded dynamically via MT5 Server Manager without interrupting live client trading." }
       ]}
       onOpenAccount={onOpenAccount}

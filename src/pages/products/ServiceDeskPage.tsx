@@ -155,7 +155,7 @@ export const ServiceDeskPage: React.FC<ServiceDeskPageProps> = ({ onOpenAccount 
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
               <div className="flex items-center gap-3">
                 <Headphones className="w-5 h-5 text-emerald-500" />
-                <span className="text-xs font-mono font-bold text-slate-900 dark:text-white">BrokerBros Agent Console • Ticket Queue</span>
+                <span className="text-xs font-mono font-bold text-slate-900 dark:text-white">AyaamX Agent Console • Ticket Queue</span>
               </div>
               <div className="flex items-center gap-2">
                 {(['open', 'resolved', 'sla'] as const).map((tab) => (

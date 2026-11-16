@@ -22,7 +22,7 @@ export const CareersPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-semibold rounded-md border border-emerald-200 font-mono">
             <Briefcase className="w-3.5 h-3.5 text-emerald-600" />
-            CAREERS AT BROKERBROS
+            CAREERS AT AyaamX
           </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-4xl text-slate-900 font-sans">
             Engineer the Future of Global Financial Infrastructure

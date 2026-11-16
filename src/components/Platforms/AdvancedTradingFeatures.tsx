@@ -174,7 +174,7 @@ export const AdvancedTradingFeatures: React.FC = () => {
             Engineered for Active Professional Traders
           </h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
-            Deep-dive into the proprietary tools, algorithmic order types, and risk management systems powering BrokerBros platforms.
+            Deep-dive into the proprietary tools, algorithmic order types, and risk management systems powering AyaamX platforms.
           </p>
         </div>
 

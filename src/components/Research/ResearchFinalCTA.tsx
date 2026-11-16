@@ -23,7 +23,7 @@ export const ResearchFinalCTA: React.FC<ResearchFinalCTAProps> = ({ onOpenAccoun
         {/* Large Editorial Headline */}
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif-heading font-semibold text-slate-900 tracking-tight leading-[1.12]">
           Stay Ahead of the Markets. <br />
-          <span className="text-emerald-700">Start Investing with BrokerBros.</span>
+          <span className="text-emerald-700">Start Investing with AyaamX.</span>
         </h2>
 
         {/* Subtitle */}

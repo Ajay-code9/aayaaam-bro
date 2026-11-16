@@ -26,7 +26,7 @@ export const ProductGallerySection: React.FC<ProductGallerySectionProps> = ({
       id: '1',
       title: 'Main Operations Dashboard',
       category: 'Overview',
-      imageSrc: '/broker-crm-img-one.png',
+      imageSrc: '/aayaamx-operations-platform.png',
       description: 'Real-time overview of active clients, daily volume, pending KYC requests, and key financial performance indicators.'
     },
     {

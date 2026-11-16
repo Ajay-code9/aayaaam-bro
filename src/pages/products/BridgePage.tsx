@@ -9,7 +9,7 @@ interface PageProps {
 export const BridgePage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ProductMasterPageTemplate
-      productTitle="BrokerBros Bridge"
+      productTitle="AyaamX Bridge"
       heroBadge="TURNKEY BROKERAGE LIQUIDITY BRIDGE"
       heroDescription="Connect your MetaTrader, cTrader, or custom web platform directly to top Liquidity Providers (LPs) for ultra-fast, sub-millisecond order execution."
       heroImage="/fix-bridge-showcase.png"
@@ -38,8 +38,8 @@ export const BridgePage: React.FC<PageProps> = ({ onOpenAccount }) => {
       ]}
       faqs={[
         { 
-          q: "What is BrokerBros Bridge?", 
-          a: "BrokerBros Bridge is a smart software engine that connects trading platforms (like MT4/MT5 or WebTrader) directly to liquidity providers (banks and prime brokers) to execute trades at lightning speed with minimal spread." 
+          q: "What is AyaamX Bridge?", 
+          a: "AyaamX Bridge is a smart software engine that connects trading platforms (like MT4/MT5 or WebTrader) directly to liquidity providers (banks and prime brokers) to execute trades at lightning speed with minimal spread." 
         },
         { 
           q: "How does it help manage broker risk and liquidity?", 
@@ -47,7 +47,7 @@ export const BridgePage: React.FC<PageProps> = ({ onOpenAccount }) => {
         },
         { 
           q: "Can I connect custom liquidity providers to the bridge?", 
-          a: "Yes! BrokerBros Bridge supports all standard FIX protocol feeds and can connect to any prime broker or liquidity venue worldwide." 
+          a: "Yes! AyaamX Bridge supports all standard FIX protocol feeds and can connect to any prime broker or liquidity venue worldwide." 
         }
       ]}
       onOpenAccount={onOpenAccount}

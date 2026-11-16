@@ -60,7 +60,7 @@ export const AuthTrustSection: React.FC = () => {
           </h2>
 
           <p className="text-slate-600 text-sm font-sans leading-relaxed">
-            BrokerBros provides world-class financial infrastructure designed to protect investor assets and deliver high-speed execution.
+            AyaamX provides world-class financial infrastructure designed to protect investor assets and deliver high-speed execution.
           </p>
         </div>
 

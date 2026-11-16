@@ -104,7 +104,7 @@ export const NewsInsightsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       readTime: '4 min read',
       impact: 'High',
       author: 'Tariq Al-Mansoor, Energy Analyst',
-      imageSrc: '/broker-crm-img-one.png'
+      imageSrc: '/aayaamx-operations-platform.png'
     },
     {
       id: '6',

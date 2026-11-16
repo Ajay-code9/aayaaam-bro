@@ -154,7 +154,7 @@ export const B2bCrmPage: React.FC<B2bCrmPageProps> = ({ onOpenAccount }) => {
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-200 dark:border-slate-800 pb-4">
               <div className="flex items-center gap-3">
                 <Briefcase className="w-5 h-5 text-emerald-500" />
-                <span className="text-xs font-mono font-bold text-slate-900 dark:text-white">BrokerBros B2B Sales Engine • Pipeline View</span>
+                <span className="text-xs font-mono font-bold text-slate-900 dark:text-white">AyaamX B2B Sales Engine • Pipeline View</span>
               </div>
               <div className="flex items-center gap-2">
                 {(['lead', 'contacted', 'funded'] as const).map((stage) => (

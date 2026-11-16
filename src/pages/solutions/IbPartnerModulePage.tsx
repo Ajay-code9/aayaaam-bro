@@ -52,7 +52,7 @@ export const IbPartnerModulePage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
   const testimonials = [
     { quote: "The multi-tier IB system transformed our partnership business. We went from manually calculating rebates in spreadsheets to fully automated real-time payouts across 5 tiers.", name: "Sarah Kowalski", role: "Head of Partnerships, Apex FX", rating: 5 },
-    { quote: "Our IBs love the branded partner portal. Registration-to-first-deposit conversion jumped 40% after we deployed the BrokerBros IB module with tracking links.", name: "James Liu", role: "CEO, Pacific Markets", rating: 5 },
+    { quote: "Our IBs love the branded partner portal. Registration-to-first-deposit conversion jumped 40% after we deployed the AyaamX IB module with tracking links.", name: "James Liu", role: "CEO, Pacific Markets", rating: 5 },
     { quote: "We manage over 2,000 active IBs globally. The anti-fraud engine catches rebate churning before it costs us money. Absolutely essential.", name: "Ahmed Al-Rashid", role: "COO, Gulf Trading Co.", rating: 5 }
   ];
 
@@ -143,7 +143,7 @@ export const IbPartnerModulePage: React.FC<PageProps> = ({ onOpenAccount }) => {
               
               <div className="relative">
                 <img 
-                  src="/broker-crm-img-one.png" 
+                  src="/aayaamx-operations-platform.png" 
                   alt="IB Partner Portal Interface" 
                   className="w-full h-auto rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 relative z-10" 
                 />

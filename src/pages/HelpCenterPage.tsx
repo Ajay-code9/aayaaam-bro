@@ -47,7 +47,7 @@ export const HelpCenterPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
   const faqs = [
     {
-      q: "How fast can our team deploy the Broker Bros Turnkey SaaS Stack?",
+      q: "How fast can our team deploy the AyaamX Turnkey SaaS Stack?",
       a: "Standard turnkey deployments (White-Label CRM, WebTrader, Mobile Apps, and FIX Bridge) take 24 to 48 hours. Custom C++ MT5 server plugins and bespoke API bridges typically deploy within 3 to 5 business days."
     },
     {
@@ -59,7 +59,7 @@ export const HelpCenterPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       a: "Yes. For custom enterprise engineering projects, complete source code ownership and full intellectual property (IP) rights are transferred to your firm upon project completion."
     },
     {
-      q: "How does Broker Bros ensure continuous high availability during market volatility?",
+      q: "How does AyaamX ensure continuous high availability during market volatility?",
       a: "Our infrastructure is co-located inside Equinix NY4, LD4, and TY3 financial datacenters with active-active server redundancy and automatic sub-second failover nodes, guaranteeing 99.999% uptime."
     }
   ];

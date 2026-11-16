@@ -11,19 +11,21 @@ interface LocationMarker {
   code: string;
   city: string;
   country: string;
+  hubRole: string;
   x: number; // percentage
   y: number; // percentage
-  volume: string;
-  change: string;
+  throughput: string;
+  latency: string;
 }
 
 const MARKERS: LocationMarker[] = [
-  { id: 'nyse', name: 'NYSE • NASDAQ', code: 'NYSE / NASDAQ', city: 'New York', country: 'USA', x: 24, y: 36, volume: '$48.2 Billion', change: '+1.35%' },
-  { id: 'lse', name: 'London Stock Exchange', code: 'LSE', city: 'London', country: 'UK', x: 46, y: 29, volume: '$12.4 Billion', change: '+0.82%' },
-  { id: 'fse', name: 'Frankfurt Stock Exchange', code: 'FSE', city: 'Frankfurt', country: 'Germany', x: 50, y: 28, volume: '$9.8 Billion', change: '+0.64%' },
-  { id: 'sgx', name: 'Singapore Exchange', code: 'SGX', city: 'Singapore', country: 'Singapore', x: 74, y: 58, volume: '$6.5 Billion', change: '+1.10%' },
-  { id: 'tse', name: 'Tokyo Stock Exchange', code: 'TSE', city: 'Tokyo', country: 'Japan', x: 84, y: 36, volume: '$18.7 Billion', change: '+0.95%' },
-  { id: 'asx', name: 'Australian Securities Exchange', code: 'ASX', city: 'Sydney', country: 'Australia', x: 86, y: 74, volume: '$5.3 Billion', change: '+0.48%' },
+  { id: 'ny', name: 'North America Enterprise Hub', code: 'US-EAST · NY4', city: 'New York', country: 'United States', hubRole: 'Tier-1 FIX Liquidity & Equities Cross-Connect', x: 24, y: 36, throughput: '120k msgs/sec', latency: '< 1.2 ms' },
+  { id: 'ldn', name: 'European Financial Gateway', code: 'LD4 · Slough', city: 'London', country: 'United Kingdom', hubRole: 'Bank ECNs, Institutional FX & Crypto Bridges', x: 46, y: 29, throughput: '95k msgs/sec', latency: '< 0.8 ms' },
+  { id: 'fra', name: 'Continental Cloud Node', code: 'FR2 · Equinix', city: 'Frankfurt', country: 'Germany', hubRole: 'European Banking APIs & GDPR-Compliant Storage', x: 50, y: 28, throughput: '78k msgs/sec', latency: '< 1.5 ms' },
+  { id: 'ahmedabad', name: 'AyaamX Headquarters & R&D Hub', code: 'IN-WEST · HQ', city: 'Ahmedabad', country: 'India', hubRole: 'Core Engineering, AI Model Pipelines & Turnkey Delivery', x: 67, y: 46, throughput: 'Primary R&D Center', latency: 'Active Operations' },
+  { id: 'sg', name: 'Asia-Pacific Ultra-Low Latency Hub', code: 'SG1 · Singapore', city: 'Singapore', country: 'Singapore', hubRole: 'APAC Broker Backoffices, PAMM Nodes & Crypto Settlement', x: 74, y: 58, throughput: '110k msgs/sec', latency: '< 1.9 ms' },
+  { id: 'tyo', name: 'East Asia High-Frequency Node', code: 'TY3 · Tokyo', city: 'Tokyo', country: 'Japan', hubRole: 'Multi-Asset Routing & Liquidity Aggregation', x: 84, y: 36, throughput: '85k msgs/sec', latency: '< 2.1 ms' },
+  { id: 'syd', name: 'Oceania Regional Gateway', code: 'SY2 · Sydney', city: 'Sydney', country: 'Australia', hubRole: 'ASIC-Compliant Data Residency & Clearing Hooks', x: 86, y: 74, throughput: '60k msgs/sec', latency: '< 2.8 ms' },
 ];
 
 export const GlobalMapSection: React.FC<GlobalMapSectionProps> = ({ onOpenAccount }) => {
@@ -65,18 +67,18 @@ export const GlobalMapSection: React.FC<GlobalMapSectionProps> = ({ onOpenAccoun
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200/80 dark:border-emerald-500/30 shadow-2xs">
                 <Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                <span>GLOBAL LIQUIDITY & MULTI-CURRENCY ROUTING</span>
+                <span>GLOBAL INFRASTRUCTURE & MULTI-REGION ROUTING</span>
               </div>
             </div>
 
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-extrabold tracking-tight text-[#0F172A] dark:text-white font-sans leading-[1.15]">
-              Connect Your Brokerage to Global Multi-Asset Liquidity
+              Worldwide Trading Infrastructure & Low-Latency Connectivity
             </h2>
 
             {/* Description */}
             <p className="text-[#64748B] dark:text-slate-300 text-sm sm:text-base leading-relaxed font-normal max-w-lg">
-              Bridge your trading platforms directly to Tier-1 ECNs, bank prime brokers, and crypto liquidity venues across 35+ countries. Clear client balances seamlessly in 26 currencies.
+              Deploy your broker CRMs, prop firm evaluation engines, and trading apps across low-latency financial datacenters worldwide. Direct FIX cross-connects to 150+ Tier-1 LPs with sub-millisecond execution.
             </p>
 
             {/* Three Statistic Cards (Subtle Border, Soft Shadow, 16px Rounded, Hover Effect, Icon Bag) */}
@@ -86,23 +88,23 @@ export const GlobalMapSection: React.FC<GlobalMapSectionProps> = ({ onOpenAccoun
                   <Globe className="w-3.5 h-3.5" />
                 </div>
                 <div className="text-xl sm:text-2xl font-black text-[#0F172A] dark:text-white font-mono tracking-tight">150+</div>
-                <div className="text-[11px] text-[#64748B] dark:text-slate-400 font-medium mt-0.5">Connected LPs & Venues</div>
+                <div className="text-[11px] text-[#64748B] dark:text-slate-400 font-medium mt-0.5">Connected LPs & Hubs</div>
               </div>
 
               <div className="bg-white dark:bg-[#141C2B] p-3.5 rounded-[16px] border border-[#E5E7EB] dark:border-[#1E293B] shadow-xs hover:shadow-md hover:border-emerald-200 transition-all duration-200 group">
                 <div className="w-7 h-7 rounded-lg bg-[#DCFCE7] dark:bg-emerald-500/10 text-[#22C55E] dark:text-emerald-400 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
                   <Layers className="w-3.5 h-3.5" />
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-[#22C55E] dark:text-emerald-400 font-mono tracking-tight">35+</div>
-                <div className="text-[11px] text-[#64748B] dark:text-slate-400 font-medium mt-0.5">Financial Hubs</div>
+                <div className="text-xl sm:text-2xl font-black text-[#22C55E] dark:text-emerald-400 font-mono tracking-tight">&lt; 1.5ms</div>
+                <div className="text-[11px] text-[#64748B] dark:text-slate-400 font-medium mt-0.5">Average Execution Latency</div>
               </div>
 
               <div className="bg-white dark:bg-[#141C2B] p-3.5 rounded-[16px] border border-[#E5E7EB] dark:border-[#1E293B] shadow-xs hover:shadow-md hover:border-emerald-200 transition-all duration-200 group">
-                <div className="w-7 h-7 rounded-lg bg-[#DCFCE7] text-[#22C55E] flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
+                <div className="w-7 h-7 rounded-lg bg-[#DCFCE7] dark:bg-emerald-500/10 text-[#22C55E] dark:text-emerald-400 flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
                   <Coins className="w-3.5 h-3.5" />
                 </div>
-                <div className="text-xl sm:text-2xl font-black text-[#0F172A] font-mono tracking-tight">26</div>
-                <div className="text-[11px] text-[#64748B] font-medium mt-0.5">Currency Wallets</div>
+                <div className="text-xl sm:text-2xl font-black text-[#0F172A] dark:text-white font-mono tracking-tight">99.99%</div>
+                <div className="text-[11px] text-[#64748B] dark:text-slate-400 font-medium mt-0.5">Guaranteed System Uptime</div>
               </div>
             </div>
 
@@ -112,8 +114,7 @@ export const GlobalMapSection: React.FC<GlobalMapSectionProps> = ({ onOpenAccoun
                 onClick={onOpenAccount}
                 className="px-6 py-3.5 bg-[#22C55E] hover:bg-[#16A34A] text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-200 text-sm font-sans flex items-center gap-2 group cursor-pointer"
               >
-                <span>Access Global Liquidity Bridge</span>
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <span>Deploy Global Infrastructure →</span>
               </button>
             </div>
           </div>
@@ -155,8 +156,10 @@ export const GlobalMapSection: React.FC<GlobalMapSectionProps> = ({ onOpenAccoun
                 <path d="M 24 36 Q 35 20, 46 29" fill="none" stroke="#22C55E" strokeWidth="1.2" strokeDasharray="3 3" className="opacity-90" />
                 {/* Curved Path: London (46,29) to Frankfurt (50,28) */}
                 <path d="M 46 29 Q 48 26, 50 28" fill="none" stroke="#22C55E" strokeWidth="1.2" strokeDasharray="3 3" className="opacity-90" />
-                {/* Curved Path: Frankfurt (50,28) to Singapore (74,58) */}
-                <path d="M 50 28 Q 62 42, 74 58" fill="none" stroke="#22C55E" strokeWidth="1.2" strokeDasharray="3 3" className="opacity-75" />
+                {/* Curved Path: Frankfurt (50,28) to Ahmedabad HQ (67,46) */}
+                <path d="M 50 28 Q 58 35, 67 46" fill="none" stroke="#22C55E" strokeWidth="1.5" strokeDasharray="3 3" className="opacity-95" />
+                {/* Curved Path: Ahmedabad HQ (67,46) to Singapore (74,58) */}
+                <path d="M 67 46 Q 70 52, 74 58" fill="none" stroke="#22C55E" strokeWidth="1.2" strokeDasharray="3 3" className="opacity-80" />
                 {/* Curved Path: Singapore (74,58) to Tokyo (84,36) */}
                 <path d="M 74 58 Q 79 46, 84 36" fill="none" stroke="#22C55E" strokeWidth="1.2" strokeDasharray="3 3" className="opacity-75" />
                 {/* Curved Path: Tokyo (84,36) to Sydney (86,74) */}
@@ -194,12 +197,12 @@ export const GlobalMapSection: React.FC<GlobalMapSectionProps> = ({ onOpenAccoun
 
             {/* BOTTOM: Floating Information Card */}
             <div className="relative z-10 bg-white/95 backdrop-blur-xs p-3.5 sm:p-4 rounded-[16px] border border-gray-200/90 shadow-md flex items-center justify-between gap-4 font-sans">
-              <div>
-                <div className="text-xs sm:text-sm font-extrabold text-[#0F172A]">{selectedMarker.name}</div>
-                <div className="text-[11px] text-[#64748B] font-medium">{selectedMarker.city}, {selectedMarker.country}</div>
+              <div className="min-w-0">
+                <div className="text-xs sm:text-sm font-extrabold text-[#0F172A] truncate">{selectedMarker.name}</div>
+                <div className="text-[11px] text-[#64748B] font-medium truncate">{selectedMarker.city}, {selectedMarker.country} · <span className="text-emerald-600 font-mono font-bold">{selectedMarker.hubRole}</span></div>
               </div>
 
-              <div className="flex items-center gap-4">
+              <div className="flex items-center gap-4 shrink-0">
                 {/* Mini Green Sparkline */}
                 <div className="hidden sm:block">
                   <svg className="w-16 h-5">
@@ -208,10 +211,10 @@ export const GlobalMapSection: React.FC<GlobalMapSectionProps> = ({ onOpenAccoun
                 </div>
 
                 <div className="text-right">
-                  <div className="text-xs sm:text-sm font-black font-mono text-[#0F172A]">{selectedMarker.volume}</div>
+                  <div className="text-xs sm:text-sm font-black font-mono text-[#0F172A]">{selectedMarker.throughput}</div>
                   <div className="text-[10px] font-mono font-bold text-[#22C55E] flex items-center justify-end gap-0.5">
                     <TrendingUp className="w-3 h-3 text-[#22C55E]" />
-                    <span>{selectedMarker.change}</span>
+                    <span>{selectedMarker.latency}</span>
                   </div>
                 </div>
               </div>

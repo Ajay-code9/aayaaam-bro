@@ -125,7 +125,7 @@ export const EducationalGuides: React.FC<EducationalGuidesProps> = ({ onOpenAcco
               <ul className="space-y-1 list-disc list-inside">
                 <li>Understand core financial ratios without complex mathematics.</li>
                 <li>Identify key metrics on financial statements.</li>
-                <li>Apply risk mitigation rules directly to your BrokerBros portfolio.</li>
+                <li>Apply risk mitigation rules directly to your AyaamX portfolio.</li>
               </ul>
             </div>
 

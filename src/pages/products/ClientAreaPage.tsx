@@ -85,7 +85,7 @@ export const ClientAreaPage: React.FC<ClientAreaPageProps> = ({ onOpenAccount })
     },
     {
       q: 'Which KYC providers are pre-integrated into the portal?',
-      a: 'BrokerBros Client Area includes built-in API bridges for Sumsub, Veriff, Shufti Pro, and Onfido for zero-friction identity and proof of address verification.'
+      a: 'AyaamX Client Area includes built-in API bridges for Sumsub, Veriff, Shufti Pro, and Onfido for zero-friction identity and proof of address verification.'
     },
     {
       q: 'How do traders deposit and withdraw funds?',

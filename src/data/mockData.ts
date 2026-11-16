@@ -186,44 +186,44 @@ export const ACCOUNT_TYPES: AccountType[] = [
 export const PLATFORM_FEATURES: PlatformFeature[] = [
   {
     id: 'pro-desktop',
-    title: 'White-Label Desktop Workstation',
-    subtitle: 'High-Performance Execution Workbench',
-    description: 'Custom branded desktop terminal engineered for active traders. Features multi-monitor layouts, 120+ indicators, level-2 depth of market, and native MT5 server hooks.',
+    title: 'Custom Branded WebTrader',
+    subtitle: 'High-Performance Browser Execution Terminal',
+    description: 'Equip your traders with an ultra-responsive web trading terminal. Features full TradingView charting integration, one-click execution, DOM order book, and real-time market depth streaming.',
     specs: [
-      { label: 'Order Execution', value: '< 12 ms' },
-      { label: 'Order Algos', value: '100+ Types' },
-      { label: 'MT5 Server API', value: 'C++ Hooks' },
-      { label: 'Chart Panels', value: '32 Workstations' }
+      { label: 'Order Execution', value: '< 10 ms' },
+      { label: 'Chart Engine', value: 'TradingView Pro' },
+      { label: 'Market Depth', value: 'Level-2 DOM' },
+      { label: 'Streaming', value: 'WebSocket Ticks' }
     ],
-    keyTools: ['BookTrader Level II', 'OptionTrader Strategy Builder', 'BasketTrader Algo', 'Real-time Risk Monitor'],
+    keyTools: ['TradingView Chart Suite', 'Depth of Market (DOM)', 'One-Click Fast Order Entry', 'Multi-Asset Watchlists'],
     imageType: 'chart'
   },
   {
     id: 'web-trader',
-    title: 'White-Label Webtrader Portal',
-    subtitle: 'Browser Interface with Zero Installation',
-    description: 'Deliver instant web-based trading access for your clients. Includes TradingView charting integration, automated deposit workflows, and full broker brand customization.',
+    title: 'Trader Portal & Backoffice CRM',
+    subtitle: 'Unified Client Onboarding & Admin Console',
+    description: 'Connect client registration, automated KYC document queues, wallet deposits, and multi-tier IB rebate tracking through a seamless client portal and administrative CRM.',
     specs: [
-      { label: 'Compatibility', value: 'Chrome / Safari / Edge' },
-      { label: 'Security', value: '256-Bit SSL + 2FA' },
-      { label: 'Chart Engine', value: 'TradingView Native' },
-      { label: 'Deployment', value: 'Turnkey Cloud' }
+      { label: 'KYC Verification', value: 'Automated Queue' },
+      { label: 'IB Rebate Engine', value: 'Multi-Tier Realtime' },
+      { label: 'Payment Gateways', value: 'Fiat & Crypto Instant' },
+      { label: 'Audit Security', value: 'Role-Based Logs' }
     ],
-    keyTools: ['One-Click Order Entry', 'Interactive Economic Calendar', 'AI Screener Studio', 'ESG & Fundamentals'],
+    keyTools: ['Automated KYC Verification', 'Multi-Tier IB Rebate Trees', 'Deposit & Withdrawal Queues', 'Granular Role Permissions'],
     imageType: 'order'
   },
   {
     id: 'mobile-app',
-    title: 'Branded iOS & Android Mobile Apps',
-    subtitle: 'Published to App Store & Google Play',
-    description: 'Provide your clients with high-rated mobile trading apps under your own broker brand name, icon, and custom color theme tokens.',
+    title: 'Native iOS & Android Trading Apps',
+    subtitle: 'Published Under Your Own Brand Identity',
+    description: 'Deliver native iOS and Android mobile trading applications published directly to Apple App Store and Google Play with your firm name, logo, splash screen, and custom theme tokens.',
     specs: [
-      { label: 'App Stores', value: 'Apple & Google Play' },
-      { label: 'Authentication', value: 'FaceID & TouchID' },
-      { label: 'Push Alerts', value: 'Instant Order Fills' },
-      { label: 'App Rating', value: '4.9 ★★★★★' }
+      { label: 'App Stores', value: 'App Store & Play Store' },
+      { label: 'Security', value: 'Biometric FaceID / 2FA' },
+      { label: 'Order Execution', value: 'Instant Push Alerts' },
+      { label: 'Syncing', value: 'Real-Time MT5 / FIX' }
     ],
-    keyTools: ['Mobile Charting with Gestures', 'Instant Push Order Alerts', 'Quick Cash Deposit via Mobile Check', 'Option Chain Matrix'],
+    keyTools: ['Gesture-Based Mobile Charts', 'Biometric Biometric Login', 'Instant Trade Execution', 'Push Notification Engine'],
     imageType: 'mobile'
   }
 ];
@@ -307,70 +307,70 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'faq-1',
     category: 'Licensing & Pricing',
-    question: 'How is BrokerBros infrastructure priced — per seat, per module, or flat SaaS?',
-    answer: 'BrokerBros operates on a flat monthly SaaS licensing model per module. Brokers select only the modules they need (CRM, Prop Engine, Webtrader, FIX Bridge, etc.) and pay a fixed monthly fee with zero per-trade revenue share. Volume-based enterprise discounts are available for high-frequency deployments.'
+    question: 'How is AyaamX infrastructure priced — per seat, per module, or flat SaaS?',
+    answer: 'AyaamX operates on transparent, predictable pricing models: milestone-based delivery for custom builds, or flat monthly licensing for turnkey software modules (Broker CRM, Prop Engine, WebTrader, FIX Bridge). We charge zero per-trader penalty fees and zero revenue share on your volume.'
   },
   {
     id: 'faq-2',
-    category: 'Liquidity & FIX',
-    question: 'How does the FIX 4.4 LP Bridge connect to our existing liquidity providers?',
-    answer: 'The BrokerBros FIX 4.4 Bridge connects directly to your preferred Tier-1 LP or Prime of Prime via standard FIX protocol sessions. Configuration takes under 2 business days. We support Aggregation, A-Book, B-Book, and hybrid routing rules with sub-millisecond execution speeds.'
+    category: 'Infrastructure & IP',
+    question: 'Do we own the source code and intellectual property of the software?',
+    answer: 'Yes. For custom software engineering and dedicated platform delivery, 100% of the source code, architecture blueprints, database schemas, and intellectual property are fully transferred to your firm upon milestone completion. Zero vendor lock-in.'
   },
   {
     id: 'faq-3',
-    category: 'Compliance & Security',
-    question: 'How are client funds segregated within the BrokerBros infrastructure?',
-    answer: 'All client fund balances are maintained in fully segregated ledger accounts at Tier-1 custodian banks, completely isolated from operational capital. The multi-currency wallet module supports 26 currency pairs with automated daily reconciliation and cryptographic audit logs for regulator submission.'
+    category: 'Security & Cloud',
+    question: 'Where is our client data stored and how is system security handled?',
+    answer: 'AyaamX deploys software on dedicated, single-tenant cloud infrastructure (your AWS, GCP, or private servers). We never co-mingle or monetize your operator database. All data is protected with AES-256 encryption at rest, TLS 1.3 in transit, and automated daily encrypted snapshot archives.'
   },
   {
     id: 'faq-4',
-    category: 'Infrastructure & Setup',
-    question: 'What is the typical go-live timeline for a complete White-Label Brokerage setup?',
-    answer: 'A standard White-Label Brokerage deployment (CRM + Webtrader + Mobile App + Client Portal) takes 1–3 business days after branding assets and MT5 server credentials are submitted. FIX Bridge connectivity and Prop Firm Engine configurations typically add 1–2 additional business days.'
+    category: 'Liquidity & FIX',
+    question: 'How does the FIX 4.4 / 5.0 Bridge connect to our liquidity providers?',
+    answer: 'The AyaamX FIX Bridge connects directly to your preferred Tier-1 LP, Prime of Prime, or crypto liquidity venue via standard FIX protocol sessions. Setup takes under 2 business days. We support SmartRouting, Aggregation, A-Book, B-Book, and hybrid execution rules with sub-millisecond routing speeds.'
   },
   {
     id: 'faq-5',
-    category: 'Licensing & Pricing',
-    question: 'Does BrokerBros charge any revenue share or per-lot commissions on client trades?',
-    answer: 'No. BrokerBros charges zero per-lot commissions or revenue share on client trade activity. All pricing is transparent flat SaaS monthly fees. Brokers retain 100% of the spread markup, commission income, and swap revenue generated from their client base.'
+    category: 'AI & Automation',
+    question: 'Can AyaamX build custom AI workflow agents for our existing operations?',
+    answer: 'Yes. We engineer autonomous AI agents and document extraction pipelines tailored to your operational workflows (such as KYC document review, client support triage, and invoice data extraction) with built-in human-in-the-loop review steps and zero third-party model training on your data.'
   },
   {
     id: 'faq-6',
     category: 'Prop Firm Engine',
-    question: 'Does the Prop Firm Engine support automated drawdown breach and account lock?',
-    answer: 'Yes. The Prop Firm Evaluation Engine includes fully automated real-time drawdown monitoring with configurable daily loss limits, trailing drawdown, and maximum drawdown thresholds. When a breach is detected, the engine automatically locks the trading account and triggers a notification workflow to the operator dashboard within milliseconds.'
+    question: 'Does the Prop Firm Evaluation Engine support automated drawdown breach and account locking?',
+    answer: 'Yes. The Prop Firm Engine includes sub-second real-time equity surveillance with configurable daily drawdown rules, trailing drawdown limits, profit target tracking, and automated account locking triggers with instant operator alerts and profit split calculation.'
   }
 ];
 
 export const RESEARCH_ARTICLES: ResearchArticle[] = [
   {
     id: 'res-1',
-    title: 'Connecting Your MT5 Server to FIX Liquidity Providers (A-Book vs B-Book Setup)',
-    category: 'Liquidity Setup',
-    date: 'July 28, 2026',
-    author: 'Alex Mercer • Head of Systems Integration',
+    title: 'Start with the workflow. Then add the AI.',
+    category: 'AI & Automation',
+    date: 'August 14, 2026',
+    author: 'AyaamX AI Engineering Group',
     readTime: '5 min read',
-    summary: 'A simple guide to configuring FIX 4.4 liquidity bridges. Learn how to balance A-Book execution and B-Book risk management for optimum spread margins.',
-    tag: 'Liquidity & Execution'
+    summary: 'A practical framework to identify high-impact document handling and review automation opportunities without sacrificing human oversight or compliance controls.',
+    tag: 'AI & Automation'
   },
   {
     id: 'res-2',
-    title: 'Setting Up Prop Firm Challenges: Drawdown Rules & Automated Account Lockout',
-    category: 'Prop Firm Guide',
-    date: 'July 24, 2026',
-    author: 'Sarah Chen • Lead Product Specialist',
+    title: 'A brokerage is an ecosystem, not just a trading screen.',
+    category: 'Fintech & Trading',
+    date: 'August 08, 2026',
+    author: 'AyaamX Trading Systems Team',
     readTime: '6 min read',
-    summary: 'Step-by-step setup for evaluation phases, daily drawdown rules, profit targets, and automated funded trader payouts using the BrokerBros Prop Engine.',
-    tag: 'Prop Firm Operations'
+    summary: 'Why trader registration, multi-tier IB rebates, risk dashboards, and FIX liquidity bridges belong in the exact same architectural conversation.',
+    tag: 'Fintech & Trading'
   },
   {
     id: 'res-3',
-    title: 'Offshore & Onshore Licensing Checklist (FCA, CySEC, ASIC, & VFSC Setup)',
-    category: 'Compliance Guide',
-    date: 'July 20, 2026',
-    author: 'David Miller • Senior Regulatory Consultant',
+    title: 'What belongs on-chain? Ask before you build.',
+    category: 'Blockchain & Web3',
+    date: 'July 30, 2026',
+    author: 'AyaamX Web3 Architecture Desk',
     readTime: '4 min read',
-    summary: 'Everything you need to launch under regulated jurisdictions. How to use pre-built KYC document queues and AML background checks for fast client onboarding.',
-    tag: 'Compliance & Regulation'
+    summary: 'How to clarify digital asset ownership, wallet onboarding journeys, and smart contract boundaries before deploying decentralized applications or payment gateways.',
+    tag: 'Blockchain & Web3'
   }
 ];

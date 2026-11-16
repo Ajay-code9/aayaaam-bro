@@ -16,7 +16,7 @@ import {
 import { CommissionPricingTable } from '../../components/Pricing/CommissionPricingTable';
 import { PricingTiersSection } from '../../components/Pricing/PricingTiersSection';
 import { FeeTransparencyCards } from '../../components/Pricing/FeeTransparencyCards';
-import { CompareBrokerBrosTable } from '../../components/Pricing/CompareBrokerBrosTable';
+import { CompareAyaamXTable } from '../../components/Pricing/CompareAyaamXTable';
 import { InteractivePricingCalculator } from '../../components/Pricing/InteractivePricingCalculator';
 import { PricingFAQAccordion } from '../../components/Pricing/PricingFAQAccordion';
 import { PricingCTA } from '../../components/Pricing/PricingCTA';
@@ -172,7 +172,7 @@ export const CommissionsPage: React.FC<CommissionsPageProps> = ({ onOpenAccount 
       <FeeTransparencyCards />
 
       {/* 5. Competitor Comparison Table */}
-      <CompareBrokerBrosTable onOpenAccount={onOpenAccount} />
+      <CompareAyaamXTable onOpenAccount={onOpenAccount} />
 
       {/* 6. Interactive Savings Calculator */}
       <InteractivePricingCalculator onOpenAccount={onOpenAccount} />

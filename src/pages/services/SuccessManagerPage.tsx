@@ -16,7 +16,7 @@ export const SuccessManagerPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       deliverables={[
         { title: "Named Account Manager", desc: "Single direct contact person for all your operational, technical, and trading desk needs.", icon: Users, sla: "Dedicated 1-on-1" },
         { title: "Weekly Performance Audits", desc: "Regular reviews of trading volume, conversion rates, and server execution speeds.", icon: Briefcase, sla: "Weekly Sync" },
-        { title: "Priority Feature Requests", desc: "Direct priority input into BrokerBros product roadmap and custom feature requests.", icon: Award, sla: "VIP Priority" },
+        { title: "Priority Feature Requests", desc: "Direct priority input into AyaamX product roadmap and custom feature requests.", icon: Award, sla: "VIP Priority" },
         { title: "Regulatory Assistance", desc: "Guidance on trade reporting logs, audit trails, and compliance documentation.", icon: ShieldCheck, sla: "Continuous SLA" }
       ]}
       workflowSteps={[
@@ -38,7 +38,7 @@ export const SuccessManagerPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         { label: "Response Time", value: "< 1 Hour" }
       ]}
       faqs={[
-        { q: "What does a Dedicated Success Manager do for my broker?", a: "Your Success Manager coordinates technical onboarding, optimizes system performance, conducts staff training, and acts as your internal advocate at BrokerBros." },
+        { q: "What does a Dedicated Success Manager do for my broker?", a: "Your Success Manager coordinates technical onboarding, optimizes system performance, conducts staff training, and acts as your internal advocate at AyaamX." },
         { q: "How often will we meet with our Success Manager?", a: "We schedule structured weekly tactical syncs and formal quarterly business reviews (QBRs), with real-time Slack access in between." },
         { q: "Can the Success Manager help with marketing or IB acquisition strategies?", a: "Yes. Our team shares industry best practices for IB compensation structuring, client retention workflows, and affiliate tracking." }
       ]}

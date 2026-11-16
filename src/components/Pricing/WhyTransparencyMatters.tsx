@@ -6,7 +6,7 @@ export const WhyTransparencyMatters: React.FC = () => {
     {
       title: 'No Hidden Charges',
       badge: 'Zero Markup Policy',
-      description: 'Unlike legacy brokers that quietly siphon capital through maintenance fees, ticket surcharges, or inactivity penalties, BrokerBros charges zero hidden fees.',
+      description: 'Unlike legacy brokers that quietly siphon capital through maintenance fees, ticket surcharges, or inactivity penalties, AyaamX charges zero hidden fees.',
       metric: '$0 Account Maintenance',
       icon: ShieldAlert,
       features: ['No inactivity fees', 'No custody or holding fees', 'Free real-time Level 2 quotes'],
@@ -119,7 +119,7 @@ export const WhyTransparencyMatters: React.FC = () => {
         {/* Visual Infographic Banner (Light & Dark Enterprise Theme) */}
         <div className="bg-emerald-50/70 dark:bg-emerald-500/10 p-6 sm:p-8 rounded-2xl border border-emerald-200/90 dark:border-emerald-500/30 shadow-xs grid grid-cols-1 md:grid-cols-3 gap-6 items-center font-sans">
           <div className="space-y-1.5 text-center md:text-left">
-            <span className="text-xs font-mono font-bold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider">THE BROKERBROS IMPACT</span>
+            <span className="text-xs font-mono font-bold text-emerald-800 dark:text-emerald-300 uppercase tracking-wider">THE AyaamX IMPACT</span>
             <h4 className="text-2xl font-bold text-slate-900 dark:text-white font-serif-heading">Compounding Cost Reduction</h4>
             <p className="text-xs text-slate-600 dark:text-slate-300">See how $0.0035 execution rates and 4.85% APY yield transform 10-year portfolio projections.</p>
           </div>

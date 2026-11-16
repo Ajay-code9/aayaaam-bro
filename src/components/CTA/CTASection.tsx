@@ -12,11 +12,11 @@ interface CTASectionProps {
 export const CTASection: React.FC<CTASectionProps> = ({
   onOpenAccount,
   title,
-  subtitle = "14 enterprise infrastructure modules. Flat monthly SaaS pricing. Zero revenue share. Your brand, your clients, your revenue.",
-  badge = "TURNKEY BROKERAGE LAUNCH GATEWAY",
+  subtitle = "End-to-end digital engineering across Trading Tech, AI & Automation, Web3, and Enterprise Platforms. Your vision, full code ownership, engineered to scale.",
+  badge = "ENTERPRISE DIGITAL ENGINEERING GATEWAY",
 }) => {
   return (
-    <section className="relative overflow-hidden py-24 lg:py-28 font-sans bg-white dark:bg-[#090D14] text-slate-900 dark:text-white border-t border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
+    <section className="relative overflow-hidden py-24 lg:py-28 font-sans bg-white dark:bg-[#000000] text-slate-900 dark:text-white border-t border-slate-200 dark:border-[#1F1F28] transition-colors duration-300">
 
       {/* Mesh Glows */}
       <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-500/10 dark:bg-emerald-500/15 rounded-full blur-[140px] pointer-events-none" />
@@ -39,9 +39,9 @@ export const CTASection: React.FC<CTASectionProps> = ({
             title
           ) : (
             <>
-              Launch Your White-Label{' '}
+              Build Your Next-Generation{' '}
               <span className="bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-500 dark:from-emerald-400 dark:via-teal-400 dark:to-emerald-400 bg-clip-text text-transparent">
-                Brokerage Infrastructure.
+                Digital &amp; Trading Ecosystem.
               </span>
             </>
           )}
@@ -57,7 +57,7 @@ export const CTASection: React.FC<CTASectionProps> = ({
             onClick={onOpenAccount}
             className="w-full sm:w-auto px-8 py-4 bg-emerald-600 hover:bg-emerald-500 text-white font-extrabold text-base rounded-xl shadow-xl shadow-emerald-600/20 transition-all flex items-center justify-center gap-2 cursor-pointer group"
           >
-            <span>Request Custom Module Quotation</span>
+            <span>Consult With Lead Architects</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
           
@@ -66,17 +66,17 @@ export const CTASection: React.FC<CTASectionProps> = ({
             className="w-full sm:w-auto px-7 py-4 font-bold text-sm rounded-xl border transition-all flex items-center justify-center gap-2 cursor-pointer bg-slate-50 dark:bg-[#121520] hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-800 shadow-xs"
           >
             <Lock className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            <span>Schedule a Live Platform Demo</span>
+            <span>Schedule Platform Walkthrough</span>
           </button>
         </div>
 
         {/* Trust Checkmarks */}
         <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs font-mono font-semibold text-slate-600 dark:text-slate-400">
           {[
-            { icon: CheckCircle2, label: '14 Enterprise Modules' },
-            { icon: ShieldCheck, label: 'Zero Revenue Share' },
-            { icon: Zap, label: '1–3 Day Go-Live SLA' },
-            { icon: Globe2, label: 'Flat SaaS Pricing' },
+            { icon: CheckCircle2, label: 'End-to-End Delivery' },
+            { icon: ShieldCheck, label: '100% Code Ownership' },
+            { icon: Zap, label: 'Ultra-Low Latency' },
+            { icon: Globe2, label: 'Global Scaling & SLAs' },
           ].map((item, i) => {
             const Icon = item.icon;
             return (
@@ -90,13 +90,13 @@ export const CTASection: React.FC<CTASectionProps> = ({
 
         {/* Divider Stat Line */}
         <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center justify-center gap-8 text-[11px] font-mono font-semibold text-slate-500 dark:text-slate-400">
-          <span>256-Bit Encrypted</span>
+          <span>Enterprise-Grade Architecture</span>
           <span>•</span>
           <span>99.99% Uptime SLA</span>
           <span>•</span>
-          <span>26 Currency Support</span>
+          <span>50+ Platforms Delivered</span>
           <span>•</span>
-          <span>500+ Active Brokerage Clients</span>
+          <span>Ahmedabad, India Headquarters</span>
         </div>
 
       </div>

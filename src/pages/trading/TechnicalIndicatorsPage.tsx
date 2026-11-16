@@ -83,14 +83,14 @@ export const TechnicalIndicatorsPage: React.FC<PageProps> = ({ onOpenAccount }) 
   ];
 
   const faqs = [
-    { q: 'Are technical indicators included for free?', a: 'Yes! All 100+ technical indicators, VWAP, and custom Pine Script support are included free with every BrokerBros account.' },
+    { q: 'Are technical indicators included for free?', a: 'Yes! All 100+ technical indicators, VWAP, and custom Pine Script support are included free with every AyaamX account.' },
     { q: 'Can I write custom indicators in Pine Script?', a: 'Yes. Our web terminal features a full Pine Script compiler supporting custom plots, alerts, and strategy backtesting.' },
     { q: 'Do indicators sync between web and mobile apps?', a: 'Yes. Any indicator templates and settings saved in your workspace cloud sync automatically to the mobile app.' },
     { q: 'Is Volume Profile and VWAP supported?', a: 'Yes. Session VWAP, Anchored VWAP, and Volume Profile (VPVR/VPFR) are available across all stock, crypto, and futures charts.' },
   ];
 
   const testimonials = [
-    { quote: "The VWAP and Volume Profile implementation in BrokerBros is as crisp as institutional software like TradingView Pro.", name: "Derek Chen", role: "Equity Scalper", rating: 5 },
+    { quote: "The VWAP and Volume Profile implementation in AyaamX is as crisp as institutional software like TradingView Pro.", name: "Derek Chen", role: "Equity Scalper", rating: 5 },
     { quote: "Importing my custom Pine Script indicators took 30 seconds. The multi-timeframe overlay is a game changer for my setup.", name: "Samantha Miller", role: "Technical Analyst", rating: 5 },
     { quote: "Having 100+ indicators available on web and mobile without extra fees saves me hundreds per year in chart subscriptions.", name: "Robert Taylor", role: "Swing Trader", rating: 5 },
   ];
@@ -227,7 +227,7 @@ export const TechnicalIndicatorsPage: React.FC<PageProps> = ({ onOpenAccount }) 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">Technical Analysis Modules</h2>
-            <p className="text-slate-500 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">Six powerful indicator suites built into the BrokerBros charting workstation.</p>
+            <p className="text-slate-500 text-sm sm:text-base leading-relaxed max-w-xl mx-auto">Six powerful indicator suites built into the AyaamX charting workstation.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

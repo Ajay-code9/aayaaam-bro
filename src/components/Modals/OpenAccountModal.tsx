@@ -33,7 +33,7 @@ export const OpenAccountModal: React.FC<OpenAccountModalProps> = ({ isOpen, onCl
             </div>
             <div>
               <h3 className="text-lg font-serif-heading font-semibold text-white">
-                Broker Bros B2B Technical Demo &amp; Consultation
+                AyaamX B2B Technical Demo &amp; Consultation
               </h3>
               <p className="text-[11px] text-slate-400 font-mono">
                 Enterprise White-Label Technology Infrastructure Setup

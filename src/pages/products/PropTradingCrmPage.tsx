@@ -82,7 +82,7 @@ export const PropTradingCrmPage: React.FC<PropTradingCrmPageProps> = ({ onOpenAc
   const faqs = [
     {
       q: 'Can we build custom 1-Step and 2-Step challenge rules?',
-      a: 'Yes. BrokerBros Prop Firm CRM allows complete customization of evaluation phases, max daily drawdown (e.g. 5%), total max drawdown (e.g. 10%), profit targets, and profit share percentages.'
+      a: 'Yes. AyaamX Prop Firm CRM allows complete customization of evaluation phases, max daily drawdown (e.g. 5%), total max drawdown (e.g. 10%), profit targets, and profit share percentages.'
     },
     {
       q: 'How are account breaches handled?',

@@ -91,7 +91,7 @@ export const OptionsPage: React.FC<OptionsPageProps> = ({ onOpenAccount }) => {
     { q: 'What multi-leg options strategies are supported?', a: 'We support single calls/puts, vertical spreads, calendar spreads, iron condors, butterflies, straddles, strangles, and custom 4-leg combos.' },
     { q: 'Are real-time Greeks included without additional fees?', a: 'Yes! Black-Scholes Greeks (Delta, Gamma, Theta, Vega) and real-time IV calculations are included free across all options chains.' },
     { q: 'How does multi-leg order execution work?', a: 'Multi-leg spread orders are routed to options exchanges as a single atomic package order to eliminate leg risk.' },
-    { q: 'Can I trade options on mobile?', a: 'Yes. The BrokerBros Mobile app includes the complete options chain, Greeks display, and spread builder.' },
+    { q: 'Can I trade options on mobile?', a: 'Yes. The AyaamX Mobile app includes the complete options chain, Greeks display, and spread builder.' },
   ];
 
   const testimonials = [
@@ -345,7 +345,7 @@ export const OptionsPage: React.FC<OptionsPageProps> = ({ onOpenAccount }) => {
 
       <div className="py-6 bg-slate-50 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 text-xs text-slate-400 text-center">
-          <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Options trading involves significant risk and is not suitable for all investors. Prior to trading options, please read the Characteristics and Risks of Standardized Options (ODD). BrokerBros LLC is member FINRA/SIPC.
+          <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Options trading involves significant risk and is not suitable for all investors. Prior to trading options, please read the Characteristics and Risks of Standardized Options (ODD). AyaamX LLC is member FINRA/SIPC.
         </div>
       </div>
     </div>

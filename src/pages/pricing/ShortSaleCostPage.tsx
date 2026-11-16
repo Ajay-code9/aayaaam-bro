@@ -99,7 +99,7 @@ export const ShortSaleCostPage: React.FC<ShortSaleCostPageProps> = ({ onOpenAcco
               </div>
               <h3 className="text-2xl sm:text-3xl font-extrabold text-white">Earn Extra Income on Stocks You Already Own</h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                When you opt in, BrokerBros can lend out your fully paid stock to traders seeking short locates. You receive 50% of the daily market borrow fee while retaining 100% economic ownership and dividend rights.
+                When you opt in, AyaamX can lend out your fully paid stock to traders seeking short locates. You receive 50% of the daily market borrow fee while retaining 100% economic ownership and dividend rights.
               </p>
             </div>
 

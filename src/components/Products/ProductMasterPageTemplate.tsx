@@ -69,6 +69,7 @@ export interface ProductMasterPageProps {
   heroSlides?: ProductSlideItem[];
   customHeroElement?: React.ReactNode;
   heroImageAlt?: string;
+  heroImageFrameless?: boolean;
   heroImageLayout?: 'split' | 'below';
   workflowSteps?: ProductWorkflowStep[];
   visualizerTabs: ProductVisualizerTab[];
@@ -91,6 +92,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
   heroSlides,
   customHeroElement,
   heroImageAlt,
+  heroImageFrameless = false,
   heroImageLayout = 'split',
   workflowSteps,
   visualizerTabs,
@@ -155,10 +157,12 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
 
   const renderHeroImageCard = (isSplitMode: boolean) => (
     <div className={`relative group w-full ${isSplitMode ? 'lg:col-span-7' : 'max-w-5xl mx-auto pt-6'}`}>
-      <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-400 rounded-3xl blur-2xl opacity-30 group-hover:opacity-45 transition duration-500" />
-      <div className="relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl">
+      {!heroImageFrameless && (
+        <div className="absolute -inset-1.5 bg-gradient-to-r from-emerald-600 via-teal-500 to-emerald-400 rounded-3xl blur-2xl opacity-30 group-hover:opacity-45 transition duration-500" />
+      )}
+      <div className={heroImageFrameless ? 'relative w-full' : 'relative rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-2xl'}>
         {/* Browser Mockup Header */}
-        <div className="flex items-center justify-between px-3 py-1 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+        {!heroImageFrameless && <div className="flex items-center justify-between px-3 py-1 bg-slate-100 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-rose-500/80 inline-block" />
             <span className="w-2 h-2 rounded-full bg-amber-500/80 inline-block" />
@@ -166,15 +170,15 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
           </div>
           <div className="flex items-center gap-1 px-2.5 py-0 rounded bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800 text-[10px] font-mono text-slate-500 dark:text-slate-400">
             <span className="text-emerald-500 font-bold">https://</span>
-            <span>trader.brokerbros.com</span>
+            <span>trader.AyaamX.com</span>
           </div>
           <div className="w-6" />
-        </div>
+        </div>}
 
         {customHeroElement ? (
           customHeroElement
         ) : slides.length > 0 ? (
-          <div className="relative w-full overflow-hidden bg-white dark:bg-slate-950 flex flex-col items-center justify-center">
+          <div className={`relative w-full overflow-hidden flex flex-col items-center justify-center ${heroImageFrameless ? '' : 'bg-white dark:bg-slate-950'}`}>
             {slides.map((slide, sIdx) => {
               const isActive = sIdx === currentSlideIndex;
               return (
@@ -215,7 +219,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
             )}
           </div>
         ) : heroImageDark && heroImageLight ? (
-          <div className="w-full overflow-hidden bg-white dark:bg-slate-950 flex items-center justify-center">
+          <div className={`w-full overflow-hidden flex items-center justify-center ${heroImageFrameless ? '' : 'bg-white dark:bg-slate-950'}`}>
             <img
               src={heroImageDark}
               alt={heroImageAlt || productTitle}
@@ -228,7 +232,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
             />
           </div>
         ) : heroImage ? (
-          <div className="w-full overflow-hidden bg-white dark:bg-slate-950 flex items-center justify-center">
+          <div className={`w-full overflow-hidden flex items-center justify-center ${heroImageFrameless ? '' : 'bg-white dark:bg-slate-950'}`}>
             <img
               src={heroImage}
               alt={heroImageAlt || productTitle}
@@ -264,11 +268,11 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#090D14] text-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans">
+    <div className="min-h-screen bg-white dark:bg-[#000000] text-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans">
 
       {/* 1. HERO SECTION */}
-      <section className="relative min-h-[calc(100vh-90px)] flex flex-col justify-center py-6 sm:py-10 overflow-hidden border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-[#0E1420]">
-        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:28px_28px] opacity-60 pointer-events-none" />
+      <section className="relative min-h-[calc(100vh-90px)] flex flex-col justify-center py-6 sm:py-10 overflow-hidden border-b border-slate-200 dark:border-[#1F1F28] bg-white dark:bg-[#000000]">
+        <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:28px_28px] opacity-40 pointer-events-none" />
         <div className="absolute top-1/4 right-10 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-left my-auto">
@@ -304,14 +308,14 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
 
-                  <div className="inline-flex items-center gap-3 p-2 px-3.5 rounded-xl bg-slate-50 dark:bg-[#131926] border border-slate-200 dark:border-slate-800 shadow-xs shrink-0">
+                  <div className="inline-flex items-center gap-3 p-2 px-3.5 rounded-xl bg-slate-50 dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] shadow-xs shrink-0">
                     <div className="flex items-center justify-center w-6 h-6 rounded-lg bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold shrink-0">
                       <Zap className="w-3.5 h-3.5" />
                     </div>
                     <div className="text-sm font-extrabold font-mono text-emerald-600 dark:text-emerald-400">
                       {productMetric.value}
                     </div>
-                    <div className="h-3.5 w-px bg-slate-200 dark:bg-slate-800 shrink-0" />
+                    <div className="h-3.5 w-px bg-slate-200 dark:bg-[#1F1F28] shrink-0" />
                     <div className="text-xs font-semibold text-slate-600 dark:text-slate-400">
                       {productMetric.label}
                     </div>
@@ -373,7 +377,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
       </section>
 
       {/* 2. CHRONOLOGICAL HOW IT WORKS WORKFLOW */}
-      <section className="py-14 sm:py-18 bg-white dark:bg-[#0E1420] border-b border-slate-200 dark:border-slate-800">
+      <section className="py-14 sm:py-18 bg-white dark:bg-[#000000] border-b border-slate-200 dark:border-[#1F1F28]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 
           <div className="text-center max-w-2xl mx-auto space-y-2">
@@ -395,7 +399,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
               const colorStyle = stepColors[sIdx % stepColors.length];
 
               return (
-                <div key={sIdx} className="p-6 rounded-2xl bg-slate-50 dark:bg-[#131926] border border-slate-200 dark:border-slate-800 space-y-3 relative">
+                <div key={sIdx} className="p-6 rounded-2xl bg-slate-50 dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] space-y-3 relative">
                   <div className={`w-9 h-9 rounded-xl font-mono font-bold flex items-center justify-center text-sm border ${colorStyle}`}>
                     {stepItem.num}
                   </div>
@@ -437,7 +441,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
             return (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-white dark:bg-[#131926] border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all duration-300 space-y-4 flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] shadow-sm hover:shadow-md hover:border-emerald-500/50 transition-all duration-300 space-y-4 flex flex-col justify-between"
               >
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
@@ -464,7 +468,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
       </section>
 
       {/* 4. INTERACTIVE MODULE CONTROL & LIVE VISUAL PREVIEW */}
-      <section className="py-14 sm:py-18 bg-slate-100 dark:bg-[#0E1420] border-t border-b border-slate-200 dark:border-slate-800">
+      <section className="py-14 sm:py-18 bg-slate-50 dark:bg-[#000000] border-t border-b border-slate-200 dark:border-[#1F1F28]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
 
           <div className="text-center max-w-3xl mx-auto space-y-2">
@@ -484,7 +488,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${activeTab === tab.id
                   ? 'bg-emerald-600 text-white shadow-md'
-                  : 'bg-white dark:bg-[#131926] text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800'
+                  : 'bg-white dark:bg-[#0D0D12] text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-[#1F1F28]'
                   }`}
               >
                 {tab.label}
@@ -493,8 +497,8 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
           </div>
 
           {/* Visualizer Display Box */}
-          <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#131926] border border-slate-200 dark:border-slate-800 shadow-lg space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-200 dark:border-slate-800 pb-3">
+          <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] shadow-lg space-y-4">
+            <div className="flex items-center justify-between border-b border-slate-200 dark:border-[#1F1F28] pb-3">
               <div className="flex items-center gap-2">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
                 <span className="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block" />
@@ -563,7 +567,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
               return (
                 <div
                   key={fIdx}
-                  className="rounded-xl bg-white dark:bg-[#131926] border border-slate-200 dark:border-slate-800 overflow-hidden"
+                  className="rounded-xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] overflow-hidden"
                 >
                   <button
                     onClick={() => setActiveFaq(isOpen ? null : fIdx)}
@@ -573,15 +577,18 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
                     <ChevronDown className={`w-4 h-4 text-slate-400 transition-transform ${isOpen ? 'rotate-180 text-emerald-500' : ''}`} />
                   </button>
                   {isOpen && (
-                    <div className="px-4 pb-4 text-xs text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-slate-800/60 pt-3">
+                    <div className="px-4 pb-4 text-xs text-slate-600 dark:text-slate-400 leading-relaxed border-t border-slate-100 dark:border-[#1F1F28] pt-3">
                       {faq.a}
                     </div>
                   )}
                 </div>
               );
             })}
-          {/* Related Stack Modules Cross-Linking Grid */}
-        <div className="space-y-6 pt-8 border-t border-slate-200 dark:border-slate-800">
+          </div>
+        </div>
+
+        {/* Related Stack Modules Cross-Linking Grid */}
+        <div className="space-y-6 pt-8 border-t border-slate-200 dark:border-[#1F1F28]">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
               MODULAR BROKERAGE STACK
@@ -590,12 +597,19 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
               Explore Related Turnkey Modules
             </h2>
             <p className="text-xs text-slate-600 dark:text-slate-400">
-              Seamlessly connect {productTitle} with other core Broker Bros infrastructure components.
+              Seamlessly connect {productTitle} with other core AyaamX infrastructure components.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <a href="#/products/forex-crm" className="p-4 rounded-xl bg-white dark:bg-[#131926] border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all space-y-2 group">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <button
+              onClick={() => {
+                window.history.pushState({}, '', '/products/forex-crm');
+                window.dispatchEvent(new PopStateEvent('popstate'));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="text-left p-4 rounded-xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] hover:border-emerald-500/50 transition-all space-y-2 group cursor-pointer"
+            >
               <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors flex items-center justify-between">
                 <span>Forex CRM &amp; Portal</span>
                 <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
@@ -603,9 +617,16 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
               <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2">
                 Multi-tier client portal, Sumsub KYC, 50+ PSPs, and MT4/MT5 sync.
               </p>
-            </a>
+            </button>
 
-            <a href="#/products/web-trader" className="p-4 rounded-xl bg-white dark:bg-[#131926] border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all space-y-2 group">
+            <button
+              onClick={() => {
+                window.history.pushState({}, '', '/services/trading-technology/trading-platform-integration');
+                window.dispatchEvent(new PopStateEvent('popstate'));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="text-left p-4 rounded-xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] hover:border-emerald-500/50 transition-all space-y-2 group cursor-pointer"
+            >
               <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors flex items-center justify-between">
                 <span>HTML5 WebTrader</span>
                 <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
@@ -613,9 +634,16 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
               <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2">
                 Zero-install web trading terminal with Level-2 DOM and TradingView charts.
               </p>
-            </a>
+            </button>
 
-            <a href="#/products/bridge" className="p-4 rounded-xl bg-white dark:bg-[#131926] border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all space-y-2 group">
+            <button
+              onClick={() => {
+                window.history.pushState({}, '', '/services/trading-technology/fix-api-lp-integration');
+                window.dispatchEvent(new PopStateEvent('popstate'));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="text-left p-4 rounded-xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] hover:border-emerald-500/50 transition-all space-y-2 group cursor-pointer"
+            >
               <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors flex items-center justify-between">
                 <span>FIX 4.4 Liquidity Bridge</span>
                 <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
@@ -623,9 +651,16 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
               <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2">
                 Sub-millisecond SmartOrder routing and A/B book risk management.
               </p>
-            </a>
+            </button>
 
-            <a href="#/products/ib-portal" className="p-4 rounded-xl bg-white dark:bg-[#131926] border border-slate-200 dark:border-slate-800 hover:border-emerald-500/50 transition-all space-y-2 group">
+            <button
+              onClick={() => {
+                window.history.pushState({}, '', '/solutions/forex-brokerage/ib-affiliate-management');
+                window.dispatchEvent(new PopStateEvent('popstate'));
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+              className="text-left p-4 rounded-xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] hover:border-emerald-500/50 transition-all space-y-2 group cursor-pointer"
+            >
               <div className="text-xs font-bold text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors flex items-center justify-between">
                 <span>Multi-Tier IB Portal</span>
                 <ArrowRight className="w-3.5 h-3.5 text-slate-400 group-hover:text-emerald-500 transition-colors" />
@@ -633,9 +668,7 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
               <p className="text-[11px] text-slate-500 dark:text-slate-400 line-clamp-2">
                 Multi-level affiliate tree visualizer and sub-cent automated rebates.
               </p>
-            </a>
-          </div>
-        </div>
+            </button>
           </div>
         </div>
 

@@ -68,7 +68,7 @@ export const CommissionPricingTable: React.FC<{ onOpenAccount: () => void }> = (
       minTicket: '$0.00 base fee per order',
       maxCap: 'No maximum cap',
       passThroughFees: 'CME / ICE / Eurex exchange & clearing fees passed through at exact cost.',
-      example: 'Trading 5 Micro E-mini NQ contracts: Total BrokerBros fee = $4.25 ($0.85/contract) + CME exchange pass-through.',
+      example: 'Trading 5 Micro E-mini NQ contracts: Total AyaamX fee = $4.25 ($0.85/contract) + CME exchange pass-through.',
       highlights: ['CME, Eurex, ICE, HKEX markets', 'Span margin optimization', 'Full Depth-of-Market (DOM) order book'],
     },
     {

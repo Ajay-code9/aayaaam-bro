@@ -23,7 +23,7 @@ const MockDashboard = () => (
           <div className="w-2.5 h-2.5 rounded-full bg-yellow-500" />
           <div className="w-2.5 h-2.5 rounded-full bg-green-500" />
         </div>
-        <span className="text-slate-400 font-mono text-[10px]">BrokerBros Web Terminal — LIVE</span>
+        <span className="text-slate-400 font-mono text-[10px]">AyaamX Web Terminal — LIVE</span>
       </div>
       <div className="flex items-center gap-2">
         <div className="flex items-center gap-1 bg-green-600/20 border border-green-600/40 px-2 py-0.5 rounded">
@@ -176,7 +176,7 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
 
   const testimonials = [
     {
-      quote: "BrokerBros Web Terminal completely replaced our Bloomberg subscription for intraday equity trading. The Level II depth and VWAP order execution are institutional quality at a fraction of the cost.",
+      quote: "AyaamX Web Terminal completely replaced our Bloomberg subscription for intraday equity trading. The Level II depth and VWAP order execution are institutional quality at a fraction of the cost.",
       name: "James Harrington",
       role: "Head of Equities, Meridian Capital",
       rating: 5,
@@ -188,7 +188,7 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
       rating: 5,
     },
     {
-      quote: "We onboarded 40 traders to BrokerBros in 48 hours. The workspace persistence and SmartRouting meant our team was productive from day one. Zero PFOF is a deal-maker for us.",
+      quote: "We onboarded 40 traders to AyaamX in 48 hours. The workspace persistence and SmartRouting meant our team was productive from day one. Zero PFOF is a deal-maker for us.",
       name: "Thomas Bauer",
       role: "CTO, TradeDesk Europe",
       rating: 5,
@@ -198,7 +198,7 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
   const faqs = [
     {
       q: 'Is there any software to download?',
-      a: 'None. The BrokerBros Web Terminal runs entirely in your browser using HTML5 and WebSocket technology. It works on Chrome, Firefox, Safari, and Edge across Windows, macOS, and Linux with no plugins required.',
+      a: 'None. The AyaamX Web Terminal runs entirely in your browser using HTML5 and WebSocket technology. It works on Chrome, Firefox, Safari, and Edge across Windows, macOS, and Linux with no plugins required.',
     },
     {
       q: 'What Level II data is included?',
@@ -1066,7 +1066,7 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
       <div className="py-6 bg-slate-50 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-xs text-slate-400 leading-relaxed text-center max-w-4xl mx-auto">
-            <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Trading CFDs, Forex, stocks, and other financial instruments involves substantial risk and may not be suitable for all investors. You may lose some or all of your invested capital. Leverage can work against you. Past performance is not indicative of future results. Please ensure you fully understand the risks involved and seek independent financial advice if necessary. BrokerBros LLC is a member of FINRA/SIPC. Securities are protected up to $500,000 (including $250,000 for cash claims) through SIPC.
+            <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Trading CFDs, Forex, stocks, and other financial instruments involves substantial risk and may not be suitable for all investors. You may lose some or all of your invested capital. Leverage can work against you. Past performance is not indicative of future results. Please ensure you fully understand the risks involved and seek independent financial advice if necessary. AyaamX LLC is a member of FINRA/SIPC. Securities are protected up to $500,000 (including $250,000 for cash claims) through SIPC.
           </p>
         </div>
       </div>

@@ -26,7 +26,7 @@ export const IposPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             Access Initial Public Offerings at Offering Price
           </h1>
           <p className="text-slate-700 text-lg sm:text-xl max-w-3xl leading-relaxed font-sans font-medium">
-            BrokerBros provides retail and institutional clients equal access to high-profile IPO allocations without management markups or high account minimums.
+            AyaamX provides retail and institutional clients equal access to high-profile IPO allocations without management markups or high account minimums.
           </p>
         </div>
       </section>

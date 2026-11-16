@@ -9,7 +9,7 @@ interface PageProps {
 export const FinancialWidgetsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   return (
     <ProductMasterPageTemplate
-      productTitle="BrokerBros Financial Widgets"
+      productTitle="AyaamX Financial Widgets"
       heroBadge="EMBEDDABLE WEB TICKERS & CALENDARS"
       heroDescription="Suite of lightweight, customizable HTML5 web widgets including real-time market tickers, economic calendars, currency converters, and market heatmaps."
       productMetric={{ label: "Widget Load Speed", value: "< 15 ms", sub: "Lightweight Asynchronous Embed" }}
@@ -30,7 +30,7 @@ export const FinancialWidgetsPage: React.FC<PageProps> = ({ onOpenAccount }) => 
         { label: "Load Impact", value: "< 15 ms" }
       ]}
       faqs={[
-        { q: "How do we embed BrokerBros Financial Widgets into our website?", a: "Simply copy and paste our 1-line JavaScript or iframe embed tag into your website HTML." },
+        { q: "How do we embed AyaamX Financial Widgets into our website?", a: "Simply copy and paste our 1-line JavaScript or iframe embed tag into your website HTML." },
         { q: "Do the widgets match our website dark or light theme?", a: "Yes. Widgets automatically inherit your site's dark/light theme or can be styled with custom CSS colors." }
       ]}
       onOpenAccount={onOpenAccount}

@@ -22,7 +22,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenInquiry }) => {
   });
 
   return (
-    <section id="faq" className="py-16 lg:py-20 bg-[#F8FAFC] dark:bg-[#0E1420] border-b border-slate-200/80 dark:border-[#1E293B] transition-colors duration-300">
+    <section id="faq" className="py-16 lg:py-20 bg-[#F8FAFC] dark:bg-[#000000] border-b border-slate-200/80 dark:border-[#1F1F28] transition-colors duration-300">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
         
         {/* Title Header */}
@@ -48,7 +48,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenInquiry }) => {
               placeholder="Search questions (e.g., FIX Bridge setup, KYC module, SaaS pricing, go-live timeline)..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-11 pr-4 py-3 bg-white dark:bg-[#141C2B] border border-slate-300 dark:border-[#1E293B] rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 text-xs sm:text-sm focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none shadow-xs transition-all"
+              className="w-full pl-11 pr-4 py-3 bg-white dark:bg-[#0D0D12] border border-slate-300 dark:border-[#1F1F28] rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-500 text-xs sm:text-sm focus:border-emerald-600 focus:ring-1 focus:ring-emerald-600 outline-none shadow-xs transition-all"
             />
             {searchQuery && (
               <span className="absolute right-4 top-1/2 -translate-y-1/2 text-[11px] font-mono text-slate-400">
@@ -86,10 +86,10 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenInquiry }) => {
               return (
                 <div
                   key={faq.id}
-                  className={`bg-white dark:bg-[#141C2B] rounded-xl border transition-all ${
+                  className={`bg-white dark:bg-[#0D0D12] rounded-xl border transition-all ${
                     isOpen
                       ? 'border-emerald-500/80 dark:border-emerald-500/80 shadow-md ring-1 ring-emerald-500/20'
-                      : 'border-slate-200/80 dark:border-[#1E293B] hover:border-slate-300 dark:hover:border-slate-700 shadow-[0_2px_10px_rgba(0,0,0,0.02)]'
+                      : 'border-slate-200/80 dark:border-[#1F1F28] hover:border-slate-300 dark:hover:border-slate-700 shadow-[0_2px_10px_rgba(0,0,0,0.02)]'
                   }`}
                 >
                   <button
@@ -119,7 +119,7 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenInquiry }) => {
         </div>
 
         {/* Professional Support Contact Bar */}
-        <div className="bg-white dark:bg-[#141C2B] p-6 rounded-2xl border border-slate-200 dark:border-[#1E293B] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="bg-white dark:bg-[#0D0D12] p-6 rounded-2xl border border-slate-200 dark:border-[#1F1F28] shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-center sm:text-left">
             <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 flex items-center justify-center shrink-0">
               <MessageSquare className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />

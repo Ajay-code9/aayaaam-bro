@@ -34,14 +34,14 @@ export const PricingFAQAccordion: React.FC = () => {
     {
       id: 'faq-4',
       category: 'Margin Rates',
-      question: 'How do BrokerBros margin interest rates compare to traditional brokers?',
-      answer: 'BrokerBros charges wholesale margin rates benchmarked directly to central bank rates (starting at 5.83% APY for USD). Traditional brokers charge between 11.5% and 13.0% APY on identical loan amounts, allowing our clients to save thousands annually.',
+      question: 'How do AyaamX margin interest rates compare to traditional brokers?',
+      answer: 'AyaamX charges wholesale margin rates benchmarked directly to central bank rates (starting at 5.83% APY for USD). Traditional brokers charge between 11.5% and 13.0% APY on identical loan amounts, allowing our clients to save thousands annually.',
     },
     {
       id: 'faq-5',
       category: 'Account Fees',
       question: 'Are there any inactivity fees, custody fees, or account maintenance charges?',
-      answer: 'No. BrokerBros has a strict Zero Hidden Fee policy. We charge $0 monthly account maintenance, $0 inactivity penalties, and $0 asset custody fees regardless of how frequently or infrequently you trade.',
+      answer: 'No. AyaamX has a strict Zero Hidden Fee policy. We charge $0 monthly account maintenance, $0 inactivity penalties, and $0 asset custody fees regardless of how frequently or infrequently you trade.',
     },
     {
       id: 'faq-6',
@@ -58,8 +58,8 @@ export const PricingFAQAccordion: React.FC = () => {
     {
       id: 'faq-8',
       category: 'Account Fees',
-      question: 'Does BrokerBros reimburse transfer fees when moving portfolios from another broker?',
-      answer: 'Yes! BrokerBros automatically reimburses ACATS account transfer fees up to $150 per account when transferring portfolio assets from another brokerage firm.',
+      question: 'Does AyaamX reimburse transfer fees when moving portfolios from another broker?',
+      answer: 'Yes! AyaamX automatically reimburses ACATS account transfer fees up to $150 per account when transferring portfolio assets from another brokerage firm.',
     },
   ];
 

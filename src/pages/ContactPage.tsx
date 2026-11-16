@@ -31,7 +31,7 @@ export const ContactPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             <span>24/5 GLOBAL CLIENT & DESK SUPPORT</span>
           </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Get in Touch With BrokerBros
+            Get in Touch With AyaamX
           </h1>
           <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm max-w-2xl mx-auto font-medium">
             Reach our trade execution desks, client services team, or institutional specialists directly 24 hours a day, 5 days a week.
@@ -54,7 +54,7 @@ export const ContactPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#141C2B] border border-slate-200 dark:border-slate-800 space-y-1">
                 <Mail className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
                 <div className="text-xs font-bold text-slate-900 dark:text-white">Support Email</div>
-                <div className="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 font-bold">support@brokerbros.com</div>
+                <div className="text-[11px] font-mono text-emerald-700 dark:text-emerald-400 font-bold">support@AyaamX.com</div>
               </div>
               <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#141C2B] border border-slate-200 dark:border-slate-800 space-y-1">
                 <Clock className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
@@ -97,7 +97,7 @@ export const ContactPage: React.FC<PageProps> = ({ onOpenAccount }) => {
                   <CheckCircle2 className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                   <span>Inquiry Submitted Successfully!</span>
                 </div>
-                <p>A BrokerBros specialist will get back to your business email within 2 hours.</p>
+                <p>A AyaamX specialist will get back to your business email within 2 hours.</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-3.5">

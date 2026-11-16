@@ -155,7 +155,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({ isOpen, onClose }) =
                       required
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      placeholder="alexander@broker.com"
+                      placeholder="alexander@company.com"
                       className="w-full pl-9 pr-3 py-2 bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-lg text-slate-900 dark:text-white text-xs font-sans focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500/20 transition-all"
                     />
                   </div>
@@ -212,7 +212,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({ isOpen, onClose }) =
                     rows={2}
                     value={requirements}
                     onChange={(e) => setRequirements(e.target.value)}
-                    placeholder="Describe your brokerage requirements, platform stack (MT4/MT5, WebTrader), or timeline..."
+                    placeholder="Describe your technical architecture, project scope, integrations or timeline..."
                     className="w-full pl-9 pr-3 py-2 bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-800 rounded-lg text-slate-900 dark:text-white text-xs font-sans focus:outline-none focus:border-emerald-600 focus:ring-1 focus:ring-emerald-500/20 transition-all resize-none"
                   />
                 </div>

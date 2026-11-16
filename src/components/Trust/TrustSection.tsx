@@ -37,164 +37,164 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
 
   const tabData = {
     routing: {
-      badge: 'SAFE CLIENT FUNDS',
-      amount: '100% Segregated Accounts',
-      lastAudited: 'Updated Daily',
-      verifiedStatus: 'Tier-1 Segregated Accounts',
-      heading: 'Client Capital is Always Kept Separate & Safe',
+      badge: 'DATA SOVEREIGNTY',
+      amount: '100% Client Data Ownership',
+      lastAudited: 'Zero Vendor Lock-In',
+      verifiedStatus: 'Isolated Dedicated Databases',
+      heading: 'Your Client Data & IP Belong 100% to Your Firm',
       paragraph:
-        'Client trading funds are stored in top-tier bank accounts, completely separate from firm operating capital. Includes automated daily balance reconciliation.',
-      imagePath: '/section-one.webp',
-      placeholderLabel: 'Segregated Client Funds Architecture',
+        'AyaamX delivers software on isolated, dedicated infrastructure. We never share, co-mingle, or monetize your operator database, user records, or trading logs. You retain complete intellectual property ownership.',
+      imagePath: '/section-one.png',
+      placeholderLabel: 'Data Sovereignty & Isolated Architecture',
       metrics: [
         {
-          title: 'Client Fund Safety',
-          value: '100% Isolated',
-          subtitle: 'Client money separated from firm ops',
+          title: 'Database Isolation',
+          value: '100% Dedicated',
+          subtitle: 'Single-tenant private database instances',
           icon: Lock,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         },
         {
-          title: 'Multi-Currency Support',
-          value: '26 Currencies',
-          subtitle: 'Automated multi-currency balance tracking',
-          icon: Coins,
+          title: 'IP Ownership',
+          value: 'Full Handover',
+          subtitle: 'Complete source code and architecture rights',
+          icon: ShieldCheck,
           highlight: 'bg-blue-50 text-blue-700 border-blue-200'
         },
         {
-          title: 'Bank Tier',
-          value: 'Tier-1 Banks',
-          subtitle: 'Stored in top-tier institutional banks',
+          title: 'Cloud Infrastructure',
+          value: 'Your Cloud / AWS',
+          subtitle: 'Deploy directly inside your company cloud',
           icon: Landmark,
           highlight: 'bg-slate-50 text-slate-700 border-slate-200'
         },
         {
-          title: 'Daily Balance Check',
-          value: 'Daily Ledger',
-          subtitle: 'Automated daily balance reconciliation',
+          title: 'Backup & Recovery',
+          value: 'Daily Automated',
+          subtitle: 'Automated encrypted snapshot archives',
           icon: BadgeCheck,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         }
       ]
     },
     capital: {
-      badge: 'AUTOMATIC RISK LOGS',
-      amount: 'Transparent History',
-      lastAudited: 'Continuous Compliance',
-      verifiedStatus: 'Clear Audit History',
-      heading: 'Clean, Transparent & Audit-Ready Record Keeping',
+      badge: 'ROLE-BASED GOVERNANCE',
+      amount: 'Tamper-Proof Audit History',
+      lastAudited: 'Continuous Event Tracking',
+      verifiedStatus: 'Granular Admin Permissions',
+      heading: 'Complete Transparency Across Operator & Staff Actions',
       paragraph:
-        'Every trade, IB commission payout, and account breach is automatically recorded in real-time so your brokerage is always ready for regulator review.',
-      imagePath: '/section-second.webp',
+        'Maintain absolute visibility over every internal decision. Automated audit logs track deposit approvals, withdrawal processing, KYC state changes, and risk rule adjustments by staff member and timestamp.',
+      imagePath: '/section-second.png',
       placeholderLabel: 'Immutable Audit Logging Illustration',
       metrics: [
         {
-          title: 'Audit Trail',
-          value: '100% Secure',
-          subtitle: 'Tamper-proof digital record keeping',
+          title: 'Audit Logging',
+          value: '100% Traceable',
+          subtitle: 'Every staff action logged with immutable timestamp',
           icon: ShieldCheck,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         },
         {
-          title: 'Risk & Breach Logs',
-          value: 'Sub-Second',
-          subtitle: 'Real-time account risk tracking',
+          title: 'Staff Access Roles',
+          value: 'Granular RBAC',
+          subtitle: 'Custom manager, compliance & finance roles',
           icon: Scale,
           highlight: 'bg-blue-50 text-blue-700 border-blue-200'
         },
         {
-          title: 'Report Exports',
-          value: '1-Click XML',
-          subtitle: 'Easy reports for FCA/CySEC/ASIC',
+          title: 'Compliance Reports',
+          value: '1-Click Export',
+          subtitle: 'Standardized CSV & XML regulator ledger feeds',
           icon: Download,
           highlight: 'bg-slate-50 text-slate-700 border-slate-200'
         },
         {
-          title: 'Data Retention',
-          value: '7+ Years',
-          subtitle: 'Compliant with record-keeping rules',
+          title: 'Log Preservation',
+          value: 'Cryptographic',
+          subtitle: 'Append-only audit queues prevent log alteration',
           icon: Shield,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         }
       ]
     },
     insurance: {
-      badge: 'BANK-GRADE SECURITY',
-      amount: '99.99% Uptime SLA',
-      lastAudited: 'Certified 2026',
-      verifiedStatus: 'Bank-Grade Cyber Security',
-      heading: 'Ultra-Fast, Hack-Proof & Reliable Infrastructure',
+      badge: 'ENTERPRISE DEVSECOPS',
+      amount: '99.99% Production Uptime SLA',
+      lastAudited: 'Enterprise Grade 2026',
+      verifiedStatus: 'End-to-End Encryption',
+      heading: 'Resilient Cloud Systems Built for Continuous Operation',
       paragraph:
-        'Powered by enterprise 256-bit encryption standards, SSL data protection, and a guaranteed 99.99% uptime SLA to keep your brokerage running smoothly 24/7.',
+        'All client endpoints, CRM portals, and API hooks run with AES-256 encryption at rest and TLS 1.3 in transit. Redundant microservices ensure zero disruption during high-volatility market events.',
       imagePath: '/section-third.webp',
       placeholderLabel: 'Cyber Security Architecture Illustration',
       metrics: [
         {
-          title: 'Security Standard',
-          value: '256-BIT SSL',
-          subtitle: 'Enterprise encrypted data protection',
+          title: 'Transit & Rest Security',
+          value: '256-Bit TLS 1.3',
+          subtitle: 'End-to-end encrypted API & socket feeds',
           icon: Shield,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         },
         {
-          title: 'Server Uptime SLA',
+          title: 'System Uptime SLA',
           value: '99.99% SLA',
-          subtitle: 'Multi-region server backup',
+          subtitle: 'Multi-zone cloud failover & load balancing',
           icon: Zap,
           highlight: 'bg-blue-50 text-blue-700 border-blue-200'
         },
         {
-          title: 'Data Encryption',
-          value: '256-Bit SSL',
-          subtitle: 'Encrypted data in transit & at rest',
+          title: 'Network Defense',
+          value: 'DDoS Shield',
+          subtitle: 'Automated edge rate-limiting & bot mitigation',
           icon: Lock,
           highlight: 'bg-slate-50 text-slate-700 border-slate-200'
         },
         {
           title: 'Disaster Recovery',
-          value: '< 5 min Failover',
-          subtitle: 'Automated backup server system',
+          value: '< 5 min RTO',
+          subtitle: 'Automated failover across standby regions',
           icon: Landmark,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         }
       ]
     },
     rating: {
-      badge: 'GLOBAL LICENSE READY',
-      amount: '5+ Frameworks',
-      lastAudited: 'Regulator Compliant',
-      verifiedStatus: 'FCA / CySEC / ASIC Ready',
-      heading: 'Ready for Global Financial Regulation & Onboarding',
+      badge: 'REGULATORY COMPLIANCE ARCHITECTURE',
+      amount: 'Multi-Jurisdiction Ready',
+      lastAudited: 'Standardized Data Schemas',
+      verifiedStatus: 'KYC & AML Integrated Queues',
+      heading: 'Built to Meet Global Financial Reporting Standards',
       paragraph:
-        'Pre-configured workflows for FCA, CySEC, ASIC, and offshore licenses with built-in instant KYC document verification and AML background checks.',
-      imagePath: '/section-fourth.webp',
+        'Software pre-configured for brokerage licensing requirements across onshore and offshore jurisdictions. Includes automated KYC document workflows, AML watchlist checks, and audit-ready data structures.',
+      imagePath: '/section-fourth.png',
       placeholderLabel: 'Regulatory Compliance Framework Illustration',
       metrics: [
         {
-          title: 'Supported Licenses',
-          value: '5+ Global Licenses',
-          subtitle: 'FCA, CySEC, ASIC, VFSC, FSA ready',
+          title: 'Compliance Workflows',
+          value: 'Global Ready',
+          subtitle: 'Built for FCA, CySEC, ASIC, VFSC & FSA rules',
           icon: Award,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         },
         {
-          title: 'Fast KYC Verification',
-          value: '< 2 min Auto',
-          subtitle: 'Automated ID document check',
+          title: 'KYC Verification',
+          value: 'Automated Queue',
+          subtitle: 'Automated document extraction and review states',
           icon: ShieldCheck,
           highlight: 'bg-blue-50 text-blue-700 border-blue-200'
         },
         {
-          title: 'AML Sanctions Check',
-          value: 'Live Screening',
-          subtitle: 'Global PEP & sanction blacklist checks',
+          title: 'AML Sanction Checks',
+          value: 'API Hook Ready',
+          subtitle: 'Connects with Sumsub, Shufti Pro & Ondato',
           icon: BadgeCheck,
           highlight: 'bg-slate-50 text-slate-700 border-slate-200'
         },
         {
-          title: 'Compliance Reports',
-          value: 'Automated',
-          subtitle: 'Periodic regulatory filing exports',
+          title: 'Audit-Ready Schemas',
+          value: 'Standardized',
+          subtitle: 'Instant export for periodic regulatory filings',
           icon: Scale,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         }
@@ -255,7 +255,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
     <section
       ref={sectionRef}
       id="trust"
-      className="py-6 lg:py-10 bg-white dark:bg-[#090D14] text-slate-900 dark:text-slate-100 border-b border-slate-200/50 dark:border-[#1E293B] relative overflow-hidden font-sans transition-colors duration-300"
+      className="py-6 lg:py-10 bg-white dark:bg-[#000000] text-slate-900 dark:text-slate-100 border-b border-slate-200 dark:border-[#1F1F28] relative overflow-hidden font-sans transition-colors duration-300"
     >
       {/* Subtle Static Background Grid (Opacity < 5%) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-[0.035]">
@@ -264,46 +264,46 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200/70 dark:border-[#1E293B] pb-4">
+        <div className="flex flex-col md:flex-row md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-[#1F1F28] pb-4">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-md bg-slate-900 text-white font-mono text-[11px] border border-slate-800 shadow-sm">
-              <span className="w-2 h-2 rounded-full bg-emerald-400" />
-              <span className="text-emerald-400 font-bold tracking-wider">256-BIT ENCRYPTED</span>
-              <span className="text-slate-700">|</span>
-              <span className="text-slate-300 font-bold">MULTI-JURISDICTION COMPLIANCE READY</span>
+            <div className="inline-flex items-center gap-2.5 px-3 py-1 rounded-md bg-slate-100 dark:bg-[#0D0D12] text-slate-900 dark:text-white font-mono text-[11px] border border-slate-300 dark:border-[#1F1F28] shadow-sm">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              <span className="text-emerald-700 dark:text-emerald-400 font-bold tracking-wider">ENTERPRISE SOFTWARE SECURITY</span>
+              <span className="text-slate-300 dark:text-slate-700">|</span>
+              <span className="text-slate-700 dark:text-slate-300 font-bold">100% CODE & DATA SOVEREIGNTY</span>
             </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-slate-900 dark:text-white font-sans">
-              Enterprise Security & Regulatory Compliance Guaranteed
+              Enterprise Software Security & Compliance Architecture
             </h2>
           </div>
           <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-sm leading-relaxed max-w-md font-sans font-medium">
-            Built on military-grade encryption, segregated client wallet architecture, and automated audit trails required by global financial regulators (FCA, CySEC, ASIC, FSA, VFSC).
+            Engineered on isolated cloud architecture, immutable audit logging, and automated compliance pipelines required to operate regulated brokerages and high-throughput prop trading firms.
           </p>
         </div>
 
-        <div className="bg-white dark:bg-[#141C2B] rounded-2xl border border-slate-200 dark:border-[#1E293B] shadow-lg shadow-slate-200/40 overflow-hidden grid grid-cols-1 lg:grid-cols-12 transition-all">
+        <div className="bg-white dark:bg-[#0D0D12] rounded-2xl border border-slate-200 dark:border-[#1F1F28] shadow-lg shadow-slate-200/40 dark:shadow-none overflow-hidden grid grid-cols-1 lg:grid-cols-12 transition-all">
 
-          {/* LEFT STICKY NAVIGATION PANEL */}
-          <div className="lg:col-span-4 bg-slate-900 text-white p-5 space-y-4 flex flex-col justify-between relative overflow-hidden border-r border-slate-800">
-            <div className="absolute inset-0 bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:20px_20px] opacity-50 pointer-events-none"></div>
+          {/* LEFT STICKY NAVIGATION PANEL (Light in Light Mode, Smoke Black in Dark Mode) */}
+          <div className="lg:col-span-4 bg-slate-50 dark:bg-[#0D0D12] text-slate-900 dark:text-white p-5 space-y-4 flex flex-col justify-between relative overflow-hidden border-r border-slate-200 dark:border-[#1F1F28]">
+            <div className="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:20px_20px] opacity-30 dark:opacity-50 pointer-events-none"></div>
 
             <div className="relative z-10 space-y-3">
               <div className="space-y-1">
-                <span className="text-[10px] font-mono font-bold text-emerald-400 uppercase tracking-widest flex items-center gap-1.5">
-                  <Shield className="w-3 h-3" />
+                <span className="text-[10px] font-mono font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-widest flex items-center gap-1.5">
+                  <Shield className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
                   INFRASTRUCTURE SECURITY PILLARS
                 </span>
-                <p className="text-[11px] text-slate-300 font-sans leading-snug">
-                  Select a pillar below to review how BrokerBros protects your operators' client capital and keeps your infrastructure audit-ready:
+                <p className="text-[11px] text-slate-600 dark:text-slate-300 font-sans leading-snug">
+                  Select a pillar below to review how AyaamX protects your operators' client capital and keeps your infrastructure audit-ready:
                 </p>
               </div>
 
               {/* STORY PROGRESS BAR & CARDS */}
               <div className="relative space-y-2 pt-1">
                 {/* Thin vertical progress line */}
-                <div className="absolute left-2.5 top-3 bottom-3 w-0.5 bg-slate-800 rounded-full z-0 hidden lg:block">
+                <div className="absolute left-2.5 top-3 bottom-3 w-0.5 bg-slate-200 dark:bg-slate-800 rounded-full z-0 hidden lg:block">
                   <motion.div
-                    className="w-full bg-emerald-400 rounded-full"
+                    className="w-full bg-emerald-500 rounded-full"
                     animate={{ height: `${((currentIndex + 1) / STORY_KEYS.length) * 100}%` }}
                     transition={{ duration: 0.3 }}
                   />
@@ -312,26 +312,26 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                 {[
                   {
                     id: 'routing' as StoryKey,
-                    title: 'Safe Client Funds',
-                    badge: '100% Segregated Accounts',
+                    title: '100% Data Sovereignty',
+                    badge: 'Zero Vendor Lock-In & Dedicated DBs',
                     icon: Lock
                   },
                   {
                     id: 'capital' as StoryKey,
-                    title: 'Automatic Risk Logs',
-                    badge: '100% Transparent History',
+                    title: 'Role-Based Governance',
+                    badge: 'Tamper-Proof Audit Logging',
                     icon: Landmark
                   },
                   {
                     id: 'insurance' as StoryKey,
-                    title: 'Bank-Grade Security',
-                    badge: '256-Bit SSL & 99.99% Uptime',
+                    title: 'Enterprise DevSecOps',
+                    badge: '256-Bit SSL & 99.99% Uptime SLA',
                     icon: ShieldCheck
                   },
                   {
                     id: 'rating' as StoryKey,
-                    title: 'Global License Ready',
-                    badge: 'FCA / CySEC / ASIC Frameworks',
+                    title: 'Compliance Architecture',
+                    badge: 'Global Regulatory Data Schemas',
                     icon: Award
                   }
                 ].map((tab, idx) => {
@@ -346,14 +346,14 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                       whileHover={{ x: 3, y: -1 }}
                       transition={{ duration: 0.15 }}
                       className={`w-full p-3 rounded-xl text-left transition-all duration-300 cursor-pointer relative overflow-hidden border group ${isSelected
-                        ? 'bg-gradient-to-r from-slate-800 to-slate-900 border-emerald-500/90 text-white shadow-md shadow-emerald-950/40 ring-1 ring-emerald-500/50'
-                        : 'bg-slate-950/60 border-slate-800/80 text-slate-400 hover:text-white hover:bg-slate-800/60 hover:border-slate-700'
+                        ? 'bg-white dark:bg-[#15151D] border-emerald-500 dark:border-emerald-500 text-slate-900 dark:text-white shadow-md ring-1 ring-emerald-500/40'
+                        : 'bg-white/80 dark:bg-[#07070A] border-slate-200 dark:border-[#1F1F28] text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-[#121218] hover:border-slate-300 dark:hover:border-slate-700'
                         }`}
                     >
                       {isSelected && (
                         <motion.div
                           layoutId="activeTabGlow"
-                          className="absolute left-0 top-0 bottom-0 w-1 bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.8)]"
+                          className="absolute left-0 top-0 bottom-0 w-1 bg-emerald-500 shadow-[0_0_12px_rgba(52,211,153,0.8)]"
                         />
                       )}
 
@@ -362,31 +362,31 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                           {/* Progress indicator dot / check */}
                           <div className="shrink-0 w-4 h-4 rounded-full flex items-center justify-center text-[9px] font-mono">
                             {isCompleted ? (
-                              <Check className="w-3 h-3 text-emerald-400 stroke-[3]" />
+                              <Check className="w-3 h-3 text-emerald-600 dark:text-emerald-400 stroke-[3]" />
                             ) : isSelected ? (
-                              <div className="w-2 h-2 rounded-full bg-emerald-400" />
+                              <div className="w-2 h-2 rounded-full bg-emerald-500" />
                             ) : (
-                              <div className="w-1.5 h-1.5 rounded-full bg-slate-600" />
+                              <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700" />
                             )}
                           </div>
 
                           <div
                             className={`p-1.5 rounded-lg transition-colors ${isSelected
-                              ? 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
-                              : 'bg-slate-800/80 text-slate-400 group-hover:text-slate-200'
+                              ? 'bg-emerald-50 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30'
+                              : 'bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 group-hover:text-slate-800 dark:group-hover:text-slate-200'
                               }`}
                           >
                             <IconComponent className="w-3.5 h-3.5" />
                           </div>
                           <div>
                             <div
-                              className={`text-xs font-bold font-sans tracking-tight ${isSelected ? 'text-white font-extrabold' : 'text-slate-300'
+                              className={`text-xs font-bold font-sans tracking-tight ${isSelected ? 'text-slate-900 dark:text-white font-extrabold' : 'text-slate-700 dark:text-slate-300'
                                 }`}
                             >
                               {tab.title}
                             </div>
                             <div
-                              className={`text-[10px] font-mono font-medium mt-0.5 ${isSelected ? 'text-emerald-400 font-bold' : 'text-slate-500'
+                              className={`text-[10px] font-mono font-medium mt-0.5 ${isSelected ? 'text-emerald-700 dark:text-emerald-400 font-bold' : 'text-slate-500'
                                 }`}
                             >
                               {tab.badge}
@@ -395,8 +395,8 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                         </div>
                         <ChevronRight
                           className={`w-3.5 h-3.5 transition-transform duration-200 ${isSelected
-                            ? 'translate-x-1 text-emerald-400'
-                            : 'text-slate-600 group-hover:text-slate-400 group-hover:translate-x-0.5'
+                            ? 'translate-x-1 text-emerald-600 dark:text-emerald-400'
+                            : 'text-slate-400 dark:text-slate-600 group-hover:text-slate-600 dark:group-hover:text-slate-400 group-hover:translate-x-0.5'
                             }`}
                         />
                       </div>
@@ -406,17 +406,17 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
               </div>
             </div>
 
-            <div className="relative z-10 pt-3 border-t border-slate-800/80 flex items-center justify-between text-[10px] font-mono text-slate-400">
+            <div className="relative z-10 pt-3 border-t border-slate-200 dark:border-[#1F1F28] flex items-center justify-between text-[10px] font-mono text-slate-500 dark:text-slate-400">
               <span className="flex items-center gap-1.5">
-                <BadgeCheck className="w-3 h-3 text-emerald-400" />
+                <BadgeCheck className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
                 SOC THREAT DEFENSE
               </span>
-              <span className="text-emerald-400 font-bold tracking-wider">256-BIT ENCRYPTED</span>
+              <span className="text-emerald-700 dark:text-emerald-400 font-bold tracking-wider">256-BIT ENCRYPTED</span>
             </div>
           </div>
 
           {/* RIGHT STORY CONTENT PANEL (SMOOTH ANIMATED TRANSITION) */}
-          <div className="lg:col-span-8 p-5 sm:p-6 flex flex-col justify-between space-y-5 bg-white dark:bg-[#141C2B]">
+          <div className="lg:col-span-8 p-5 sm:p-6 flex flex-col justify-between space-y-5 bg-white dark:bg-[#0D0D12]">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -427,7 +427,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                 className="space-y-4"
               >
                 {/* Top Badge & Audit Strip */}
-                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 dark:border-slate-800 pb-3">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 dark:border-[#1F1F28] pb-3">
                   <div className="flex items-center gap-2">
                     <span className="text-[11px] font-mono font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-0.5 rounded-md border border-emerald-200 dark:border-emerald-800/80 shadow-2xs">
                       {currentContent.badge}
@@ -482,7 +482,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                         }}
                         className="w-full h-auto max-h-[200px] object-contain select-none scale-105"
                       />
-                      <div className="placeholder-info hidden w-full aspect-[4/3] rounded-xl border-2 border-dashed border-slate-300 dark:border-slate-700 bg-slate-50/80 dark:bg-slate-900/80 flex flex-col items-center justify-center p-4 text-center">
+                      <div className="placeholder-info hidden w-full aspect-[4/3] rounded-xl border-2 border-dashed border-slate-300 dark:border-[#1F1F28] bg-slate-50/80 dark:bg-[#07070A] flex flex-col items-center justify-center p-4 text-center">
                         <div className="p-2 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200/80 dark:border-emerald-800/80 mb-1.5">
                           <PieChart className="w-5 h-5" />
                         </div>
@@ -511,7 +511,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                           initial={{ opacity: 0, y: 10, scale: 0.97 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
                           transition={{ duration: 0.3, delay: idx * 0.06 }}
-                          className="px-2.5 py-2 rounded-lg border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-slate-900/70 hover:bg-white dark:hover:bg-slate-800/80 hover:border-emerald-300 dark:hover:border-emerald-500/50 hover:shadow-xs transition-all duration-200 space-y-0.5 group"
+                          className="px-2.5 py-2 rounded-lg border border-slate-200 dark:border-[#1F1F28] bg-slate-50/70 dark:bg-[#121218] hover:bg-white dark:hover:bg-[#161620] hover:border-emerald-300 dark:hover:border-emerald-500/50 hover:shadow-xs transition-all duration-200 space-y-0.5 group"
                         >
                           <div className="flex items-center justify-between">
                             <span className="text-[10px] font-mono font-semibold text-slate-500 dark:text-slate-400 truncate max-w-[130px]">
@@ -536,33 +536,33 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
             </AnimatePresence>
 
             {/* Bottom Regulatory Footer Strip */}
-            <div className="pt-2.5 border-t border-slate-200 dark:border-slate-800 space-y-2.5">
+            <div className="pt-2.5 border-t border-slate-200 dark:border-[#1F1F28] space-y-2.5">
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 text-center">
-                <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-slate-900/80 border border-slate-200/70 dark:border-slate-800 flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
+                <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-[#121218] border border-slate-200/70 dark:border-[#1F1F28] flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
                   <ShieldCheck className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
                   <span>256-Bit Encrypted</span>
                 </div>
-                <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-slate-900/80 border border-slate-200/70 dark:border-slate-800 flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
+                <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-[#121218] border border-slate-200/70 dark:border-[#1F1F28] flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
                   <CheckCircle2 className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span>Segregated Wallets</span>
+                  <span>Zero Vendor Lock-In</span>
                 </div>
-                <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-slate-900/80 border border-slate-200/70 dark:border-slate-800 flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
+                <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-[#121218] border border-slate-200/70 dark:border-[#1F1F28] flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
                   <BadgeCheck className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span>FCA / CySEC / ASIC Ready</span>
+                  <span>Audit-Ready Schemas</span>
                 </div>
-                <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-slate-900/80 border border-slate-200/70 dark:border-slate-800 flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
+                <div className="py-1 px-2 rounded-md bg-slate-50 dark:bg-[#121218] border border-slate-200/70 dark:border-[#1F1F28] flex items-center justify-center gap-1.5 text-[10px] font-mono font-bold text-slate-800 dark:text-slate-200">
                   <Lock className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span>Cryptographic Audit Logs</span>
+                  <span>100% IP & Data Ownership</span>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-2 pt-0.5">
                 <button
                   onClick={onOpenAccount}
-                  className="flex items-center gap-1.5 text-[10.5px] font-mono font-bold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 px-3 py-2 rounded-lg border border-slate-300/80 dark:border-slate-700 transition-all justify-center cursor-pointer"
+                  className="flex items-center gap-1.5 text-[10.5px] font-mono font-bold text-slate-700 dark:text-slate-200 hover:text-slate-900 dark:hover:text-white bg-slate-100 dark:bg-[#121218] hover:bg-slate-200 dark:hover:bg-[#1A1A24] px-3 py-2 rounded-lg border border-slate-300/80 dark:border-[#1F1F28] transition-all justify-center cursor-pointer"
                 >
                   <Download className="w-3 h-3 text-emerald-600 dark:text-emerald-400 shrink-0" />
-                  <span>Download Infrastructure Security Brief →</span>
+                  <span>Download Architecture & Security Whitepaper →</span>
                 </button>
 
                 <motion.button
@@ -571,7 +571,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                   whileTap={{ scale: 0.98 }}
                   className="px-6 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-[11px] rounded-lg shadow-sm shadow-emerald-500/20 transition-all flex items-center justify-center gap-1.5 cursor-pointer group"
                 >
-                  <span>Request Security Documentation →</span>
+                  <span>Request Custom Technical Consultation →</span>
                 </motion.button>
               </div>
             </div>

@@ -113,10 +113,10 @@ export const PlatformInteractiveTabs: React.FC<{ onOpenAccount: () => void }> = 
   const currentTab = tabs.find((t) => t.id === activeTab)!;
 
   const codeSnippets = {
-    python: `import brokerbros as bb
+    python: `import ayaamx as ax
 
 # Initialize institutional API client
-client = bb.Client(api_key="bb_live_9942a", env="production")
+client = ax.Client(api_key="ax_live_9942a", env="production")
 
 # Submit SmartRouted Limit Order
 order = client.orders.create(
@@ -130,10 +130,10 @@ order = client.orders.create(
 )
 
 print(f"Order Transmitted: ID {order.id} | Status: {order.status}")`,
-    cpp: `#include <brokerbros/fix_engine.hpp>
+    cpp: `#include <AyaamX/fix_engine.hpp>
 
 int main() {
-    bb::FixSession session("tcp://fix.brokerbros.com:9800", "ACCOUNT_8842");
+    bb::FixSession session("tcp://fix.AyaamX.com:9800", "ACCOUNT_8842");
     
     bb::NewOrderSingle order;
     order.setSymbol("NVDA");
@@ -145,7 +145,7 @@ int main() {
     session.send(order);
     return 0;
 }`,
-    fix: `8=FIX.4.4|9=148|35=D|49=CLIENT_PRO|56=BROKERBROS|34=102|52=20260731-08:20:00|11=ORD_99182|55=NVDA|54=1|38=500|40=2|44=128.45|59=0|10=182|`
+    fix: `8=FIX.4.4|9=148|35=D|49=CLIENT_PRO|56=AyaamX|34=102|52=20260731-08:20:00|11=ORD_99182|55=NVDA|54=1|38=500|40=2|44=128.45|59=0|10=182|`
   };
 
   return (

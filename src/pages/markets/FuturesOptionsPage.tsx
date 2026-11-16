@@ -262,10 +262,10 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
   const faqs = [
     {
       q: 'What is the difference between Day Trading Margin and Overnight Initial Margin?',
-      a: 'Intraday (Day Trading) Margin is the reduced capital required to enter and hold a futures position during active market hours (typically 9:30 AM to 4:00 PM ET). BrokerBros offers 10% intraday margins (e.g. $125 for Micro S&P). Overnight Initial Margin is mandated by exchange clearinghouses (e.g. CME) and applies if positions remain open past 5:00 PM ET.'
+      a: 'Intraday (Day Trading) Margin is the reduced capital required to enter and hold a futures position during active market hours (typically 9:30 AM to 4:00 PM ET). AyaamX offers 10% intraday margins (e.g. $125 for Micro S&P). Overnight Initial Margin is mandated by exchange clearinghouses (e.g. CME) and applies if positions remain open past 5:00 PM ET.'
     },
     {
-      q: 'How does contract rollover work for futures traders at BrokerBros?',
+      q: 'How does contract rollover work for futures traders at AyaamX?',
       a: 'Futures contracts expire on fixed quarterly schedules (March, June, September, December). Our automated Contract Explorer alerts you 5 days prior to first notice date or expiration, allowing 1-click rollover to the next active contract month with zero leg-risk.'
     },
     {
@@ -273,8 +273,8 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
       a: 'Yes. Micro E-mini futures (MES, MNQ, MCL, MGC) are 1/10th the contract size of standard E-mini contracts. You can trade Micro S&P 500 futures with as little as $125 day trading margin, making them ideal for active retail traders and precise portfolio hedging.'
     },
     {
-      q: 'What clearing exchanges does BrokerBros connect to directly?',
-      a: 'BrokerBros provides direct co-located DMA (Direct Market Access) gateways to CME Group (CME, CBOT, NYMEX, COMEX), Eurex, ICE Futures Europe/US, HKEX, SGX, and CBOE Futures Exchange (CFE).'
+      q: 'What clearing exchanges does AyaamX connect to directly?',
+      a: 'AyaamX provides direct co-located DMA (Direct Market Access) gateways to CME Group (CME, CBOT, NYMEX, COMEX), Eurex, ICE Futures Europe/US, HKEX, SGX, and CBOE Futures Exchange (CFE).'
     },
     {
       q: 'Are there any hidden ticket surcharges or routing fees?',
@@ -1063,7 +1063,7 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
               Sub-Millisecond Order Routing Engine
             </h2>
             <p className="text-slate-400 text-sm">
-              How BrokerBros transmits futures orders directly to global exchange matching engines without intermediary markups or delays.
+              How AyaamX transmits futures orders directly to global exchange matching engines without intermediary markups or delays.
             </p>
           </div>
 
@@ -1081,7 +1081,7 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
 
             <div className="bg-slate-900 p-5 rounded-xl border border-slate-800 text-center space-y-2">
               <div className="w-8 h-8 rounded-full bg-emerald-500/10 text-emerald-400 flex items-center justify-center mx-auto font-bold">2</div>
-              <div className="font-bold text-white">BrokerBros Smart Routing</div>
+              <div className="font-bold text-white">AyaamX Smart Routing</div>
               <div className="text-[11px] text-slate-400">Co-located Gateway</div>
             </div>
 
@@ -1147,7 +1147,7 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
             <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-xs space-y-4">
               <h3 className="text-xl font-bold font-serif-heading text-slate-900">Cash Settlement vs Physical Delivery</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Equity index futures (ES, NQ) are 100% cash-settled directly into your account balance upon expiration. Physical commodity futures (CL, GC) are automatically rolled or closed by BrokerBros prior to First Notice Date to prevent physical delivery obligations.
+                Equity index futures (ES, NQ) are 100% cash-settled directly into your account balance upon expiration. Physical commodity futures (CL, GC) are automatically rolled or closed by AyaamX prior to First Notice Date to prevent physical delivery obligations.
               </p>
               <div className="p-3 bg-emerald-50 text-emerald-800 rounded-lg border border-emerald-200 text-xs font-mono">
                 ✓ 100% Automated Rollover Protection Active
@@ -1167,7 +1167,7 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
             <h2 className="text-3xl font-serif-heading font-semibold text-slate-900">
               Frequently Asked Questions
             </h2>
-            <p className="text-slate-600 text-sm">Everything you need to know about global futures trading at BrokerBros.</p>
+            <p className="text-slate-600 text-sm">Everything you need to know about global futures trading at AyaamX.</p>
           </div>
 
           <div className="space-y-4">

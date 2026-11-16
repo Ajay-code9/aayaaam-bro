@@ -38,7 +38,7 @@ export const OpenAccountPage: React.FC<OpenAccountPageProps> = () => {
             onClick={() => navigate('/')}
             className="flex items-center gap-2 cursor-pointer group"
           >
-            <img src="/logo-white.png" alt="BrokerBros" className="h-9 w-auto object-contain" />
+            <img src="/logo-white.png" alt="AyaamX" className="h-9 w-auto object-contain" />
           </button>
 
           {/* Right Action: Log In Button */}
@@ -76,7 +76,7 @@ export const OpenAccountPage: React.FC<OpenAccountPageProps> = () => {
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400 font-mono">
           <div className="flex items-center gap-2">
             <Lock className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-            <span>BrokerBros Digital Onboarding • Member SIPC & FINRA</span>
+            <span>AyaamX Digital Onboarding • Member SIPC & FINRA</span>
           </div>
           <div className="flex items-center gap-4">
             <button onClick={() => navigate('/privacy-policy')} className="hover:text-slate-700 transition-colors">Privacy</button>

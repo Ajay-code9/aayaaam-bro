@@ -25,8 +25,8 @@ const MockRobotCodeTerminal = () => (
       </div>
     </div>
     <div className="p-4 space-y-2 text-[11px] leading-relaxed text-slate-300">
-      <div><span className="text-purple-400">from</span> brokerbros <span className="text-purple-400">import</span> AlgoEngine, OrderType</div>
-      <div><span className="text-blue-400">bot</span> = AlgoEngine(api_key=<span className="text-emerald-400">"bb_live_9921"</span>, venue=<span className="text-emerald-400">"NY4"</span>)</div>
+      <div><span className="text-purple-400">from</span> ayaamx <span className="text-purple-400">import</span> AlgoEngine, OrderType</div>
+      <div><span className="text-blue-400">bot</span> = AlgoEngine(api_key=<span className="text-emerald-400">"ax_live_9921"</span>, venue=<span className="text-emerald-400">"NY4"</span>)</div>
       <div className="text-slate-500"># Listening for WebSocket market depth ticks</div>
       <div><span className="text-purple-400">async def</span> <span className="text-yellow-400">on_tick</span>(depth):</div>
       <div className="pl-4"><span className="text-purple-400">if</span> depth.spread &lt; <span className="text-amber-400">0.02</span> <span className="text-purple-400">and</span> depth.vwap_deviation &gt; <span className="text-amber-400">1.8</span>:</div>
@@ -85,7 +85,7 @@ export const TradingRobotsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   ];
 
   const testimonials = [
-    { quote: "Our quant strategy execution latency dropped from 18ms to 0.3ms after moving to BrokerBros FIX gateway in Equinix NY4.", name: "Dr. Aris Thorne", role: "Head Quant, Aether Capital", rating: 5 },
+    { quote: "Our quant strategy execution latency dropped from 18ms to 0.3ms after moving to AyaamX FIX gateway in Equinix NY4.", name: "Dr. Aris Thorne", role: "Head Quant, Aether Capital", rating: 5 },
     { quote: "The Python SDK is remarkably clean. We went from backtesting to live automated trading in less than 48 hours.", name: "Siddharth Rao", role: "Algorithmic Trader", rating: 5 },
     { quote: "The 20-year tick historical backtester saved us months of data collection work. It's an indispensable tool for automated strategies.", name: "Claire Dupont", role: "Systematic Trader", rating: 5 },
   ];
@@ -191,7 +191,7 @@ export const TradingRobotsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
                 High-Frequency Code.<br />Zero Infrastructure Hassle.
               </h2>
               <p className="text-slate-500 text-base leading-relaxed max-w-lg">
-                Focus purely on alpha generation while BrokerBros manages co-location, market data feeds, and execution risk protection.
+                Focus purely on alpha generation while AyaamX manages co-location, market data feeds, and execution risk protection.
               </p>
               <ul className="space-y-3">
                 {[
@@ -335,7 +335,7 @@ export const TradingRobotsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
       <div className="py-6 bg-slate-50 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 text-xs text-slate-400 text-center">
-          <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Algorithmic and automated trading involves risk of financial loss. Past backtesting results are not guarantees of live performance. BrokerBros LLC is member FINRA/SIPC.
+          <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Algorithmic and automated trading involves risk of financial loss. Past backtesting results are not guarantees of live performance. AyaamX LLC is member FINRA/SIPC.
         </div>
       </div>
     </div>

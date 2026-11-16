@@ -83,7 +83,7 @@ export const StocksPage: React.FC<StocksPageProps> = ({ onOpenAccount }) => {
   ];
 
   const faqs = [
-    { q: 'Are US stock trades really $0 commission?', a: 'Yes! BrokerBros offers zero commission on all US stocks and ETFs with zero hidden platform markups.' },
+    { q: 'Are US stock trades really $0 commission?', a: 'Yes! AyaamX offers zero commission on all US stocks and ETFs with zero hidden platform markups.' },
     { q: 'Can I trade during extended pre-market and after-hours sessions?', a: 'Yes. Pre-market trading is available from 4:00 AM ET and after-hours runs until 8:00 PM ET with full Level II streaming depth.' },
     { q: 'What is SIPC coverage on my stock account?', a: 'Your securities account is protected up to $500,000 (including $250,000 for cash claims) through SIPC membership.' },
     { q: 'Can I buy fractional shares of expensive stocks like Berkshire or NVDA?', a: 'Yes! You can purchase fractional shares by entering any dollar amount starting from just $1.' },
@@ -340,7 +340,7 @@ export const StocksPage: React.FC<StocksPageProps> = ({ onOpenAccount }) => {
 
       <div className="py-6 bg-slate-50 border-t border-slate-200">
         <div className="max-w-6xl mx-auto px-4 text-xs text-slate-400 text-center">
-          <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Stock and ETF trading involves risk including potential loss of principal. Securities offered through BrokerBros LLC, member FINRA/SIPC.
+          <span className="font-semibold text-slate-500">Risk Disclaimer:</span> Stock and ETF trading involves risk including potential loss of principal. Securities offered through AyaamX LLC, member FINRA/SIPC.
         </div>
       </div>
     </div>

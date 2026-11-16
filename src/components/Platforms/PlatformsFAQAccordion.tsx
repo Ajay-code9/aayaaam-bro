@@ -6,7 +6,7 @@ export const PlatformsFAQAccordion: React.FC = () => {
 
   const faqs = [
     {
-      q: "Do I need to install any software to trade on BrokerBros Web Trader?",
+      q: "Do I need to install any software to trade on AyaamX Web Trader?",
       a: "No software download is required for Web Trader. It runs natively in any modern HTML5 web browser (Chrome, Safari, Edge, Firefox). Your custom workspace layouts, indicators, and watchlists automatically save to our secure cloud."
     },
     {
@@ -15,7 +15,7 @@ export const PlatformsFAQAccordion: React.FC = () => {
     },
     {
       q: "Can I test my trading strategies on a Paper Trading account before risking live capital?",
-      a: "Yes! Every BrokerBros account includes a free $100,000 Paper Trading virtual portfolio with real-time market data feed simulation across Web, Desktop Pro, and Mobile interfaces."
+      a: "Yes! Every AyaamX account includes a free $100,000 Paper Trading virtual portfolio with real-time market data feed simulation across Web, Desktop Pro, and Mobile interfaces."
     },
     {
       q: "How does SmartOrder Routing guarantee NBBO price improvement?",
@@ -31,7 +31,7 @@ export const PlatformsFAQAccordion: React.FC = () => {
     },
     {
       q: "How does cross-device workspace cloud synchronization work?",
-      a: "All chart drawings, watchlists, technical indicators, and order preferences sync automatically to your BrokerBros cloud profile in real time. Any change made on your Desktop Workstation immediately updates on your Mobile App and Web Trader."
+      a: "All chart drawings, watchlists, technical indicators, and order preferences sync automatically to your AyaamX cloud profile in real time. Any change made on your Desktop Workstation immediately updates on your Mobile App and Web Trader."
     }
   ];
 

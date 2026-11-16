@@ -52,7 +52,7 @@ export const Mt5ServerApiPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
   const testimonials = [
     { quote: "The REST gateway saved our team 6 months of development. Instead of wrestling with raw C++ Manager API, our Node.js backend connects via clean REST endpoints with full Swagger docs.", name: "Daniel Kim", role: "CTO, Quantum Brokers", rating: 5 },
-    { quote: "We built a custom dealing plugin that auto-routes toxic flow to our LP within 50 microseconds. The plugin framework documentation and support from BrokerBros was outstanding.", name: "Andrei Volkov", role: "Lead Developer, RusTrade Systems", rating: 5 },
+    { quote: "We built a custom dealing plugin that auto-routes toxic flow to our LP within 50 microseconds. The plugin framework documentation and support from AyaamX was outstanding.", name: "Andrei Volkov", role: "Lead Developer, RusTrade Systems", rating: 5 },
     { quote: "The webhook event system connects our MT5 server directly to our CRM. Every new account, deposit, and trade triggers automated workflows. Zero polling, zero delays.", name: "Lisa Chen", role: "Head of Engineering, Pacific Prime FX", rating: 5 }
   ];
 
@@ -121,7 +121,7 @@ export const Mt5ServerApiPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               
               <div className="relative">
                 <img 
-                  src="/broker-crm-img-one.png" 
+                  src="/aayaamx-operations-platform.png" 
                   alt="Broker CRM Interface" 
                   className="w-full h-auto rounded-[18px] shadow-2xl border border-slate-200 dark:border-slate-800 relative z-10" 
                 />

@@ -36,12 +36,12 @@ export const ApiIntegrationsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     python: {
       title: 'Python SDK — Simple Order Execution',
       language: 'python',
-      code: `from brokerbros import TradingClient
+      code: `from ayaamx import TradingClient
 
 # 1. Connect using your API Key & Secret
 client = TradingClient(
-    api_key="bb_live_9f82a170c4b",
-    api_secret="bb_sec_9942a1b782c"
+    api_key="ax_live_9f82a170c4b",
+    api_secret="ax_sec_9942a1b782c"
 )
 
 # 2. Place a Buy Order for EUR/USD
@@ -58,16 +58,16 @@ print(f"✅ Order Placed Successfully! Order ID: {order.id}")`
     node: {
       title: 'Node.js REST API — Fetch Account Balance',
       language: 'javascript',
-      code: `import { BrokerBros } from '@brokerbros/sdk';
+      code: `import { AyaamX } from '@ayaamx/sdk';
 
-const bb = new BrokerBros({
-  apiKey: process.env.BB_API_KEY,
-  apiSecret: process.env.BB_API_SECRET
+const ax = new AyaamX({
+  apiKey: process.env.AX_API_KEY,
+  apiSecret: process.env.AX_API_SECRET
 });
 
 // Fetch current account balance and free margin
 async function checkBalance() {
-  const account = await bb.getAccountSummary();
+  const account = await ax.getAccountSummary();
   console.log(\`Balance: $\${account.balance} | Free Margin: $\${account.freeMargin}\`);
 }
 
@@ -76,7 +76,7 @@ checkBalance();`
     websockets: {
       title: 'WebSocket Stream — Live Price Feed',
       language: 'javascript',
-      code: `const ws = new WebSocket('wss://stream.brokerbros.com/v2/prices');
+      code: `const ws = new WebSocket('wss://stream.AyaamX.com/v2/prices');
 
 ws.on('open', () => {
   // Subscribe to live tick prices for EURUSD and BTCUSD
@@ -105,8 +105,8 @@ EndTime=00:00:00
 [SESSION]
 BeginString=FIX.4.4
 SenderCompID=YOUR_BROKERAGE_NAME
-TargetCompID=BROKERBROS_MATCHING_ENGINE
-SocketConnectHost=fix.brokerbros.com
+TargetCompID=AyaamX_MATCHING_ENGINE
+SocketConnectHost=fix.AyaamX.com
 SocketConnectPort=9820
 HeartBtInt=30`
     }
@@ -122,7 +122,7 @@ HeartBtInt=30`
     {
       step: '01',
       title: 'Create Free Developer Account',
-      desc: 'Sign up in 30 seconds and generate your API Key and Secret from your BrokerBros dashboard.',
+      desc: 'Sign up in 30 seconds and generate your API Key and Secret from your AyaamX dashboard.',
       icon: Key
     },
     {
@@ -245,7 +245,7 @@ HeartBtInt=30`
               <span>4-STEP INTEGRATION GUIDE</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              How to Connect Your System to BrokerBros
+              How to Connect Your System to AyaamX
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
               Follow these 4 simple steps to start streaming data and executing orders.
@@ -286,7 +286,7 @@ HeartBtInt=30`
                 Simple Code Examples
               </h2>
               <p className="text-slate-300 text-sm max-w-2xl leading-relaxed">
-                Click a language tab to see real, working code examples for connecting to BrokerBros APIs.
+                Click a language tab to see real, working code examples for connecting to AyaamX APIs.
               </p>
             </div>
 

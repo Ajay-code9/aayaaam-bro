@@ -91,7 +91,7 @@ export const PlatformComparisonMatrix: React.FC = () => {
             Execution Capabilities Matrix
           </h2>
           <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-sans">
-            Technical feature breakdown across all BrokerBros trading interfaces.
+            Technical feature breakdown across all AyaamX trading interfaces.
           </p>
         </div>
 

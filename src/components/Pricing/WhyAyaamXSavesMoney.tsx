@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cpu, Zap, Scale, TrendingUp, ArrowRight, ShieldCheck, Check } from 'lucide-react';
 
-export const WhyBrokerBrosSavesMoney: React.FC = () => {
+export const WhyAyaamXSavesMoney: React.FC = () => {
   const steps = [
     {
       num: '01',
@@ -43,7 +43,7 @@ export const WhyBrokerBrosSavesMoney: React.FC = () => {
             <span>Capital Efficiency Mechanics</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-heading font-semibold text-slate-900 dark:text-white tracking-tight">
-            How BrokerBros Saves You Money
+            How AyaamX Saves You Money
           </h2>
           <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg leading-relaxed font-sans">
             A 4-stage execution architecture engineered to eliminate unnecessary friction, reduce spreads, and maximize your net returns.

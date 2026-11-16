@@ -70,7 +70,7 @@ export const OpenAccountHero: React.FC<OpenAccountHeroProps> = ({
           </div>
 
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white font-sans leading-[1.12]">
-            Open Your BrokerBros Account
+            Open Your AyaamX Account
           </h1>
 
           <p className="text-slate-300 text-xs sm:text-sm font-sans leading-relaxed max-w-2xl mx-auto">

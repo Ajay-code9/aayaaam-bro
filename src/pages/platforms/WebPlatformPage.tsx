@@ -322,7 +322,7 @@ export const WebPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             id: 'web-4',
             title: 'White-Label Client Account Portal',
             category: 'Overview',
-            imageSrc: '/broker-crm-img-one.png',
+            imageSrc: '/aayaamx-operations-platform.png',
             description: 'Client funding, deposit history, account leverage settings, and security controls.'
           }
         ]}
@@ -357,7 +357,7 @@ export const WebPlatformPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               },
               {
                 q: 'Do I need to pay any extra monthly fee for web terminal access?',
-                a: 'No. Access to the BrokerBros Web Terminal is 100% free for all funded account holders, including live streaming Level 1 prices.'
+                a: 'No. Access to the AyaamX Web Terminal is 100% free for all funded account holders, including live streaming Level 1 prices.'
               }
             ].map((faq, idx) => (
               <div

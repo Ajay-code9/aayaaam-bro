@@ -48,7 +48,7 @@ export const CrossDeviceSyncSection: React.FC = () => {
             <div className="flex items-center justify-between pb-4 border-b border-slate-800 text-xs font-mono text-slate-400">
               <span className="text-emerald-400 font-bold flex items-center gap-2">
                 <RefreshCw className="w-4 h-4 text-emerald-400 animate-spin" />
-                BROKERBROS CLOUD SYNC ACTIVE
+                AyaamX CLOUD SYNC ACTIVE
               </span>
               <span>256-BIT ENCRYPTED TLS 1.3</span>
             </div>
@@ -59,7 +59,7 @@ export const CrossDeviceSyncSection: React.FC = () => {
               {/* Central Cloud Badge */}
               <div className="bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-emerald-500/20 border border-emerald-500/40 rounded-2xl p-4 text-center max-w-xs mx-auto shadow-lg space-y-1">
                 <Cloud className="w-8 h-8 text-emerald-400 mx-auto" />
-                <div className="text-sm font-bold font-mono text-emerald-300">BrokerBros Cloud Core</div>
+                <div className="text-sm font-bold font-mono text-emerald-300">AyaamX Cloud Core</div>
                 <p className="text-[10px] text-slate-300 font-mono">Sub-10ms Global State Replication</p>
               </div>
 

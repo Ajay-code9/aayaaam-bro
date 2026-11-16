@@ -11,22 +11,22 @@ export const TermsConditionsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "1",
       title: "Who We Are & Scope of Terms",
-      content: "These Terms & Conditions govern your access to and use of broker-bros.com, public marketing content, demonstration request forms, and online developer documentation. Paid software subscriptions, hosting SLAs, bridge connectivity, and custom implementation services are governed by separate signed Master Services Agreements (MSA), Service Level Agreements (SLA), and Order Forms."
+      content: "These Terms & Conditions govern your access to and use of ayaamx.com, public marketing content, demonstration request forms, and online developer documentation. Paid software subscriptions, hosting SLAs, bridge connectivity, and custom implementation services are governed by separate signed Master Services Agreements (MSA), Service Level Agreements (SLA), and Order Forms."
     },
     {
       num: "2",
       title: "B2B Technology Provider Position",
-      content: "Broker Bros operates strictly as a B2B brokerage technology infrastructure vendor. Unless a separate regulated entity and signed agreement expressly state otherwise, Broker Bros is not a retail broker, investment adviser, or money manager, and does not hold client deposits, execute retail trades, or issue financial instruments."
+      content: "AyaamX operates strictly as a B2B brokerage technology infrastructure vendor. Unless a separate regulated entity and signed agreement expressly state otherwise, AyaamX is not a retail broker, investment adviser, or money manager, and does not hold client deposits, execute retail trades, or issue financial instruments."
     },
     {
       num: "3",
       title: "Acceptance of Terms & Business Authority",
-      content: "By accessing this website, requesting a technical demonstration, or communicating with Broker Bros, you accept these Terms. If you are acting on behalf of a company or brokerage operator, you represent and warrant that you possess full corporate authority to bind that entity."
+      content: "By accessing this website, requesting a technical demonstration, or communicating with AyaamX, you accept these Terms. If you are acting on behalf of a company or brokerage operator, you represent and warrant that you possess full corporate authority to bind that entity."
     },
     {
       num: "4",
       title: "Permitted Business Use",
-      content: "You are permitted to use this website solely for evaluating Broker Bros software products, reviewing technical specifications, and communicating with our team. You may not attempt unauthorized access to restricted client portals, inject malicious code, scrap data automatically, or misrepresent entity identity."
+      content: "You are permitted to use this website solely for evaluating AyaamX software products, reviewing technical specifications, and communicating with our team. You may not attempt unauthorized access to restricted client portals, inject malicious code, scrap data automatically, or misrepresent entity identity."
     },
     {
       num: "5",
@@ -41,12 +41,12 @@ export const TermsConditionsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "7",
       title: "Third-Party Platforms & Non-Affiliation",
-      content: "Broker Bros products interface with third-party trading platforms (such as MetaTrader 4/5, cTrader), liquidity venues, KYC providers, and payment gateways. All third-party trademarks belong to their respective owners. Reference to a third-party platform does not imply official endorsement or corporate affiliation unless explicitly stated."
+      content: "AyaamX products interface with third-party trading platforms (such as MetaTrader 4/5, cTrader), liquidity venues, KYC providers, and payment gateways. All third-party trademarks belong to their respective owners. Reference to a third-party platform does not imply official endorsement or corporate affiliation unless explicitly stated."
     },
     {
       num: "8",
       title: "Intellectual Property Rights",
-      content: "All website software code, interface designs, architecture diagrams, product branding, documentation, and content are the exclusive intellectual property of Broker Bros Technology Ltd. No license or ownership right is granted by accessing the public website."
+      content: "All website software code, interface designs, architecture diagrams, product branding, documentation, and content are the exclusive intellectual property of AyaamX Technology Ltd. No license or ownership right is granted by accessing the public website."
     },
     {
       num: "9",
@@ -61,7 +61,7 @@ export const TermsConditionsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "11",
       title: "External Links",
-      content: "This website may contain links to third-party portals, developer tools, or social channels. Broker Bros is not responsible for external content or privacy practices."
+      content: "This website may contain links to third-party portals, developer tools, or social channels. AyaamX is not responsible for external content or privacy practices."
     },
     {
       num: "12",
@@ -71,7 +71,7 @@ export const TermsConditionsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "13",
       title: "Limitation of Liability",
-      content: "Broker Bros shall not be liable for indirect, incidental, or consequential damages arising solely from use of the public marketing website. Contractual liabilities for enterprise software services are governed by signed MSAs."
+      content: "AyaamX shall not be liable for indirect, incidental, or consequential damages arising solely from use of the public marketing website. Contractual liabilities for enterprise software services are governed by signed MSAs."
     },
     {
       num: "14",
@@ -91,7 +91,7 @@ export const TermsConditionsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
     {
       num: "17",
       title: "Contact & Security Responsible Disclosure",
-      content: "For legal inquiries, contact legal@broker-bros.com. To report a security vulnerability responsibly, submit details to security@broker-bros.com."
+      content: "For legal inquiries, contact legal@ayaamx.com. To report a security vulnerability responsibly, submit details to security@ayaamx.com."
     }
   ];
 

@@ -38,7 +38,7 @@ export const CustomDevelopmentPage: React.FC<PageProps> = ({ onOpenAccount }) =>
         { label: "Warranty Support", value: "1 Year SLA" }
       ]}
       faqs={[
-        { q: "Can BrokerBros develop custom MT5 server plugins or bridge extensions?", a: "Yes. Our senior C++ engineers specialize in building low-latency MetaTrader 5 server plugins, custom risk management managers, and bridge connectors." },
+        { q: "Can AyaamX develop custom MT5 server plugins or bridge extensions?", a: "Yes. Our senior C++ engineers specialize in building low-latency MetaTrader 5 server plugins, custom risk management managers, and bridge connectors." },
         { q: "Who owns the intellectual property and source code of custom projects?", a: "For custom enterprise engineering projects, full IP rights and complete source code ownership are transferred to your firm upon delivery." },
         { q: "How do you ensure custom code doesn't slow down server execution?", a: "All custom plugins undergo rigorous microsecond benchmark testing and stress load simulations up to 50,000 requests per second before production deployment." }
       ]}

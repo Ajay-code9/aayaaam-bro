@@ -45,7 +45,7 @@ export const FeaturedResearch: React.FC<FeaturedResearchProps> = ({
             </h2>
           </div>
           <p className="text-slate-300 text-xs sm:text-sm max-w-lg font-sans leading-relaxed">
-            Curated deep-dives, earnings breakdowns, and macro policy analysis authored by BrokerBros quantitative strategists.
+            Curated deep-dives, earnings breakdowns, and macro policy analysis authored by AyaamX quantitative strategists.
           </p>
         </div>
 

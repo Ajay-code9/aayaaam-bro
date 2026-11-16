@@ -20,11 +20,11 @@ import {
 } from 'lucide-react';
 import { CTASection } from '../components/CTA/CTASection';
 
-interface WhyBrokerBrosPageProps {
+interface WhyAyaamXPageProps {
   onOpenAccount: () => void;
 }
 
-export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAccount }) => {
+export const WhyAyaamXPage: React.FC<WhyAyaamXPageProps> = ({ onOpenAccount }) => {
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
   const [selectedLatencyLoc, setSelectedLatencyLoc] = useState<'ny4' | 'ld4' | 'ty3'>('ny4');
 
@@ -104,22 +104,22 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
   };
 
   const humanComparison = [
-    { feature: "Support Accessibility", brokerBros: "24/7 Live Human Desk (<30s)", retailApps: "Chatbot / Email Only (24-48h)" },
-    { feature: "Execution Speed", brokerBros: "Sub-10ms Direct Fiber", retailApps: "150ms - 500ms Delayed" },
-    { feature: "Order Routing Model", brokerBros: "Zero PFOF SmartRouting", retailApps: "PFOF Sold to Internalizers" },
-    { feature: "Infrastructure Uptime", brokerBros: "99.999% SLA Failover", retailApps: "Frequent Volatility Outages" },
-    { feature: "Fee Transparency", brokerBros: "Zero Hidden Markups", retailApps: "Hidden Spread Markups" },
-    { feature: "Client Capital Safety", brokerBros: "100% Segregated Top Tier", retailApps: "Co-mingled Operating Pool" }
+    { feature: "Support Accessibility", AyaamX: "24/7 Live Human Desk (<30s)", retailApps: "Chatbot / Email Only (24-48h)" },
+    { feature: "Execution Speed", AyaamX: "Sub-10ms Direct Fiber", retailApps: "150ms - 500ms Delayed" },
+    { feature: "Order Routing Model", AyaamX: "Zero PFOF SmartRouting", retailApps: "PFOF Sold to Internalizers" },
+    { feature: "Infrastructure Uptime", AyaamX: "99.999% SLA Failover", retailApps: "Frequent Volatility Outages" },
+    { feature: "Fee Transparency", AyaamX: "Zero Hidden Markups", retailApps: "Hidden Spread Markups" },
+    { feature: "Client Capital Safety", AyaamX: "100% Segregated Top Tier", retailApps: "Co-mingled Operating Pool" }
   ];
 
   const faqs = [
     {
-      q: "What makes BrokerBros execution faster than typical brokers?",
-      a: "BrokerBros servers are co-located directly inside major financial hubs (Equinix NY4 New Jersey, LD4 London, TY3 Tokyo). By utilizing optical fiber cross-connects and zero-PFOF SmartRouting, order latency stays consistently under 10 milliseconds."
+      q: "What makes AyaamX execution faster than typical brokers?",
+      a: "AyaamX servers are co-located directly inside major financial hubs (Equinix NY4 New Jersey, LD4 London, TY3 Tokyo). By utilizing optical fiber cross-connects and zero-PFOF SmartRouting, order latency stays consistently under 10 milliseconds."
     },
     {
       q: "How does 24/7 Human Desk support work?",
-      a: "Unlike retail fintech apps that force clients into unhelpful AI chatbot loops, BrokerBros provides direct phone and chat channels to experienced human trading specialists 24 hours a day, 7 days a week. Average answer time is under 30 seconds."
+      a: "Unlike retail fintech apps that force clients into unhelpful AI chatbot loops, AyaamX provides direct phone and chat channels to experienced human trading specialists 24 hours a day, 7 days a week. Average answer time is under 30 seconds."
     },
     {
       q: "What does 99.999% SLA Uptime mean for my firm?",
@@ -127,7 +127,7 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
     },
     {
       q: "How is client capital segregated and protected?",
-      a: "All client funds are held in dedicated, segregated bank accounts at Tier-1 banking institutions (such as JPMorgan Chase, Barclays, and UBS), completely separate from BrokerBros corporate operating funds. Daily automated balance reconciliations guarantee instant withdrawal liquidity."
+      a: "All client funds are held in dedicated, segregated bank accounts at Tier-1 banking institutions (such as JPMorgan Chase, Barclays, and UBS), completely separate from AyaamX corporate operating funds. Daily automated balance reconciliations guarantee instant withdrawal liquidity."
     }
   ];
 
@@ -148,7 +148,7 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
           </h1>
 
           <p className="max-w-2xl mx-auto text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium leading-relaxed">
-            BrokerBros combines sub-10ms direct fiber execution, 99.999% SLA uptime, and a 24/7 dedicated human trading desk — giving institutional operators and proprietary firms the fastest, most reliable financial infrastructure on earth.
+            AyaamX combines sub-10ms direct fiber execution, 99.999% SLA uptime, and a 24/7 dedicated human trading desk — giving institutional operators and proprietary firms the fastest, most reliable financial infrastructure on earth.
           </p>
 
           <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
@@ -156,7 +156,7 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
               onClick={onOpenAccount}
               className="w-full sm:w-auto px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl shadow-lg shadow-emerald-600/25 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
             >
-              <span>Get Started with BrokerBros</span>
+              <span>Get Started with AyaamX</span>
               <ArrowRight className="w-4 h-4" />
             </button>
             <a
@@ -194,7 +194,7 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
 
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-14">
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Why Financial Institutions Choose BrokerBros
+            Why Financial Institutions Choose AyaamX
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
             Every layer of our stack is optimized for maximum velocity, total transparency, and continuous human availability.
@@ -301,7 +301,7 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
         </div>
       </section>
 
-      {/* 4. THE HUMAN DIFFERENCE (BROKERBROS VS RETAIL APPS) */}
+      {/* 4. THE HUMAN DIFFERENCE (AyaamX VS RETAIL APPS) */}
       <section className="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-3">
           <div className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest flex items-center justify-center gap-1.5">
@@ -309,7 +309,7 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
             HUMAN ACCESSIBILITY & AUDITABILITY
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            BrokerBros vs Standard Retail Apps
+            AyaamX vs Standard Retail Apps
           </h2>
           <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base">
             See how our speed, reliability, and dedicated human desk support compare against legacy and retail brokers.
@@ -321,7 +321,7 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
             <thead className="bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-mono uppercase text-[11px] border-b border-slate-200 dark:border-slate-800">
               <tr>
                 <th className="py-4 px-6 font-bold">Feature Metric</th>
-                <th className="py-4 px-6 font-bold text-emerald-600 dark:text-emerald-400">BrokerBros Master Standard</th>
+                <th className="py-4 px-6 font-bold text-emerald-600 dark:text-emerald-400">AyaamX Master Standard</th>
                 <th className="py-4 px-6 font-bold text-slate-500">Retail Fintech Brokers</th>
               </tr>
             </thead>
@@ -333,7 +333,7 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
                   </td>
                   <td className="py-4 px-6 font-bold font-mono text-emerald-600 dark:text-emerald-400 flex items-center gap-2">
                     <CheckCircle2 className="w-4 h-4 shrink-0 text-emerald-500" />
-                    <span>{row.brokerBros}</span>
+                    <span>{row.AyaamX}</span>
                   </td>
                   <td className="py-4 px-6 text-slate-500 dark:text-slate-400 font-mono">
                     {row.retailApps}
@@ -354,7 +354,7 @@ export const WhyBrokerBrosPage: React.FC<WhyBrokerBrosPageProps> = ({ onOpenAcco
               FREQUENTLY ASKED QUESTIONS
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Understanding Why BrokerBros Leads
+              Understanding Why AyaamX Leads
             </h2>
           </div>
 

@@ -20,7 +20,7 @@ export const LegalPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             Legal Terms, Privacy Policies & Risk Statements
           </h1>
           <p className="text-slate-700 text-lg sm:text-xl max-w-3xl leading-relaxed font-sans font-medium">
-            BrokerBros Securities LLC is a registered broker-dealer and member of FINRA/SIPC. All client accounts are subject to customer agreements and regulatory disclosures.
+            AyaamX Securities LLC is a registered broker-dealer and member of FINRA/SIPC. All client accounts are subject to customer agreements and regulatory disclosures.
           </p>
         </div>
       </section>
@@ -34,12 +34,12 @@ export const LegalPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
           <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-xs space-y-4">
             <h2 className="text-2xl font-bold font-serif-heading text-slate-900">2. Privacy Policy & Data Protection</h2>
-            <p>BrokerBros protects client financial records and personal identification in compliance with SOC-2 Type II standards, Gramm-Leach-Bliley Act (GLBA), and EU General Data Protection Regulation (GDPR).</p>
+            <p>AyaamX protects client financial records and personal identification in compliance with SOC-2 Type II standards, Gramm-Leach-Bliley Act (GLBA), and EU General Data Protection Regulation (GDPR).</p>
           </div>
 
           <div className="bg-white p-8 rounded-xl border border-slate-200 shadow-xs space-y-4">
             <h2 className="text-2xl font-bold font-serif-heading text-slate-900">3. Order Execution & Best Execution Policy</h2>
-            <p>BrokerBros does not accept Payment for Order Flow (PFOF) for US equity orders. Orders are routed via proprietary SmartRouting algorithms to public exchanges, dark pools, and alternative trading systems to achieve optimal price improvement.</p>
+            <p>AyaamX does not accept Payment for Order Flow (PFOF) for US equity orders. Orders are routed via proprietary SmartRouting algorithms to public exchanges, dark pools, and alternative trading systems to achieve optimal price improvement.</p>
           </div>
         </div>
       </section>

@@ -53,7 +53,7 @@ export const PammMamPage: React.FC<PageProps> = ({ onOpenAccount }) => {
   const testimonials = [
     { quote: "We manage $200M across 15 PAMM funds. The allocation engine handles 10,000+ sub-accounts without a single sync issue. Trade execution is reflected instantly across all investors.", name: "Alexander Volkov", role: "Chief Fund Manager, Volkov Capital", rating: 5 },
     { quote: "The investor portal is beautifully designed. Our clients can see their NAV, fee deductions, and fund performance in real-time. It builds the trust that institutional investors demand.", name: "Sarah Mitchell", role: "Director of Operations, Sterling Asset Management", rating: 5 },
-    { quote: "High-water mark tracking was our number one requirement. BrokerBros handles it perfectly — no manual calculations, no disputes. Performance fees are auto-deducted at the right time.", name: "Hassan Khouri", role: "Head of Wealth, Levant Markets", rating: 5 }
+    { quote: "High-water mark tracking was our number one requirement. AyaamX handles it perfectly — no manual calculations, no disputes. Performance fees are auto-deducted at the right time.", name: "Hassan Khouri", role: "Head of Wealth, Levant Markets", rating: 5 }
   ];
 
   const faqs = [
@@ -120,7 +120,7 @@ export const PammMamPage: React.FC<PageProps> = ({ onOpenAccount }) => {
               
               <div className="relative">
                 <img 
-                  src="/broker-crm-img-one.png" 
+                  src="/aayaamx-operations-platform.png" 
                   alt="Broker CRM Interface" 
                   className="w-full h-auto rounded-[18px] shadow-2xl border border-slate-200 dark:border-slate-800 relative z-10" 
                 />

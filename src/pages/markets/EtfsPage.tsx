@@ -27,10 +27,10 @@ export const EtfsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
             Digital Asset Indexing &amp; Global ETF Routing Infrastructure
           </h1>
           <p className="text-slate-700 text-lg sm:text-xl max-w-3xl leading-relaxed font-sans font-medium">
-            Empower your brokerage to offer 13,000+ global ETFs, thematic baskets, and digital asset index modules through Broker Bros modular routing engines and broker-controlled execution bridges.
+            Empower your brokerage to offer 13,000+ global ETFs, thematic baskets, and digital asset index modules through AyaamX modular routing engines and broker-controlled execution bridges.
           </p>
           <div className="p-4 bg-slate-100 rounded-lg border border-slate-200 text-xs text-slate-600 max-w-3xl">
-            <strong className="text-slate-800">Technology Provider Disclosure:</strong> Broker Bros provides trading software, indexation modules, and connectivity infrastructure for brokerage operators. Broker Bros is a B2B technology vendor, not a retail broker or investment adviser, and does not issue, underwrite, or market financial ETFs to end-retail clients.
+            <strong className="text-slate-800">Technology Provider Disclosure:</strong> AyaamX provides trading software, indexation modules, and connectivity infrastructure for brokerage operators. AyaamX is a B2B technology vendor, not a retail broker or investment adviser, and does not issue, underwrite, or market financial ETFs to end-retail clients.
           </div>
         </div>
       </section>

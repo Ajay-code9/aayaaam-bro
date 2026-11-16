@@ -385,28 +385,28 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
 
   const faqs = [
     {
-      q: 'How does BrokerBros provide over 1,000,000 bonds with zero markup?',
-      a: 'BrokerBros connects directly to primary electronic execution venues (TM3, MarketAxess, Tradeweb, Bloomberg FIT) aggregating secondary liquidity from over 50 global institutional dealers. Unlike traditional retail brokerages that embed hidden 1% - 2% markups into bond prices, BrokerBros passes true institutional wholesale execution directly to your account with $0 markup.'
+      q: 'How does AyaamX provide over 1,000,000 bonds with zero markup?',
+      a: 'AyaamX connects directly to primary electronic execution venues (TM3, MarketAxess, Tradeweb, Bloomberg FIT) aggregating secondary liquidity from over 50 global institutional dealers. Unlike traditional retail brokerages that embed hidden 1% - 2% markups into bond prices, AyaamX passes true institutional wholesale execution directly to your account with $0 markup.'
     },
     {
       q: 'What is the minimum investment required to trade Treasuries or Corporate Bonds?',
       a: 'US Treasury Bills, Notes, and Bonds have a minimum order size of $1,000 Par Value ($1 bond unit). Most Corporate and Municipal bonds trade in increments of $1,000 or $5,000 Par Value, allowing retail investors and wealth managers to build custom diversified portfolios with modest capital.'
     },
     {
-      q: 'Can I sell my bonds on BrokerBros prior to their maturity date?',
-      a: 'Yes. BrokerBros provides continuous live secondary market liquidity. You can request a live Request-For-Quote (RFQ) bid or list your bonds on the secondary order book at any time during market hours with institutional depth.'
+      q: 'Can I sell my bonds on AyaamX prior to their maturity date?',
+      a: 'Yes. AyaamX provides continuous live secondary market liquidity. You can request a live Request-For-Quote (RFQ) bid or list your bonds on the secondary order book at any time during market hours with institutional depth.'
     },
     {
       q: 'How are coupon interest payments paid into my brokerage account?',
-      a: 'Coupon interest is deposited automatically in cash into your BrokerBros core cash or sweep account on the official payment dates (typically semiannually for US Treasuries and Corporate bonds, or monthly for mortgage-backed securities).'
+      a: 'Coupon interest is deposited automatically in cash into your AyaamX core cash or sweep account on the official payment dates (typically semiannually for US Treasuries and Corporate bonds, or monthly for mortgage-backed securities).'
     },
     {
-      q: 'Does BrokerBros offer automated Bond Ladder building tools?',
+      q: 'Does AyaamX offer automated Bond Ladder building tools?',
       a: 'Yes. Our integrated Bond Ladder Builder allows you to specify your target investment amount, desired credit rating tier, and duration range (e.g. 1 to 5 years). The system automatically selects zero-markup CUSIPs with non-overlapping maturity dates and balanced annual cash flows.'
     },
     {
-      q: 'How does BrokerBros handle Treasury Auction orders?',
-      a: 'You can participate in weekly US Treasury Auctions (4-week Bills up to 30-year Bonds) directly through the BrokerBros platform at non-competitive bid pricing with zero commission and zero auction fees.'
+      q: 'How does AyaamX handle Treasury Auction orders?',
+      a: 'You can participate in weekly US Treasury Auctions (4-week Bills up to 30-year Bonds) directly through the AyaamX platform at non-competitive bid pricing with zero commission and zero auction fees.'
     }
   ];
 
@@ -784,7 +784,7 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
               </div>
 
               <div className="flex justify-between items-center p-3 bg-slate-900 rounded-lg">
-                <span className="text-slate-400">BrokerBros Execution Fee</span>
+                <span className="text-slate-400">AyaamX Execution Fee</span>
                 <span className="text-white font-bold">$0.00 (Zero Markup)</span>
               </div>
 
@@ -1084,20 +1084,20 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
         </div>
       </section>
 
-      {/* 7. WHY BROKERBROS FOR FIXED INCOME? (FEATURE CARDS) */}
+      {/* 7. WHY AyaamX FOR FIXED INCOME? (FEATURE CARDS) */}
       <section className="py-20 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
               <Award className="w-3.5 h-3.5 text-emerald-700" />
-              THE BROKERBROS ADVANTAGE
+              THE AyaamX ADVANTAGE
             </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Institutional Power Built for Every Investor
             </h2>
             <p className="text-slate-600 text-base">
-              Why wealth managers, family offices, and self-directed investors choose BrokerBros for fixed income.
+              Why wealth managers, family offices, and self-directed investors choose AyaamX for fixed income.
             </p>
           </div>
 
@@ -1109,7 +1109,7 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
               </div>
               <h3 className="text-xl font-bold font-serif-heading text-slate-900">Zero Markup Pricing</h3>
               <p className="text-slate-600 text-sm leading-relaxed">
-                Most retail brokers mark up bond prices by 1% to 2%, pocketing thousands from your yield. BrokerBros passes wholesale dealer prices straight to you with $0 markup.
+                Most retail brokers mark up bond prices by 1% to 2%, pocketing thousands from your yield. AyaamX passes wholesale dealer prices straight to you with $0 markup.
               </p>
               <div className="pt-2 text-xs font-mono text-emerald-700 font-bold">Transparent Pass-Through Execution</div>
             </div>
@@ -1314,7 +1314,7 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
                 <span className="w-3 h-3 rounded-full bg-rose-500"></span>
                 <span className="w-3 h-3 rounded-full bg-amber-500"></span>
                 <span className="w-3 h-3 rounded-full bg-emerald-500"></span>
-                <span className="text-slate-400 ml-2 font-bold">BrokerBros Fixed Income Workstation v4.2</span>
+                <span className="text-slate-400 ml-2 font-bold">AyaamX Fixed Income Workstation v4.2</span>
               </div>
               <span className="text-emerald-400 font-bold">CONNECTED: DTCC FIX GATEWAY</span>
             </div>
