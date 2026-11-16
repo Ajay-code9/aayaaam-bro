@@ -63,11 +63,6 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
           
           {/* Left Column Text */}
           <div className="lg:col-span-6 space-y-5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-500/20">
-              <Cpu className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>CORE ARCHITECTURE & INFRASTRUCTURE</span>
-            </div>
-
             <h2 className="text-2xl sm:text-3xl lg:text-[2.4rem] font-extrabold text-slate-950 dark:text-white tracking-tight leading-[1.15] font-sans">
               Accelerate Growth With AyaamX Digital &amp; Trading Ecosystems
             </h2>
@@ -151,10 +146,6 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
         {/* ── 3. AYAAMX MODULAR INFRASTRUCTURE ENGINE (2-COL GRID) ── */}
         <div className="space-y-10">
           <div className="text-center max-w-3xl mx-auto space-y-2.5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-500/20">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>MODULAR ENTERPRISE ARCHITECTURE</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight font-sans">
               Complete Modular Infrastructure Engine
             </h2>
@@ -217,11 +208,6 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
 
           {/* Right Column Institutional Transparency Copy */}
           <div className="lg:col-span-7 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-500/20">
-              <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>THE WAY WE BUILD &amp; DELIVER</span>
-            </div>
-
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight font-sans">
               Clear Engineering. Complete Code Ownership. Zero Lock-In.
             </h2>

@@ -123,13 +123,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             <button
               type="button"
               onClick={() => handleNav('/')}
-              className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg ${
+              className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2.5 py-1.5 rounded-lg ${
                 currentPath === '/'
                   ? 'text-emerald-500 font-bold bg-emerald-500/10'
                   : isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60' : 'hover:text-emerald-600 hover:bg-slate-100/80'
               }`}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
               <span>Home</span>
             </button>
 

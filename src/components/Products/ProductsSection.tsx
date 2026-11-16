@@ -146,11 +146,6 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onOpenAccount 
 
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-2.5">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-500/20">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>AYAAMX PLATFORM ARCHITECTURE</span>
-          </div>
-
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-950 dark:text-white tracking-tight font-sans">
             Explore AyaamX Modular Platforms &amp; Solutions
           </h2>

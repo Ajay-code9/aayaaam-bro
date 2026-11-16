@@ -329,10 +329,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
             {/* Header + Core Mission Banner */}
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-12 pb-10 border-b border-slate-100 dark:border-white/10">
               <div className="space-y-4">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 text-[11px] font-mono font-bold uppercase tracking-wider border border-emerald-500/20">
-                  <Target className="w-3.5 h-3.5" />
-                  <span>VISION &amp; PURPOSE</span>
-                </div>
                 <h2 className="text-3xl sm:text-4xl lg:text-[2.65rem] font-black tracking-tight leading-[1.12] text-slate-950 dark:text-white">
                   Build Software People Can Rely On.
                 </h2>
@@ -454,10 +450,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
 
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 text-[11px] font-mono font-bold uppercase tracking-wider border border-emerald-500/20">
-                  <Workflow className="w-3.5 h-3.5" />
-                  <span>ENGINEERING LIFECYCLE</span>
-                </div>
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Know What We’re Building and What Comes Next.
                 </h2>
@@ -584,10 +576,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
 
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 text-[11px] font-mono font-bold uppercase tracking-wider border border-emerald-500/20">
-                  <Cpu className="w-3.5 h-3.5" />
-                  <span>STACK CAPABILITIES</span>
-                </div>
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Choose Technology Around What the Product Needs.
                 </h2>
@@ -763,10 +751,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
 
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 text-[11px] font-mono font-bold uppercase tracking-wider border border-emerald-500/20">
-                  <Users className="w-3.5 h-3.5" />
-                  <span>ORGANIZATIONAL GOVERNANCE</span>
-                </div>
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Meet the Roles Behind Your Project.
                 </h2>
@@ -876,10 +860,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
 
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 text-[11px] font-mono font-bold uppercase tracking-wider border border-emerald-500/20">
-                  <Briefcase className="w-3.5 h-3.5" />
-                  <span>CAREERS AT AYAAMX</span>
-                </div>
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Help Businesses Build and Use Better Software.
                 </h2>
@@ -965,10 +945,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
 
             <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-8 border-b border-slate-100 dark:border-white/10">
               <div className="max-w-2xl space-y-3">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 text-[11px] font-mono font-bold uppercase tracking-wider border border-emerald-500/20">
-                  <Phone className="w-3.5 h-3.5" />
-                  <span>START A CONVERSATION</span>
-                </div>
                 <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-950 dark:text-white leading-tight">
                   Tell Us What You Want to Build.
                 </h2>
