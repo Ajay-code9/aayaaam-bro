@@ -21,10 +21,6 @@ export const EconomicCalendarSection: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 border-b border-slate-200 pb-6">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200">
-              <Calendar className="w-3.5 h-3.5 text-emerald-600" />
-              <span>MACRO INDICATOR TRACKER</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 font-sans tracking-tight">
               Global Economic Calendar
             </h2>

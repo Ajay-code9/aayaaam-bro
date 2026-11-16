@@ -63,10 +63,6 @@ export const CaseStudiesSection: React.FC = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-200 dark:border-[#1E293B] pb-6">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-500/30">
-              <Layers className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>PROVEN PRODUCTION DELIVERABLES</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white font-sans">
               Selected Work &amp; Case Studies
             </h2>

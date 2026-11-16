@@ -62,10 +62,6 @@ export const MobileAppPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-6">
           
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-semibold border border-emerald-200 dark:border-emerald-800/50">
-            <Smartphone className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            <span>IOS & ANDROID MOBILE APP</span>
-          </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-[1.15] max-w-4xl mx-auto">
             Trade Stocks, Options & Forex Anywhere on Your Phone
@@ -143,10 +139,6 @@ export const MobileAppPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold uppercase border border-emerald-200 dark:border-emerald-800/40">
-              <Layers className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              MOBILE SCREEN PRESETS
-            </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
               Designed for Intuitive One-Handed Navigation
             </h2>

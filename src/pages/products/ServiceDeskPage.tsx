@@ -109,10 +109,6 @@ export const ServiceDeskPage: React.FC<ServiceDeskPageProps> = ({ onOpenAccount 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 max-w-4xl mx-auto">
             
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-mono font-bold uppercase tracking-wider bg-emerald-50 dark:bg-emerald-950/70 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/60 shadow-xs">
-              <Headphones className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>Trader Support & Helpdesk Module</span>
-            </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-[1.15] text-slate-900 dark:text-white">
               Enterprise Brokerage{' '}
@@ -257,10 +253,6 @@ export const ServiceDeskPage: React.FC<ServiceDeskPageProps> = ({ onOpenAccount 
       <section className="py-24 border-b border-slate-200 dark:border-slate-800/80">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           <div className="text-center space-y-4 max-w-3xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-bold uppercase bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/50">
-              <Activity className="w-3.5 h-3.5" />
-              <span>Trader Support Journey</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-black tracking-tight text-slate-900 dark:text-white">
               Automated Support Resolution Flow
             </h2>

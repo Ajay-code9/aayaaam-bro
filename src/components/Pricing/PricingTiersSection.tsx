@@ -108,10 +108,6 @@ export const PricingTiersSection: React.FC<{ onOpenAccount: () => void }> = ({ o
         
         {/* Header - Simple & Clean Language */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold shadow-2xs">
-            <Server className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>SIMPLE FLAT MONTHLY SAAS PRICING</span>
-          </div>
 
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
             Turnkey SaaS Tiers. <span className="text-emerald-600 dark:text-emerald-400">Zero Commission Markup.</span>

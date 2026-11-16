@@ -50,10 +50,6 @@ export const AuthTrustSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-mono font-bold rounded-full border border-emerald-200">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-            <span>UNCOMPROMISED PROTECTION</span>
-          </div>
 
           <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900 tracking-tight">
             Institutional Trust & Capital Safeguards

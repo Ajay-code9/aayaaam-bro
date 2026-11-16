@@ -24,10 +24,6 @@ export const ResearchNewsletter: React.FC = () => {
 
           {/* Left Text & Value Props (7 Cols) */}
           <div className="lg:col-span-7 space-y-5 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 text-emerald-400 text-xs font-mono font-bold rounded-md border border-emerald-500/30">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-              <span>THE DAILY INTEL NEWSLETTER</span>
-            </div>
 
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight">
               Morning Market Briefings <br className="hidden sm:inline" />

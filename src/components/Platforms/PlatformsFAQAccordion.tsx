@@ -41,10 +41,6 @@ export const PlatformsFAQAccordion: React.FC = () => {
         
         {/* Header */}
         <div className="text-center space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-100 border border-slate-200 text-slate-800 text-xs font-semibold uppercase tracking-wider">
-            <HelpCircle className="w-3.5 h-3.5 text-emerald-600" />
-            <span>PLATFORM FREQUENTLY ASKED QUESTIONS</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-heading font-semibold text-slate-900 tracking-tight">
             Frequently Asked Questions
           </h2>

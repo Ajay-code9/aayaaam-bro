@@ -292,7 +292,6 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
                     <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-emerald-700 dark:text-emerald-300">The work so far</p>
                     <p className="mt-1 text-sm font-medium text-slate-600 dark:text-slate-400">Published company figures</p>
                   </div>
-                  <span className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1.5 text-[10px] font-semibold text-emerald-800 dark:bg-emerald-400/10 dark:text-emerald-300"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Ahmedabad, India</span>
                 </div>
 
                 <div className="grid grid-cols-2">

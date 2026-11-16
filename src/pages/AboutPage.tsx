@@ -49,10 +49,6 @@ export const AboutPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       <section className="relative py-16 sm:py-20 lg:py-24 border-b border-slate-200 dark:border-[#1E293B] overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(16,185,129,0.15),transparent)] pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-8">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold rounded-md border border-emerald-200 dark:border-emerald-500/20">
-            <Building2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>ABOUT AyaamX B2B TECHNOLOGY PROVIDER</span>
-          </div>
           <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl text-slate-900 dark:text-white font-sans">
             Engineering for the Way Your Business Works
           </h1>

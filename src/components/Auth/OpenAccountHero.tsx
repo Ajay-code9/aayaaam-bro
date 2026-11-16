@@ -64,10 +64,6 @@ export const OpenAccountHero: React.FC<OpenAccountHeroProps> = ({
         
         {/* Top Editorial Banner */}
         <div className="text-center max-w-3xl mx-auto space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/25">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-            <span>FAST 3-MINUTE DIGITAL ONBOARDING</span>
-          </div>
 
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black tracking-tight text-white font-sans leading-[1.12]">
             Open Your AyaamX Account

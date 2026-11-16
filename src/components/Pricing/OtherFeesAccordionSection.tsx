@@ -118,10 +118,6 @@ export const OtherFeesAccordionSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200 dark:bg-[#141C2B] border border-slate-300 dark:border-[#1E293B] text-slate-800 dark:text-slate-200 text-xs font-semibold uppercase tracking-wider">
-            <DollarSign className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>Comprehensive Fee Transparency</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-heading font-semibold text-slate-900 dark:text-white tracking-tight">
             Other Fees & Service Charges
           </h2>

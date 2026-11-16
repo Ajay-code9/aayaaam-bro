@@ -27,10 +27,6 @@ export const FaqSection: React.FC<FaqSectionProps> = ({ onOpenInquiry }) => {
         
         {/* Title Header */}
         <div className="text-center max-w-2xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-500/30">
-            <HelpCircle className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>KNOWLEDGE BASE & SUPPORT</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-sans">
             Frequently Asked Questions
           </h2>

@@ -32,10 +32,6 @@ export const MarketSnapshot: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 pb-6">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-800 bg-emerald-50 px-3 py-1 rounded-md border border-emerald-200 mb-2">
-              <Activity className="w-3.5 h-3.5 text-emerald-600" />
-              <span>REAL-TIME SNAPSHOT</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-black text-slate-900 font-sans tracking-tight">
               Today's Market Snapshot
             </h2>

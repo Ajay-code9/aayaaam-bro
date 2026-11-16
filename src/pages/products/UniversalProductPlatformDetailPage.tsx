@@ -205,7 +205,6 @@ export const UniversalProductPlatformDetailPage: React.FC<ProductDetailPageProps
                         <p className="text-[10px] font-semibold uppercase tracking-[0.13em] text-slate-400">Current workflow</p>
                         <p className="mt-1.5 max-w-sm text-sm font-semibold text-slate-900 dark:text-white">{view.focus}</p>
                       </div>
-                      <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-semibold text-emerald-800 dark:bg-emerald-500/10 dark:text-emerald-300"><span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Example flow</span>
                     </div>
 
                     <div className="mt-5 grid grid-cols-3 gap-2">

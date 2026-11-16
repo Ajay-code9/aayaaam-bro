@@ -280,10 +280,6 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
               <div className="lg:col-span-5 space-y-4 sm:space-y-5">
                 {/* Top Product Badge */}
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800/50">
-                  <Zap className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                  <span>{heroBadge}</span>
-                </div>
 
                 {/* Clear Main Heading */}
                 <h1 className="text-3xl sm:text-4xl lg:text-[2.5rem] xl:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.15]">
@@ -329,10 +325,6 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
           ) : (
             <div className="space-y-8 max-w-5xl mx-auto">
               <div className="max-w-3xl space-y-4 sm:space-y-5">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800/50">
-                  <Zap className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                  <span>{heroBadge}</span>
-                </div>
 
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">
                   {productTitle} <br />

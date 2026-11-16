@@ -442,10 +442,6 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
             
             {/* Left Copy Block */}
             <div className="lg:col-span-7 space-y-3.5">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-mono font-bold border border-emerald-200/80">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                <span>INSTITUTIONAL FIXED INCOME & YIELD DESK</span>
-              </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-slate-950 font-sans">
                 Access 1,000,000+ Bonds <br />
@@ -512,10 +508,6 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-700" />
-              THE ANCHOR OF WEALTH MANAGEMENT
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Why Institutional & Private Investors Allocate to Fixed Income
             </h2>
@@ -620,10 +612,6 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <Layers className="w-3.5 h-3.5 text-emerald-700" />
-              COMPREHENSIVE MARKET DEPT
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Explore Available Fixed Income Sectors
             </h2>
@@ -902,10 +890,6 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <SlidersHorizontal className="w-3.5 h-3.5 text-emerald-700" />
-              ADVANCED INVESTOR TOOLS
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Bond Screener & Interactive Yield Calculator
             </h2>
@@ -1089,10 +1073,6 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <Award className="w-3.5 h-3.5 text-emerald-700" />
-              THE AyaamX ADVANTAGE
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Institutional Power Built for Every Investor
             </h2>
@@ -1379,10 +1359,6 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <BookOpen className="w-3.5 h-3.5 text-emerald-700" />
-              FIXED INCOME ACADEMY
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Essential Bond Knowledge for Wealth Investors
             </h2>
@@ -1438,10 +1414,6 @@ export const BondsPage: React.FC<BondsPageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <HelpCircle className="w-3.5 h-3.5 text-emerald-700" />
-              INVESTOR QUESTIONS
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Frequently Asked Questions About Fixed Income
             </h2>

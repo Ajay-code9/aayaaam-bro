@@ -62,10 +62,6 @@ export const MarketDataPricingSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold uppercase tracking-wider">
-            <Database className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>Exchange Subscriptions & Tick Feeds</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Market Data Pricing
           </h2>

@@ -44,10 +44,6 @@ export const ResearchToolsGrid: React.FC<ResearchToolsGridProps> = ({ onOpenAcco
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-slate-800 pb-6">
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-2 text-xs font-mono font-bold text-cyan-300 bg-cyan-500/10 px-3 py-1 rounded-full border border-cyan-500/30">
-              <Wrench className="w-3.5 h-3.5 text-cyan-400" />
-              <span>TERMINAL UTILITIES & ENGINES</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-black text-white font-sans tracking-tight">
               Institutional Research Tools
             </h2>

@@ -30,10 +30,6 @@ export const LearningCenterPage: React.FC<PageProps> = () => {
 
         {/* Big Bold Titles */}
         <div className="space-y-4">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-800/50 text-xs font-mono font-extrabold uppercase tracking-widest shadow-xs">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 animate-pulse" />
-            <span>KNOWLEDGE HUB IN DEVELOPMENT</span>
-          </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white tracking-tight leading-tight font-sans">
             Learning Centre

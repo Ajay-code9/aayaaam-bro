@@ -328,10 +328,6 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
             
             {/* Left Copy Block */}
             <div className="lg:col-span-7 space-y-3.5">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-mono font-bold border border-emerald-200/80">
-                <Flame className="w-3.5 h-3.5 text-emerald-600" />
-                <span>CME • EUREX • ICE • HKEX • SGX • CBOE</span>
-              </div>
 
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[1.1] text-slate-950 font-sans">
                 Sub-Millisecond Global Futures <br />
@@ -398,10 +394,6 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <Award className="w-3.5 h-3.5 text-emerald-700" />
-              CAPITAL EFFICIENCY & DIRECT CLEARING
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Why Institutional Traders Prefer Global Futures
             </h2>
@@ -492,10 +484,6 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 lg:space-y-8 relative z-10 font-sans w-full">
           
           <div className="text-center max-w-3xl mx-auto space-y-1.5">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-teal-500/20 border border-emerald-500/40 text-emerald-300 text-[11px] font-mono font-bold uppercase tracking-wider">
-              <Globe className="w-3 h-3 text-emerald-400 animate-spin" style={{ animationDuration: '12s' }} />
-              <span>DIRECT MARKET ACCESS (DMA) NETWORK</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white font-sans tracking-tight">
               Connected to Premier Futures Exchanges
             </h2>
@@ -584,10 +572,6 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <Layers className="w-3.5 h-3.5 text-emerald-700" />
-              GLOBAL ASSET CLASS COVERAGE
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Explore Available Futures Markets
             </h2>
@@ -655,10 +639,6 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
           
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200 mb-2">
-                <BarChart3 className="w-3.5 h-3.5 text-emerald-700" />
-                ENTERPRISE CONTRACT MATRIX
-              </div>
               <h2 className="text-2xl sm:text-3xl font-serif-heading font-semibold text-slate-900">
                 Contract Specifications & Margins
               </h2>
@@ -964,10 +944,6 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <Calculator className="w-3.5 h-3.5 text-emerald-700" />
-              INTERACTIVE RISK & MARGIN CALCULATOR
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Calculate Your Margin & Position Size
             </h2>
@@ -1105,10 +1081,6 @@ export const FuturesOptionsPage: React.FC<FuturesOptionsPageProps> = ({ onOpenAc
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 text-emerald-800 text-xs font-bold font-mono rounded-md border border-emerald-200">
-              <BookOpen className="w-3.5 h-3.5 text-emerald-700" />
-              FUTURES ACADEMY & MECHANICS
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900">
               Master Futures Contract Mechanics
             </h2>

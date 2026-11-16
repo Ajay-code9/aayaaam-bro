@@ -51,9 +51,6 @@ export const WhyTransparencyMatters: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-300 text-xs font-semibold uppercase tracking-wider">
-            <span>Capital Efficiency & Fairness</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-heading font-semibold text-slate-900 dark:text-white tracking-tight">
             Why Transparent Pricing Matters
           </h2>

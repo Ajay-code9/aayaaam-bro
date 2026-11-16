@@ -15,10 +15,6 @@ export const PricingCTA: React.FC<PricingCTAProps> = ({ onOpenAccount, onScrollT
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8 relative z-10 font-sans">
         
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-bold uppercase tracking-wider">
-          <Sparkles className="w-4 h-4" />
-          <span>JOIN OVER 450,000 TRADERS WORLDWIDE</span>
-        </div>
 
         {/* Heading */}
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif-heading font-semibold text-white tracking-tight leading-[1.15]">

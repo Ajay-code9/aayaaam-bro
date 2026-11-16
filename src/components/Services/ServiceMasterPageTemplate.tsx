@@ -102,10 +102,6 @@ export const ServiceMasterPageTemplate: React.FC<ServiceMasterPageProps> = ({
             
             {/* Left Content Column */}
             <div className="lg:col-span-7 space-y-4 text-left">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-extrabold border border-emerald-200 dark:border-emerald-800/60">
-                <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                <span>{heroBadge}</span>
-              </div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.15]">
                 {serviceTitle}

@@ -36,10 +36,6 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4 sm:space-y-5 my-auto w-full">
           
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800/50">
-            <ShieldCheck className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>FACTUAL SECURITY CONTROLS &amp; OPERATIONAL TRUST</span>
-          </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">
             Security &amp; Operational Trust <br />
@@ -217,10 +213,6 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 space-y-12">
 
           <div className="max-w-3xl space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-500/20 text-emerald-400 text-xs font-mono font-bold border border-emerald-500/30">
-              <Database className="w-3.5 h-3.5" />
-              <span>ISOLATED BRAND STORAGE</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
               The AyaamX Vault System — Dedicated Standalone Server Isolation
             </h2>
@@ -284,10 +276,6 @@ export const DataSecurityPage: React.FC<PageProps> = ({ onOpenAccount }) => {
 
             {/* Left Content */}
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-500/30">
-                <UserCheck className="w-3.5 h-3.5" />
-                <span>GRANULAR GOVERNANCE</span>
-              </div>
 
               <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
                 Role-Based Access Control & IP-Based Allowlists

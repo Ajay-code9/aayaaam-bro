@@ -59,10 +59,6 @@ export const FeeTransparencyCards: React.FC = () => {
         
         {/* Section Header - Compact */}
         <div className="text-center max-w-2xl mx-auto space-y-1">
-          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 text-[11px] font-mono font-bold uppercase tracking-wider">
-            <Lock className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
-            <span>TRANSPARENT INSTITUTIONAL POLICY</span>
-          </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight font-sans">
             Fee Transparency & Zero Surcharge Guarantee
           </h2>

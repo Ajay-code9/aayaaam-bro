@@ -15,10 +15,6 @@ export const ResearchFinalCTA: React.FC<ResearchFinalCTAProps> = ({ onOpenAccoun
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
         
         {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-50 text-emerald-800 text-xs sm:text-sm font-semibold rounded-full border border-emerald-200 shadow-2xs font-sans">
-          <Sparkles className="w-4 h-4 text-emerald-600" />
-          <span>Empowering Smart Capital</span>
-        </div>
 
         {/* Large Editorial Headline */}
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-serif-heading font-semibold text-slate-900 tracking-tight leading-[1.12]">

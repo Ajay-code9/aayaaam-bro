@@ -39,10 +39,6 @@ export const PlatformLearningResources: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs font-semibold uppercase tracking-wider">
-            <BookOpen className="w-3.5 h-3.5 text-emerald-600" />
-            <span>PLATFORM ACADEMY & DEMOS</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif-heading font-semibold text-slate-900 tracking-tight">
             Learn How to Trade Like a Pro
           </h2>

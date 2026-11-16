@@ -12,10 +12,6 @@ export const PlatformsCTA: React.FC<{ onOpenAccount: () => void }> = ({ onOpenAc
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-8">
         
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono font-semibold uppercase tracking-wider">
-          <Zap className="w-3.5 h-3.5 text-emerald-400" />
-          <span>START TRADING IN MINUTES</span>
-        </div>
 
         <h2 className="text-3xl sm:text-5xl lg:text-6xl font-serif-heading font-semibold text-white tracking-tight leading-tight">
           Ready to Experience Enterprise Trading Precision?

@@ -26,10 +26,6 @@ export const ContactPage: React.FC<PageProps> = ({ onOpenAccount }) => {
         
         {/* 1. Header (Compact & Crisp) */}
         <div className="text-center space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200 dark:border-emerald-800/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold uppercase tracking-wider">
-            <Mail className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>24/5 GLOBAL CLIENT & DESK SUPPORT</span>
-          </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
             Get in Touch With AyaamX
           </h1>

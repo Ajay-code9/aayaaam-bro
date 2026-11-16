@@ -15,10 +15,6 @@ export const EducationPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       <section className="relative bg-white dark:bg-[#0a0a0a] text-slate-900 dark:text-white py-20 lg:py-24 border-b border-slate-200/80 dark:border-slate-800 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-semibold rounded-md border border-emerald-200 dark:border-emerald-800/50 font-mono">
-            <BookOpen className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            INVESTOR EDUCATION & RESEARCH
-          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight max-w-4xl text-slate-900 dark:text-white font-sans">
             Empower Your Trading with Institutional Insights
           </h1>

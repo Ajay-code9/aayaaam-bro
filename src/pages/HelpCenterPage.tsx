@@ -70,10 +70,6 @@ export const HelpCenterPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       {/* 1. HERO SEARCH SECTION */}
       <section className="relative py-16 sm:py-24 bg-white dark:bg-[#0E1420] border-b border-slate-200 dark:border-slate-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-500/20">
-            <HelpCircle className="w-3.5 h-3.5" />
-            <span>OPERATOR KNOWLEDGEBASE & SUPPORT CENTER</span>
-          </div>
 
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white">
             How Can We Help Your Brokerage?

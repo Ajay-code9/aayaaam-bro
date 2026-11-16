@@ -18,10 +18,6 @@ export const ResearchSection: React.FC<ResearchSectionProps> = ({ onOpenAccount 
           <div className="lg:col-span-8 space-y-4 text-left relative z-10">
             
             {/* Clean Simple Badge */}
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 font-mono text-[11px] font-bold border border-emerald-200 dark:border-emerald-500/30 shadow-2xs">
-              <BookOpen className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>ENGINEERING INSIGHTS & SETUP GUIDES</span>
-            </div>
 
             {/* Natural Human Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-[40px] font-bold tracking-tight text-slate-900 dark:text-white font-sans leading-[1.15]">

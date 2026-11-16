@@ -293,10 +293,6 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
 
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-5 w-full flex flex-col items-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 tracking-wider uppercase font-mono shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span>INSTITUTIONAL-GRADE BROWSER TERMINAL</span>
-          </div>
 
           {/* H1 */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.1] max-w-3xl">
@@ -428,10 +424,6 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
 
             {/* Left — copy */}
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-wider font-mono">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span>LIVE PLATFORM</span>
-              </div>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
                 See exactly what<br />you're trading with.
@@ -518,10 +510,6 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-wider font-mono">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <span>TERMINAL MODULES</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
               One terminal, every tool.
             </h2>
@@ -564,10 +552,6 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
           <div className="text-center max-w-2xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-wider font-mono">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <span>GETTING STARTED</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
               Live in 5 steps.
             </h2>
@@ -610,10 +594,6 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-wider font-mono">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <span>SEAMLESS INTEGRATIONS</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
               Plugged into every market.
             </h2>
@@ -684,10 +664,6 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-wider font-mono">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <span>TESTIMONIALS</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
               What Our Clients Say
             </h2>
@@ -764,10 +740,6 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16">
             <div className="lg:col-span-2 space-y-4">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-wider font-mono">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span>FAQ</span>
-              </div>
               <h2 className="text-3xl sm:text-4xl font-black text-slate-950 tracking-tight leading-tight">Frequently asked questions.</h2>
               <p className="text-slate-500 text-sm leading-relaxed">Can't find the answer you're looking for? Reach out to our support team directly.</p>
               <button
@@ -810,10 +782,6 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="text-center mb-10 space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-wider font-mono">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-              <span>PRICING PLANS</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
               Simple, Transparent Pricing
             </h2>
@@ -992,10 +960,6 @@ export const WebTradingTerminalPage: React.FC<PageProps> = ({ onOpenAccount }) =
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           <div className="text-center mb-12 space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 border border-emerald-100 rounded-full text-[10px] font-bold text-emerald-600 uppercase tracking-wider font-mono">
-              <Zap className="w-3 h-3" />
-              <span>GET STARTED</span>
-            </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-950 tracking-tight leading-[1.1]">
               Start trading with{' '}
               <span className="text-emerald-600">institutional tools</span> today.

@@ -39,10 +39,6 @@ export const TechnologyArchitecture: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-teal-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider">
-            <Zap className="w-3.5 h-3.5 text-emerald-400 animate-pulse" />
-            <span>SUB-MILLISECOND DATACENTER INFRASTRUCTURE</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-sans tracking-tight">
             Co-Located High-Frequency Architecture
           </h2>

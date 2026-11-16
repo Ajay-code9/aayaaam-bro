@@ -65,10 +65,6 @@ export const GlobalMapSection: React.FC<GlobalMapSectionProps> = ({ onOpenAccoun
 
             {/* Global Exchange Access Badge */}
             <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200/80 dark:border-emerald-500/30 shadow-2xs">
-                <Globe className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                <span>GLOBAL INFRASTRUCTURE & MULTI-REGION ROUTING</span>
-              </div>
             </div>
 
             {/* Heading */}

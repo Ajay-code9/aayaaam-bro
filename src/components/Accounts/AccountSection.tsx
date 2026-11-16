@@ -17,10 +17,6 @@ export const AccountSection: React.FC<AccountSectionProps> = ({ onOpenAccount })
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-slate-200 dark:border-[#1F1F28] pb-5">
           <div className="space-y-2 max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-500/30">
-              <User className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>CUSTOM DIGITAL PRODUCT ENGAGEMENT</span>
-            </div>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-slate-900 dark:text-white font-sans">
               Configured for Your Specific Business Model
             </h2>
@@ -107,10 +103,6 @@ export const AccountSection: React.FC<AccountSectionProps> = ({ onOpenAccount })
           <div className="absolute inset-0 bg-[radial-gradient(#94a3b8_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:20px_20px] opacity-20 dark:opacity-40 pointer-events-none"></div>
 
           <div className="relative z-10 text-center max-w-xl mx-auto space-y-2">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 animate-spin" style={{ animationDuration: '6s' }} />
-              <span>TURNKEY BROKERAGE DEPLOYMENT WORKFLOW</span>
-            </div>
             <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white font-sans tracking-tight">
               Live Brokerage Launch in 3 Steps
             </h3>

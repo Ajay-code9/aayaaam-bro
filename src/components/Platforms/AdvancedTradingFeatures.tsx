@@ -166,10 +166,6 @@ export const AdvancedTradingFeatures: React.FC = () => {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-teal-500/20 border border-emerald-500/40 text-emerald-300 text-xs font-mono font-bold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-            <span>ALGORITHMIC & HIGH-FREQUENCY SUITE</span>
-          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight font-sans">
             Engineered for Active Professional Traders
           </h2>

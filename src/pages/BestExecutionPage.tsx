@@ -203,10 +203,6 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full flex-1 flex flex-col justify-center">
           <div className="max-w-3xl space-y-6">
             
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 dark:bg-slate-900/90 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-300 dark:border-emerald-500/30 shadow-sm backdrop-blur-md">
-              <Zap className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>SMARTROUTING ENGINE & ZERO PFOF</span>
-            </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight leading-[1.15] text-slate-950 dark:text-white font-sans">
               Best Execution & <br />
@@ -385,10 +381,6 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
       <section className="py-20 bg-white dark:bg-[#0a0a0a] border-b border-slate-200 dark:border-slate-800/80 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 text-xs font-bold font-mono rounded-md border border-emerald-200 dark:border-emerald-500/30">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-700 dark:text-emerald-400" />
-              TRANSPARENT EXECUTION COMPARISON
-            </div>
             <h2 className="text-3xl sm:text-4xl font-serif-heading font-semibold text-slate-900 dark:text-white">
               AyaamX Zero PFOF vs Industry Models
             </h2>

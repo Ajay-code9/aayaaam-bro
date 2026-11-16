@@ -100,10 +100,6 @@ export const TermsConditionsPage: React.FC<PageProps> = ({ onOpenAccount }) => {
       <section className="relative bg-white dark:bg-[#0E1420] text-slate-900 dark:text-white py-16 lg:py-20 border-b border-slate-200 dark:border-slate-800 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px] opacity-60"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-semibold rounded-md border border-emerald-200 dark:border-emerald-800/50 font-mono">
-            <Scale className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            ENTERPRISE LEGAL TERMS
-          </div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-slate-900 dark:text-white font-sans">
             Website Terms &amp; Conditions
           </h1>

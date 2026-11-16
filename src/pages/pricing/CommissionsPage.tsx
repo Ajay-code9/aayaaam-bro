@@ -72,10 +72,6 @@ export const CommissionsPage: React.FC<CommissionsPageProps> = ({ onOpenAccount 
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center space-y-4 sm:space-y-5 my-auto w-full">
           
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800/50">
-            <DollarSign className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>TRANSPARENT VOLUME & EXECUTION FEES</span>
-          </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.12]">
             Volume & Execution Fee Schedules <br />

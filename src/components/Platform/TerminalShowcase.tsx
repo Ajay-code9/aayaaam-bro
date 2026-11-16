@@ -24,10 +24,6 @@ export const TerminalShowcase: React.FC<TerminalShowcaseProps> = ({ onOpenAccoun
           <div className="lg:col-span-5 space-y-5">
             {/* Header */}
             <div className="space-y-2.5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-emerald-50 dark:bg-[#0D0D12] text-emerald-800 dark:text-white font-mono text-[11px] border border-emerald-200 dark:border-[#1F1F28] shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-emerald-500" />
-                <span className="text-emerald-700 dark:text-emerald-400 font-bold tracking-wider">ENTERPRISE TRADING PLATFORMS</span>
-              </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white font-sans leading-tight">
                 Branded Trading Terminals & Client Portals
               </h2>

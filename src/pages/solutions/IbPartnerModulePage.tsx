@@ -85,10 +85,6 @@ export const IbPartnerModulePage: React.FC<PageProps> = ({ onOpenAccount }) => {
             <div className="lg:col-span-7 space-y-4 sm:space-y-5">
               
               {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 dark:bg-emerald-950/50 text-emerald-800 dark:text-emerald-400 text-xs font-mono font-bold border border-emerald-200 dark:border-emerald-800/50">
-                <Users className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-                <span>MULTI-TIER IB & AFFILIATE PARTNER ENGINE</span>
-              </div>
 
               {/* Main Heading */}
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.1]">

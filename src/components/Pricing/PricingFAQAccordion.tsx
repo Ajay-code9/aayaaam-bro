@@ -75,10 +75,6 @@ export const PricingFAQAccordion: React.FC = () => {
         
         {/* Header */}
         <div className="text-center space-y-1.5 max-w-xl mx-auto">
-          <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-slate-100 dark:bg-[#141C2B] border border-slate-200 dark:border-[#1E293B] text-slate-800 dark:text-slate-200 text-[11px] font-mono font-semibold uppercase tracking-wider">
-            <HelpCircle className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-            <span>Got Questions?</span>
-          </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight font-sans">
             Frequently Asked Questions
           </h2>

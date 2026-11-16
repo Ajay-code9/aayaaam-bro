@@ -13,17 +13,8 @@ export const SecuritySection: React.FC<SecuritySectionProps> = ({ onOpenAccount 
         {/* Institutional Regulatory & Security Header Block */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center border-b border-[#E5E7EB] pb-10">
           
-          {/* LEFT SIDE: Badge, Large Heading, 2-line supporting paragraph, horizontal trust chips */}
+          {/* LEFT SIDE: Large Heading, 2-line supporting paragraph, horizontal trust chips */}
           <div className="lg:col-span-7 space-y-4 text-left">
-            
-            {/* 1. Small Premium Badge */}
-            <div>
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-mono font-bold border border-emerald-200/80">
-                <ShieldCheck className="w-3.5 h-3.5 text-[#22C55E]" />
-                <span>MULTI-JURISDICTION REGULATORY COMPLIANCE</span>
-              </div>
-            </div>
-
             {/* 2. Large Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold tracking-tight text-[#0F172A] font-sans leading-[1.12]">
               Turnkey Regulatory &<br className="hidden sm:inline" /> Compliance Infrastructure

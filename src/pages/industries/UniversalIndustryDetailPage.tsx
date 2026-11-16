@@ -73,9 +73,8 @@ export const UniversalIndustryDetailPage: React.FC<IndustryPageProps> = ({ onOpe
             <span className="text-slate-300 dark:text-slate-700">/</span>
             <span className="text-xs font-mono font-medium text-slate-500">INDUSTRIES</span>
             <span className="text-slate-300 dark:text-slate-700">/</span>
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 font-mono text-[11px] font-bold border border-emerald-200 dark:border-emerald-500/30">
-              <Sparkles className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400" />
-              <span>{data.name.toUpperCase()} INFRASTRUCTURE</span>
+            <span className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">
+              {data.name.toUpperCase()} INFRASTRUCTURE
             </span>
           </div>
 
