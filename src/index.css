@@ -2,6 +2,20 @@
 @import "tailwindcss";
 @variant dark (&:where(.dark, .dark *));
 
+@theme {
+  --color-emerald-50: #f2fbf6;
+  --color-emerald-100: #dcf3e6;
+  --color-emerald-200: #bce7ce;
+  --color-emerald-300: #8fd5af;
+  --color-emerald-400: #2ea564;
+  --color-emerald-500: #0d824d;
+  --color-emerald-600: #0a7343;
+  --color-emerald-700: #085e37;
+  --color-emerald-800: #084b2d;
+  --color-emerald-900: #073e26;
+  --color-emerald-950: #032315;
+}
+
 @layer base {
   :root {
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -80,6 +94,12 @@
     --color-muted: #64748b;
     color-scheme: dark;
     scrollbar-color: #334155 transparent;
+
+    /* Subtle, grounded corporate green for dark theme (eliminates neon glare) */
+    --color-emerald-400: #22995b;
+    --color-emerald-500: #1b854e;
+    --color-emerald-600: #147242;
+    --color-emerald-700: #0f5b34;
   }
 
   /* Ultra-Thin Modern Global Scrollbar (5px Width, No Arrows) */

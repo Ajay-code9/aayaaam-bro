@@ -102,13 +102,15 @@ export const Navbar: React.FC<NavbarProps> = ({
       <div className="w-full max-w-[1536px] mx-auto px-3 sm:px-4 lg:px-5 xl:px-8 flex items-center justify-between h-16 relative">
         <button onClick={() => handleNav('/')} className="flex items-center group shrink-0 text-left cursor-pointer py-1">
           <div className="relative flex items-center h-11 sm:h-12 lg:h-[3.25rem]">
+            {/* Dark Theme Logo (Crisp White 'AAYAAMX' Text) */}
             <img
-              src="/logo-black.png"
+              src="/logo-white.png"
               alt="AyaamX"
               className="h-full w-auto object-contain transition-opacity duration-300 ease-in-out opacity-0 dark:opacity-100 group-hover:scale-[1.02]"
             />
+            {/* Light Theme Logo (Original Navy 'AAYAAMX' Text) */}
             <img
-              src="/logo-white.png"
+              src="/logo-black.png"
               alt="AyaamX"
               className="h-full w-auto object-contain transition-opacity duration-300 ease-in-out opacity-100 dark:opacity-0 absolute inset-0 group-hover:scale-[1.02]"
             />
@@ -1168,7 +1170,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Share Your Project Brief CTA - AayaamX Core CTA */}
           <button
             onClick={onOpenInquiry}
-            className="inline-flex items-center justify-center gap-2 px-4.5 py-2.5 rounded-xl font-semibold text-xs text-white bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 shadow-sm hover:shadow-emerald-500/25 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer whitespace-nowrap shrink-0"
+            className="inline-flex items-center justify-center gap-2 px-4.5 py-2.5 rounded-xl font-semibold text-xs text-white bg-emerald-600 hover:bg-emerald-500 shadow-sm hover:shadow-emerald-600/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer whitespace-nowrap shrink-0"
           >
             <span>Share Project Brief</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
