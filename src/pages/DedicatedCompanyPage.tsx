@@ -202,8 +202,8 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
 
           <div className="grid grid-cols-1 gap-5 md:grid-cols-3 md:gap-4 xl:gap-6">
             <article className="group overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-[#0D0D12]">
-              <div className="relative aspect-[16/9] overflow-hidden bg-slate-950 flex items-center justify-center p-2">
-                <img src="/enterprise-saas-hero.png" alt="Multi-tenant enterprise SaaS portal and customer dashboard preview" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.035]" loading="lazy" />
+              <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-[#15151e]">
+                <img src="/enterprise-saas-hero.png" alt="Multi-tenant enterprise SaaS portal and customer dashboard preview" className="h-full w-full object-cover" loading="lazy" />
                 <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-slate-950/80 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm">SaaS & Client Portals</span>
               </div>
               <div className="flex min-h-[230px] flex-col p-5 sm:p-6">
@@ -222,8 +222,8 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
             </article>
 
             <article className="group overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-[#0D0D12]">
-              <div className="relative aspect-[16/9] overflow-hidden bg-slate-950 flex items-center justify-center p-2">
-                <img src="/aayaamx-webtrader-desktop.png" alt="Multi-screen professional trading terminal, chart engine, and broker backoffice console" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.035]" loading="lazy" />
+              <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-[#15151e]">
+                <img src="/aayaamx-webtrader-desktop.png" alt="Multi-screen professional trading terminal, chart engine, and broker backoffice console" className="h-full w-full object-cover" loading="lazy" />
                 <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-slate-950/80 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm">Fintech & Trading</span>
               </div>
               <div className="flex min-h-[230px] flex-col p-5 sm:p-6">
@@ -242,8 +242,8 @@ export const DedicatedCompanyPage: React.FC<CompanyPageProps> = ({ onOpenAccount
             </article>
 
             <article className="group overflow-hidden rounded-[1.6rem] border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-white/10 dark:bg-[#0D0D12]">
-              <div className="relative aspect-[16/9] overflow-hidden bg-slate-950 flex items-center justify-center p-2">
-                <img src="/ai-powered-products-hero.png" alt="Autonomous AI workflow pipeline and data extraction system preview" className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.035]" loading="lazy" />
+              <div className="relative aspect-[16/9] overflow-hidden bg-slate-100 dark:bg-[#15151e]">
+                <img src="/ai-powered-products-hero.png" alt="Autonomous AI workflow pipeline and data extraction system preview" className="h-full w-full object-cover" loading="lazy" />
                 <span className="absolute left-4 top-4 rounded-full border border-white/20 bg-slate-950/80 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm">AI · Web3 · Integrations</span>
               </div>
               <div className="flex min-h-[230px] flex-col p-5 sm:p-6">

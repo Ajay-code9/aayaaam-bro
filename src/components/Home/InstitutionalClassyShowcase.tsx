@@ -112,16 +112,16 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
 
           {/* Right Column AyaamX Enterprise Workspace Mockup */}
           <div className="lg:col-span-6 flex justify-center">
-            <div className="relative w-full max-w-xl rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl group">
+            <div className="relative w-full max-w-xl rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 shadow-2xl">
               <img
                 src="/aayaamx-hero-workspace.webp"
                 alt="AyaamX Enterprise Architecture"
-                className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500 dark:hidden"
+                className="w-full h-auto object-cover dark:hidden"
               />
               <img
                 src="/aayaamx-hero-workspace-dark.webp"
                 alt="AyaamX Enterprise Architecture"
-                className="w-full h-auto object-cover group-hover:scale-102 transition-transform duration-500 hidden dark:block"
+                className="w-full h-auto object-cover hidden dark:block"
               />
             </div>
           </div>
@@ -130,11 +130,11 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
 
         {/* ── 2. REAL WORKSPACE & ENGINEERING ECOSYSTEM MOCKUP ── */}
         <div className="py-6 text-center space-y-4">
-          <div className="relative max-w-5xl mx-auto overflow-hidden rounded-2xl border border-slate-200 dark:border-[#1E293B] shadow-2xl group">
+          <div className="relative max-w-5xl mx-auto overflow-hidden rounded-2xl border border-slate-200 dark:border-[#1E293B] shadow-2xl">
             <img
               src="/aayaamx-engineering-terminal.jpg"
               alt="AyaamX Software Engineering Ecosystem & High-Throughput Terminal"
-              className="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-500 rounded-2xl"
+              className="w-full h-auto object-cover rounded-2xl"
             />
           </div>
         </div>
