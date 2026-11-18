@@ -168,9 +168,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <div className="grid grid-cols-4 gap-6">
                     {/* Col 1 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Software & Core Dev</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -211,9 +210,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 2 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Trading & Fintech</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -254,9 +252,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 3 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">AI & Blockchain</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -297,9 +294,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 4 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Cloud & Architecture</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -376,9 +372,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <div className="grid grid-cols-4 gap-6">
                     {/* Col 1 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Fintech & Payments</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -418,9 +413,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 2 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Forex & Brokerage</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -460,9 +454,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 3 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Prop & Blockchain</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -502,9 +495,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 4 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Enterprise & AI</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -581,9 +573,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <div className="grid grid-cols-4 gap-6">
                     {/* Col 1 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Financial Markets</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -622,9 +613,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 2 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Trading & Banking</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -663,9 +653,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 3 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Web3 & Digital Assets</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -704,9 +693,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 4 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Tech Startups & Enterprise</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -781,9 +769,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <div className="grid grid-cols-4 gap-6">
                     {/* Col 1 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Brokerage Platforms</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -822,9 +809,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 2 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Prop & Trading Suites</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -863,9 +849,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 3 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Enterprise SaaS</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -904,9 +889,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 4 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Blockchain & Wallets</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -980,9 +964,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                   <div className="grid grid-cols-4 gap-6">
                     {/* Col 1 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">About AayaamX</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -1021,9 +1004,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 2 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Mission & Method</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -1062,9 +1044,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 3 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Tech & Architecture</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
@@ -1103,9 +1084,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
                     {/* Col 4 */}
                     <div>
-                      <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100 dark:border-slate-800">
+                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
                         <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Careers & Connect</span>
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
                       </div>
                       <div className="space-y-1">
                         {[
