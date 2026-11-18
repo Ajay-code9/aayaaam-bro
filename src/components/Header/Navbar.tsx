@@ -104,7 +104,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className="relative flex items-center h-11 sm:h-12 lg:h-[3.25rem]">
             {/* Dark Theme Logo (Crisp White 'AAYAAMX' Text) */}
             <img
-              src="/logo-white.png"
+              src="/logo-white.png?v=4"
               alt="AyaamX"
               className="h-full w-auto object-contain transition-opacity duration-300 ease-in-out opacity-0 dark:opacity-100 group-hover:scale-[1.02]"
             />
