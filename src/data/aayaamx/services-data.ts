@@ -67,7 +67,7 @@ export const servicesData: Record<string, ServiceData> = {
     tagline: 'Engineered around your business workflows — custom portals, distributed backend services, and scalable database architectures designed to replace fragmented legacy tools.',
     metrics: [
       { value: '99.9% Uptime', label: 'Enterprise Availability SLA', live: true },
-      { value: '< 50ms Latency', label: 'Global Data Layer Query Budget', live: true },
+      { value: '< 50ms Latency', label: 'Fast Database Response Time', live: true },
       { value: '100% IP Ownership', label: 'Full Source Code & Repositories' },
       { value: 'Zero Licensing Fees', label: 'No Per-Seat Recurring Tax' },
     ],
@@ -296,7 +296,7 @@ export const servicesData: Record<string, ServiceData> = {
     tagline: 'Engineered for high gross margins and enterprise growth — secure multi-tenant data isolation, metered billing, automated provisioning, and sub-second tenant workspaces.',
     metrics: [
       { value: '99.99% Uptime', label: 'Multi-Tenant Availability SLA', live: true },
-      { value: '< 20ms Query', label: 'Row-Level Security (RLS) Budget', live: true },
+      { value: '< 20ms Query', label: 'Strict Data Separation Speed', live: true },
       { value: 'Automated Billing', label: 'Stripe & Lemonsqueezy Sync' },
       { value: 'Zero Noisy Neighbors', label: 'Isolated Pool Provisioning' },
     ],
@@ -509,7 +509,7 @@ export const servicesData: Record<string, ServiceData> = {
     title: 'Modern Web Application & Interactive Portal Engineering.',
     tagline: 'Built around the tasks your customers and internal teams need to complete — responsive, secure web applications with instant page transitions, real-time collaboration, and bulletproof API integrations.',
     metrics: [
-      { value: '< 100ms', label: 'First Contentful Paint (FCP)', live: true },
+      { value: '< 100ms', label: 'Instant Page Loading Speed', live: true },
       { value: '100% Lighthouse', label: 'Performance & SEO Benchmarks', live: true },
       { value: 'Zero Latency', label: 'Optimistic UI Updates' },
       { value: 'Enterprise Ready', label: 'SOC2 & OWASP Top 10 Hardened' },
@@ -687,8 +687,8 @@ export const servicesData: Record<string, ServiceData> = {
     title: 'Native iOS & Android Mobile App Development.',
     tagline: 'High-performance React Native, Flutter, Swift, and Kotlin mobile applications engineered for 60fps fluidity, resilient offline sync, biometric security, and guaranteed App Store submission.',
     metrics: [
-      { value: '60 fps', label: 'Interaction Fluidity Budget', live: true },
-      { value: '< 1ms', label: 'Local SQLite Query Latency', live: true },
+      { value: '60 fps', label: 'Smooth Mobile App Animation', live: true },
+      { value: '< 1ms', label: 'Offline Data Load Speed', live: true },
       { value: 'Biometric Auth', label: 'FaceID & Fingerprint Security' },
       { value: '100% Approval', label: 'Guaranteed Store Submission' },
     ],
@@ -915,7 +915,7 @@ export const servicesData: Record<string, ServiceData> = {
     title: 'Forex CRM, Trader Cabinets & Broker Backoffice.',
     tagline: 'Enterprise trading infrastructure for brokerages and prop trading firms — multi-tier IB management, real-time trader cabinets, automated KYC/AML, payment gateway orchestration, and MT4/MT5 bridges.',
     metrics: [
-      { value: 'Sub-Millisecond', label: 'Execution & Quote Broadcast', live: true },
+      { value: 'Sub-Millisecond', label: 'Live Market Price Updates', live: true },
       { value: 'Multi-Tier IB', label: 'Real-Time Commission Engine', live: true },
       { value: 'Multi-Bridge', label: 'MT4, MT5, cTrader & Vertex' },
       { value: 'Automated KYC', label: 'Instant Verification & Payouts' },
@@ -1760,7 +1760,7 @@ export const servicesData: Record<string, ServiceData> = {
     title: 'High-Throughput REST APIs & Real-Time WebSocket Streaming.',
     tagline: 'High-performance backend services engineered for high-concurrency environments — low-latency REST endpoints, WebSocket market feeds, Redis caching, and PostgreSQL clustering.',
     metrics: [
-      { value: '< 20ms', label: 'p95 Response Latency', live: true },
+      { value: '< 20ms', label: 'System API Response Speed', live: true },
       { value: '100k+', label: 'Concurrent WebSocket Clients', live: true },
       { value: 'OpenAPI 3.0', label: 'Automated Swagger Contracts' },
       { value: 'Zero Drop', label: 'Rate-Limited DDOS Protection' },

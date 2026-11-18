@@ -86,18 +86,10 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
                 key={idx} 
                 className="bg-slate-50 dark:bg-[#0D0D12] p-4 sm:p-5 rounded-2xl border border-slate-200 dark:border-[#1F1F28] space-y-1 hover:border-emerald-500/50 transition-colors"
               >
-                <div className="flex items-center justify-between">
-                  <div className="text-lg sm:text-2xl font-black font-mono text-slate-900 dark:text-white truncate">
-                    {m.value}
-                  </div>
-                  {m.live && (
-                    <span className="flex items-center gap-1 text-[9px] font-mono font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-200 dark:border-emerald-800/80 shrink-0">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                      LIVE SLA
-                    </span>
-                  )}
+                <div className="text-xl sm:text-2xl font-black font-mono text-slate-900 dark:text-white truncate">
+                  {m.value}
                 </div>
-                <div className="text-[11px] sm:text-xs font-sans text-slate-500 dark:text-slate-400 font-medium">
+                <div className="text-[11px] sm:text-xs font-sans text-slate-500 dark:text-slate-400 font-medium leading-relaxed">
                   {m.label}
                 </div>
               </div>
@@ -128,114 +120,7 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
       </section>
 
       {/* 2. LIVE SANDBOX / SYSTEM ARCHITECTURE WORKBENCH */}
-      {data.sandbox && data.sandbox.tabs.length > 0 && (
-        <section className="py-14 sm:py-20 border-b border-slate-200 dark:border-[#1F1F28] bg-slate-50/60 dark:bg-[#050508]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
-            
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-              <div className="space-y-1.5">
-                <span className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider flex items-center gap-1.5">
-                  <Terminal className="w-4 h-4" />
-                  SYSTEM ARCHITECTURE SIMULATION
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white font-sans">
-                  Interactive Production Inspection
-                </h2>
-              </div>
-              <div className="text-xs font-mono text-slate-500 dark:text-slate-400 bg-white dark:bg-[#0D0D12] px-3 py-1.5 rounded-lg border border-slate-200 dark:border-[#1F1F28]">
-                ENDPOINT: <span className="text-slate-900 dark:text-emerald-400 font-bold">{data.sandbox.address}</span>
-              </div>
-            </div>
-
-            {/* Sandbox Container (IDE Style) */}
-            <div className="bg-white dark:bg-[#0D0D12] rounded-2xl border border-slate-200 dark:border-[#1F1F28] shadow-xl overflow-hidden">
-              
-              {/* Window Title Bar & Tabs */}
-              <div className="bg-slate-100 dark:bg-[#07070A] px-4 py-2.5 border-b border-slate-200 dark:border-[#1F1F28] flex flex-wrap items-center justify-between gap-3">
-                <div className="flex items-center gap-2">
-                  <div className="flex items-center gap-1.5 mr-2">
-                    <span className="w-3 h-3 rounded-full bg-red-400/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-amber-400/80 inline-block" />
-                    <span className="w-3 h-3 rounded-full bg-emerald-400/80 inline-block" />
-                  </div>
-                  <div className="flex flex-wrap gap-1">
-                    {data.sandbox.tabs.map((tab) => (
-                      <button
-                        key={tab.id}
-                        onClick={() => setActiveTabId(tab.id)}
-                        className={`px-3 py-1.5 rounded-lg text-xs font-mono font-semibold transition-all cursor-pointer ${
-                          tab.id === (activeTab?.id || '')
-                            ? 'bg-white dark:bg-[#15151D] text-slate-950 dark:text-white border border-slate-300 dark:border-[#1F1F28] shadow-xs'
-                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
-                        }`}
-                      >
-                        {tab.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                <div className="text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-0.5 rounded border border-emerald-200 dark:border-emerald-800/80">
-                  {data.sandbox.liveBadge}
-                </div>
-              </div>
-
-              {/* Active Tab Content & Telemetry HUD */}
-              {activeTab && (
-                <div className="p-5 sm:p-6 space-y-6">
-                  
-                  {/* Telemetry Micro-Cards */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    <div className="bg-slate-50 dark:bg-[#121218] p-3 rounded-xl border border-slate-200 dark:border-[#1F1F28]">
-                      <div className="text-[10px] font-mono text-slate-400 uppercase">{activeTab.metricLabel1}</div>
-                      <div className="text-sm font-black font-mono text-slate-900 dark:text-emerald-400 mt-0.5">{activeTab.metricValue1}</div>
-                    </div>
-                    <div className="bg-slate-50 dark:bg-[#121218] p-3 rounded-xl border border-slate-200 dark:border-[#1F1F28]">
-                      <div className="text-[10px] font-mono text-slate-400 uppercase">{activeTab.metricLabel2}</div>
-                      <div className="text-sm font-black font-mono text-slate-900 dark:text-white mt-0.5">{activeTab.metricValue2}</div>
-                    </div>
-                    <div className="bg-slate-50 dark:bg-[#121218] p-3 rounded-xl border border-slate-200 dark:border-[#1F1F28]">
-                      <div className="text-[10px] font-mono text-slate-400 uppercase">{activeTab.metricLabel3}</div>
-                      <div className="text-sm font-black font-mono text-slate-900 dark:text-white mt-0.5">{activeTab.metricValue3}</div>
-                    </div>
-                  </div>
-
-                  {/* Code Snippet Box */}
-                  <div className="bg-[#0A0D14] text-slate-200 rounded-xl p-4 font-mono text-xs overflow-x-auto border border-slate-800 space-y-1">
-                    <div className="text-[11px] text-slate-500 pb-2 border-b border-slate-800 mb-2 flex items-center justify-between">
-                      <span>FILE: {activeTab.codeTitle}</span>
-                      <span className="text-emerald-400 text-[10px] uppercase">{activeTab.badge}</span>
-                    </div>
-                    {activeTab.codeLines.map((line, lIdx) => (
-                      <div 
-                        key={lIdx} 
-                        className={`py-0.5 leading-relaxed ${line.type === 'highlight' ? 'bg-emerald-500/15 -mx-4 px-4 text-emerald-300 font-bold' : ''} ${line.type === 'comment' ? 'text-slate-500 italic' : ''}`}
-                      >
-                        {line.parts.map((p, pIdx) => {
-                          let color = 'text-slate-200';
-                          if (p.kind === 'keyword') color = 'text-purple-400 font-bold';
-                          if (p.kind === 'func') color = 'text-blue-400';
-                          if (p.kind === 'string') color = 'text-emerald-400';
-                          if (p.kind === 'badge') color = 'text-amber-400 font-bold';
-                          return <span key={pIdx} className={color}>{p.text}</span>;
-                        })}
-                      </div>
-                    ))}
-                  </div>
-
-                </div>
-              )}
-
-              {/* Sandbox Footer */}
-              <div className="bg-slate-50 dark:bg-[#07070A] px-5 py-3 border-t border-slate-200 dark:border-[#1F1F28] text-xs font-mono text-slate-500 dark:text-slate-400 flex items-center justify-between">
-                <span>{data.sandbox.footerNote}</span>
-                <span className="text-emerald-600 dark:text-emerald-400 font-bold">100% PRODUCTION COMPATIBLE</span>
-              </div>
-
-            </div>
-
-          </div>
-        </section>
-      )}
+      {/* SECTION REMOVED TO PREVENT GEEKY/AI-GENERATED FAKE SIMULATOR LOOK */}
 
       {/* 2.5 TECHNOLOGY STACK MATRIX */}
       {data.techMatrix && (
@@ -283,51 +168,58 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
         </section>
       )}
 
-      {/* 3. CORE DELIVERABLES GRID */}
-      <section id="deliverables" className="py-16 sm:py-24 border-b border-slate-200 dark:border-[#1F1F28]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      {/* 3. CORE DELIVERABLES GRID (HIGH-END ENTERPRISE CARD DESIGN) */}
+      <section id="deliverables" className="py-16 sm:py-24 border-b border-slate-200 dark:border-[#1F1F28] bg-slate-50/40 dark:bg-transparent">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <div className="text-center max-w-3xl mx-auto space-y-2.5">
-            <span className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
-              ENTERPRISE CAPABILITIES
+          <div className="text-center max-w-3xl mx-auto space-y-3">
+            <span className="text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
+              WHAT WE DELIVER
             </span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 dark:text-white font-sans">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 dark:text-white font-sans tracking-tight">
               Production Deliverables &amp; Specifications
             </h2>
-            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
               Every deliverable is backed by strict architecture specifications, automated testing pipelines, and complete intellectual property handover.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {data.deliverables.map((del, idx) => (
               <div 
                 key={idx}
-                className="bg-white dark:bg-[#0D0D12] p-6 sm:p-8 rounded-2xl border border-slate-200 dark:border-[#1F1F28] space-y-5 hover:border-emerald-500/60 hover:shadow-lg transition-all group"
+                className="group relative rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200/90 dark:border-[#1F1F28] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/50 hover:shadow-xl dark:hover:border-emerald-500/40 flex flex-col justify-between"
               >
-                <div className="flex items-center justify-between pb-2 border-b border-slate-100 dark:border-[#1F1F28]">
-                  <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-50 dark:bg-emerald-500/10 text-emerald-800 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30">
-                    {del.badge}
-                  </span>
-                  <span className="text-xs font-mono font-bold text-slate-400">
-                    0{idx + 1}
-                  </span>
+                {/* Top Header Row */}
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/5">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
+                      {del.badge}
+                    </span>
+                    <span className="text-xs font-mono font-extrabold text-slate-300 dark:text-slate-700 group-hover:text-emerald-500 transition-colors">
+                      0{idx + 1}
+                    </span>
+                  </div>
+
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-950 dark:text-white font-sans group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                      {del.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans mt-2">
+                      {del.description}
+                    </p>
+                  </div>
                 </div>
 
-                <div>
-                  <h3 className="text-xl font-bold text-slate-950 dark:text-white font-sans group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
-                    {del.title}
-                  </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-sans mt-2">
-                    {del.description}
-                  </p>
-                </div>
-
-                <div className="pt-2 space-y-2 border-t border-slate-100 dark:border-[#1F1F28]">
+                {/* Specs Checklist Box */}
+                <div className="mt-5 pt-4 border-t border-slate-100 dark:border-white/5 space-y-2">
+                  <div className="text-[10px] font-mono font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
+                    TECHNICAL SPECIFICATIONS
+                  </div>
                   {del.specs.map((spec, sIdx) => (
-                    <div key={sIdx} className="flex items-start gap-2 text-xs font-medium text-slate-700 dark:text-slate-300">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 dark:text-emerald-400 shrink-0 mt-0.5" />
-                      <span>{spec}</span>
+                    <div key={sIdx} className="flex items-start gap-2.5 text-xs font-medium text-slate-700 dark:text-slate-300 font-sans">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5 group-hover:scale-125 transition-transform" />
+                      <span className="leading-snug">{spec}</span>
                     </div>
                   ))}
                 </div>
@@ -338,19 +230,19 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
         </div>
       </section>
 
-      {/* 4. 3-STAGE DELIVERY METHODOLOGY */}
+      {/* 4. 3-STAGE DELIVERY METHODOLOGY (PREMIUM ARCHITECTURAL PROCESS DESIGN) */}
       {data.methodology && (
-        <section className="py-16 sm:py-24 border-b border-slate-200 dark:border-[#1F1F28] bg-slate-50/60 dark:bg-[#050508]">
+        <section className="py-16 sm:py-24 border-b border-slate-200 dark:border-[#1F1F28] bg-slate-50/40 dark:bg-transparent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
-            <div className="text-center max-w-3xl mx-auto space-y-2.5">
-              <span className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-wider">
-                OUR DELIVERY PROCESS
+            <div className="text-center max-w-3xl mx-auto space-y-3">
+              <span className="text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
+                DELIVERY FRAMEWORK
               </span>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 dark:text-white font-sans">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 dark:text-white font-sans tracking-tight">
                 Predictable Milestone-Driven Execution
               </h2>
-              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed">
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
                 From initial architecture mapping to production launch and warranty SLAs — clear visibility at every stage.
               </p>
             </div>
@@ -359,25 +251,35 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
               {[data.methodology.stage1, data.methodology.stage2, data.methodology.stage3].map((stage, idx) => (
                 <div 
                   key={idx}
-                  className="bg-white dark:bg-[#0D0D12] p-6 sm:p-7 rounded-2xl border border-slate-200 dark:border-[#1F1F28] space-y-4 hover:border-emerald-500/50 transition-all flex flex-col justify-between"
+                  className="group relative rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200/90 dark:border-[#1F1F28] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/50 hover:shadow-xl flex flex-col justify-between"
                 >
-                  <div className="space-y-3">
-                    <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/30 text-emerald-700 dark:text-emerald-400 font-mono font-black flex items-center justify-center text-sm">
-                      0{idx + 1}
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/5">
+                      <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-mono font-black text-sm flex items-center justify-center border border-emerald-200/80 dark:border-emerald-500/30">
+                        0{idx + 1}
+                      </div>
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                        PHASE 0{idx + 1}
+                      </span>
                     </div>
-                    <h3 className="text-lg font-bold text-slate-950 dark:text-white font-sans">
-                      {stage.title}
+
+                    <h3 className="text-lg font-bold text-slate-950 dark:text-white font-sans group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                      {stage.title.replace(/^Stage\s*\d+:\s*/i, '')}
                     </h3>
-                    <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed font-sans">
+
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
                       {stage.focus}
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-slate-100 dark:border-[#1F1F28] space-y-2">
+                  <div className="mt-5 pt-4 border-t border-slate-100 dark:border-white/5 space-y-2">
+                    <div className="text-[10px] font-mono font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
+                      KEY DELIVERABLES
+                    </div>
                     {stage.bullets.map((b, bIdx) => (
-                      <div key={bIdx} className="flex items-center gap-2 text-xs font-mono font-bold text-slate-700 dark:text-slate-300">
-                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                        <span>{b}</span>
+                      <div key={bIdx} className="flex items-start gap-2.5 text-xs font-medium text-slate-700 dark:text-slate-300 font-sans">
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5 group-hover:scale-125 transition-transform" />
+                        <span className="leading-snug">{b}</span>
                       </div>
                     ))}
                   </div>

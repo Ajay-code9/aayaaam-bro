@@ -19,7 +19,7 @@ const industries: Record<string, IndustryPage> = {
     name: 'Financial Services',
     headline: 'Modernize Account Servicing, Digital Portals & Finance Reviews.',
     intro: 'Empower wealth managers, lenders, and financial institutions with unified client portals, automated KYC verification pipelines, and real-time transaction reconciliation records.',
-    audience: 'For financial advisory firms, private funds, asset managers, and non-bank financial institutions.',
+    audience: 'Financial advisory firms, private investment funds, wealth asset managers, and institutional lenders.',
     workflowTitle: 'Client Servicing & Account Management',
     workflow: [
       ['Onboarding & KYC', 'The client submits application details through an intuitive portal and uploads required identity documents.'],
@@ -46,7 +46,7 @@ const industries: Record<string, IndustryPage> = {
     name: 'Forex & Brokerage',
     headline: 'Connect the Systems Behind Your Brokerage.',
     intro: 'Give traders one place to apply, check their account and follow orders. Give staff a shared view of what happened across your portal, CRM and trading platform.',
-    audience: 'For new brokerages and established teams replacing disconnected tools.',
+    audience: 'Emerging and established brokerage firms upgrading client portals, CRM systems, and MT4/MT5 trade execution bridges.',
     workflowTitle: 'Trader Account Setup',
     workflow: [
       ['Application submitted', 'The trader submits their information and sees which documents are still needed.'],
@@ -72,7 +72,7 @@ const industries: Record<string, IndustryPage> = {
     name: 'Proprietary Trading Firms',
     headline: 'Run Trader Evaluations With Clear, Reviewable Rules.',
     intro: 'AayaamX builds software for prop firms to enrol traders, check progress against challenge rules and review payout requests. Your firm defines the rules and makes operating decisions.',
-    audience: 'For prop firms launching evaluations or replacing manual challenge and payout tracking.',
+    audience: 'Prop trading firms launching funded evaluation challenges, real-time drawdown monitors, and automated trader payouts.',
     workflowTitle: 'From Sign-Up to Evaluation Result',
     workflow: [
       ['Trader enrols', 'The portal records the selected challenge and shows the applicable rules.'],
@@ -98,7 +98,7 @@ const industries: Record<string, IndustryPage> = {
     name: 'Banking & Fintech',
     headline: 'Make Customer Applications and Payments Easier to Follow.',
     intro: 'Build customer portals and internal tools around your existing providers and records. Customers can see what is happening, and staff can pick up an application or payment with its history intact.',
-    audience: 'For banks and fintech product teams improving digital onboarding, payments or internal servicing.',
+    audience: 'Digital banks, payment service providers, and fintech engineering teams modernizing onboarding portals and payment rails.',
     workflowTitle: 'Application Review',
     workflow: [
       ['Customer applies', 'The portal collects details and shows what information is missing.'],
@@ -124,7 +124,7 @@ const industries: Record<string, IndustryPage> = {
     name: 'Blockchain & Web3',
     headline: 'Build Wallet Experiences People Can Follow.',
     intro: 'Connect wallets and smart contracts to an application that explains what users are approving and shows what happened after they submitted it.',
-    audience: 'For product teams building wallet-enabled checkout, token access or other on-chain experiences.',
+    audience: 'Web3 product teams and token projects building non-custodial checkout flows, tokenization suites, and smart contract apps.',
     workflowTitle: 'Wallet Checkout',
     workflow: [
       ['Wallet connected', 'The application checks whether the wallet is on a supported network.'],
@@ -150,7 +150,7 @@ const industries: Record<string, IndustryPage> = {
     name: 'SaaS & Technology Startups',
     headline: 'Get a Product Into Customers’ Hands and Build From There.',
     intro: 'AayaamX helps product teams scope the first release, build the customer experience and set up the systems needed to onboard the next account.',
-    audience: 'For founders and product teams launching SaaS or turning an early product into a platform for more customers.',
+    audience: 'Technology founders and high-growth software teams launching multi-tenant SaaS products and enterprise customer portals.',
     workflowTitle: 'Onboard a New SaaS Customer',
     workflow: [
       ['Workspace created', 'The customer gets a workspace configured for their organisation.'],
@@ -176,7 +176,7 @@ const industries: Record<string, IndustryPage> = {
     name: 'Enterprise Businesses',
     headline: 'Keep Work Moving Across Departments.',
     intro: 'Connect the tools teams use to serve customers, run operations and report progress. Give each team the right view of a shared record so updates carry through every handoff.',
-    audience: 'For businesses replacing spreadsheet handoffs or connecting new software to existing operations.',
+    audience: 'Enterprises automating cross-department workflows, legacy ERP integrations, approval pipelines, and customer portals.',
     workflowTitle: 'Resolve an Order Change',
     workflow: [
       ['Support records the request', 'The change is logged against the customer and order.'],
@@ -202,7 +202,7 @@ const industries: Record<string, IndustryPage> = {
     name: 'Digital Asset Businesses',
     headline: 'Trace Digital Asset Activity From Deposit to Balance.',
     intro: 'Build the records and interfaces behind deposits, transfers and account balances. Give customers a clear status and give operations the information to investigate exceptions.',
-    audience: 'For exchanges, payment providers and businesses operating digital asset products.',
+    audience: 'Crypto exchanges, Web3 payment gateways, custody providers, and institutional digital asset operators.',
     workflowTitle: 'Credit a Digital Asset Deposit',
     workflow: [
       ['Transfer detected', 'The system records the network transaction and matches it to a known address.'],
@@ -226,7 +226,29 @@ const industries: Record<string, IndustryPage> = {
   },
 };
 
+const industryAliases: Record<string, string> = {
+  fintech: 'financial-services',
+  'financial-technology': 'financial-services',
+  'financial-services': 'financial-services',
+  'forex-brokerage': 'forex-brokerage',
+  'forex': 'forex-brokerage',
+  'prop-trading': 'prop-trading',
+  'proptech-realestate': 'enterprise-businesses',
+  'banking-fintech': 'banking-fintech',
+  'blockchain-web3': 'blockchain-web3',
+  'digital-asset-businesses': 'digital-asset-businesses',
+  'saas-technology-startups': 'saas-technology-startups',
+  'saas': 'saas-technology-startups',
+  'enterprise-businesses': 'enterprise-businesses',
+  'enterprise': 'enterprise-businesses',
+  'ecommerce-retail': 'enterprise-businesses',
+  'healthcare-lifesciences': 'enterprise-businesses',
+  'logistics-supply-chain': 'enterprise-businesses',
+};
+
 export function getIndustryPage(path: string): IndustryPage | undefined {
-  const slug = path.match(/^\/industries\/([a-z0-9-]+)$/)?.[1];
-  return slug && Object.hasOwn(industries, slug) ? industries[slug] : undefined;
+  const rawSlug = path.match(/^\/industries\/([a-z0-9-]+)$/)?.[1] || path.replace(/^\/+/, '').split('/').pop() || '';
+  const resolvedKey = industryAliases[rawSlug] || rawSlug;
+  return Object.hasOwn(industries, resolvedKey) ? industries[resolvedKey] : industries['financial-services'];
 }
+

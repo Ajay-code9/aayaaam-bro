@@ -42,7 +42,7 @@ export const PopularTopicsFilter: React.FC<PopularTopicsFilterProps> = ({
                     : 'bg-slate-950 text-slate-300 hover:text-white border border-slate-800 hover:border-slate-700'
                 }`}
               >
-                {isActive && <Sparkles className="w-3 h-3 text-slate-950 animate-pulse" />}
+                {isActive && <Sparkles className="w-3 h-3 text-slate-950" />}
                 <span>{topic}</span>
               </button>
             );

@@ -162,38 +162,38 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
     rating: {
       badge: 'REGULATORY COMPLIANCE ARCHITECTURE',
       amount: 'Multi-Jurisdiction Ready',
-      lastAudited: 'Standardized Data Schemas',
-      verifiedStatus: 'KYC & AML Integrated Queues',
-      heading: 'Built to Meet Global Financial Reporting Standards',
+      lastAudited: 'Standardized Regulatory Schemas',
+      verifiedStatus: 'Integrated KYC & AML Pipelines',
+      heading: 'Engineered to Meet Global Financial & Brokerage Standards',
       paragraph:
-        'Software pre-configured for brokerage licensing requirements across onshore and offshore jurisdictions. Includes automated KYC document workflows, AML watchlist checks, and audit-ready data structures.',
+        'Software pre-configured for brokerage compliance requirements across onshore and offshore jurisdictions. Includes automated KYC document workflows, integrated AML watchlist screening, and audit-ready data structures.',
       imagePath: '/section-fourth.png',
       placeholderLabel: 'Regulatory Compliance Framework Illustration',
       metrics: [
         {
           title: 'Compliance Workflows',
           value: 'Global Ready',
-          subtitle: 'Built for FCA, CySEC, ASIC, VFSC & FSA rules',
+          subtitle: 'Pre-mapped for FCA, CySEC, ASIC, VFSC & FSA rules',
           icon: Award,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
         },
         {
           title: 'KYC Verification',
-          value: 'Automated Queue',
-          subtitle: 'Automated document extraction and review states',
+          value: 'Automated Pipeline',
+          subtitle: 'Integrated with Sumsub, Shufti Pro & Ondato',
           icon: ShieldCheck,
           highlight: 'bg-blue-50 text-blue-700 border-blue-200'
         },
         {
           title: 'AML Sanction Checks',
-          value: 'API Hook Ready',
-          subtitle: 'Connects with Sumsub, Shufti Pro & Ondato',
+          value: 'Real-Time Screen',
+          subtitle: 'Automated PEP & global sanction list matching',
           icon: BadgeCheck,
           highlight: 'bg-slate-50 text-slate-700 border-slate-200'
         },
         {
           title: 'Audit-Ready Schemas',
-          value: 'Standardized',
+          value: '1-Click Export',
           subtitle: 'Instant export for periodic regulatory filings',
           icon: Scale,
           highlight: 'bg-emerald-50 text-emerald-700 border-emerald-200'
@@ -325,7 +325,7 @@ export const TrustSection: React.FC<TrustSectionProps> = ({ onOpenAccount }) => 
                   {
                     id: 'rating' as StoryKey,
                     title: 'Compliance Architecture',
-                    badge: 'Global Regulatory Data Schemas',
+                    badge: 'FCA, CySEC & Global Regulatory Schemas',
                     icon: Award
                   }
                 ].map((tab, idx) => {

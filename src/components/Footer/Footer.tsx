@@ -121,11 +121,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAccount, onLogin }) => {
               Industries
             </h4>
             <ul className="space-y-2.5 text-slate-600 dark:text-slate-400 text-[10px]">
-              <li><button onClick={() => navigate('/industries/fintech')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Financial Technology</button></li>
-              <li><button onClick={() => navigate('/industries/ecommerce-retail')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">E-Commerce & Retail</button></li>
-              <li><button onClick={() => navigate('/industries/healthcare-lifesciences')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Healthcare & Life Sciences</button></li>
-              <li><button onClick={() => navigate('/industries/logistics-supply-chain')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Logistics & Supply Chain</button></li>
-              <li><button onClick={() => navigate('/industries/proptech-realestate')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">PropTech & Real Estate</button></li>
+              <li><button onClick={() => navigate('/industries/financial-services')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Financial Services</button></li>
+              <li><button onClick={() => navigate('/industries/forex-brokerage')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Forex & Brokerage</button></li>
+              <li><button onClick={() => navigate('/industries/prop-trading')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Prop Trading Firms</button></li>
+              <li><button onClick={() => navigate('/industries/banking-fintech')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Banking & Fintech</button></li>
+              <li><button onClick={() => navigate('/industries/enterprise-businesses')} className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors cursor-pointer text-left font-normal">Enterprise Businesses</button></li>
             </ul>
           </div>
 
@@ -156,33 +156,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenAccount, onLogin }) => {
           </p>
         </div>
 
-        {/* Compliance Badges & Legal Copyright */}
-        <div className="pt-2 space-y-3 text-[10px] text-slate-500">
-          <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 dark:border-slate-800/60 pb-3">
-            <div className="flex flex-wrap items-center gap-2">
-              {['AES-256 Encrypted', '100% IP Ownership', 'Enterprise RBAC & SSO', 'ISO-Standard Code Quality', 'Global Cloud Infrastructure'].map((b) => (
-                <span key={b} className="px-2.5 py-0.5 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded font-mono text-[10px] text-slate-700 dark:text-slate-400 shadow-2xs">
-                  {b}
-                </span>
-              ))}
-            </div>
-
-            <div className="flex items-center gap-3.5 text-slate-600 dark:text-slate-400 font-mono text-[10px]">
-              <button onClick={() => navigate('/company#vision-mission')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Vision</button>
-              <span>·</span>
-              <button onClick={() => navigate('/terms-conditions')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Terms</button>
-              <span>·</span>
-              <button onClick={() => navigate('/privacy-policy')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Privacy</button>
-              <span>·</span>
-              <button onClick={() => navigate('/company#contact')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Share Brief</button>
-            </div>
+        {/* Clean Corporate Footer Bottom */}
+        <div className="pt-4 border-t border-slate-200 dark:border-slate-800/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div className="flex items-center gap-6 font-medium">
+            <button onClick={() => navigate('/terms-conditions')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Terms</button>
+            <button onClick={() => navigate('/privacy-policy')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Privacy</button>
+            <button onClick={() => navigate('/company#contact')} className="hover:text-slate-900 dark:hover:text-white transition-colors cursor-pointer">Contact</button>
           </div>
 
-          <p className="text-slate-500 text-[10px] leading-relaxed">
-            AyaamX® is a registered trademark of AyaamX Technologies. All deliverables, codebases, and brand assets are transferred with full client ownership upon milestone completion.
-          </p>
-
-          <div className="text-slate-500 text-[10px] text-center font-mono pt-1">
+          <div className="font-mono text-[11px] text-slate-400 dark:text-slate-500">
             © 2026 AyaamX Technologies. All rights reserved.
           </div>
         </div>

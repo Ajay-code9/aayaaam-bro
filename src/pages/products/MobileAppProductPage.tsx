@@ -162,8 +162,8 @@ export const MobileAppProductPage: React.FC<MobileAppProductPageProps> = ({ onOp
                 </p>
               </div>
               <div className="pt-2 flex items-center gap-2 text-[11px] font-mono text-slate-500">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span>Scroll Down Image Section Active</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
+                <span>Mobile App Interface Specification</span>
               </div>
             </div>
           </div>

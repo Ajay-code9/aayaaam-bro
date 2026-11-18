@@ -66,33 +66,29 @@ export const CTASection: React.FC<CTASectionProps> = ({
           </button>
         </div>
 
-        {/* Trust Checkmarks */}
-        <div className="flex flex-wrap items-center justify-center gap-6 pt-4 text-xs font-mono font-semibold text-slate-600 dark:text-slate-400">
-          {[
-            { icon: CheckCircle2, label: 'End-to-End Delivery' },
-            { icon: ShieldCheck, label: '100% Code Ownership' },
-            { icon: Zap, label: 'Ultra-Low Latency' },
-            { icon: Globe2, label: 'Global Scaling & SLAs' },
-          ].map((item, i) => {
-            const Icon = item.icon;
-            return (
-              <span key={i} className="flex items-center gap-1.5">
-                <Icon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-                {item.label}
-              </span>
-            );
-          })}
-        </div>
-
-        {/* Divider Stat Line */}
-        <div className="pt-6 border-t border-slate-200 dark:border-slate-800/80 flex flex-wrap items-center justify-center gap-8 text-[11px] font-mono font-semibold text-slate-500 dark:text-slate-400">
-          <span>Enterprise-Grade Architecture</span>
-          <span>•</span>
-          <span>99.99% Uptime SLA</span>
-          <span>•</span>
-          <span>50+ Platforms Delivered</span>
-          <span>•</span>
-          <span>Ahmedabad, India Headquarters</span>
+        {/* Trust Badges Bar */}
+        <div className="pt-6">
+          <div className="inline-flex flex-wrap items-center justify-center gap-6 sm:gap-10 px-8 py-4 rounded-2xl bg-slate-50/80 dark:bg-white/[0.03] border border-slate-200/80 dark:border-white/10 shadow-xs text-xs sm:text-sm font-medium text-slate-700 dark:text-slate-300">
+            <span className="flex items-center gap-2">
+              <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span>End-to-End Delivery</span>
+            </span>
+            <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
+            <span className="flex items-center gap-2">
+              <ShieldCheck className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span>100% Code Ownership</span>
+            </span>
+            <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
+            <span className="flex items-center gap-2">
+              <Zap className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span>Ultra-Low Latency</span>
+            </span>
+            <span className="hidden sm:inline text-slate-300 dark:text-slate-700">•</span>
+            <span className="flex items-center gap-2">
+              <Globe2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <span>99.99% Uptime SLA</span>
+            </span>
+          </div>
         </div>
 
       </div>

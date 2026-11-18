@@ -110,9 +110,11 @@ export const UniversalIndustryDetailPage: React.FC<IndustryPageProps> = ({ onOpe
           </div>
 
           {/* Audience Callout Banner */}
-          <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] flex items-center gap-3 text-xs font-mono text-slate-600 dark:text-slate-400">
-            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-            <span><strong className="text-slate-900 dark:text-white">Designed For:</strong> {data.audience}</span>
+          <div className="p-4 rounded-xl bg-slate-50 dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] flex items-center gap-3 text-xs text-slate-600 dark:text-slate-400">
+            <span className="font-semibold text-slate-900 dark:text-white uppercase tracking-wider text-[11px] font-mono px-2 py-0.5 rounded bg-slate-200/60 dark:bg-slate-800 shrink-0">
+              Target Audience
+            </span>
+            <span className="leading-relaxed">{data.audience}</span>
           </div>
 
         </div>

@@ -56,59 +56,54 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenAccount, onExplorePlat
         <FeatureStripSection />
       </div>
 
-      {/* ③ ENTERPRISE BROKERAGE COMPARISON TABLE */}
-      <Section anim={fadeUp}>
-        <IbkrComparisonTable onOpenAccount={onOpenAccount} />
-      </Section>
-
-      {/* ④ ULTRA CLASSY ENTERPRISE SHOWCASE (Clean Whitespace, Real Mockup & 2-Col Grid) */}
+      {/* ③ TURNKEY SOFTWARE PRODUCTS & ENTERPRISE SOLUTIONS (6 Product Cards) */}
       <Section anim={fadeUp}>
         <InstitutionalClassyShowcase onOpenAccount={onOpenAccount} />
       </Section>
 
-      {/* ④ GLOBAL ASSET COVERAGE & PRODUCTS — Show what you can trade */}
+      {/* ④ INTERACTIVE PLATFORM MODULES (Deep-dive with UI Showcase) */}
       <Section anim={fadeUp}>
         <ProductsSection onOpenAccount={onOpenAccount} />
       </Section>
 
-      {/* ⑤ CASH YIELD & MARGIN BORROWING — Monetization hook */}
-      <Section anim={fadeLeft}>
-        <YieldPricingSection onOpenAccount={onOpenAccount} />
-      </Section>
-
-      {/* ⑥ EXECUTION TERMINAL SHOWCASE — Platform proof */}
+      {/* ⑤ BRANDED TERMINAL & CLIENT PORTAL SHOWCASE */}
       <Section anim={scaleUp}>
         <TerminalShowcase onOpenAccount={onOpenAccount} />
       </Section>
 
-      {/* ⑦ GLOBAL EXCHANGE MAP — Global reach, trust */}
+      {/* ⑥ GLOBAL CLOUD DEPLOYMENT & SERVER TOPOLOGY MAP */}
       <Section anim={fadeRight}>
         <GlobalMapSection onOpenAccount={onOpenAccount} />
       </Section>
 
-      {/* ⑧ INSTITUTIONAL RESILIENCE & TRUST — Build confidence mid-scroll */}
+      {/* ⑦ DATA SOVEREIGNTY, SECURITY & COMPLIANCE PILLARS */}
       <Section anim={fadeUp} delay={0.05}>
         <TrustSection onOpenAccount={onOpenAccount} />
       </Section>
 
-      {/* ⑧.b AYAAMX SELECTED PRODUCTION DELIVERABLES / CASE STUDIES */}
+      {/* ⑧ WHY HIGH-GROWTH FIRMS CHOOSE AYAAMX (Comparison Table) */}
+      <Section anim={fadeUp}>
+        <IbkrComparisonTable onOpenAccount={onOpenAccount} />
+      </Section>
+
+      {/* ⑨ PRODUCTION DELIVERABLES & CASE STUDIES */}
       <Section anim={fadeUp}>
         <CaseStudiesSection />
       </Section>
 
-      {/* ⑨ OPERATOR KNOWLEDGE BASE & INTELLIGENCE PORTAL */}
-      <Section anim={scaleUp}>
-        <ResearchSection onOpenAccount={onOpenAccount} />
-      </Section>
-
-      {/* ⑪ TAILORED ACCOUNT ARCHITECTURE */}
+      {/* ⑩ TAILORED SOFTWARE LICENSING PACKAGES */}
       <Section anim={fadeRight}>
         <AccountSection onOpenAccount={onOpenAccount} />
       </Section>
 
-      {/* ⑫ TRADER ACADEMY & EDUCATION */}
-      <Section anim={fadeUp}>
-        <AcademySection onOpenAccount={onOpenAccount} />
+      {/* ⑪ TRANSPARENT PRICING & DELIVERY ENGAGEMENT MODELS */}
+      <Section anim={fadeLeft}>
+        <YieldPricingSection onOpenAccount={onOpenAccount} />
+      </Section>
+
+      {/* ⑫ ARCHITECTURAL INSIGHTS & ENGINEERING PLAYBOOKS */}
+      <Section anim={scaleUp}>
+        <ResearchSection onOpenAccount={onOpenAccount} />
       </Section>
 
       {/* ⑬ FREQUENTLY ASKED QUESTIONS */}
@@ -116,7 +111,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onOpenAccount, onExplorePlat
         <FaqSection onOpenInquiry={onOpenInquiry} />
       </Section>
 
-      {/* ⑭ FINAL CINEMATIC CTA */}
+      {/* ⑭ FINAL ENTERPRISE CTA */}
       <CTASection variant="light" onOpenAccount={onOpenAccount} />
     </div>
   );

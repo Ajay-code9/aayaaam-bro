@@ -117,8 +117,24 @@ export const RouterProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const navigate = (path: string) => {
     if (typeof window !== 'undefined') {
       window.history.pushState({}, '', path);
-      setCurrentPath(path);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Strip hash to resolve page route cleanly in currentPath
+      const routePath = path.includes('#') ? path.split('#')[0] : path;
+      setCurrentPath(routePath || '/');
+
+      const hash = path.includes('#') ? path.split('#')[1] : null;
+      if (hash) {
+        // If there is an anchor hash, allow the target component or element to handle scrolling
+        setTimeout(() => {
+          const el = document.getElementById(hash);
+          if (el) {
+            const yOffset = -140;
+            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+          }
+        }, 100);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   };
 

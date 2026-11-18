@@ -258,8 +258,8 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
             </div>
             
             <div className="pt-2 flex items-center gap-2 relative z-10 text-[11px] font-mono text-slate-500">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Ready for Product Image</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/80" />
+              <span>Platform Screenshot Specification</span>
             </div>
           </div>
         )}
@@ -459,52 +459,73 @@ export const ProductMasterPageTemplate: React.FC<ProductMasterPageProps> = ({
         </div>
       </section>
 
-      {/* 4. INTERACTIVE MODULE CONTROL & LIVE VISUAL PREVIEW */}
-      <section className="py-14 sm:py-18 bg-slate-50 dark:bg-[#000000] border-t border-b border-slate-200 dark:border-[#1F1F28]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      {/* 4. CORE PLATFORM CAPABILITIES & OPERATIONAL WORKFLOW */}
+      <section className="py-16 sm:py-20 bg-slate-50 dark:bg-[#060608] border-t border-b border-slate-200 dark:border-[#1F1F28]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
 
-          <div className="text-center max-w-3xl mx-auto space-y-2">
+          <div className="max-w-3xl space-y-2">
+            <span className="text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
+              FUNCTIONAL CAPABILITIES
+            </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Interactive Module Views
+              Operational Workspaces & Management Modules
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm">
-              Click below to preview different functional controls of {productTitle}.
+              Explore key functional consoles and administrative workspaces included in the {productTitle} deployment.
             </p>
           </div>
 
-          {/* Tab Switcher */}
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {visualizerTabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all cursor-pointer ${activeTab === tab.id
-                  ? 'bg-emerald-600 text-white shadow-md'
-                  : 'bg-white dark:bg-[#0D0D12] text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800 border border-slate-200 dark:border-[#1F1F28]'
+          {/* Module Selector Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {visualizerTabs.map((tab) => {
+              const isSelected = activeTab === tab.id;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setActiveTab(tab.id)}
+                  className={`p-5 rounded-2xl text-left transition-all border cursor-pointer relative ${
+                    isSelected
+                      ? 'bg-white dark:bg-[#0D0D12] border-emerald-500 shadow-md ring-1 ring-emerald-500/20'
+                      : 'bg-white/60 dark:bg-[#0D0D12]/60 border-slate-200 dark:border-[#1F1F28] hover:border-slate-300 dark:hover:border-slate-700'
                   }`}
-              >
-                {tab.label}
-              </button>
-            ))}
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <h3 className="text-sm font-bold text-slate-900 dark:text-white">
+                      {tab.label}
+                    </h3>
+                    {isSelected && (
+                      <span className="text-[10px] font-semibold text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 shrink-0">
+                        Active View
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-slate-600 dark:text-slate-400 line-clamp-2 leading-relaxed">
+                    {tab.previewText}
+                  </p>
+                </button>
+              );
+            })}
           </div>
 
-          {/* Visualizer Display Box */}
-          <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] shadow-lg space-y-4">
-            <div className="flex items-center justify-between border-b border-slate-200 dark:border-[#1F1F28] pb-3">
+          {/* Selected Workspace Overview Card */}
+          <div className="p-6 sm:p-8 rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] shadow-sm space-y-5">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 dark:border-[#1F1F28] pb-4">
+              <div>
+                <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">
+                  Active Console Scope
+                </span>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mt-0.5">
+                  {currentTabObj?.label}
+                </h3>
+              </div>
               <div className="flex items-center gap-2">
-                <span className="w-2.5 h-2.5 rounded-full bg-red-500 inline-block" />
-                <span className="w-2.5 h-2.5 rounded-full bg-yellow-500 inline-block" />
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 inline-block" />
-                <span className="text-xs font-mono font-bold text-slate-700 dark:text-slate-300 ml-2">
-                  {productTitle} // {currentTabObj?.label}
+                <span className="text-xs font-medium text-slate-500 dark:text-slate-400">
+                  Included in Turnkey License & Source Delivery
                 </span>
               </div>
-              <span className="text-[10px] font-mono text-emerald-600 dark:text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20 font-bold">
-                Operational Status: OK
-              </span>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed">
+            <p className="text-sm text-slate-700 dark:text-slate-300 font-medium leading-relaxed max-w-4xl">
               {currentTabObj?.previewText}
             </p>
 

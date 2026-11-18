@@ -314,7 +314,7 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
               </div>
 
               <div className="hidden lg:flex justify-center text-emerald-600 dark:text-emerald-400">
-                <ArrowRight className="w-6 h-6 animate-pulse" />
+                <ArrowRight className="w-6 h-6 text-emerald-500" />
               </div>
 
               {/* Step 2 */}
@@ -327,7 +327,7 @@ export const BestExecutionPage: React.FC<BestExecutionPageProps> = ({ onOpenAcco
               </div>
 
               <div className="hidden lg:flex justify-center text-emerald-600 dark:text-emerald-400">
-                <ArrowRight className="w-6 h-6 animate-pulse" />
+                <ArrowRight className="w-6 h-6 text-emerald-500" />
               </div>
 
               {/* Step 3 */}

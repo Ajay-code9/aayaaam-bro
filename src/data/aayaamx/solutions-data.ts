@@ -328,10 +328,10 @@ export const solutionsData: Record<string, SolutionData> = {
     headline: 'Digital Payments Gateway, Multi-Rail Settlement & Cashier Routing.',
     tagline: 'Enterprise-grade payment gateway architecture supporting dynamic crypto deposit generation, credit card processing, SEPA/ACH rails, and automated multi-network confirmation routing with zero reconciliation drops.',
     metrics: [
-      { value: '99.99%', label: 'Gateway Webhook Delivery SLA', live: true },
-      { value: '< 2.4s', label: 'Average Network Confirmation Detect', live: true },
+      { value: '99.99%', label: 'Guaranteed Webhook Delivery Uptime', live: true },
+      { value: '< 2.4s', label: 'Instant Blockchain Payment Detection', live: true },
       { value: 'Multi-Rail', label: 'Cards, Bank Rails & 10+ Blockchains' },
-      { value: '0% Drift', label: 'Real-Time Ledger Settlement Guarantee' },
+      { value: '100% Accurate', label: 'Real-Time Balance Settlement' },
     ],
     sandbox: {
       address: 'gateway.aayaamx.com/v1/payments/webhook',
@@ -814,9 +814,9 @@ export const solutionsData: Record<string, SolutionData> = {
     headline: 'Financial Automation Engine, Reconciliation & Ledger Synchronization.',
     tagline: 'Automate high-volume financial workflows — intelligent intake validation rules, automated bank statement matching, exception triage pipelines, and continuous bidirectional synchronization with enterprise ERP ledgers.',
     metrics: [
-      { value: '99.8%', label: 'Automated Transaction Match Rate', live: true },
-      { value: '0.00% Drift', label: 'End-of-Day Ledger Reconciliation', live: true },
-      { value: '< 100ms', label: 'Rule Evaluation Engine Execution' },
+      { value: '99.8%', label: 'Transactions Automatically Matched', live: true },
+      { value: '100% Accurate', label: 'Daily Books Match Real Bank Accounts', live: true },
+      { value: '< 100ms', label: 'Fast Automated Rule Execution' },
       { value: 'Auto-Sync', label: 'NetSuite, SAP, Xero & QuickBooks' },
     ],
     sandbox: {

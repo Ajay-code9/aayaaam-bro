@@ -11,46 +11,46 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
 
   const modularEngines = [
     {
-      title: 'AyaamX Broker CRM & Client Operations',
-      subtitle: 'Turnkey Broker Backoffice & Client Portal',
-      desc: 'Connect trader registration, automated KYC verification queues, multi-currency deposit wallets, and multi-tier introducing broker rebate hierarchies with instant ledger synchronization.',
+      title: 'Turnkey Broker CRM & Client Portal Software',
+      subtitle: 'READY-TO-DEPLOY SOFTWARE PRODUCT',
+      desc: 'A complete, ready-to-launch brokerage operating software. We deploy your branded web/mobile client portal, KYC onboarding queues, multi-tier IB rebate tree calculator, and payment gateway backoffice in under 3 days.',
       route: '/products/forex-crm',
-      btnText: 'View CRM Platform Suite'
+      btnText: 'Purchase / License CRM Suite'
     },
     {
-      title: 'Prop Trading Challenge & Risk Engine',
-      subtitle: 'Proprietary Firm Evaluation Software',
-      desc: 'Automate multi-phase evaluation challenges, trailing drawdown surveillance, automated account breach lockouts, and verified funded trader profit-split payouts.',
+      title: 'Prop Trading Challenge & Risk Management Software',
+      subtitle: 'TURNKEY PROP FIRM PLATFORM',
+      desc: 'Launch your proprietary trading firm with our all-in-one evaluation software. Handles challenge phase automation, live equity drawdown breach detection, account credential generation, and funded trader profit split payouts.',
       route: '/products/prop-trading-crm',
-      btnText: 'View Prop Firm Suite'
+      btnText: 'Purchase Prop Firm Suite'
     },
     {
-      title: 'Branded WebTrader & Mobile Apps',
-      subtitle: 'White-Label Trading Interface',
-      desc: 'Cross-platform trading platforms built with native TradingView charting, depth of market (DOM), one-click execution, and sub-10ms latency under your brand.',
+      title: 'White-Label WebTrader & Native Mobile Apps',
+      subtitle: 'WHITE-LABEL SOFTWARE PRODUCT',
+      desc: 'Own your trading interface. We license high-speed cross-platform WebTraders and native iOS/Android apps with TradingView charting, depth of market (DOM), and sub-10ms order routing, customized under your logo and domain.',
       route: '/products/web-trader',
-      btnText: 'View Trading Apps'
+      btnText: 'Get White-Label Terminal'
     },
     {
-      title: 'Social Copy Trading & PAMM / MAM Suite',
-      subtitle: 'Investment & Allocation Software',
-      desc: 'Scale social trading with sub-millisecond copier execution, equity/balance proportional modes, and automated high-watermark performance fee distribution.',
+      title: 'Social Copy Trading & PAMM / MAM Software Engine',
+      subtitle: 'ENTERPRISE ASSET ENGINE',
+      desc: 'Plug-and-play investment software for brokers and asset managers. Instant server-side trade replication across thousands of follower accounts with automated high-watermark performance fee settlement.',
       route: '/products/pamm-mam',
-      btnText: 'View Copy Trading Suite'
+      btnText: 'License Copy Trading Engine'
     },
     {
-      title: 'Autonomous AI Workflow & Compliance Agents',
-      subtitle: 'Enterprise Automation & Document AI',
-      desc: 'Deploy custom AI agents that extract structured data from financial records, automate compliance checking, and prepare draft responses with verified staff review.',
+      title: 'Custom AI Automation & Document Intelligence Systems',
+      subtitle: 'CUSTOM AI PROJECT DELIVERABLE',
+      desc: 'We engineer custom AI software projects tailored to your firm. Includes automated financial document extraction pipelines, compliance audit bots, and 24/7 intelligent customer operations assistants.',
       route: '/services',
-      btnText: 'View AI Automation'
+      btnText: 'Commission AI Project'
     },
     {
-      title: 'FIX 4.4 Engine & Crypto Payment Gateway',
-      subtitle: 'Liquidity Routing & Digital Asset Gateway',
-      desc: 'Direct sub-millisecond FIX protocol session routing to 150+ Tier-1 LPs paired with non-custodial crypto payment gateways supporting 8+ major blockchain networks.',
+      title: 'FIX 4.4 Engine & Crypto Gateway Software',
+      subtitle: 'CORE FINANCIAL INFRASTRUCTURE',
+      desc: 'Enterprise order routing and digital asset payment software. Connect directly to 150+ Tier-1 LPs via ultra-low latency FIX protocols paired with automated, non-custodial crypto deposit and withdrawal gateways.',
       route: '/api-integrations',
-      btnText: 'View FIX & Payments'
+      btnText: 'Get Infrastructure Suite'
     }
   ];
 
@@ -143,10 +143,10 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
         <div className="space-y-10">
           <div className="text-center max-w-3xl mx-auto space-y-2.5">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-950 dark:text-white tracking-tight font-sans">
-              Turnkey Software Modules &amp; Trading Engines
+              Software Products &amp; Enterprise Solutions We Deliver
             </h2>
             <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-medium font-sans">
-              Deploy production-ready broker platforms, proprietary trading suites, and AI engines — customized and licensed under your enterprise brand.
+              Buy production-ready software platforms or commission custom end-to-end engineering projects — delivered with full branding, private cloud deployment, and optional source-code ownership.
             </p>
           </div>
 

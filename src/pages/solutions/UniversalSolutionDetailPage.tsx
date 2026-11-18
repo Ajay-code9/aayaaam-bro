@@ -111,18 +111,10 @@ export const UniversalSolutionDetailPage: React.FC<SolutionPageProps> = ({ onOpe
                 key={idx}
                 className="p-4 rounded-xl bg-slate-50 dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] transition-all hover:border-emerald-500/40 group"
               >
-                <div className="flex items-center justify-between gap-2 mb-1">
-                  <div className="text-lg sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight group-hover:text-emerald-500 transition-colors truncate">
-                    {metric.value}
-                  </div>
-                  {metric.live && (
-                    <span className="flex items-center gap-1 px-1.5 py-0.5 rounded text-[9px] font-mono font-bold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/30 shrink-0">
-                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                      LIVE SLA
-                    </span>
-                  )}
+                <div className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight group-hover:text-emerald-500 transition-colors truncate mb-1">
+                  {metric.value}
                 </div>
-                <div className="text-xs text-slate-600 dark:text-slate-400 font-medium">
+                <div className="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
                   {metric.label}
                 </div>
               </div>
@@ -173,145 +165,7 @@ export const UniversalSolutionDetailPage: React.FC<SolutionPageProps> = ({ onOpe
         </section>
       )}
 
-      {/* 3. INTERACTIVE SIMULATION SANDBOX */}
-      {data.sandbox && data.sandbox.tabs && data.sandbox.tabs.length > 0 && (
-        <section className="py-16 sm:py-24 border-b border-slate-200 dark:border-[#1F1F28] bg-slate-50/30 dark:bg-transparent">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
-            
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-              <div className="space-y-2 max-w-2xl">
-                <span className="text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest flex items-center gap-2">
-                  <Terminal className="w-3.5 h-3.5" />
-                  LIVE SYSTEM ARCHITECTURE SIMULATOR
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">
-                  Interactive Production Inspection
-                </h2>
-                <p className="text-sm text-slate-600 dark:text-slate-400">
-                  Examine the underlying distributed logic, RPC handlers, data schemas, and failover topologies that power our production deployments.
-                </p>
-              </div>
-
-              {/* Status Indicator */}
-              <div className="flex items-center gap-2 font-mono text-xs px-3.5 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 border border-emerald-200 dark:border-emerald-500/30 self-start md:self-auto">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                <span className="font-bold">{data.sandbox.liveBadge}</span>
-              </div>
-            </div>
-
-            {/* Sandbox Card */}
-            <div className="rounded-2xl border border-slate-200 dark:border-[#1F1F28] bg-white dark:bg-[#0D0D12] overflow-hidden shadow-xl">
-              
-              {/* Browser Bar */}
-              <div className="px-4 py-3 bg-slate-100 dark:bg-[#12121A] border-b border-slate-200 dark:border-[#1F1F28] flex flex-wrap items-center justify-between gap-3">
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-red-400/80 shrink-0" />
-                  <span className="w-3 h-3 rounded-full bg-yellow-400/80 shrink-0" />
-                  <span className="w-3 h-3 rounded-full bg-green-400/80 shrink-0" />
-                  <span className="ml-3 font-mono text-xs text-slate-500 dark:text-slate-400 items-center gap-1.5 hidden sm:flex truncate max-w-[200px] md:max-w-none">
-                    <Lock className="w-3 h-3 text-emerald-500 shrink-0" />
-                    https://{data.sandbox.address}
-                  </span>
-                </div>
-
-                <div className="w-full sm:w-auto flex items-center gap-1.5 overflow-x-auto no-scrollbar py-1 max-w-full">
-                  {data.sandbox.tabs.map((tab) => (
-                    <button
-                      key={tab.id}
-                      onClick={() => setActiveTabId(tab.id)}
-                      className={`px-3 py-1.5 rounded-lg font-mono text-xs font-semibold whitespace-nowrap transition-all cursor-pointer shrink-0 ${
-                        activeTab?.id === tab.id
-                          ? 'bg-emerald-500 text-slate-950 shadow'
-                          : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/50 dark:hover:bg-slate-800/50'
-                      }`}
-                    >
-                      {tab.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Sandbox Body */}
-              {activeTab && (
-                <div className="p-4 sm:p-6 space-y-6">
-                  
-                  {/* Tab Telemetry Bar */}
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-3.5 rounded-xl bg-slate-50 dark:bg-[#08080C] border border-slate-200 dark:border-[#1F1F28]">
-                    <div className="flex items-center justify-between sm:justify-start sm:gap-3">
-                      <span className="text-xs text-slate-500 font-mono">{activeTab.metricLabel1}:</span>
-                      <span className="text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">{activeTab.metricValue1}</span>
-                    </div>
-                    <div className="flex items-center justify-between sm:justify-start sm:gap-3 border-t sm:border-t-0 sm:border-l border-slate-200 dark:border-[#1F1F28] pt-2 sm:pt-0 sm:pl-3">
-                      <span className="text-xs text-slate-500 font-mono">{activeTab.metricLabel2}:</span>
-                      <span className="text-xs font-mono font-bold text-slate-800 dark:text-slate-200">{activeTab.metricValue2}</span>
-                    </div>
-                    <div className="flex items-center justify-between sm:justify-start sm:gap-3 border-t sm:border-t-0 sm:border-l border-slate-200 dark:border-[#1F1F28] pt-2 sm:pt-0 sm:pl-3">
-                      <span className="text-xs text-slate-500 font-mono">{activeTab.metricLabel3}:</span>
-                      <span className="text-xs font-mono font-bold text-slate-800 dark:text-slate-200">{activeTab.metricValue3}</span>
-                    </div>
-                  </div>
-
-                  {/* Code View */}
-                  <div className="rounded-xl bg-slate-950 text-slate-200 p-4 font-mono text-xs sm:text-[13px] leading-relaxed overflow-x-auto border border-slate-800 shadow-inner">
-                    <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-800 text-slate-400 text-xs">
-                      <span className="flex items-center gap-2">
-                        <Code2 className="w-4 h-4 text-emerald-400" />
-                        {activeTab.codeTitle}
-                      </span>
-                      <span className="px-2 py-0.5 rounded text-[10px] bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">
-                        {activeTab.badge}
-                      </span>
-                    </div>
-
-                    <pre className="space-y-1">
-                      {activeTab.codeLines?.map((line, lIdx) => (
-                        <div 
-                          key={lIdx} 
-                          className={`flex items-start ${
-                            line.type === 'highlight' 
-                              ? 'bg-emerald-500/10 -mx-4 px-4 py-0.5 rounded text-emerald-200 font-medium' 
-                              : line.type === 'comment' 
-                              ? 'text-slate-500 italic' 
-                              : ''
-                          }`}
-                        >
-                          <span className="w-8 select-none text-slate-600 text-right pr-4 text-[11px]">{lIdx + 1}</span>
-                          <span className="flex-1">
-                            {line.parts.map((p, pIdx) => {
-                              let cls = 'text-slate-300';
-                              if (p.kind === 'keyword') cls = 'text-purple-400 font-bold';
-                              if (p.kind === 'func') cls = 'text-blue-400 font-semibold';
-                              if (p.kind === 'component') cls = 'text-yellow-400 font-semibold';
-                              if (p.kind === 'string') cls = 'text-emerald-400';
-                              if (p.kind === 'prop') cls = 'text-sky-300';
-                              if (p.kind === 'badge') cls = 'px-1.5 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-[10px]';
-                              return <span key={pIdx} className={cls}>{p.text}</span>;
-                            })}
-                          </span>
-                        </div>
-                      ))}
-                    </pre>
-                  </div>
-
-                  {/* Sandbox Footer Note */}
-                  <div className="flex items-center justify-between text-xs text-slate-500 dark:text-slate-400 font-mono pt-2">
-                    <span>{data.sandbox.footerNote}</span>
-                    <span className="flex items-center gap-1 text-emerald-600 dark:text-emerald-400">
-                      <ShieldCheck className="w-3.5 h-3.5" />
-                      AUDITED ARCHITECTURE
-                    </span>
-                  </div>
-
-                </div>
-              )}
-
-            </div>
-
-          </div>
-        </section>
-      )}
-
-      {/* 4. TECHNICAL SPECIFICATION MATRIX */}
+      {/* 3. TECHNICAL SPECIFICATION MATRIX */}
       {data.techMatrix && (
         <section className="py-16 sm:py-20 border-b border-slate-200 dark:border-[#1F1F28]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
@@ -357,18 +211,18 @@ export const UniversalSolutionDetailPage: React.FC<SolutionPageProps> = ({ onOpe
         </section>
       )}
 
-      {/* 5. DELIVERABLES / CORE CAPABILITIES */}
+      {/* 5. DELIVERABLES / CORE CAPABILITIES (HIGH-END ENTERPRISE CARD DESIGN) */}
       <section id="deliverables" className="py-16 sm:py-24 border-b border-slate-200 dark:border-[#1F1F28] bg-slate-50/40 dark:bg-transparent">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
           
-          <div className="max-w-2xl space-y-2">
+          <div className="text-center max-w-3xl mx-auto space-y-3">
             <span className="text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
               WHAT WE DELIVER
             </span>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
-              Core Capabilities & Turnkey Deliverables
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 dark:text-white font-sans tracking-tight">
+              Core Capabilities &amp; Turnkey Deliverables
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
+            <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
               Every deployment includes complete institutional deliverables, documented APIs, and 100% intellectual property ownership.
             </p>
           </div>
@@ -377,32 +231,36 @@ export const UniversalSolutionDetailPage: React.FC<SolutionPageProps> = ({ onOpe
             {data.deliverables?.map((deliv, idx) => (
               <div 
                 key={idx}
-                className="p-6 rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] space-y-4 hover:border-emerald-500/40 transition-all shadow-sm hover:shadow-md group flex flex-col justify-between"
+                className="group relative rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200/90 dark:border-[#1F1F28] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/50 hover:shadow-xl dark:hover:border-emerald-500/40 flex flex-col justify-between"
               >
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between">
-                    <span className="px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/5">
+                    <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">
                       {deliv.badge}
                     </span>
-                    <span className="text-xs font-mono font-bold text-slate-400 group-hover:text-emerald-500 transition-colors">
+                    <span className="text-xs font-mono font-extrabold text-slate-300 dark:text-slate-700 group-hover:text-emerald-500 transition-colors">
                       0{idx + 1}
                     </span>
                   </div>
 
-                  <h3 className="text-base font-bold text-slate-900 dark:text-white group-hover:text-emerald-500 transition-colors">
-                    {deliv.title}
-                  </h3>
-
-                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                    {deliv.description}
-                  </p>
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-950 dark:text-white font-sans group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                      {deliv.title}
+                    </h3>
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans mt-2">
+                      {deliv.description}
+                    </p>
+                  </div>
                 </div>
 
-                <div className="pt-4 border-t border-slate-100 dark:border-[#1F1F28] space-y-1.5">
+                <div className="mt-5 pt-4 border-t border-slate-100 dark:border-white/5 space-y-2">
+                  <div className="text-[10px] font-mono font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
+                    TECHNICAL SPECIFICATIONS
+                  </div>
                   {deliv.specs?.map((spec, sIdx) => (
-                    <div key={sIdx} className="flex items-center gap-2 text-[11px] font-mono text-slate-700 dark:text-slate-300">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0" />
-                      <span>{spec}</span>
+                    <div key={sIdx} className="flex items-start gap-2.5 text-xs font-medium text-slate-700 dark:text-slate-300 font-sans">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5 group-hover:scale-125 transition-transform" />
+                      <span className="leading-snug">{spec}</span>
                     </div>
                   ))}
                 </div>
@@ -415,36 +273,27 @@ export const UniversalSolutionDetailPage: React.FC<SolutionPageProps> = ({ onOpe
 
       {/* 6. VERIFIED PRODUCTION CASE STUDY SHOWCASE */}
       {data.project && (
-        <section className="py-16 sm:py-20 border-b border-slate-200 dark:border-[#1F1F28]">
+        <section className="py-14 sm:py-18 border-b border-slate-200 dark:border-[#1F1F28] bg-slate-50/50 dark:bg-transparent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="p-8 sm:p-10 rounded-3xl bg-slate-50 dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] flex flex-col lg:flex-row items-center justify-between gap-8">
-              <div className="space-y-3 max-w-2xl">
-                <div className="flex items-center gap-2">
-                  <span className="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-emerald-500 text-slate-950">
-                    FEATURED CASE STUDY
-                  </span>
-                  <span className="text-xs font-mono text-slate-500 dark:text-slate-400">
-                    DEPLOYED IN PRODUCTION
-                  </span>
-                </div>
-                <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">
+            <div className="p-7 sm:p-9 rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] shadow-xs flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+              <div className="space-y-2.5 max-w-2xl">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-400">
+                  PRODUCTION DELIVERABLE SHOWCASE
+                </span>
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 dark:text-white font-sans tracking-tight">
                   {data.project.name}
                 </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed font-sans font-normal">
                   {data.project.summary}
                 </p>
-                <div className="pt-2 flex items-center gap-2 text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400">
-                  <Activity className="w-4 h-4" />
-                  <span>KEY IMPACT: {data.project.metrics}</span>
-                </div>
               </div>
 
-              <div className="shrink-0 flex flex-col sm:flex-row gap-3">
+              <div className="shrink-0">
                 <button
                   onClick={onOpenAccount}
-                  className="px-6 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold text-xs uppercase tracking-wider transition-all shadow-md cursor-pointer"
+                  className="px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider transition-all shadow-sm cursor-pointer"
                 >
-                  REQUEST CASE STUDY BRIEF
+                  Request Case Study Brief
                 </button>
               </div>
             </div>
@@ -452,19 +301,19 @@ export const UniversalSolutionDetailPage: React.FC<SolutionPageProps> = ({ onOpe
         </section>
       )}
 
-      {/* 7. 3-STAGE METHODOLOGY */}
+      {/* 7. 3-STAGE METHODOLOGY (PREMIUM ARCHITECTURAL PROCESS DESIGN) */}
       {data.methodology && (
-        <section className="py-16 sm:py-24 border-b border-slate-200 dark:border-[#1F1F28] bg-slate-50/30 dark:bg-transparent">
+        <section className="py-16 sm:py-24 border-b border-slate-200 dark:border-[#1F1F28] bg-slate-50/40 dark:bg-transparent">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             
-            <div className="text-center max-w-2xl mx-auto space-y-2">
+            <div className="text-center max-w-3xl mx-auto space-y-3">
               <span className="text-[11px] font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
-                DELIVERY ROADMAP
+                DELIVERY FRAMEWORK
               </span>
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
-                How We Engineer & Ship Your Solution
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-950 dark:text-white font-sans tracking-tight">
+                Predictable 3-Stage Milestone Execution
               </h2>
-              <p className="text-sm text-slate-600 dark:text-slate-400">
+              <p className="text-slate-600 dark:text-slate-300 text-sm sm:text-base leading-relaxed font-normal">
                 A structured, sprint-driven engineering process from architecture discovery to turn-key production launch.
               </p>
             </div>
@@ -477,33 +326,38 @@ export const UniversalSolutionDetailPage: React.FC<SolutionPageProps> = ({ onOpe
               ].map((item, idx) => (
                 <div 
                   key={idx}
-                  className="p-6 rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200 dark:border-[#1F1F28] space-y-4 relative shadow-sm"
+                  className="group relative rounded-2xl bg-white dark:bg-[#0D0D12] border border-slate-200/90 dark:border-[#1F1F28] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/50 hover:shadow-xl flex flex-col justify-between"
                 >
-                  <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-[#1F1F28]">
-                    <span className="text-2xl font-black font-mono text-emerald-500">
-                      {item.stage}
-                    </span>
-                    <span className="text-xs font-mono font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                      STAGE {item.stage}
-                    </span>
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-white/5">
+                      <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 font-mono font-black text-sm flex items-center justify-center border border-emerald-200/80 dark:border-emerald-500/30">
+                        {item.stage}
+                      </div>
+                      <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
+                        PHASE {item.stage}
+                      </span>
+                    </div>
+
+                    <h3 className="text-lg font-bold text-slate-950 dark:text-white font-sans group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                      {item.data.title.replace(/^Stage\s*\d+:\s*/i, '')}
+                    </h3>
+
+                    <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-sans">
+                      {item.data.focus}
+                    </p>
                   </div>
 
-                  <h3 className="text-lg font-bold text-slate-900 dark:text-white">
-                    {item.data.title}
-                  </h3>
-
-                  <p className="text-xs text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
-                    {item.data.focus}
-                  </p>
-
-                  <ul className="space-y-2 pt-2 border-t border-slate-100 dark:border-[#1F1F28]">
+                  <div className="mt-5 pt-4 border-t border-slate-100 dark:border-white/5 space-y-2">
+                    <div className="text-[10px] font-mono font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
+                      KEY DELIVERABLES
+                    </div>
                     {item.data.bullets?.map((b, bIdx) => (
-                      <li key={bIdx} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 mt-0.5 shrink-0" />
-                        <span>{b}</span>
-                      </li>
+                      <div key={bIdx} className="flex items-start gap-2.5 text-xs font-medium text-slate-700 dark:text-slate-300 font-sans">
+                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0 mt-1.5 group-hover:scale-125 transition-transform" />
+                        <span className="leading-snug">{b}</span>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                 </div>
               ))}
             </div>
