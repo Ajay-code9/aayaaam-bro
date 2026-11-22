@@ -453,3 +453,32 @@ header, header * {
   pointer-events: auto !important;
 }
 
+/* Smooth auto-scroll for overflowing navigation text on hover */
+.nav-text-container {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.nav-text-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.group:hover .nav-text-marquee {
+  animation: marquee-hover-scroll 5s linear infinite alternate;
+}
+
+@keyframes marquee-hover-scroll {
+  0%, 20% {
+    transform: translateX(0%);
+  }
+  80%, 100% {
+    transform: translateX(-40%);
+  }
+}
+

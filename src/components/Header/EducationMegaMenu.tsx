@@ -20,7 +20,7 @@ export const EducationMegaMenu: React.FC<EducationMegaMenuProps> = ({
 
   return (
     <div
-      className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[980px] max-w-[calc(100vw-32px)] rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 p-0 animate-in fade-in zoom-in-95 duration-200 z-50 overflow-hidden font-sans ${
+      className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1020px] max-w-[calc(100vw-32px)] rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 p-0 animate-in fade-in zoom-in-95 duration-200 z-50 overflow-hidden font-sans ${
         isDark ? 'bg-[#0E131F] text-white shadow-black/80' : 'bg-[#FAFCFB] text-slate-900 shadow-slate-900/15'
       }`}
     >
@@ -31,7 +31,7 @@ export const EducationMegaMenu: React.FC<EducationMegaMenuProps> = ({
       <div className="flex flex-col lg:flex-row min-h-[300px]">
         
         {/* ── LEFT PANEL: Category Selector (Vertical Tabs) ── */}
-        <div className={`w-full lg:w-[230px] shrink-0 p-2.5 border-b lg:border-b-0 lg:border-r ${
+        <div className={`w-full lg:w-[260px] shrink-0 p-2.5 border-b lg:border-b-0 lg:border-r ${
           isDark ? 'border-slate-800/80 bg-[#0A0E17]' : 'border-slate-200/80 bg-[#F4F8F6]'
         }`}>
           <div className="space-y-1.5">
@@ -67,7 +67,9 @@ export const EducationMegaMenu: React.FC<EducationMegaMenuProps> = ({
                     >
                       <IconComp className="w-4 h-4" />
                     </div>
-                    <span className="truncate">{category.title}</span>
+                    <div className="nav-text-container" title={category.title}>
+                      <span className="nav-text-marquee">{category.title}</span>
+                    </div>
                   </div>
 
                   {isActive && (
