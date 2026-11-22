@@ -61,7 +61,9 @@ export const Navbar: React.FC<NavbarProps> = ({
   const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>('services');
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
-  const isDarkNavbar = theme === 'dark';
+  const isHome = currentPath === '/' || currentPath === '';
+  const isTransparentAtTop = isHome && !isScrolled;
+  const isDarkNavbar = theme === 'dark' || isTransparentAtTop;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,9 +94,13 @@ export const Navbar: React.FC<NavbarProps> = ({
       setTimeout(() => {
         const el = document.getElementById(hash);
         if (el) {
-          const yOffset = -140; // generous offset to account for sticky navbar + subheader
-          const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
-          window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+          const yOffset = -90; // offset to account for sticky navbar
+          if ((window as any).lenis) {
+            (window as any).lenis.scrollTo(el, { offset: yOffset, duration: 1.2 });
+          } else {
+            const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+          }
         }
       }, 150);
       return;
@@ -105,26 +111,32 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 w-full ${
-      isDarkNavbar
-        ? 'bg-[#0d121d]/95 backdrop-blur-md border-b border-slate-800 text-white shadow-md shadow-black/20'
-        : 'bg-white/95 backdrop-blur-md border-b border-slate-200 text-slate-900 shadow-xs'
+    <header className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-300 ease-in-out ${
+      isTransparentAtTop
+        ? 'bg-transparent border-b border-transparent text-white'
+        : isDarkNavbar
+          ? 'bg-[#0d121d]/95 backdrop-blur-md border-b border-slate-800 text-white shadow-md shadow-black/20'
+          : 'bg-white/95 backdrop-blur-md border-b border-slate-200 text-slate-900 shadow-xs'
     }`}>
       {/* Container - Fixed still height (no shrinking/jumping on scroll) */}
       <div className="w-full max-w-[1720px] mx-auto px-2 sm:px-4 lg:px-4 xl:px-6 flex items-center justify-between h-16 relative">
         <button onClick={() => handleNav('/')} className="flex items-center group shrink-0 text-left cursor-pointer py-1">
           <div className="relative flex items-center h-10 sm:h-11 lg:h-11">
-            {/* Dark Theme Logo (Crisp White 'AAYAAMX' Text) */}
+            {/* White Logo: Shown in dark mode OR when transparent over Hero */}
             <img
               src="/logo-white.png?v=4"
               alt="AyaamX"
-              className="h-full w-auto object-contain transition-opacity duration-300 ease-in-out opacity-0 dark:opacity-100 group-hover:scale-[1.02]"
+              className={`h-full w-auto object-contain transition-opacity duration-300 ease-in-out ${
+                isDarkNavbar ? 'opacity-100' : 'opacity-0'
+              } group-hover:scale-[1.02]`}
             />
-            {/* Light Theme Logo (Original Navy 'AAYAAMX' Text) */}
+            {/* Navy/Black Logo: Shown ONLY in light mode when scrolled down */}
             <img
               src="/logo-black.png"
               alt="AyaamX"
-              className="h-full w-auto object-contain transition-opacity duration-300 ease-in-out opacity-100 dark:opacity-0 absolute inset-0 group-hover:scale-[1.02]"
+              className={`h-full w-auto object-contain transition-opacity duration-300 ease-in-out ${
+                isDarkNavbar ? 'opacity-0' : 'opacity-100'
+              } absolute inset-0 group-hover:scale-[1.02]`}
             />
           </div>
         </button>
@@ -146,8 +158,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('services'); }}
                 className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
                   activeDropdown === 'services' || currentPath.startsWith('/services/web') || currentPath.startsWith('/services/mobile')
-                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
+                    ? 'text-blue-600 dark:text-blue-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-blue-400' : 'text-slate-700 hover:text-blue-600'
                 }`}
               >
                 <span>Web &amp; Mobile Development</span>
@@ -171,8 +183,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('solutions'); }}
                 className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
                   activeDropdown === 'solutions'
-                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
+                    ? 'text-blue-600 dark:text-blue-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-blue-400' : 'text-slate-700 hover:text-blue-600'
                 }`}
               >
                 <span>Fintech &amp; Trading</span>
@@ -196,8 +208,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('industries'); }}
                 className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
                   activeDropdown === 'industries' || currentPath.startsWith('/services/ai-automation')
-                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
+                    ? 'text-blue-600 dark:text-blue-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-blue-400' : 'text-slate-700 hover:text-blue-600'
                 }`}
               >
                 <span>AI &amp; Automation</span>
@@ -221,8 +233,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('products'); }}
                 className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
                   activeDropdown === 'products' || currentPath.startsWith('/marketplace')
-                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
+                    ? 'text-blue-600 dark:text-blue-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-blue-400' : 'text-slate-700 hover:text-blue-600'
                 }`}
               >
                 <span>Marketplace</span>
@@ -246,8 +258,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('education'); }}
                 className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
                   activeDropdown === 'education' || currentPath.startsWith('/education')
-                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
+                    ? 'text-blue-600 dark:text-blue-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-blue-400' : 'text-slate-700 hover:text-blue-600'
                 }`}
               >
                 <span>Education</span>
@@ -271,8 +283,8 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('api-websockets'); }}
                 className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
                   activeDropdown === 'api-websockets'
-                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
-                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
+                    ? 'text-blue-600 dark:text-blue-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-blue-400' : 'text-slate-700 hover:text-blue-600'
                 }`}
               >
                 <span>APIs &amp; WebSockets</span>
@@ -291,8 +303,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => handleNav('/#case-studies')}
               className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] font-bold ${
                 currentPath === '/portfolio' || currentPath.includes('case-studies')
-                  ? 'text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50/80 dark:bg-emerald-950/40'
-                  : 'text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 hover:bg-emerald-500/10'
+                  ? 'text-blue-600 dark:text-blue-400 font-bold bg-blue-50/80 dark:bg-blue-950/40'
+                  : 'text-blue-600 dark:text-blue-400 hover:text-emerald-500 hover:bg-blue-500/10'
               }`}
             >
               <span>Portfolio</span>
@@ -307,7 +319,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={(e) => toggleTheme(e)}
             aria-label="Toggle Light/Dark Theme"
             title={theme === 'dark' ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-            className="w-9 h-9 rounded-full flex items-center justify-center text-slate-600 dark:text-amber-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors border border-slate-200 dark:border-slate-700 cursor-pointer"
+            className={`w-9 h-9 rounded-full flex items-center justify-center transition-colors cursor-pointer ${
+              isTransparentAtTop
+                ? 'text-slate-200 hover:text-white bg-white/5 hover:bg-white/10 border border-white/20'
+                : 'text-slate-600 dark:text-amber-400 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-700'
+            }`}
           >
             <div className="relative w-4 h-4 flex items-center justify-center transition-transform duration-500 hover:rotate-12">
               <Sun className={`w-4 h-4 text-amber-400 absolute transition-all duration-500 transform ${
@@ -319,10 +335,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </button>
 
-          {/* Discuss Your Project CTA - AayaamX Core CTA */}
+          {/* Discuss Your Project CTA - AayaamX Brand Gradient */}
           <button
             onClick={onOpenInquiry}
-            className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-lg font-semibold text-xs text-white bg-emerald-600 hover:bg-emerald-500 shadow-sm hover:shadow-emerald-600/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer whitespace-nowrap shrink-0"
+            className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg font-bold text-xs text-white bg-gradient-to-r from-[#1b3995] via-[#438780] to-[#77bd7b] hover:from-[#204464] hover:to-[#438780] shadow-sm hover:shadow-[#77bd7b]/25 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer whitespace-nowrap shrink-0"
           >
             <span>Discuss Your Project</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
@@ -398,7 +414,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       key={cat.id}
                       onClick={() => handleNav(cat.items[0]?.path || '/services')}
                       className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-semibold transition-colors flex items-center justify-between ${
-                        isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-200' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-800'
+                        isDarkNavbar ? 'hover:text-blue-400 hover:bg-slate-800/60 text-slate-200' : 'hover:text-blue-600 hover:bg-slate-100 text-slate-800'
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
@@ -436,7 +452,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     key={idx}
                     onClick={() => handleNav(item.path)}
                     className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-medium transition-colors flex items-center justify-between ${
-                      isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-300' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-700'
+                      isDarkNavbar ? 'hover:text-blue-400 hover:bg-slate-800/60 text-slate-300' : 'hover:text-blue-600 hover:bg-slate-100 text-slate-700'
                     }`}
                   >
                     <span>{item.title}</span>
@@ -472,7 +488,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     key={idx}
                     onClick={() => handleNav(item.path)}
                     className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-medium transition-colors flex items-center justify-between ${
-                      isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-300' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-700'
+                      isDarkNavbar ? 'hover:text-blue-400 hover:bg-slate-800/60 text-slate-300' : 'hover:text-blue-600 hover:bg-slate-100 text-slate-700'
                     }`}
                   >
                     <span>{item.title}</span>
@@ -507,7 +523,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     key={idx}
                     onClick={() => handleNav(item.path)}
                     className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-medium transition-colors flex items-center justify-between ${
-                      isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-300' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-700'
+                      isDarkNavbar ? 'hover:text-blue-400 hover:bg-slate-800/60 text-slate-300' : 'hover:text-blue-600 hover:bg-slate-100 text-slate-700'
                     }`}
                   >
                     <span>{item.title}</span>
@@ -536,7 +552,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       key={cat.id}
                       onClick={() => handleNav('/education')}
                       className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-semibold transition-colors flex items-center justify-between ${
-                        isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-200' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-800'
+                        isDarkNavbar ? 'hover:text-blue-400 hover:bg-slate-800/60 text-slate-200' : 'hover:text-blue-600 hover:bg-slate-100 text-slate-800'
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
@@ -569,7 +585,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                       key={cat.id}
                       onClick={() => handleNav(cat.items[0]?.path || '/api-integrations')}
                       className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-semibold transition-colors flex items-center justify-between ${
-                        isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-200' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-800'
+                        isDarkNavbar ? 'hover:text-blue-400 hover:bg-slate-800/60 text-slate-200' : 'hover:text-blue-600 hover:bg-slate-100 text-slate-800'
                       }`}
                     >
                       <div className="flex items-center gap-2.5">
@@ -587,7 +603,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Portfolio Mobile Link */}
           <button
             onClick={() => handleNav('/#case-studies')}
-            className="w-full text-left p-2.5 rounded-lg font-bold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 flex items-center justify-between text-xs border-b border-slate-200 dark:border-slate-800/80"
+            className="w-full text-left p-2.5 rounded-lg font-bold text-blue-600 dark:text-blue-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 flex items-center justify-between text-xs border-b border-slate-200 dark:border-slate-800/80"
           >
             <span className="font-extrabold uppercase tracking-wider text-xs">Portfolio</span>
             <ArrowRight className="w-4 h-4 text-emerald-500" />
@@ -618,7 +634,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                     key={idx}
                     onClick={() => handleNav(item.path)}
                     className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-medium transition-colors flex items-center justify-between ${
-                      isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-300' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-700'
+                      isDarkNavbar ? 'hover:text-blue-400 hover:bg-slate-800/60 text-slate-300' : 'hover:text-blue-600 hover:bg-slate-100 text-slate-700'
                     }`}
                   >
                     <span>{item.title}</span>

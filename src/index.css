@@ -3,17 +3,17 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-  --color-emerald-50: #f2fbf6;
-  --color-emerald-100: #dcf3e6;
-  --color-emerald-200: #bce7ce;
-  --color-emerald-300: #8fd5af;
-  --color-emerald-400: #2ea564;
-  --color-emerald-500: #0d824d;
-  --color-emerald-600: #0a7343;
-  --color-emerald-700: #085e37;
-  --color-emerald-800: #084b2d;
-  --color-emerald-900: #073e26;
-  --color-emerald-950: #032315;
+  --color-emerald-50: #f0f8f7;
+  --color-emerald-100: #dcefe9;
+  --color-emerald-200: #b5ded5;
+  --color-emerald-300: #77bd7b;
+  --color-emerald-400: #438780;
+  --color-emerald-500: #204464;
+  --color-emerald-600: #1b3995;
+  --color-emerald-700: #162e7a;
+  --color-emerald-800: #13245e;
+  --color-emerald-900: #0f1c48;
+  --color-emerald-950: #080e28;
 }
 
 @layer base {
@@ -26,8 +26,8 @@
     --color-paragraph: #4B5563;
     --color-muted: #6B7280;
 
-    --brand-green-primary: #31a736;
-    --brand-green-hover: #26872a;
+    --brand-gradient-start: #1b3995; --brand-gradient-mid1: #204464; --brand-gradient-mid2: #438780; --brand-gradient-end: #77bd7b; --brand-gradient-mid: #1A56DB; --brand-gradient-end: #0ea5e9;
+    --brand-blue-primary: #1b3995; --brand-teal-primary: #438780; --brand-teal-primary: #06B6D4;
   }
 
   /* Global Clean Font Application: Plus Jakarta Sans Everywhere */
@@ -36,15 +36,15 @@
   }
 
   /* Smooth theme transition engine targeted at layout containers and card backgrounds */
-  html, body, header, footer, main, section, nav, div, button, a, input, select, textarea, table, tr, td, th {
-    transition-property: background-color, border-color, fill, stroke, box-shadow;
-    transition-duration: 300ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* Typography elements switch crisp & high-contrast without passing through dull grey mid-blend */
-  h1, h2, h3, h4, h5, h6, p, span, label, strong, b, code {
+  html.theme-changing body,
+  html.theme-changing header,
+  html.theme-changing footer,
+  html.theme-changing main,
+  html.theme-changing section,
+  html.theme-changing nav {
     transition-property: background-color, border-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   /* Exclude heavy image/video/canvas assets or spin animations from theme transition lag */
@@ -73,19 +73,30 @@
     z-index: 9999;
   }
 
+  /* Lenis recommended standard CSS */
+  html.lenis, html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+  .lenis.lenis-smooth iframe {
+    pointer-events: none;
+  }
+
   html {
     color: var(--color-heading);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    scroll-behavior: smooth;
     scrollbar-width: thin;
     scrollbar-color: #cbd5e1 transparent;
-    /* scrollbar-gutter: stable; */
-    overflow-y: scroll;
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
-    width: 100%;
   }
 
   html.dark {
@@ -96,10 +107,10 @@
     scrollbar-color: #334155 transparent;
 
     /* Subtle, grounded corporate green for dark theme (eliminates neon glare) */
-    --color-emerald-400: #22995b;
-    --color-emerald-500: #1b854e;
-    --color-emerald-600: #147242;
-    --color-emerald-700: #0f5b34;
+    --color-emerald-400: #60a5fa;
+    --color-emerald-500: #3b82f6;
+    --color-emerald-600: #2563eb;
+    --color-emerald-700: #1d4ed8;
   }
 
   /* Ultra-Thin Modern Global Scrollbar (5px Width, No Arrows) */
@@ -144,8 +155,8 @@
     line-height: 1.7;
     color: #4B5563;
     background-color: #ffffff;
-    overflow-x: hidden !important;
-    max-width: 100vw !important;
+    overflow-x: clip;
+    max-width: 100vw;
     width: 100%;
     position: relative;
   }
@@ -241,16 +252,17 @@
 
   /* #31a736 Brand Accent Utility Overrides */
   .bg-emerald-500, .bg-emerald-600 {
-    background-color: #31a736 !important;
+    background: linear-gradient(135deg, #1b3995 0%, #204464 40%, #438780 75%, #77bd7b 100%) !important;
+    background-color: #1b3995 !important;
   }
   .text-emerald-400, .text-emerald-500, .text-emerald-600, .text-emerald-700, .text-emerald-800 {
-    color: #31a736 !important;
+    color: #438780 !important;
   }
   .border-emerald-200, .border-emerald-400, .border-emerald-500, .border-emerald-600 {
-    border-color: rgba(49, 167, 54, 0.4) !important;
+    border-color: rgba(67, 135, 128, 0.45) !important;
   }
   .bg-emerald-50, .bg-emerald-100, .bg-emerald-500\/10 {
-    background-color: rgba(49, 167, 54, 0.1) !important;
+    background-color: rgba(67, 135, 128, 0.12) !important;
   }
 
   /* Headings inherit clean, crisp sans-serif geometry */

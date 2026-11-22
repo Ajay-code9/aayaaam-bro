@@ -26,7 +26,7 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
           
           {/* Green Category Tag */}
-          <div className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.18em] text-emerald-600 dark:text-emerald-400">
+          <div className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-[0.18em] text-blue-600 dark:text-blue-400">
             {data.categoryBadge || 'WEB DEVELOPMENT'}
           </div>
 
@@ -52,7 +52,7 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
                 const el = document.getElementById('deliverables');
                 if (el) el.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm rounded-full transition-all shadow-md inline-flex items-center gap-2 cursor-pointer group"
+              className="px-6 py-3 bg-gradient-to-r from-[#1b3995] via-[#204464] to-[#438780] hover:opacity-95 text-white font-bold text-xs sm:text-sm rounded-full transition-all shadow-md inline-flex items-center gap-2 cursor-pointer group"
             >
               <span>View Software overview</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -73,7 +73,7 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
           
           <div className="space-y-2">
-            <span className="text-[11px] sm:text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-[0.18em]">
+            <span className="text-[11px] sm:text-xs font-mono font-bold text-blue-600 dark:text-blue-400 uppercase tracking-[0.18em]">
               STANDARD ENGINEERING PACKAGE
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 dark:text-white font-sans tracking-tight">
@@ -89,10 +89,10 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
             {data.deliverables.map((del, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl p-5 sm:p-6 border transition-all duration-200 bg-white dark:bg-[#0E131F] border-slate-200/80 dark:border-slate-800 hover:border-emerald-500/40 hover:shadow-md flex items-start gap-4"
+                className="rounded-2xl p-5 sm:p-6 border transition-all duration-200 bg-white dark:bg-[#0E131F] border-slate-200/80 dark:border-slate-800 hover:border-blue-500/40 hover:shadow-md flex items-start gap-4"
               >
                 {/* Emerald Rounded Checkbox Icon */}
-                <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-300 dark:border-emerald-500/30 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                <div className="w-7 h-7 rounded-lg bg-blue-50 dark:bg-blue-500/10 border border-blue-300 dark:border-emerald-500/30 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 mt-0.5">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
 
@@ -117,7 +117,7 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
             
             <div className="space-y-2">
-              <span className="text-[11px] sm:text-xs font-mono font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-[0.18em]">
+              <span className="text-[11px] sm:text-xs font-mono font-bold text-blue-600 dark:text-blue-400 uppercase tracking-[0.18em]">
                 EXECUTION METHODOLOGY
               </span>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-slate-950 dark:text-white font-sans tracking-tight">
@@ -137,12 +137,12 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
               ].map(({ stageNum, stageData }, idx) => (
                 <div
                   key={idx}
-                  className="rounded-2xl p-6 border transition-all duration-200 bg-white dark:bg-[#0E131F] border-slate-200/80 dark:border-slate-800 hover:border-emerald-500/40 hover:shadow-md flex flex-col justify-between min-h-[220px]"
+                  className="rounded-2xl p-6 border transition-all duration-200 bg-white dark:bg-[#0E131F] border-slate-200/80 dark:border-slate-800 hover:border-blue-500/40 hover:shadow-md flex flex-col justify-between min-h-[220px]"
                 >
                   <div className="space-y-4">
                     {/* Circle Number and Stage Pill */}
                     <div className="flex items-center justify-between">
-                      <div className="w-8 h-8 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 font-bold text-xs flex items-center justify-center border border-emerald-200 dark:border-emerald-500/30">
+                      <div className="w-8 h-8 rounded-full bg-blue-50 dark:bg-blue-500/10 text-blue-600 dark:text-blue-400 font-bold text-xs flex items-center justify-center border border-emerald-200 dark:border-emerald-500/30">
                         {stageNum}
                       </div>
                       <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700">
@@ -161,9 +161,9 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
                   </div>
 
                   {/* Guaranteed SLA bottom row */}
-                  <div className="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-semibold text-emerald-600 dark:text-emerald-400">
+                  <div className="mt-6 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-xs font-semibold text-blue-600 dark:text-blue-400">
                     <span>Guaranteed SLA</span>
-                    <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                    <CheckCircle2 className="w-4 h-4 text-blue-500" />
                   </div>
                 </div>
               ))}
@@ -171,7 +171,7 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
 
             {/* Sub-Card Box: Explore full Web & Mobile Development */}
             <div className="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-slate-50/70 dark:bg-[#0B0F19] p-7 sm:p-9 text-center space-y-4 mt-8">
-              <div className="w-10 h-10 mx-auto rounded-xl bg-emerald-100/70 dark:bg-emerald-500/15 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-mono font-bold text-sm">
+              <div className="w-10 h-10 mx-auto rounded-xl bg-emerald-100/70 dark:bg-blue-500/15 text-emerald-700 dark:text-emerald-400 flex items-center justify-center font-mono font-bold text-sm">
                 &lt;/&gt;
               </div>
 
@@ -187,7 +187,7 @@ export const UniversalServiceDetailPage: React.FC<ServicePageProps> = ({ onOpenA
               <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                 <button
                   onClick={() => navigate('/custom-software-development')}
-                  className="text-xs sm:text-sm font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 transition-colors inline-flex items-center gap-1 cursor-pointer"
+                  className="text-xs sm:text-sm font-bold text-blue-600 dark:text-blue-400 hover:text-blue-500 transition-colors inline-flex items-center gap-1 cursor-pointer"
                 >
                   <span>Explore web &amp; mobile development</span>
                   <ArrowRight className="w-3.5 h-3.5" />

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import Lenis from 'lenis';
 import { HIDE_CLIENT_PORTAL_LOGIN, HIDE_BOOK_DEMO } from './config/flags';
 import { RouterProvider, useRouter } from './router';
 import { ThemeProvider, useTheme } from './context/ThemeContext';
@@ -105,6 +106,8 @@ import { DedicatedCompanyPage } from './pages/DedicatedCompanyPage';
 
 // New Managed Service Submenu Pages
 import { TechnicalSupportPage } from './pages/services/TechnicalSupportPage';
+import { PortfolioPage } from './pages/portfolio/PortfolioPage';
+import { SingleCaseStudyPage } from './pages/portfolio/SingleCaseStudyPage';
 import { SuccessManagerPage } from './pages/services/SuccessManagerPage';
 import { HostingServerPage } from './pages/services/HostingServerPage';
 import { CyberSecurityPage } from './pages/services/CyberSecurityPage';
@@ -140,7 +143,45 @@ function AppContent() {
     handleOpenAccount();
   };
 
-  React.useEffect(() => {
+  // Initialize Lenis smooth scroll engine (Apple/Linear buttery glide)
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.1,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // exponential ease-out
+      orientation: 'vertical',
+      gestureOrientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 0.9,
+      touchMultiplier: 1.5,
+    });
+
+    let animationFrameId: number;
+    function raf(time: number) {
+      lenis.raf(time);
+      animationFrameId = requestAnimationFrame(raf);
+    }
+    animationFrameId = requestAnimationFrame(raf);
+
+    // Expose lenis to window for programmatic scroll calls
+    (window as any).lenis = lenis;
+
+    return () => {
+      cancelAnimationFrame(animationFrameId);
+      lenis.destroy();
+      delete (window as any).lenis;
+    };
+  }, []);
+
+  // Scroll to top or target hash smoothly on route transition
+  useEffect(() => {
+    if ((window as any).lenis) {
+      (window as any).lenis.scrollTo(0, { immediate: true });
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [currentPath]);
+
+  useEffect(() => {
     if (currentPath === '/open-account' || currentPath === '/signup' || currentPath === '/register') {
       setIsInquiryModalOpen(true);
     }
@@ -374,7 +415,14 @@ function AppContent() {
       case '/signup':
       case '/register':
         return <HomePage onOpenAccount={handleOpenAccount} onExplorePlatforms={() => navigate('/platforms')} />;
+      case '/portfolio':
+      case '/case-studies':
+        return <PortfolioPage onOpenAccount={handleOpenAccount} />;
       default:
+        if (currentPath.startsWith('/portfolio/')) {
+          const slug = currentPath.replace('/portfolio/', '');
+          return <SingleCaseStudyPage slug={slug} onOpenAccount={handleOpenAccount} />;
+        }
         if (currentPath.startsWith('/services')) {
           return <UniversalServiceDetailPage onOpenAccount={handleOpenAccount} />;
         }
@@ -409,8 +457,10 @@ function AppContent() {
         />
       )}
 
-      {/* Dynamic Route View (offset by fixed 64px header) */}
-      <main id="main-content" className="w-full max-w-full overflow-x-clip pt-16">
+      {/* Dynamic Route View (offset by fixed 64px header on non-home pages) */}
+      <main id="main-content" className={`w-full max-w-full overflow-x-clip ${
+        currentPath === '/' || currentPath === '' ? 'pt-0' : 'pt-16'
+      }`}>
         {renderPage()}
       </main>
 
