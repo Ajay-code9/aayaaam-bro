@@ -55,14 +55,14 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({ isOpen, onClose }) =
             <div>
               <div className="flex items-center gap-2">
                 <h3 className="text-base sm:text-lg font-serif-heading font-bold text-white tracking-tight leading-none">
-                  Enterprise Solution Inquiry
+                  Discuss Your Project
                 </h3>
                 <span className="px-1.5 py-0.5 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 rounded text-[9px] font-mono uppercase font-semibold">
-                  Direct Desk
+                  Engineering Desk
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 font-sans mt-0.5 leading-tight">
-                Submit your requirements & get a custom proposal within 24 hours.
+                Connect directly with our lead architects. We will review your specs and respond within 24 hours.
               </p>
             </div>
           </div>
@@ -230,7 +230,7 @@ export const InquiryModal: React.FC<InquiryModalProps> = ({ isOpen, onClose }) =
                   ) : (
                     <>
                       <Send className="w-3.5 h-3.5" />
-                      <span>Submit Inquiry Request</span>
+                      <span>Discuss Your Project</span>
                     </>
                   )}
                 </button>

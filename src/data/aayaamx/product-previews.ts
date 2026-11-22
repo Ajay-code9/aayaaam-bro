@@ -15,7 +15,7 @@ export const productPreviews = {
   },
   '/products/broker-backoffice': {
     title: 'Brokerage Operations Desk',
-    reference: 'Operations Desk BB-2041',
+    reference: 'Operations Desk AX-2041',
     states: ['Request Received', 'Exception Reviewed', 'Decision Recorded'],
     records: ['Request · Account funding & rebate check', 'Review · Finance & risk clearance', 'Audit · Role permissions logged'],
     actions: ['Review Request', 'Authorize Update'],

@@ -2,6 +2,18 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useTheme } from '../../context/ThemeContext';
 import { useRouter } from '../../router';
 import { HIDE_CLIENT_PORTAL_LOGIN, HIDE_BOOK_DEMO } from '../../config/flags';
+import { WebMobileMegaMenu } from './WebMobileMegaMenu';
+import { FintechTradingMegaMenu } from './FintechTradingMegaMenu';
+import { AiAutomationMegaMenu } from './AiAutomationMegaMenu';
+import { MarketplaceMegaMenu } from './MarketplaceMegaMenu';
+import { EducationMegaMenu } from './EducationMegaMenu';
+import { ApiWebsocketMegaMenu } from './ApiWebsocketMegaMenu';
+import { API_WEBSOCKET_CATEGORIES } from '../../data/apiWebsocketNavData';
+import { EDUCATION_CATEGORIES } from '../../data/educationNavData';
+import { MARKETPLACE_CATEGORIES } from '../../data/marketplaceNavData';
+import { AI_AUTOMATION_CATEGORIES } from '../../data/aiAutomationNavData';
+import { FINTECH_TRADING_CATEGORIES } from '../../data/fintechTradingNavData';
+import { WEB_MOBILE_CATEGORIES } from '../../data/webMobileNavData';
 import {
   Menu,
   X,
@@ -99,9 +111,9 @@ export const Navbar: React.FC<NavbarProps> = ({
         : 'bg-white/95 backdrop-blur-md border-b border-slate-200 text-slate-900 shadow-xs'
     }`}>
       {/* Container - Fixed still height (no shrinking/jumping on scroll) */}
-      <div className="w-full max-w-[1536px] mx-auto px-3 sm:px-4 lg:px-5 xl:px-8 flex items-center justify-between h-16 relative">
+      <div className="w-full max-w-[1720px] mx-auto px-2 sm:px-4 lg:px-4 xl:px-6 flex items-center justify-between h-16 relative">
         <button onClick={() => handleNav('/')} className="flex items-center group shrink-0 text-left cursor-pointer py-1">
-          <div className="relative flex items-center h-11 sm:h-12 lg:h-[3.25rem]">
+          <div className="relative flex items-center h-10 sm:h-11 lg:h-11">
             {/* Dark Theme Logo (Crisp White 'AAYAAMX' Text) */}
             <img
               src="/logo-white.png?v=4"
@@ -118,23 +130,12 @@ export const Navbar: React.FC<NavbarProps> = ({
         </button>
 
         {/* Centered Navigation Links - AYAAMX ARCHITECTURE */}
-        <nav className={`hidden lg:flex items-center justify-center flex-1 mx-1 lg:mx-2 xl:mx-3 gap-1 lg:gap-1.5 xl:gap-2 text-[11px] lg:text-[11.5px] xl:text-xs font-semibold ${
+        <nav className={`hidden lg:flex items-center justify-center flex-1 mx-1 lg:mx-2 xl:mx-2 gap-1 xl:gap-1.5 text-[11px] xl:text-[11.5px] font-medium tracking-tight ${
           isDarkNavbar ? 'text-slate-200' : 'text-slate-700'
         }`}>
-            {/* 0. Home */}
-            <button
-              type="button"
-              onClick={() => handleNav('/')}
-              className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2.5 py-1.5 rounded-lg ${
-                currentPath === '/'
-                  ? 'text-emerald-500 font-bold bg-emerald-500/10'
-                  : isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60' : 'hover:text-emerald-600 hover:bg-slate-100/80'
-              }`}
-            >
-              <span>Home</span>
-            </button>
 
-            {/* 1. Services Dropdown */}
+
+            {/* 1. Web & Mobile Development Dropdown (Client's Interactive Master-Detail Menu) */}
             <div
               className="py-2"
               onMouseEnter={() => handleMouseEnter('services')}
@@ -143,202 +144,23 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 type="button"
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('services'); }}
-                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2.5 py-1.5 rounded-lg ${
-                  activeDropdown === 'services' || currentPath.startsWith('/services')
-                    ? 'text-emerald-500 font-bold bg-emerald-500/10'
-                    : isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60' : 'hover:text-emerald-600 hover:bg-slate-100/80'
+                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
+                  activeDropdown === 'services' || currentPath.startsWith('/services/web') || currentPath.startsWith('/services/mobile')
+                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
                 }`}
               >
-                <span>Services</span>
+                <span>Web &amp; Mobile Development</span>
               </button>
               {activeDropdown === 'services' && (
-                <div
-                  onMouseEnter={() => handleMouseEnter('services')}
-                  onMouseLeave={handleMouseLeave}
-                  className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1140px] max-w-[calc(100vw-32px)] rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 p-6 animate-in fade-in zoom-in-95 duration-200 z-50 overflow-hidden ${
-                    isDarkNavbar
-                      ? 'bg-slate-900 text-white shadow-black/70'
-                      : 'bg-white text-slate-900 shadow-slate-900/15'
-                  }`}
-                >
-                  {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[33.5%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
-
-                  {/* 4 Column Layout matching reference screenshot media_1794498004827_118a8b60.jpg */}
-                  <div className="grid grid-cols-4 gap-6">
-                    {/* Col 1 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Software & Core Dev</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Custom Software Development", path: "/services/software-engineering/custom-software-development", desc: "Tailored web, mobile & distributed backend systems", icon: Code },
-                          { title: "SaaS Development", path: "/services/software-engineering/saas-development", desc: "Multi-tenant platforms with high uptime & RLS isolation", icon: Layers },
-                          { title: "Web Application Development", path: "/services/software-engineering/web-application-development", desc: "Interactive portals built around business workflows", icon: Globe },
-                          { title: "Mobile App Development", path: "/services/software-engineering/mobile-app-development", desc: "High-performance native iOS & Android applications", icon: Smartphone }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 2 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Trading & Fintech</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Forex CRM Development", path: "/services/trading-technology/forex-crm-development", desc: "Trader onboarding, verification & account servicing", icon: LineChart },
-                          { title: "Broker Backoffice Development", path: "/services/trading-technology/broker-backoffice-development", desc: "Staff operations workspace, multi-tier IB & finance", icon: Building },
-                          { title: "Trading Platform Integration", path: "/services/trading-technology/trading-platform-integration", desc: "WebTrader, mobile apps & trading terminal APIs", icon: Smartphone },
-                          { title: "FIX API & LP Integration", path: "/services/trading-technology/fix-api-integration", desc: "Institutional execution bridges & latency feeds", icon: Cloud }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 3 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">AI & Blockchain</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "AI Agent Development", path: "/services/ai-automation/ai-agent-development", desc: "Intelligent autonomous agents & reviewable workflows", icon: Brain },
-                          { title: "Generative AI Solutions", path: "/services/ai-automation/generative-ai-solutions", desc: "Document processing, draft replies & vector search", icon: Sparkles },
-                          { title: "Smart Contract Development", path: "/services/blockchain/smart-contract-development", desc: "Audited token contracts, staking & EVM logic", icon: Blocks },
-                          { title: "Digital Wallet Development", path: "/services/blockchain/digital-wallet-development", desc: "Multi-chain deposit tracking & confirmation routing", icon: Wallet }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 4 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Cloud & Architecture</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Cloud Engineering & DevOps", path: "/services/cloud-infrastructure/cloud-engineering", desc: "Dockerized scalable microservices & CI/CD", icon: Cloud },
-                          { title: "System Integration & APIs", path: "/services/cloud-infrastructure/api-development", desc: "Robust data flow between existing enterprise tools", icon: Code },
-                          { title: "UI/UX Engineering", path: "/services/product-engineering/ui-ux-engineering", desc: "Design systems & component libraries", icon: Layers },
-                          { title: "MVP & Modernization", path: "/services/product-engineering/mvp-development", desc: "From concept scoping to production handover", icon: Sparkles }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <WebMobileMegaMenu
+                  onNavigate={handleNav}
+                  isDark={isDarkNavbar}
+                />
               )}
             </div>
 
-            {/* 2. Solutions Dropdown */}
+            {/* 2. Fintech & Trading Dropdown (Client's Interactive Master-Detail Menu) */}
             <div
               className="py-2"
               onMouseEnter={() => handleMouseEnter('solutions')}
@@ -347,199 +169,23 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 type="button"
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('solutions'); }}
-                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2.5 py-1.5 rounded-lg ${
-                  activeDropdown === 'solutions' || currentPath.startsWith('/solutions')
-                    ? 'text-emerald-500 font-bold bg-emerald-500/10'
-                    : isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60' : 'hover:text-emerald-600 hover:bg-slate-100/80'
+                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
+                  activeDropdown === 'solutions'
+                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
                 }`}
               >
-                <span>Solutions</span>
+                <span>Fintech &amp; Trading</span>
               </button>
               {activeDropdown === 'solutions' && (
-                <div
-                  onMouseEnter={() => handleMouseEnter('solutions')}
-                  onMouseLeave={handleMouseLeave}
-                  className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1140px] max-w-[calc(100vw-32px)] rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 p-6 animate-in fade-in zoom-in-95 duration-200 z-50 overflow-hidden ${
-                    isDarkNavbar
-                      ? 'bg-slate-900 text-white shadow-black/70'
-                      : 'bg-white text-slate-900 shadow-slate-900/15'
-                  }`}
-                >
-                  {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[42.1%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
-
-                  {/* 4 Column Layout matching reference screenshot */}
-                  <div className="grid grid-cols-4 gap-6">
-                    {/* Col 1 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Fintech & Payments</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Digital Payments Gateway", path: "/solutions/fintech/digital-payments", desc: "Deposit address creation, network confirms & settlement", icon: Wallet },
-                          { title: "Financial Platforms Core", path: "/solutions/fintech/financial-platforms", desc: "Customer accounts, transaction history & audit trails", icon: LineChart },
-                          { title: "Financial Automation Engine", path: "/solutions/fintech/financial-automation", desc: "Intake rules, validation pipelines & ledger sync", icon: Shield }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 2 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Forex & Brokerage</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Broker Infrastructure", path: "/solutions/forex-brokerage/broker-infrastructure", desc: "Connect client portal, trading server & CRM feeds", icon: Building },
-                          { title: "Brokerage CRM Ecosystem", path: "/solutions/forex-brokerage/brokerage-crm-ecosystem", desc: "Applications, verification results & staff queues", icon: LineChart },
-                          { title: "IB & Affiliate Management", path: "/solutions/forex-brokerage/ib-and-affiliate-management", desc: "Multi-tier referral trees & automated commission rules", icon: Layers }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 3 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Prop & Blockchain</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Prop Evaluation Platforms", path: "/solutions/prop-trading/evaluation-platforms", desc: "Challenge rules, trader dashboards & drawdown monitor", icon: Shield },
-                          { title: "Challenge & Payout Ops", path: "/solutions/prop-trading/payout-management", desc: "Automated progress tracking & funded trader reviews", icon: Compass },
-                          { title: "Digital Assets & Wallets", path: "/solutions/blockchain/digital-assets", desc: "Non-custodial wallets, tokenization & smart contracts", icon: Blocks }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 4 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Enterprise & AI</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Enterprise CRM & ERP", path: "/solutions/enterprise/enterprise-crm", desc: "Consolidated team records, approval pipelines & reports", icon: Building },
-                          { title: "Workflow Automation Hub", path: "/solutions/enterprise/workflow-automation", desc: "Automate manual tasks, document review & alerts", icon: Code },
-                          { title: "AI Business Assistants", path: "/solutions/ai-business/intelligent-assistants", desc: "Extract documents, answer queries from company data", icon: Brain },
-                          { title: "AI Knowledge Management", path: "/solutions/ai-business/knowledge-management-systems", desc: "Vector search & reviewable AI draft pipelines", icon: Sparkles }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <FintechTradingMegaMenu
+                  onNavigate={handleNav}
+                  isDark={isDarkNavbar}
+                />
               )}
             </div>
 
-            {/* 3. Industries Dropdown */}
+            {/* 3. AI & Automation Dropdown (Client's Interactive Master-Detail Menu) */}
             <div
               className="py-2"
               onMouseEnter={() => handleMouseEnter('industries')}
@@ -548,194 +194,23 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 type="button"
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('industries'); }}
-                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2.5 py-1.5 rounded-lg ${
-                  activeDropdown === 'industries' || currentPath.startsWith('/industries')
-                    ? 'text-emerald-500 font-bold bg-emerald-500/10'
-                    : isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60' : 'hover:text-emerald-600 hover:bg-slate-100/80'
+                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
+                  activeDropdown === 'industries' || currentPath.startsWith('/services/ai-automation')
+                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
                 }`}
               >
-                <span>Industries</span>
+                <span>AI &amp; Automation</span>
               </button>
               {activeDropdown === 'industries' && (
-                <div
-                  onMouseEnter={() => handleMouseEnter('industries')}
-                  onMouseLeave={handleMouseLeave}
-                  className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1140px] max-w-[calc(100vw-32px)] rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 p-6 animate-in fade-in zoom-in-95 duration-200 z-50 overflow-hidden ${
-                    isDarkNavbar
-                      ? 'bg-slate-900 text-white shadow-black/70'
-                      : 'bg-white text-slate-900 shadow-slate-900/15'
-                  }`}
-                >
-                  {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[51.05%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
-
-                  {/* 4 Columns Grid matching reference screenshot */}
-                  <div className="grid grid-cols-4 gap-6">
-                    {/* Col 1 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Financial Markets</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Financial Services", path: "/industries/financial-services", desc: "Digital account management & automated finance reviews", icon: Wallet },
-                          { title: "Forex & Brokerage", path: "/industries/forex-brokerage", desc: "Connect client portal, trading server & CRM operations", icon: LineChart }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 2 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Trading & Banking</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Proprietary Trading Firms", path: "/industries/prop-trading", desc: "Evaluation challenges, risk surveillance & payout queue", icon: Compass },
-                          { title: "Banking & Fintech", path: "/industries/banking-fintech", desc: "Core banking integrations, PSP routing & ledgers", icon: Building }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 3 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Web3 & Digital Assets</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Blockchain & Web3", path: "/industries/blockchain-web3", desc: "Smart contracts, decentralized apps & protocol tooling", icon: Blocks },
-                          { title: "Digital Asset Businesses", path: "/industries/digital-asset-businesses", desc: "Non-custodial custody, token transfers & liquidity", icon: Wallet }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 4 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Tech Startups & Enterprise</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "SaaS & Tech Startups", path: "/industries/saas-technology-startups", desc: "Multi-tenant platforms, APIs & rapid MVP release", icon: Code },
-                          { title: "Enterprise Businesses", path: "/industries/enterprise-businesses", desc: "Modernize legacy records & automated operations", icon: Layers }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <AiAutomationMegaMenu
+                  onNavigate={handleNav}
+                  isDark={isDarkNavbar}
+                />
               )}
             </div>
 
-            {/* 4. Products Dropdown */}
+            {/* 4. Marketplace Dropdown (Client's Interactive Master-Detail Menu) */}
             <div
               className="py-2"
               onMouseEnter={() => handleMouseEnter('products')}
@@ -744,387 +219,84 @@ export const Navbar: React.FC<NavbarProps> = ({
               <button
                 type="button"
                 onClick={(e) => { e.preventDefault(); handleMouseEnter('products'); }}
-                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2.5 py-1.5 rounded-lg ${
-                  activeDropdown === 'products' || currentPath.startsWith('/products')
-                    ? 'text-emerald-500 font-bold bg-emerald-500/10'
-                    : isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60' : 'hover:text-emerald-600 hover:bg-slate-100/80'
+                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
+                  activeDropdown === 'products' || currentPath.startsWith('/marketplace')
+                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
                 }`}
               >
-                <span>Products</span>
+                <span>Marketplace</span>
               </button>
               {activeDropdown === 'products' && (
-                <div
-                  onMouseEnter={() => handleMouseEnter('products')}
-                  onMouseLeave={handleMouseLeave}
-                  className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1140px] max-w-[calc(100vw-32px)] rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 p-6 animate-in fade-in zoom-in-95 duration-200 z-50 overflow-hidden ${
-                    isDarkNavbar
-                      ? 'bg-slate-900 text-white shadow-black/70'
-                      : 'bg-white text-slate-900 shadow-slate-900/15'
-                  }`}
-                >
-                  {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[59.97%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
-
-                  {/* 4 Columns Grid matching reference screenshot */}
-                  <div className="grid grid-cols-4 gap-6">
-                    {/* Col 1 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Brokerage Platforms</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Forex CRM Platform", path: "/products/forex-crm", desc: "Trader portal, KYC verification & account servicing", icon: LineChart },
-                          { title: "Broker Backoffice Platform", path: "/products/broker-backoffice", desc: "Operations queues, multi-tier IB tree & permissions", icon: Building }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 2 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Prop & Trading Suites</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Prop Trading Management", path: "/products/prop-trading-management", desc: "Automated challenge surveillance, drawdown & payouts", icon: Compass },
-                          { title: "Custom Product Ecosystems", path: "/products/custom-product-ecosystems", desc: "Turnkey multi-product interconnected tech stacks", icon: Layers }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 3 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Enterprise SaaS</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Enterprise SaaS Products", path: "/products/enterprise-saas", desc: "Multi-tenant business software with team workspaces", icon: Building },
-                          { title: "AI-Powered Products", path: "/products/ai-powered", desc: "Reviewable AI workflow assistants & extraction tools", icon: Brain }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 4 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Blockchain & Wallets</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Blockchain & Wallet Platforms", path: "/products/blockchain-wallet", desc: "Deposit tracking, multi-chain wallets & settlements", icon: Wallet }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <MarketplaceMegaMenu
+                  onNavigate={handleNav}
+                  isDark={isDarkNavbar}
+                />
               )}
             </div>
 
-            {/* 5. Company */}
+            {/* 5. Education Dropdown (Client's Interactive Master-Detail Menu) */}
             <div
               className="py-2"
-              onMouseEnter={() => handleMouseEnter('company')}
+              onMouseEnter={() => handleMouseEnter('education')}
               onMouseLeave={handleMouseLeave}
             >
               <button
                 type="button"
-                onClick={(e) => { e.preventDefault(); handleMouseEnter('company'); }}
-                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2.5 py-1.5 rounded-lg ${
-                  activeDropdown === 'company' || currentPath.startsWith('/company')
-                    ? 'text-emerald-500 font-bold bg-emerald-500/10'
-                    : isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60' : 'hover:text-emerald-600 hover:bg-slate-100/80'
+                onClick={(e) => { e.preventDefault(); handleMouseEnter('education'); }}
+                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
+                  activeDropdown === 'education' || currentPath.startsWith('/education')
+                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
                 }`}
               >
-                <span>Company</span>
+                <span>Education</span>
               </button>
-              {activeDropdown === 'company' && (
-                <div
-                  onMouseEnter={() => handleMouseEnter('company')}
-                  onMouseLeave={handleMouseLeave}
-                  className={`absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[1140px] max-w-[calc(100vw-32px)] rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 p-6 animate-in fade-in zoom-in-95 duration-200 z-50 overflow-hidden ${
-                    isDarkNavbar
-                      ? 'bg-slate-900 text-white shadow-black/70'
-                      : 'bg-white text-slate-900 shadow-slate-900/15'
-                  }`}
-                >
-                  {/* AyaamX Emerald Diamond Caret */}
-                  <div className="absolute -top-2 left-[68.86%] -translate-x-1/2 w-4 h-4 rotate-45 bg-emerald-500 border-t border-l border-emerald-500 shadow-xs" />
-
-                  {/* 4 Columns Grid matching reference screenshot */}
-                  <div className="grid grid-cols-4 gap-6">
-                    {/* Col 1 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">About AayaamX</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "About AayaamX", path: "/company#about", desc: "Software engineering company from Ahmedabad, India", icon: Building },
-                          { title: "Our Story", path: "/company#our-story", desc: "From individual tools to connected ecosystems", icon: Compass }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 2 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Mission & Method</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Vision & Mission", path: "/company#vision-mission", desc: "Build maintainable software people can rely on", icon: Shield },
-                          { title: "Our Approach", path: "/company#our-approach", desc: "Align, build & review, launch and handover", icon: Layers }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 3 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Tech & Architecture</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Technology Expertise", path: "/company#technology-expertise", desc: "Choose technology around what the product needs", icon: Code },
-                          { title: "Leadership & Team", path: "/company#leadership-team", desc: "Product, architecture, engineering & delivery roles", icon: Sparkles }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-
-                    {/* Col 4 */}
-                    <div>
-                      <div className="flex items-center justify-center pb-2.5 mb-3 border-b border-slate-100 dark:border-slate-800 text-center">
-                        <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Careers & Connect</span>
-                      </div>
-                      <div className="space-y-1">
-                        {[
-                          { title: "Careers", path: "/company#careers", desc: "Join our sales, marketing or instructor teams", icon: Smartphone },
-                          { title: "Contact Us", path: "/company#contact", desc: "Share your project brief & discuss requirements", icon: Send }
-                        ].map((item, idx) => {
-                          const IconComp = item.icon;
-                          return (
-                            <button
-                              key={idx}
-                              onClick={() => handleNav(item.path)}
-                              className={`w-full group flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 text-left cursor-pointer ${
-                                isDarkNavbar ? 'hover:bg-slate-800/80' : 'hover:bg-slate-50'
-                              }`}
-                            >
-                              <div className={`w-9 h-9 min-w-[36px] rounded-lg flex items-center justify-center transition-all duration-200 ${
-                                isDarkNavbar
-                                  ? 'bg-slate-800 text-emerald-400 group-hover:bg-emerald-950/60 group-hover:scale-105'
-                                  : 'bg-emerald-50 text-emerald-600 group-hover:bg-emerald-100 group-hover:scale-105'
-                              }`}>
-                                <IconComp className="w-4 h-4" />
-                              </div>
-                              <div className="min-w-0">
-                                <div className="text-[13px] font-semibold text-slate-800 dark:text-slate-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
-                                  {item.title}
-                                </div>
-                                <div className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug line-clamp-2 mt-0.5">
-                                  {item.desc}
-                                </div>
-                              </div>
-                            </button>
-                          );
-                        })}
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              {activeDropdown === 'education' && (
+                <EducationMegaMenu
+                  onNavigate={handleNav}
+                  isDark={isDarkNavbar}
+                />
               )}
             </div>
+
+            {/* 6. APIs & WebSockets Dropdown (Client's Interactive Master-Detail Menu) */}
+            <div
+              className="py-2"
+              onMouseEnter={() => handleMouseEnter('api-websockets')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button
+                type="button"
+                onClick={(e) => { e.preventDefault(); handleMouseEnter('api-websockets'); }}
+                className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] ${
+                  activeDropdown === 'api-websockets'
+                    ? 'text-emerald-600 dark:text-emerald-400 font-bold'
+                    : isDarkNavbar ? 'text-slate-300 hover:text-emerald-400' : 'text-slate-700 hover:text-emerald-600'
+                }`}
+              >
+                <span>APIs &amp; WebSockets</span>
+              </button>
+              {activeDropdown === 'api-websockets' && (
+                <ApiWebsocketMegaMenu
+                  onNavigate={handleNav}
+                  isDark={isDarkNavbar}
+                />
+              )}
+            </div>
+
+            {/* 7. Portfolio Direct Link */}
+            <button
+              type="button"
+              onClick={() => handleNav('/#case-studies')}
+              className={`transition-all duration-200 ease-in-out cursor-pointer whitespace-nowrap flex items-center px-2 py-1 rounded-md text-[11px] xl:text-[11.5px] font-bold ${
+                currentPath === '/portfolio' || currentPath.includes('case-studies')
+                  ? 'text-emerald-600 dark:text-emerald-400 font-bold bg-emerald-50/80 dark:bg-emerald-950/40'
+                  : 'text-emerald-600 dark:text-emerald-400 hover:text-emerald-500 hover:bg-emerald-500/10'
+              }`}
+            >
+              <span>Portfolio</span>
+            </button>
 
         </nav>
 
@@ -1147,12 +319,12 @@ export const Navbar: React.FC<NavbarProps> = ({
             </div>
           </button>
 
-          {/* Share Your Project Brief CTA - AayaamX Core CTA */}
+          {/* Discuss Your Project CTA - AayaamX Core CTA */}
           <button
             onClick={onOpenInquiry}
-            className="inline-flex items-center justify-center gap-2 px-4.5 py-2.5 rounded-xl font-semibold text-xs text-white bg-emerald-600 hover:bg-emerald-500 shadow-sm hover:shadow-emerald-600/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer whitespace-nowrap shrink-0"
+            className="inline-flex items-center justify-center gap-2 px-3.5 py-2 rounded-lg font-semibold text-xs text-white bg-emerald-600 hover:bg-emerald-500 shadow-sm hover:shadow-emerald-600/20 transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 cursor-pointer whitespace-nowrap shrink-0"
           >
-            <span>Share Project Brief</span>
+            <span>Discuss Your Project</span>
             <ArrowUpRight className="w-3.5 h-3.5" />
           </button>
 
@@ -1208,49 +380,46 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div className={`lg:hidden absolute top-full left-0 right-0 w-full z-50 border-b p-4 space-y-3 shadow-2xl animate-in slide-in-from-top-2 duration-200 max-h-[calc(100vh-5rem)] overflow-y-auto ${
             isDarkNavbar ? 'bg-[#0d121d] border-slate-800 text-white' : 'bg-white border-slate-200 text-slate-800'
           }`}>
-            {/* Services Accordion */}
+            {/* Web & Mobile Development Accordion */}
           <div className="border-b border-slate-200 dark:border-slate-800/80 pb-2">
             <button
               onClick={() => setExpandedMobileSection(expandedMobileSection === 'services' ? null : 'services')}
               className="w-full text-left p-2.5 rounded-lg font-bold flex items-center justify-between text-xs cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50"
             >
-              <span className="font-extrabold uppercase tracking-wider text-xs">Services</span>
+              <span className="font-extrabold uppercase tracking-wider text-xs">Web &amp; Mobile Development</span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${expandedMobileSection === 'services' ? 'rotate-180 text-emerald-500' : 'text-slate-400'}`} />
             </button>
             {expandedMobileSection === 'services' && (
               <div className="pl-3 pr-1 py-1 space-y-1 border-l-2 border-emerald-500/40 ml-2 mt-1">
-                {[
-                  { title: "Custom Software Development", path: "/services/custom-software-development" },
-                  { title: "SaaS Platform Engineering", path: "/services/saas-development" },
-                  { title: "Mobile App Development", path: "/services/mobile-app-development" },
-                  { title: "AI Agent Development", path: "/services/ai-agent-development" },
-                  { title: "Forex & Broker CRM Systems", path: "/services/forex-crm-development" },
-                  { title: "Smart Contracts & Web3 Wallets", path: "/services/smart-contract-development" },
-                  { title: "Cloud Hosting & Server Mgmt", path: "/services/hosting-server-management" },
-                  { title: "UI/UX & Product Design", path: "/services/ui-ux-engineering" }
-                ].map((item, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handleNav(item.path)}
-                    className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-medium transition-colors flex items-center justify-between ${
-                      isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-300' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-700'
-                    }`}
-                  >
-                    <span>{item.title}</span>
-                    <ArrowRight className="w-3 h-3 opacity-60" />
-                  </button>
-                ))}
+                {WEB_MOBILE_CATEGORIES.map((cat) => {
+                  const CatIcon = cat.icon;
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => handleNav(cat.items[0]?.path || '/services')}
+                      className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-semibold transition-colors flex items-center justify-between ${
+                        isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-200' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-800'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <CatIcon className="w-3.5 h-3.5 text-emerald-500" />
+                        <span>{cat.title}</span>
+                      </div>
+                      <ArrowRight className="w-3 h-3 opacity-60 text-emerald-500" />
+                    </button>
+                  );
+                })}
               </div>
             )}
           </div>
 
-          {/* Solutions Accordion */}
+          {/* Fintech & Trading Accordion */}
           <div className="border-b border-slate-200 dark:border-slate-800/80 pb-2">
             <button
               onClick={() => setExpandedMobileSection(expandedMobileSection === 'solutions' ? null : 'solutions')}
               className="w-full text-left p-2.5 rounded-lg font-bold flex items-center justify-between text-xs cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50"
             >
-              <span className="font-extrabold uppercase tracking-wider text-xs">Solutions</span>
+              <span className="font-extrabold uppercase tracking-wider text-xs">Fintech &amp; Trading</span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${expandedMobileSection === 'solutions' ? 'rotate-180 text-emerald-500' : 'text-slate-400'}`} />
             </button>
             {expandedMobileSection === 'solutions' && (
@@ -1278,13 +447,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </div>
 
-          {/* Industries Accordion */}
+          {/* AI & Automation Accordion */}
           <div className="border-b border-slate-200 dark:border-slate-800/80 pb-2">
             <button
               onClick={() => setExpandedMobileSection(expandedMobileSection === 'industries' ? null : 'industries')}
               className="w-full text-left p-2.5 rounded-lg font-bold flex items-center justify-between text-xs cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50"
             >
-              <span className="font-extrabold uppercase tracking-wider text-xs">Industries</span>
+              <span className="font-extrabold uppercase tracking-wider text-xs">AI &amp; Automation</span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${expandedMobileSection === 'industries' ? 'rotate-180 text-emerald-500' : 'text-slate-400'}`} />
             </button>
             {expandedMobileSection === 'industries' && (
@@ -1314,13 +483,13 @@ export const Navbar: React.FC<NavbarProps> = ({
             )}
           </div>
 
-          {/* Products Accordion */}
+          {/* Marketplace Accordion */}
           <div className="border-b border-slate-200 dark:border-slate-800/80 pb-2">
             <button
               onClick={() => setExpandedMobileSection(expandedMobileSection === 'products' ? null : 'products')}
               className="w-full text-left p-2.5 rounded-lg font-bold flex items-center justify-between text-xs cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50"
             >
-              <span className="font-extrabold uppercase tracking-wider text-xs">Products</span>
+              <span className="font-extrabold uppercase tracking-wider text-xs">Marketplace</span>
               <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${expandedMobileSection === 'products' ? 'rotate-180 text-emerald-500' : 'text-slate-400'}`} />
             </button>
             {expandedMobileSection === 'products' && (
@@ -1348,6 +517,81 @@ export const Navbar: React.FC<NavbarProps> = ({
               </div>
             )}
           </div>
+
+          {/* Education Accordion */}
+          <div className="border-b border-slate-200 dark:border-slate-800/80 pb-2">
+            <button
+              onClick={() => setExpandedMobileSection(expandedMobileSection === 'education' ? null : 'education')}
+              className="w-full text-left p-2.5 rounded-lg font-bold flex items-center justify-between text-xs cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            >
+              <span className="font-extrabold uppercase tracking-wider text-xs">Education</span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${expandedMobileSection === 'education' ? 'rotate-180 text-emerald-500' : 'text-slate-400'}`} />
+            </button>
+            {expandedMobileSection === 'education' && (
+              <div className="pl-3 pr-1 py-1 space-y-1 border-l-2 border-emerald-500/40 ml-2 mt-1">
+                {EDUCATION_CATEGORIES.map((cat) => {
+                  const CatIcon = cat.icon;
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => handleNav('/education')}
+                      className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-semibold transition-colors flex items-center justify-between ${
+                        isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-200' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-800'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <CatIcon className="w-3.5 h-3.5 text-emerald-500" />
+                        <span>{cat.title}</span>
+                      </div>
+                      <ArrowRight className="w-3 h-3 opacity-60 text-emerald-500" />
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+          {/* APIs & WebSockets Accordion */}
+          <div className="border-b border-slate-200 dark:border-slate-800/80 pb-2">
+            <button
+              onClick={() => setExpandedMobileSection(expandedMobileSection === 'api-websockets' ? null : 'api-websockets')}
+              className="w-full text-left p-2.5 rounded-lg font-bold flex items-center justify-between text-xs cursor-pointer hover:bg-slate-100 dark:hover:bg-slate-800/50"
+            >
+              <span className="font-extrabold uppercase tracking-wider text-xs">APIs &amp; WebSockets</span>
+              <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${expandedMobileSection === 'api-websockets' ? 'rotate-180 text-emerald-500' : 'text-slate-400'}`} />
+            </button>
+            {expandedMobileSection === 'api-websockets' && (
+              <div className="pl-3 pr-1 py-1 space-y-1 border-l-2 border-emerald-500/40 ml-2 mt-1">
+                {API_WEBSOCKET_CATEGORIES.map((cat) => {
+                  const CatIcon = cat.icon;
+                  return (
+                    <button
+                      key={cat.id}
+                      onClick={() => handleNav(cat.items[0]?.path || '/api-integrations')}
+                      className={`w-full text-left py-2 px-2.5 rounded-md text-xs font-semibold transition-colors flex items-center justify-between ${
+                        isDarkNavbar ? 'hover:text-emerald-400 hover:bg-slate-800/60 text-slate-200' : 'hover:text-emerald-600 hover:bg-slate-100 text-slate-800'
+                      }`}
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <CatIcon className="w-3.5 h-3.5 text-emerald-500" />
+                        <span>{cat.title}</span>
+                      </div>
+                      <ArrowRight className="w-3 h-3 opacity-60 text-emerald-500" />
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
+
+          {/* Portfolio Mobile Link */}
+          <button
+            onClick={() => handleNav('/#case-studies')}
+            className="w-full text-left p-2.5 rounded-lg font-bold text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 flex items-center justify-between text-xs border-b border-slate-200 dark:border-slate-800/80"
+          >
+            <span className="font-extrabold uppercase tracking-wider text-xs">Portfolio</span>
+            <ArrowRight className="w-4 h-4 text-emerald-500" />
+          </button>
 
           {/* Company Accordion */}
           <div className="border-b border-slate-200 dark:border-slate-800/80 pb-2">
@@ -1404,7 +648,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="w-full py-3 text-center font-extrabold text-white bg-emerald-600 hover:bg-emerald-500 rounded-xl text-xs cursor-pointer shadow-md tracking-wide uppercase flex items-center justify-center gap-2"
             >
               <Send className="w-3.5 h-3.5" />
-              Inquire Now
+              Discuss Your Project
             </button>
 
             {!HIDE_BOOK_DEMO && (

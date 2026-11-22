@@ -23,30 +23,30 @@ const HERO_SLIDES: SlideItem[] = [
   {
     id: 1,
     bgImage: '/Homepage/hero-one.webp',
-    badge: 'TURNKEY PRODUCT ENGINEERING',
-    headline: 'We Build & License High-Performance\nSoftware, Trading Systems & AI',
-    subtext: 'AyaamX delivers production-ready trading platforms, broker backoffices, proprietary firm engines, and enterprise AI automation — custom engineered and deployed directly for your brand.',
-    buttonText: 'REQUEST SOFTWARE DEMO',
-    actionType: 'crm',
+    badge: 'AI · FINTECH · ENTERPRISE SOFTWARE ENGINEERING',
+    headline: 'Engineering Complex Digital Products\n& Financial Infrastructure',
+    subtext: 'AyaamX architects and delivers production-grade enterprise software, autonomous AI workflow engines, and institutional FinTech platforms with 100% full source-code ownership.',
+    buttonText: 'DISCUSS YOUR PROJECT',
+    actionType: 'institutional',
     textColor: 'black',
   },
   {
     id: 2,
     bgImage: '/Homepage/hero-two.webp',
-    badge: 'TURNKEY BROKER & PROP FIRM PLATFORMS',
-    headline: 'Turnkey Trading Platforms &\nBroker Backoffice Software',
-    subtext: 'Ready-to-deploy client portals, multi-tier IB commission engines, and automated prop firm risk management — pre-integrated with MT4, MT5, cTrader, and Tier-1 liquidity under your brand.',
-    buttonText: 'REQUEST PLATFORM DEMO',
+    badge: 'INSTITUTIONAL FINTECH & CAPITAL MARKETS',
+    headline: 'High-Throughput Trading Engines &\nCapital Market Infrastructure',
+    subtext: 'Ultra-low latency matching engines, institutional risk gateways, multi-tier partner commission structures, and custom trading portals engineered for high-volume transactions.',
+    buttonText: 'DISCUSS YOUR PROJECT',
     actionType: 'crm',
     textColor: 'white',
   },
   {
     id: 3,
     bgImage: '/Homepage/hero-three.webp',
-    badge: 'ENTERPRISE AI & DIGITAL ENGINEERING',
-    headline: 'Custom AI Automation, Web3 &\nEnterprise Cloud Architecture',
-    subtext: 'We architect and build tailored digital products, document processing pipelines, multi-chain crypto gateways, and scalable cloud microservices for global financial enterprises.',
-    buttonText: 'CONSULT LEAD ARCHITECTS',
+    badge: 'ENTERPRISE AI SYSTEMS & CUSTOM SAAS',
+    headline: 'Autonomous AI Agent Architecture &\nMission-Critical Cloud Platforms',
+    subtext: 'We engineer domain-specialized AI agent pipelines, document intelligence systems, Web3 payment rails, and distributed cloud backends with zero vendor lock-in.',
+    buttonText: 'DISCUSS YOUR PROJECT',
     actionType: 'institutional',
     textColor: 'black',
   },
@@ -68,14 +68,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onOpenAccount, onExplo
   const slide = HERO_SLIDES[currentSlide];
   const isWhiteText = slide.textColor === 'white';
 
-  const handleAction = (type: string) => {
-    if (type === 'crm') {
-      window.location.hash = '/solutions/broker-crm';
-    } else if (type === 'institutional') {
-      window.location.hash = '/institutional';
-    } else {
-      onExplorePlatforms();
-    }
+  const handleAction = (_type: string) => {
+    onOpenAccount();
   };
 
   return (

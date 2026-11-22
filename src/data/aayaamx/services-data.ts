@@ -57,6 +57,273 @@ export interface ServiceData {
 
 export const servicesData: Record<string, ServiceData> = {
   // ==========================================
+  // CUSTOM WEBSITE & WEB DEVELOPMENT
+  // ==========================================
+  'custom-website': {
+    slug: 'custom-website',
+    categoryBadge: 'WEB DEVELOPMENT',
+    categoryHref: '/services/web-development',
+    title: 'Custom website development',
+    tagline: 'Full-spectrum engineering across modern frameworks (React, Next.js, Vue, Angular, Node.js, Python, Go, Laravel, .NET) — from ultra-fast conversion landing pages to robust corporate web platforms.',
+    metrics: [
+      { value: '95+ Lighthouse', label: 'Core Web Vitals & SEO Score', live: true },
+      { value: '< 1.2s LCP', label: 'Ultra-Fast Page Load Speed', live: true },
+      { value: '100% Code Ownership', label: 'Full Git Repository Handover' },
+      { value: 'Zero Vendor Lock-in', label: 'Deploy on Any Cloud or Server' },
+    ],
+    sandbox: {
+      address: 'web.aayaamx.internal/production-runtime',
+      liveBadge: '99.9% HEALTH',
+      footerNote: 'SSR/SSG Edge Runtime • High-throughput CDN caching & automated CI/CD pipeline',
+      tabs: [
+        {
+          id: 'frontend',
+          label: 'Next.js App Router',
+          icon: 'Globe',
+          badge: 'Server Components',
+          metricLabel1: 'RENDER STRATEGY',
+          metricValue1: 'Hybrid ISR / SSR',
+          metricLabel2: 'FIRST CONTENTFUL PAINT',
+          metricValue2: '< 0.6s Global Edge',
+          metricLabel3: 'ASSET OPTIMIZATION',
+          metricValue3: 'AVIF / WebP Auto',
+          codeTitle: 'page.tsx',
+          codeLines: [
+            { type: 'comment', parts: [{ text: '// Next.js App Router with Incremental Static Regeneration' }] },
+            {
+              parts: [
+                { text: 'export const ', kind: 'keyword' },
+                { text: 'revalidate', kind: 'prop' },
+                { text: ' = 3600; // 1-Hour ISR' },
+              ],
+            },
+            {
+              parts: [
+                { text: 'export default async function ', kind: 'keyword' },
+                { text: 'LandingPage', kind: 'func' },
+                { text: '({ params }: PageProps) {' },
+              ],
+            },
+            {
+              type: 'highlight',
+              parts: [
+                { text: '  const content = await ' },
+                { text: 'fetchOptimizedContent', kind: 'func' },
+                { text: '(params.slug);' },
+                { text: '  // 95+ Core Web Vitals', kind: 'badge' },
+              ],
+            },
+            {
+              parts: [
+                { text: '  return <' },
+                { text: 'InteractiveShowcase', kind: 'component' },
+                { text: ' data={content} />;' },
+              ],
+            },
+            { parts: [{ text: '}' }] },
+          ],
+        },
+        {
+          id: 'backend',
+          label: 'Modular API & Database',
+          icon: 'Database',
+          badge: 'PostgreSQL + Redis',
+          metricLabel1: 'API LATENCY',
+          metricValue1: '< 15ms p99',
+          metricLabel2: 'DB CONNECTION POOL',
+          metricValue2: 'PgBouncer Cluster',
+          metricLabel3: 'SECURITY AUDIT',
+          metricValue3: 'OWASP Top 10 Hardened',
+          codeTitle: 'api-service.ts',
+          codeLines: [
+            { type: 'comment', parts: [{ text: '// Scalable REST/GraphQL Service with Redis Caching' }] },
+            {
+              parts: [
+                { text: 'export async function ', kind: 'keyword' },
+                { text: 'handleProjectInquiry', kind: 'func' },
+                { text: '(req: Request) {' },
+              ],
+            },
+            {
+              parts: [
+                { text: '  const payload = await ' },
+                { text: 'validateSchema', kind: 'func' },
+                { text: '(req.json());' },
+              ],
+            },
+            {
+              type: 'highlight',
+              parts: [
+                { text: '  await ' },
+                { text: 'queueLeadProcessing', kind: 'func' },
+                { text: '(payload);' },
+                { text: '  // Zero Data Loss', kind: 'badge' },
+              ],
+            },
+            {
+              parts: [
+                { text: '  return ' },
+                { text: 'jsonResponse', kind: 'func' },
+                { text: '({ success: true, refId: payload.id });' },
+              ],
+            },
+            { parts: [{ text: '}' }] },
+          ],
+        },
+      ],
+    },
+    techMatrix: {
+      column1: {
+        title: 'Frontend & UI Frameworks',
+        icon: 'Code2',
+        items: [
+          'React 19 & Next.js 15 (App Router)',
+          'TypeScript 5 (Strict Typings)',
+          'Tailwind CSS & Framer Motion',
+          'Vue.js 3 / Nuxt.js / Angular',
+          'Semantic HTML5 & Microdata',
+          'Web Vitals & Performance Budget',
+        ],
+      },
+      column2: {
+        title: 'Backend, APIs & Databases',
+        icon: 'Database',
+        items: [
+          'Node.js (NestJS / Express)',
+          'Python (FastAPI / Django)',
+          'Go (Golang) & .NET Core / Laravel',
+          'PostgreSQL, MySQL & Supabase',
+          'Redis Cache & BullMQ Pipelines',
+          'GraphQL & OpenAPI / Swagger Specs',
+        ],
+      },
+      column3: {
+        title: 'DevOps, Security & Cloud',
+        icon: 'Server',
+        items: [
+          'AWS, Cloudflare & Vercel Edge',
+          'Docker & CI/CD GitHub Actions',
+          'OAuth2, JWT & RBAC Access Control',
+          'OWASP Security Hardening',
+          'SSL/TLS Strict, DDoS Shield',
+          'Guaranteed 30-Day SLA & Warranty',
+        ],
+      },
+    },
+    deliverables: [
+      {
+        badge: 'Frontend Engineering',
+        title: 'Responsive Frontend Architecture',
+        description: 'High-performance React / Next.js UI component library engineered for Custom website development with 60fps responsiveness across phones, tablets, and desktop displays.',
+        specs: [
+          'Mobile-First Fluid Layouts',
+          'Custom Design System & Dark/Light Mode',
+          'Interactive Micro-Animations',
+          'Cross-Browser Tested (Chrome, Safari, iOS, Edge)',
+        ],
+      },
+      {
+        badge: 'Backend & Data',
+        title: 'Scalable Backend API & Database',
+        description: 'Modular Node.js / Python / Go REST & GraphQL backend with PostgreSQL data persistence, Redis caching, and automated connection pooling.',
+        specs: [
+          'RESTful / GraphQL Endpoints',
+          'PostgreSQL Relational Schema with Indexing',
+          'Redis Query Caching & Rate Limiting',
+          'Automated Database Backup Workflows',
+        ],
+      },
+      {
+        badge: 'Growth & Visibility',
+        title: 'SEO & Core Web Vitals Optimization',
+        description: '95+ Google Lighthouse target scores, automatic OpenGraph meta tags, XML sitemaps, structured schema markup, and SSR/SSG rendering for maximal organic reach.',
+        specs: [
+          '95+ Lighthouse Performance Target',
+          'Automated OG / Social Meta Generation',
+          'Schema.org JSON-LD Structured Data',
+          'Dynamic Robots.txt & XML Sitemaps',
+        ],
+      },
+      {
+        badge: 'Enterprise Security',
+        title: 'Enterprise Security & Access Control',
+        description: 'Role-based access control (RBAC), OAuth2/JWT authentication, OWASP security hardening, CSRF/XSS defense, and tamper-resistant audit trails.',
+        specs: [
+          'Role-Based Admin Access (RBAC)',
+          'JWT / OAuth2 Secure Authentication',
+          'OWASP Top 10 Security Hardening',
+          'Encrypted Credentials & Secret Management',
+        ],
+      },
+      {
+        badge: 'Quality & Handover',
+        title: 'Complete Handover & SLA Support',
+        description: 'Full intellectual property ownership, complete Git repository transfer, OpenAPI/Swagger documentation, automated CI/CD deployment scripts, and post-launch maintenance SLA.',
+        specs: [
+          '100% Source Code & IP Handover',
+          'OpenAPI / Swagger API Documentation',
+          'Automated CI/CD Deployment Scripts',
+          'Guaranteed 30-Day Post-Launch SLA',
+        ],
+      },
+    ],
+    methodology: {
+      stage1: {
+        title: 'Align',
+        focus: 'We clarify outcomes, constraints, and success metrics.',
+        bullets: [
+          'Outcome & Constraint Discovery',
+          'Architecture & Tech Stack Blueprint',
+          'Interactive Wireframe Validation',
+          'Fixed Scope & Delivery Milestones',
+        ],
+      },
+      stage2: {
+        title: 'Build',
+        focus: 'We ship in iterations with demos and feedback loops.',
+        bullets: [
+          'Agile Sprint Releases & Staging Demos',
+          'Modular Frontend & API Implementation',
+          'Continuous Automated Test Coverage',
+          'Weekly Collaborative Feedback Loops',
+        ],
+      },
+      stage3: {
+        title: 'Launch',
+        focus: 'We deploy, train, and stay available for what comes next.',
+        bullets: [
+          'Zero-Downtime Production Deployment',
+          'Complete Source Code & Git Handover',
+          'Client Team Onboarding & Documentation',
+          'Guaranteed SLA & Ongoing Availability',
+        ],
+      },
+    },
+    faqs: [
+      {
+        question: 'Which tech stacks do you specialize in for website development?',
+        answer: 'We build across all modern production stacks depending on your performance and business requirements: React, Next.js, Vue, Angular, Node.js, Python (FastAPI/Django), Go, Laravel (PHP), and .NET Core. Every stack is implemented with zero vendor lock-in.',
+      },
+      {
+        question: 'How do you guarantee high SEO rankings and Core Web Vitals scores?',
+        answer: 'We architect websites with Server-Side Rendering (SSR) and Static Site Generation (SSG) in Next.js, minimizing client-side JavaScript execution. We implement responsive WebP/AVIF image formats, preconnect headers, semantic HTML5, and Schema.org microdata to consistently achieve 95+ Google Lighthouse scores.',
+      },
+      {
+        question: 'Do we own the full source code and intellectual property after completion?',
+        answer: 'Yes, absolutely 100%. All source code, Git repositories, Figma design files, database schemas, and documentation are transferred directly to your organization. You have complete freedom to host, modify, and expand the code without any royalty or license fee.',
+      },
+      {
+        question: 'What is included in your post-launch SLA and maintenance support?',
+        answer: 'Every project comes with our guaranteed 30-day post-launch warranty covering any bug fixes, server fine-tuning, and operational support. We also provide ongoing monthly SLA maintenance retainers for continuous feature iterations, security updates, and performance monitoring.',
+      },
+      {
+        question: 'How long does a custom website or web development project typically take?',
+        answer: 'A high-converting landing portal or corporate website typically launches in 2 to 4 weeks. Complex enterprise web applications and customer portals with extensive database workflows generally span 6 to 10 weeks delivered in bi-weekly sprint milestones.',
+      },
+    ],
+  },
+
+  // ==========================================
   // 1. CUSTOM SOFTWARE DEVELOPMENT
   // ==========================================
   'custom-software-development': {
@@ -3328,6 +3595,10 @@ export function getServiceData(slugOrPath: string): ServiceData {
   const clean = slugOrPath.replace(/^\/+/, '').replace(/^services\//, '').split('/').pop() || '';
   
   const aliasMap: Record<string, string> = {
+    'custom-website': 'custom-website',
+    'web-development': 'custom-website',
+    'custom-website-development': 'custom-website',
+    'web-dev-custom-website-development': 'custom-website',
     'custom-software-development': 'custom-software-development',
     'software-engineering': 'custom-software-development',
     'saas-development': 'saas-development',

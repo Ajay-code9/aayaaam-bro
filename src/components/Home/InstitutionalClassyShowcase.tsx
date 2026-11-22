@@ -96,7 +96,7 @@ export const InstitutionalClassyShowcase: React.FC<InstitutionalClassyShowcasePr
                 onClick={onOpenAccount}
                 className="px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold rounded-xl transition-all text-xs tracking-wider uppercase font-sans cursor-pointer shadow-md flex items-center gap-2 group"
               >
-                <span>Explore 14 Modular Solutions</span>
+                <span>Discuss Your Project</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </button>
 

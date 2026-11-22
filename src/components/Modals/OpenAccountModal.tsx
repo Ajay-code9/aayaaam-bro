@@ -28,8 +28,8 @@ export const OpenAccountModal: React.FC<OpenAccountModalProps> = ({ isOpen, onCl
         {/* Top Header with Close Button */}
         <div className="bg-slate-900 text-white p-4 sm:p-6 border-b border-slate-800 flex items-center justify-between shrink-0">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-xs">
-              BB
+            <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold text-xs tracking-wider">
+              AX
             </div>
             <div>
               <h3 className="text-lg font-serif-heading font-semibold text-white">
